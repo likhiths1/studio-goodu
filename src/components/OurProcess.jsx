@@ -6,24 +6,24 @@ import Process04 from '../assets/images/process/04.png';
 const steps = [
   {
     img: Process01,
-    title: "TETUR. SUSPENDISSE ORCI NISL",
-    desc: "Lorem ipsum dolor sit amet consectetur. Ac sagittis ultrices est nisl dictum. Ultrices magna ut integer neque. Sed magnis augue feugiat tristique. Pellentesque fringilla vel etiam cursus placerat id. Faucibus odio arcu dapibus mauris. Ut morbi quam consectetur convallis id. Tincidunt pretium tellus facilisis egestas. Risus sit quam rhoncus risus. Elit tellus elit scelerisque enim vitae volutpat.",
+    title: "Understanding You.",
+    desc: "Every great space begins with a story of yours. We start by listening, observing, and uncovering how you live, work, and feel. This stage defines not just what we build, but why we build it.",
   },
   {
     img: Process02,
-    title: "TETUR. SUSPENDISSE ORCI NISL",
-    desc: "Congue risus purus feugiat non. Sed sagittis nisi sagittis dui turpis. Volutpat dictum dolor dictum erat id. Quisque aliquam pharetra lectus ipsum. Vestibulum id dictum donec risus blandit. Mauris donec ac magna. Etiam elit dictum ultrices.",
+    title: "Concept to Creation.",
+    desc: "Here, imagination meets precision. We translate your aspirations into spatial concepts, balancing form, material, and emotion. Each detail is thoughtfully sketched, ensuring harmony between function and beauty.",
   },
   {
     img: Process03,
-    title: "TETUR. SUSPENDISSE ORCI NISL",
-    desc: "Mauris eget pretium nullam nec. Faucibus a velit dictum cursus blandit. Et nulla varius pharetra enim feugiat placerat. Quisque tortor orci porttitor. Vestibulum consequat mauris enim tortor. Scelerisque posuere orci placerat feugiat euismod. Tempus dolor.",
+    title: "Refine. Resolve. Realize.",
+    desc: "Our team collaborates closely with artisans, engineers, and partners to bring every element to life. From materials and finishes to lighting and ergonomics, perfection is in the process.",
   },
   {
     img: Process04,
-    title: "TETUR. SUSPENDISSE ORCI NISL",
-    desc: "Cras ornare gravida molestie. Leo integer pulvinar magna pretium. Urna gravida arcu quam aliquam. Ut fermentum commodo risus cursus dictum. Nunc dictum in sit mi gravida tincidunt. Nulla mattis viverra tortor erat dictumst facilisis sagittis.",
-  },
+    title: "Beyond Handover.",
+    desc: "When your space is ready, it’s more than complete, it’s alive. We walk with you through the final reveal, ensuring every line, light, and layer resonates with your vision. Our relationship doesn’t end here; it evolves, just like your space.",
+     },
 ];
 
 export default function OurProcess() {

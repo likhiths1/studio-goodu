@@ -35,9 +35,9 @@ export default function OurWorks() {
             OUR WORKS
           </h2>
           {/* Subtitle between center and left (all breakpoints) */}
-          <div className="text-xs md:text-[1.2rem] font-regular text-[#3a3532] leading-none mt-2 text-left w-[90vw] md:w-94 max-w-full mx-auto ml-[12vw]">
-            TETUR. SUSPENDISSE ORCI NISL.<br />
-            CONGUE EGESTAS SAGITTIS
+          <div className="text-xs uppercase md:text-[1.2rem] font-regular text-[#3a3532] leading-none mt-2 text-left w-[90vw] md:w-94 max-w-full mx-auto ml-[12vw]">
+            A glimpse into spaces we’ve shaped.<br />
+           
           </div>
         </div>
         {/* Collage: desktop is block grid, but mobile/tablet unchanged */}

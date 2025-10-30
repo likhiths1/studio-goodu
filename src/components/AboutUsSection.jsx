@@ -1,10 +1,10 @@
 export default function AboutUsSection() {
   const stats = [
-    { number: "10+", desc: "TETUR. SUSPENDISSE ORCI NISL\nCONGUE EGESTAS SAGITTIS" },
-    { number: "210", desc: "TETUR. SUSPENDISSE ORCI NISL\nCONGUE EGESTAS SAGITTIS" },
-    { number: "10min", desc: "TETUR. SUSPENDISSE ORCI NISL\nCONGUE EGESTAS SAGITTIS" },
-    { number: "9+", desc: "TETUR. SUSPENDISSE ORCI NISL\nCONGUE EGESTAS SAGITTIS" },
-    { number: "24/7", desc: "TETUR. SUSPENDISSE ORCI NISL\nCONGUE EGESTAS SAGITTIS" },
+    { number: "01+ Years of Craft", desc: "Shaping spaces that unite architecture, artistry, and emotion." },
+    { number: "100+ Projects Delivered", desc: "From intimate residences to expansive spaces, each crafted with intention and precision." },
+    { number: "10 min Response Time", desc: "Design conversations shouldn’t wait. We’re always within reach, always listening." },
+    { number: "6+ Design Experts", desc: "A multidisciplinary team of architects, designers, and dreamers, united by craft." },
+    { number: "24/7 Support", desc: "Because great design doesn’t end with delivery, it evolves with you." },
   ];
 
   return (
@@ -15,9 +15,9 @@ export default function AboutUsSection() {
           ABOUT US
         </h2>
         {/* Subtitle between center and left */}
-        <div className="w-full text-xs md:leading-none md:text-base md:text-[1.2rem] text-[#1d1d1d] opacity-80 font-inter font-regular mb-6 md:mb-10 mx-auto md:mx-0 md:ml-[15vw] text-left md:text-left max-w-full md:max-w-full">
-          TETUR. SUSPENDISSE ORCI NISL<br />
-          CONGUE EGESTAS SAGITTIS
+        <div className="w-full text-xs uppercase md:leading-none md:text-base md:text-[1.2rem] text-[#1d1d1d] opacity-80 font-inter font-regular mb-6 md:mb-10 mx-auto md:mx-0 md:ml-[15vw] text-left md:text-left max-w-full md:max-w-full">
+         Designing spaces that feel as good as they look.<br />
+          
         </div>
         {/* Stats rows */}
         <div className="flex flex-col bg-[#FFF6ED] ">
@@ -30,7 +30,7 @@ export default function AboutUsSection() {
                 {item.number}
               </div>
               {/* Description (right) */}
-              <div className="flex-1 text-[0.82rem] md:text-base font-medium text-[#444] whitespace-pre-line text-right pt-2 md:pt-0 z-10">
+              <div className="flex-1 uppercase text-[0.82rem] md:text-base font-medium text-[#444] whitespace-pre-line text-right pt-2 md:pt-0 z-10">
                 {item.desc}
               </div>
             </div>

@@ -6,23 +6,23 @@ import Person4 from "../assets/images/team/person4.png";
 const TEAM = [
   {
     img: Person1,
-    name: "John Woodbridge",
-    role: "Principal Designer",
+    name: "Mr. Rishab Mahesh",
+    role: "Head of Ground Realities",
   },
   {
     img: Person2,
-    name: "Juliana Rover",
-    role: "Senior Architect",
+    name: "Mrs. Prapthi Prasad",
+    role: "Talent In Training",
   },
   {
     img: Person3,
-    name: "Alan Thompson",
-    role: "Project Manager",
+    name: "Mrs. Sakshi Summariya",
+    role: "Junior Moodboard Magician of Spaces",
   },
   {
     img: Person4,
-    name: "Claire Ashford",
-    role: "Design Associate",
+    name: "Mrs. Nikitha Kolar Nagabhushan",
+    role: "Architect Designer",
   },
 ];
 

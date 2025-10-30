@@ -10,7 +10,8 @@ export default function PortfolioHeader() {
           </h2>
           <div className="flex flex-col items-end ml-auto pt-2">
             <span className="block uppercase text-xs md:text-[1.2rem] text-black/80 text-right font-regular leading-5">
-              Lorem ipsum dolor sit amet consectetur. Suspendisse orci nisl congue egestas porta turpis justo.
+              EXPLORE OUR WORLD OF REFINED DESIGN
+
             </span>
           </div>
         </div>

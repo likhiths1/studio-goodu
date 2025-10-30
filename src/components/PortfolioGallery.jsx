@@ -8,17 +8,17 @@ import Port5 from "../assets/images/portfolio/port5.png";
 const portfolioData = [
   {
     img: Port1,
-    title: "Contemporary Bachelor Pad",
+    title: "Artha Villa",
     details: "DETAILS ⇾",
   },
   {
     img: Port2,
-    title: "Modern Living Room",
+    title: "Snob Salon ",
     details: "DETAILS ⇾",
   },
   {
     img: Port3,
-    title: "Olive Wood Opulence",
+    title: "TYD ",
     details: "DETAILS ⇾",
   },
   {

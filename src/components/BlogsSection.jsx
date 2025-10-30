@@ -43,9 +43,10 @@ export default function BlogsSection() {
           <h2 className="text-[3.2rem] sm:text-[4rem] md:text-[10rem] leading-none font-medium tracking-tight text-black">
             BLOGS
           </h2>
-          <div className="mt-3 md:mt-0 md:text-right text-xs sm:text-base md:text-[1.2rem] md:leading-none text-black/80 font-inter font-regular">
-            TETUR. SUSPENDISSE ORCI NISL<br />
-            CONGUE EGESTAS SAGITTIS
+          <div className="mt-3 md:mt-0 md:text-right text-xs uppercase sm:text-base md:text-[1.2rem] md:leading-none text-black/80 font-inter font-regular">
+            Design stories that inspire living beautifully. <br />
+            WHERE LIVING BECOMES AN ART FORM.
+            
           </div>
         </div>
         <div className="w-full relative rounded-sm overflow-hidden shadow-none h-[260px] sm:h-[340px] md:h-[420px]">
