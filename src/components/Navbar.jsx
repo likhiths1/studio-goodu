@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import GooduLogo from '../assets/images/herosection/goodu-logo.png';
 
 const navLinks = [
@@ -14,7 +15,9 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-transparent font-inter z-20 px-4 md:px-12 py-2 flex items-center justify-between relative">
-      <img src={GooduLogo} alt="Studio Goodu Logo" className="h-16 md:h-20 w-auto" />
+      <Link to="/">
+        <img src={GooduLogo} alt="Studio Goodu Logo" className="h-16 md:h-20 w-auto" />
+      </Link>
 
       {/* Hamburger Icon Mobile */}
       <button
@@ -31,9 +34,15 @@ export default function Navbar() {
       <ul className="hidden md:flex gap-12 ml-[-60px] mr-24 text-lg font-inter font-medium">
         {navLinks.map(link => (
           <li key={link.name}>
-            <a href={link.href} className="text-[#EDE1D5]">
-              {link.name}
-            </a>
+            {link.href.startsWith('/') ? (
+              <Link to={link.href} className="text-[#EDE1D5]">
+                {link.name}
+              </Link>
+            ) : (
+              <a href={link.href} className="text-[#EDE1D5]">
+                {link.name}
+              </a>
+            )}
           </li>
         ))}
       </ul>
@@ -56,13 +65,23 @@ export default function Navbar() {
         <ul className="flex flex-col items-center gap-7 text-xl font-inter uppercase font-semibold">
           {navLinks.map(link => (
             <li key={link.name}>
-              <a
-                href={link.href}
-                className="text-[#EDE1D5] px-4 py-2 block"
-                onClick={() => setOpen(false)}
-              >
-                {link.name}
-              </a>
+              {link.href.startsWith('/') ? (
+                <Link
+                  to={link.href}
+                  className="text-[#EDE1D5] px-4 py-2 block"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  href={link.href}
+                  className="text-[#EDE1D5] px-4 py-2 block"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.name}
+                </a>
+              )}
             </li>
           ))}
         </ul>
