@@ -2,9 +2,9 @@ import Img1 from "../assets/images/contact/1.png";
 import Img2 from "../assets/images/contact/2.png";
 import Img3 from "../assets/images/contact/3.png";
 
-export default function ContactSection() {
+export default function ExtraContactSection() {
   return (
-    <section className="w-full bg-[#FFF6ED] lg:min-h-screen relative px-4 pt-6 pb-1 md:pt-20 md:pb-6 lg:pb-20 font-inter overflow-x-hidden">
+    <section className="w-full bg-[#FFF6ED] lg:min-h-screen relative px-4 pt-6 pb-1 md:pt-20 md:pb-6 lg:pb-20 mb-6 md:mb-10 lg:mb-0 font-inter overflow-x-hidden">
       <div className="max-w-7xl mx-auto flex flex-col items-center relative">
         {/* Headline and decorative image alignment exactly as in Figma */}
         <div className="w-full mb-0 md:mb-0 mt-0 flex flex-col gap-0 leading-tight">
@@ -66,48 +66,6 @@ export default function ContactSection() {
               draggable={false}
             />
           </div>
-        </div>
-
-        {/* Row: Left text | Right form */}
-        <div className="w-full flex flex-col md:flex-row md:items-start md:justify-between mt-4">
-          {/* Left Text */}
-          <div className="w-full md:w-1/2 flex md:justify-start justify-center pb-6 md:pb-0">
-            <span className="text-black font-bold text-base sm:text-lg leading-snug text-left">
-              Lorem Ipsum
-              <br />
-              Dolor Sit Amet
-            </span>
-          </div>
-          {/* Right Form */}
-          <form className="w-full md:w-[340px] max-w-md flex flex-col items-end space-y-5">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-sm placeholder:text-black/70 text-base text-black focus:outline-none"
-            />
-            <input
-              type="text"
-              placeholder="Apartment Size"
-              className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-sm placeholder:text-black/70 text-base text-black focus:outline-none"
-            />
-            <input
-              type="text"
-              placeholder="Apartment Details"
-              className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-sm placeholder:text-black/70 text-base text-black focus:outline-none"
-            />
-            <input
-              type="text"
-              placeholder="Phone Number"
-              className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-sm placeholder:text-black/70 text-base text-black focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="mt-2 text-black font-semibold text-[0.97rem] underline underline-offset-4 hover:opacity-80 transition"
-              style={{ background: "none", border: "none" }}
-            >
-              CONTACT ME
-            </button>
-          </form>
         </div>
       </div>
     </section>

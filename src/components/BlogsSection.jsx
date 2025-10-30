@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import BlogBg from "../assets/images/blogs/bg.png";
 
 const BLOGS = [
@@ -94,7 +95,7 @@ export default function BlogsSection() {
 
 function BlogSlide({ blog }) {
   return (
-    <div className="w-full h-full relative">
+    <Link to="/blog"><div className="w-full h-full relative">
       <img
         src={blog.bg}
         alt="Blog post"
@@ -120,6 +121,6 @@ function BlogSlide({ blog }) {
           {blog.summary}
         </div>
       </div>
-    </div>
+    </div></Link>
   );
 }

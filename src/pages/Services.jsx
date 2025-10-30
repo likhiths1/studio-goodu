@@ -1,19 +1,18 @@
 import FooterSection from "../components/FooterSection";
-import AboutUsHeader from "../components/AboutUsHeader";
+import ServicesHeader from "../components/ServicesHeader";
 import FeatureBar from "../components/FeatureBar";
-import AboutAuthorSection from "../components/AboutAuthorSection";
 import Navbar from "../components/NavbarBlack";
-import MeetTeamSection from "../components/MeetTeamSection";
 import ExtraContactSection from "../components/ExtraContactSection";
+import ResponsiveImage from "../components/ImageBackground";
+import ServicesBanner from "../assets/images/services/servicesbanner.png";
 
 export default function AboutUs() {
   return (
     <>
       <Navbar />
-      <AboutUsHeader />
+      <ServicesHeader />
       <FeatureBar />
-      <AboutAuthorSection/>
-      <MeetTeamSection />
+      <ResponsiveImage src={ServicesBanner} alt="" />
       <ExtraContactSection />
       <FooterSection />
     </>

@@ -21,7 +21,7 @@ export default function FeaturedBlogSection() {
       </div>
       {/* Overlapping containers, half floating out of image */}
       <div
-        className="relative z-20 w-full max-w-5xl flex flex-col md:flex-row items-start justify-center gap-x-12 gap-y-8 mx-auto"
+        className="relative z-20 w-full max-w-5xl flex flex-col md:flex-row items-center md:items-start justify-center gap-x-12 gap-y-8 mx-auto"
         style={{
           marginTop: "-140px" // The amount containers float out of the BG but still inside parent
         }}

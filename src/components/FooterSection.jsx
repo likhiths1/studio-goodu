@@ -8,7 +8,7 @@ import ArrowIcon from "../assets/images/arrow.png";
 
 export default function FooterSection() {
   return (
-    <footer className="w-full bg-[#FFF6ED] pt-2 pb-3 px-3 md:px-0 font-inter">
+    <footer className="w-full bg-[#FFF6ED] pt-3 md:pt-5 lg:pt-2 pb-3 px-3 md:px-0 font-inter">
       <div className="max-w-[90rem] mx-auto grid grid-cols-1 md:grid-cols-5 gap-y-5 gap-x-2 items-end">
         {/* Left: Navigation links */}
         <div className="md:col-span-2 flex flex-col gap-2 pt-3 pb-4">
@@ -50,7 +50,7 @@ export default function FooterSection() {
         <div className="col-span-5 w-full pt-6">
           <div className="flex flex-col w-full">
             <span
-              className="block w-full text-[3.1rem] md:text-[12rem] font-regular"
+              className="block w-full text-[4rem] md:text-[14rem] font-regular"
               style={{
                 color: "#D6AF60",
                 lineHeight: 1.02,
@@ -61,7 +61,7 @@ export default function FooterSection() {
               STUDIO
             </span>
             <span
-              className="block w-full text-[3.1rem] md:text-[12rem] font-regular tracking-tight"
+              className="block w-full text-[4rem] md:text-[14rem] font-regular tracking-tight"
               style={{
                 color: "#4D696C",
                 lineHeight: 1.02,
