@@ -78,14 +78,14 @@ export default function ServicesDetailSection() {
 
               {/* What's Included */}
               <div className="space-y-3">
-                <h3 className="font-inter text-xs md:text-lg md:mb-4 font-medium text-black tracking-wide">
+                <h3 className="font-inter text-xs md:text-lg md:mb-4 font-medium text-black tracking-wide inline-block border-b border-black/20 pb-2">
                   WHAT'S INCLUDED
                 </h3>
                 <ul className="space-y-6">
                   {service.included.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="text-black/70 mt-1">•</span>
-                      <span className="font-poppins text-xs md:text-[1.4rem] text-black/80">
+                    <li key={idx} className="flex items-center gap-3">
+                      <span className="text-black flex-shrink-0">•</span>
+                      <span className="font-poppins text-xs md:text-[1.4rem] text-black">
                         {item}
                       </span>
                     </li>
@@ -105,7 +105,7 @@ export default function ServicesDetailSection() {
               
               {/* Pricing under image */}
               <div>
-                <p className="font-inter text-xs md:text-lg text-black/60 mb-1">INVESTMENT</p>
+                <p className="font-inter text-xs md:text-lg text-black mb-2 inline-block border-b border-black/20 pb-2">INVESTMENT</p>
                 <p className="font-playfairdisplay text-lg md:text-[2.6rem] text-[#8D8271]">
                   {service.price}
                 </p>

@@ -25,17 +25,12 @@ export default function ServicesSection() {
                 transition: "transform 0.3s ease"
               }}
             >
-              {/* Polaroid Frame */}
-              <div className="bg-[#FFF6ED] p-3">
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-[180px] sm:h-[220px] md:h-[240px] object-cover"
-                  draggable={false}
-                />
-                {/* Optional bottom space for polaroid effect */}
-                <div className="h-8 md:h-10 bg-[#FFF6ED]"></div>
-              </div>
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-[180px] sm:h-[220px] md:h-[240px] object-cover"
+                draggable={false}
+              />
             </div>
           ))}
         </div>
