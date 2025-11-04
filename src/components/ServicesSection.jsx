@@ -28,7 +28,7 @@ export default function ServicesSection() {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-[180px] sm:h-[220px] md:h-[240px] object-cover"
+                className="w-full h-[220px] sm:h-[260px] md:h-[300px] object-cover"
                 draggable={false}
               />
             </div>

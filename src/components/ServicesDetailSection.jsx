@@ -106,7 +106,7 @@ export default function ServicesDetailSection() {
               {/* Pricing under image */}
               <div>
                 <p className="font-inter text-xs md:text-lg text-black mb-2 inline-block border-b border-black/20 pb-2">INVESTMENT</p>
-                <p className="font-playfairdisplay text-lg md:text-[2.6rem] text-[#8D8271]">
+                <p className="font-playfairdisplay text-lg md:text-[2.0rem] text-[#8D8271]">
                   {service.price}
                 </p>
               </div>
@@ -116,7 +116,7 @@ export default function ServicesDetailSection() {
 
         {/* CTA Button - Sharp edges, centered */}
         <div className="flex justify-center pt-8">
-          <button className="bg-black text-white px-8 py-3 text-sm font-medium tracking-wide hover:bg-black/90 transition rounded-none">
+          <button className="bg-black text-white px-10 md:px-12 py-3.5 md:py-4 text-sm md:text-base font-medium tracking-wide hover:bg-black/90 transition rounded-none">
             ENQUIRE NOW
           </button>
         </div>

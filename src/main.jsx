@@ -8,6 +8,8 @@ import AboutUs from './pages/AboutUs.jsx';
 import Portfolio from './pages/Portfolio.jsx';
 import Blog from './pages/Blog.jsx';
 import Services from './pages/Services.jsx';
+import BlogDetailPage from './pages/BlogDetailPage.jsx';
+import PortfolioDetailPage from './pages/PortfolioDetailPage.jsx';
 
 function ScrollToTop() {
   const { pathname, search, hash } = useLocation();
@@ -30,6 +32,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="/blog" element={<Blog/>} />
         <Route path="/services" element={<Services/>} />
+        <Route path="/blog/:id" element={<BlogDetailPage/>} />
+        <Route path="/portfolio/:id" element={<PortfolioDetailPage/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -1,3 +1,5 @@
+import BgLine from "../assets/images/contactuspage/bgline.png";
+
 export default function AboutUsSection() {
   const stats = [
     { number: "10+", desc: "TETUR. SUSPENDISSE ORCI NISL\nCONGUE EGESTAS SAGITTIS" },
@@ -23,14 +25,24 @@ export default function AboutUsSection() {
         <div className="flex flex-col bg-[#FFF6ED] md:mx-[-56px]">
           {stats.map((item, i) => (
             <div key={i} className="relative flex flex-row items-end min-h-[80px] md:min-h-[140px] pt-4 pb-6 md:pt-6 md:pb-8 md:px-14 mb-6 md:mb-10 last:mb-0">
-              {/* The full-width line (above the number) */}
-              <div className="absolute bottom-0 h-[4px] bg-[#efe2d0] z-20 inset-x-0 md:inset-x-[-56px]"></div>
-              {/* Number (slightly clipped by the line) */}
-              <div className="text-black flex-1 min-w-[94px] sm:min-w-[140px] md:min-w-[180px] text-[3.6rem] md:text-[5.2rem] tracking-[-0.08em] lg:text-[16rem] font-[350] leading-none -mb-[18px] md:-mb-[30px] lg:-mb-[36px] z-10">
-                {item.number}
+              {/* Number column with overlapping divider at 25% and masked lower area */}
+              <div className="relative flex-1 min-w-[94px] sm:min-w-[140px] md:min-w-[180px]">
+                {/* Divider positioned at 25% of the number area */}
+                <div
+                  className="absolute top-[75%] w-screen -translate-x-1/3 h-[1px] bg-[#969696] z-30"
+                />
+                {/* Overlay from divider downwards to hide the number using bgline.png */}
+                <div
+                  className="absolute left-0 right-0 z-20 pointer-events-none"
+                  style={{ top: 'calc(75% + 2px)', bottom: 0, backgroundImage: `url(${BgLine})`, backgroundRepeat: 'repeat-x', backgroundPosition: 'top left', backgroundSize: 'auto 6px', backgroundColor: '#FFF6ED' }}
+                />
+                {/* The number itself */}
+                <div className="relative z-10 text-black text-[3.6rem] md:text-[5.2rem] tracking-[-0.08em] lg:text-[16rem] font-[350] leading-none">
+                  {item.number}
+                </div>
               </div>
               {/* Description (right) */}
-              <div className="flex-1 text-[0.82rem] md:text-[1.6rem] font-medium text-[#444] whitespace-pre-line text-right pt-2 md:pt-0 mb-3 md:mb-4 z-10">
+              <div className="relative z-40 flex-1 text-[0.82rem] md:text-[1.6rem] font-medium text-[#444] whitespace-pre-line text-right pt-0 mb-28">
                 {item.desc}
               </div>
             </div>
