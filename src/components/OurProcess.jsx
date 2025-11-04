@@ -32,12 +32,12 @@ export default function OurProcess() {
       <div className="max-w-[90rem] w-full mx-auto">
         {/* Section Title with left-center alignment */}
         <div className="relative flex flex-col mb-16">
-          <h2 className="font-inter font-medium text-black tracking-tight leading-tight text-5xl md:text-[12rem] mx-auto md:mx-0 md:-ml-[4vw] md:max-w-full">
+          <h2 className="font-inter font-medium text-black tracking-[-0.08em] leading-tight text-5xl md:text-[12rem] mx-auto md:mx-0 md:-ml-[4vw] md:max-w-full">
             OUR PROCESS
           </h2>
           {/* Subtitle with right-center alignment */}
           <div className="mt-4 w-full flex justify-center md:justify-end">
-            <div className="text-xs md:text-[1.6rem] font-regular text-[#3a3532] leading-none md:mr-[4vw] text-center md:text-right max-w-full md:w-94">
+            <div className="text-xs md:text-[1.6rem] font-regular text-[#3a3532] leading-snug md:mr-[4vw] text-center md:text-right max-w-full md:w-94">
               TETUR. SUSPENDISSE ORCI NISL.<br/>CONGUE EGESTAS SAGITTIS
             </div>
           </div>

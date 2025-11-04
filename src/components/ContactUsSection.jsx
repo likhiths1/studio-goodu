@@ -45,15 +45,15 @@ export default function ContactUsSection() {
           <img
             src={BannerImg}
             alt=""
-            className="w-full h-[800px] object-contain"
+            className="w-full h-[700px] object-contain"
           />
         </div>
       </div>
 
       {/* Bottom Info Row */}
-      <div className="max-w-[90rem] w-full mt-8 flex flex-col md:grid md:grid-cols-5 md:justify-center gap-y-6 tracking-tight items-center text-center">
+      <div className="max-w-[90rem] w-full mt-24 flex flex-col md:grid md:grid-cols-5 md:justify-center gap-y-6 tracking-tight items-center text-center">
         {/* Email/Phone */}
-        <div className="col-span-1 text-[1.01rem] md:text-[1.25rem] flex flex-col gap-1 text-justify max-w-xs">
+        <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] flex flex-col gap-1 text-justify max-w-xs">
           <span className="font-inter text-[#4D696C] uppercase mb-1">OUR EMAIL & PHONE</span>
           <span className="font-playfairdisplay md:text-[1.25rem] text-black">info@velainteriors.com</span>
           <span className="font-playfairdisplay md:text-[1.25rem] text-black">003 404 507 1200</span>

@@ -71,8 +71,8 @@ export default function ContactSection() {
         {/* Row: Left text | Right form */}
         <div className="w-full flex flex-col md:flex-row md:items-end md:justify-between mt-4">
           {/* Left Text */}
-          <div className="w-full md:w-1/2 flex md:justify-start justify-center items-end pb-6 md:pb-0">
-            <span className="text-black font-bold text-2xl sm:text-3xl md:text-4xl leading-snug text-left">
+          <div className="w-full md:w-1/2 flex md:justify-start justify-center items-end pb-6 md:pb-0 md:ml-[12rem]">
+            <span className="text-black font-medium text-2xl sm:text-3xl md:text-5xl leading-snug text-left">
               Lorem Ipsum
               <br />
               Dolor Sit Amet
@@ -83,26 +83,26 @@ export default function ContactSection() {
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-sm placeholder:text-black/70 text-base text-black focus:outline-none"
+              className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-2xl placeholder:text-black/70 text-base text-black focus:outline-none"
             />
             <input
               type="text"
               placeholder="Apartment Size"
-              className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-sm placeholder:text-black/70 text-base text-black focus:outline-none"
+              className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-2xl placeholder:text-black/70 text-base text-black focus:outline-none"
             />
             <input
               type="text"
               placeholder="Apartment Details"
-              className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-sm placeholder:text-black/70 text-base text-black focus:outline-none"
+              className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-2xl placeholder:text-black/70 text-base text-black focus:outline-none"
             />
             <input
               type="text"
               placeholder="Phone Number"
-              className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-sm placeholder:text-black/70 text-base text-black focus:outline-none"
+              className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-2xl placeholder:text-black/70 text-base text-black focus:outline-none"
             />
             <button
               type="submit"
-              className="mt-2 w-full bg-transparent border-b border-[#AAA] py-[9px] text-right text-black font-bold text-[1.05rem] tracking-wide hover:opacity-80 transition focus:outline-none"
+              className="mt-2 w-full bg-transparent border-b border-[#AAA] py-[9px] text-left text-black font-bold text-[1.6rem] tracking-wide hover:opacity-80 transition focus:outline-none"
               style={{ background: "none", border: "none" }}
             >
               CONTACT ME

@@ -31,7 +31,7 @@ export default function ValuesSection() {
             {/* Line image between columns */}
             {idx < valueData.length - 1 && (
               <div className="hidden md:flex flex-col items-center justify-center">
-                <img src={LineImg} alt="" className="h-full w-px mx-2" />
+                <img src={LineImg} alt="" className="h-[1/2] w-px mx-2" />
               </div>
             )}
           </div>

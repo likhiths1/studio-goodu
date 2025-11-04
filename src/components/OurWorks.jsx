@@ -20,7 +20,7 @@ const collage = [
   { src: Work5, style: "top-[580px] left-[180px] sm:left-[300px] md:left-[400px] lg:left-[960px] xl:left-[1140px] 2xl:left-[1280px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[360px] xl:w-[420px] 2xl:w-[460px] z-10" },
   // Row 3 (staggered again differently)
   { src: Work7, style: "top-[1100px] left-[20px] sm:left-[90px] md:left-[170px] lg:left-[120px] xl:left-[160px] 2xl:left-[180px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[280px] xl:w-[330px] 2xl:w-[360px] z-30" },
-  { src: Work9, style: "top-[980px] left-[240px] sm:left-[600px] md:left-[810px] lg:left-[420px] xl:left-[550px] 2xl:left-[700px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[300px] xl:w-[340px] 2xl:w-[370px] z-20" },
+  { src: Work9, style: "top-[980px] left-[240px] sm:left-[600px] md:left-[810px] lg:left-[420px] xl:left-[550px] 2xl:left-[700px] w-[120px] sm:w-[150px] md:w-[170px] lg:w-[280px] xl:w-[320px] 2xl:w-[340px] z-20" },
   { src: Work8, style: "top-[940px] left-[200px] sm:left-[320px] md:left-[410px] lg:left-[1100px] xl:left-[1300px] 2xl:left-[1440px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[320px] xl:w-[380px] 2xl:w-[420px] z-20" },
   { src: Work10, style: "top-[1200px] left-[180px] sm:left-[350px] md:left-[460px] lg:left-[880px] xl:left-[1060px] 2xl:left-[1200px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[340px] xl:w-[400px] 2xl:w-[440px] z-20" },
   // Extra fillers (reuse some images) to cover whitespace on lg/xl/2xl
@@ -30,7 +30,7 @@ const collage = [
   { src: Work4, style: "hidden lg:block top-[450px] left-[40px] xl:left-[80px] 2xl:left-[100px] w-[200px] xl:w-[240px] 2xl:w-[260px] z-10" },
   { src: Work6, style: "hidden lg:block top-[800px] left-[40px] xl:left-[80px] 2xl:left-[100px] w-[220px] xl:w-[260px] 2xl:w-[280px] z-10" },
   // New filler for bottom whitespace (desktop only)
-  { src: Work2, style: "hidden lg:block top-[1450px] left-[360px] xl:left-[540px] 2xl:left-[660px] w-[240px] xl:w-[280px] 2xl:w-[300px] z-10" }
+  { src: Work2, style: "hidden lg:block top-[1250px] left-[200px] xl:left-[400px] 2xl:left-[540px] w-[240px] xl:w-[280px] 2xl:w-[300px] z-10" }
 ];
 
 export default function OurWorks() {

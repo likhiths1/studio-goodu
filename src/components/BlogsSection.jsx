@@ -41,15 +41,17 @@ export default function BlogsSection() {
     <section className="w-full bg-[#FFF6ED] py-14 md:py-24 px-2 sm:px-8 font-inter">
       <div className="max-w-[90rem] mx-auto">
         <div className="flex flex-row justify-between items-end mb-7 md:mb-10">
-          <h2 className="text-[3.2rem] sm:text-[4rem] md:text-[12rem] leading-none font-medium tracking-tight text-black md:-ml-[4vw]">
+          <h2 className="text-[3.2rem] sm:text-[4rem] md:text-[12rem] leading-none font-medium tracking-[-0.08em] text-black md:-ml-[4vw]">
             BLOGS
           </h2>
-          <div className="md:text-right text-xs sm:text-base md:text-[1.6rem] md:leading-none text-black/80 font-inter font-regular md:mr-[4vw] md:w-94">
-            TETUR. SUSPENDISSE ORCI NISL<br />
-            CONGUE EGESTAS SAGITTIS
+          <div className="w-full">
+            <div className="w-full md:text-right text-xs sm:text-base md:text-[1.6rem] md:leading-none text-black/80 font-inter font-regular">
+              TETUR. SUSPENDISSE ORCI NISL<br />
+              CONGUE EGESTAS SAGITTIS
+            </div>
           </div>
         </div>
-        <div className="w-full relative rounded-sm overflow-hidden shadow-none h-[360px] sm:h-[480px] md:h-[720px]">
+        <div className="w-full relative rounded-sm overflow-hidden shadow-none h-[380px] sm:h-[520px] md:h-[760px] md:ml-[-4vw]">
           {/* Slides container */}
           <div className="absolute inset-0 w-full h-full"
                style={{ perspective: 900, overflow: "clip" }}>
@@ -90,7 +92,7 @@ export default function BlogsSection() {
         </div>
         {/* CTA button */}
         <div className="w-full flex justify-center mt-8 md:mt-12">
-          <Link to="/blogt" className="inline-block px-6 md:px-7 py-2.5 md:py-3 bg-black text-white text-xs md:text-sm tracking-tight hover:opacity-90 transition" style={{ borderRadius: 0 }}>
+          <Link to="/blog" className="inline-block px-6 md:px-7 py-2.5 md:py-3 bg-black text-white text-xs md:text-sm tracking-tight hover:opacity-90 transition" style={{ borderRadius: 0 }}>
             VIEW ALL
           </Link>
         </div>
@@ -114,8 +116,8 @@ function BlogSlide({ blog }) {
           absolute bottom-0 right-0 
           bg-white shadow-md 
           px-5 py-6 sm:px-7 sm:py-8 md:px-9 md:py-10
-          w-[96%] xs:w-[90%] sm:w-[78%] md:w-[64%]
-          h-[50%]
+          w-[94%] xs:w-[88%] sm:w-[82%] md:w-[70%] lg:w-[70%]
+          h-[62%] sm:h-[65%] md:h-[68%]
           flex flex-col justify-start
         " 
         style={{ borderRadius: "16px 0 0 0.5rem" }}>
