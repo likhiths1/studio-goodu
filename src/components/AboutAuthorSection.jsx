@@ -6,7 +6,7 @@ import QuoteIcon from "../assets/images/author/quote.png";
 export default function AboutAuthorSection() {
   return (
     <section className="w-full bg-[#FFF6ED] px-3 md:px-0 py-8 md:py-16 font-inter">
-      <div className="max-w-[100rem] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 relative">
+      <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 relative">
         {/* Left quote and text */}
         <div className="flex flex-col flex-1 max-w-[28rem] md:max-w-[32rem] pl-2">
           <div className="flex items-start gap-2">

@@ -29,9 +29,9 @@ const TEAM = [
 export default function MeetTeamSection() {
   return (
     <section className="w-full bg-[#FFF6ED] px-4 md:px-0 py-8 md:py-16 font-poppins">
-      <div className="max-w-[100rem] mx-auto">
+      <div className="max-w-[90rem] mx-auto">
         <div className="flex flex-row justify-start items-end mb-7 md:mb-10">
-          <h2 className="font-medium text-black tracking-tight text-[3.2rem] md:text-[16rem] leading-none tracking-[-0.10em] text-left font-inter">
+          <h2 className="font-medium text-black tracking-tight text-[3.2rem] md:text-[12rem] leading-none tracking-[-0.10em] text-left font-inter">
             MEET OUR TEAM
           </h2>
           <div className="text-xs md:text-[1.6rem] text-black opacity-90 font-regular text-right mt-2 mr-24 md:mt- md:max-w-[100rem] font-inter tracking-[-0.08em] leading-none">
