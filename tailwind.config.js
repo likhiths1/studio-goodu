@@ -11,6 +11,7 @@ export default {
         accentgold: '#8D8271',                // for book a call button
       },
       fontFamily: {
+        inter: ["Inter", ...fontFamily.sans],
         poppins: ["Poppins", ...fontFamily.sans],
         playfairdisplay: ["Playfair Display", ...fontFamily.sans],
         britishgreen: ["British Green", ...fontFamily.sans],
