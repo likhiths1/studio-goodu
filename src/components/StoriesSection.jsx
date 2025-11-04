@@ -26,9 +26,9 @@ export default function StoriesSection() {
     <section className="w-full bg-[#FFF6ED] py-16 md:pt-[50px] md:pb-24 px-3 sm:px-8 font-inter min-h-[700px] md:min-h-[850px]">
       <div className="max-w-[90rem] mx-auto">
         {/* Heading */}
-        <h2 className="text-[3.2rem] sm:text-[3.7rem] md:text-[12rem] font-medium tracking-tight text-black leading-none mb-8 text-left md:-ml-[4vw]">
+        <h2 className="text-[3.2rem] sm:text-[3.7rem] md:text-[12rem] font-medium tracking-[-0.08em] text-black leading-none mb-8 text-left md:-ml-[4vw]">
           NAMMA<br />
-          <span className="block">GOODU STORIES</span>
+          <span className="block tracking-[-0.08em] leading-none -mt-[6px] md:-mt-[12px]">GOODU STORIES</span>
         </h2>
         {/* Responsive grid for layout control */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">

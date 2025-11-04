@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <nav className="w-full bg-transparent font-inter z-20 px-4 md:px-12 py-2 flex items-center justify-between relative">
       <Link to="/">
-        <img src={GooduLogo} alt="Studio Goodu Logo" className="h-16 md:h-20 w-auto" />
+        <img src={GooduLogo} alt="Studio Goodu Logo" className="h-16 md:h-20 ml-20 w-auto" />
       </Link>
 
       {/* Hamburger Icon Mobile */}

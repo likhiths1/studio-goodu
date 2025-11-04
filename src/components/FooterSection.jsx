@@ -35,7 +35,7 @@ export default function FooterSection() {
 
         {/* Right/meta column */}
         <div className="md:col-span-3 flex flex-col h-full items-end justify-start gap-2 pt-2 pr-1 pl-6 sm:pl-10 md:pl-12 min-w-0">
-          <span className="text-xs sm:text-sm md:text-[1.2rem] lg:text-[1.6rem] tracking-tight text-black/70 text-right mb-2 leading-snug">TETUR. SUSPENDISSE ORCI NISL<br/>CONGUE EGESTAS SAGITTIS</span>
+          <span className="text-xs sm:text-sm md:text-[1.2rem] lg:text-[1.6rem] tracking-snug text-black/70 text-right mb-2 leading-loose">TETUR. SUSPENDISSE ORCI NISL<br/>CONGUE EGESTAS SAGITTIS</span>
           {/* Footer social icons */}
           <div className="flex gap-2 sm:gap-3 mb-2 mt-auto">
             <img src={Icon1} alt="Social Icon" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[27px] md:h-[27px] object-cover opacity-90 hover:opacity-100 transition" />
