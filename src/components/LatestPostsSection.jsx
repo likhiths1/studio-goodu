@@ -43,7 +43,7 @@ export default function LatestPostsSection() {
         <span className="text-[1.6rem] md:text-[2.1rem] text-black block tracking-wide">DESIGN JOURNAL</span>
         <h2 className="font-inter text-black text-[3.2rem] md:text-[10rem] md:-mt-12 font-medium tracking-tighter mt-1 mb-10">LATEST POSTS</h2>
       </div>
-      <div className="w-full relative rounded-sm overflow-hidden shadow-none h-[260px] sm:h-[340px] md:h-[420px] mx-6">
+      <div className="w-full max-w-7xl mx-auto relative h-[320px] sm:h-[400px] md:h-[500px] px-6">
         <div className="absolute inset-0 w-full h-full" style={{ perspective: 900, overflow: "clip" }}>
           {/* Current Slide */}
           <div
@@ -70,7 +70,7 @@ export default function LatestPostsSection() {
         </div>
         {/* Arrow navigation */}
         <button
-          className="absolute top-1/2 right-2 sm:-right-4 z-30 translate-y-[-50%] bg-white/80 hover:bg-white text-black shadow-sm p-2 rounded-full border border-gray-200 transition"
+          className="absolute top-1/2 right-0 translate-x-[calc(100%+1rem)] z-30 -translate-y-1/2 bg-white/80 hover:bg-white text-black shadow-sm p-2 rounded-full border border-gray-200 transition"
           onClick={nextPost}
           aria-label="Next blog"
           disabled={direction === 1}
@@ -81,7 +81,7 @@ export default function LatestPostsSection() {
         </button>
       </div>
       <div className="mt-10 w-full flex justify-center">
-        <div className="flex items-center w-[230px] text-center text-xs tracking-wide text-[#888]">
+        <div className="flex items-center w-[500px] text-center text-xs tracking-wide text-[#888]">
           <div className="flex-grow border-t border-[#bbb]"></div>
           <span className="px-4 font-inter text-lg md:text-2xl">SEE ALL</span>
           <div className="flex-grow border-t border-[#bbb]"></div>
@@ -94,7 +94,7 @@ export default function LatestPostsSection() {
 function BlogSlide({ blog }) {
   return (
     <div className="w-full h-full relative">
-      <div className="relative h-full px-12">
+      <div className="relative h-full w-full">
         <img
           src={blog.bg}
           alt="Blog post"
@@ -103,8 +103,8 @@ function BlogSlide({ blog }) {
         />
         {/* Overlay card */}
         <div
-          className="absolute bottom-0 right-0 bg-white shadow-md px-6 py-5 mr-12 sm:px-8 sm:py-7 md:px-10 md:mr-12 md:py-8 w-full max-w-[70%]"
-          style={{ borderRadius: "16px 0 0 0.5rem" }}
+          className="absolute bottom-0 right-0 bg-white shadow-md px-6 py-5 sm:px-8 sm:py-7 md:px-10 md:py-8 w-full max-w-[90%]"
+          style={{ borderRadius: "16px 0 0 0" }}
         >
           <div className="text-[0.72rem] sm:text-xs md:text-sm font-normal mb-1 text-gray-500">
             {blog.cat} &nbsp;&nbsp;|&nbsp;&nbsp; {blog.date}

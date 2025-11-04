@@ -1,4 +1,7 @@
-import StoryImage from '../assets/images/stories/1.png';
+import Stor4 from '../assets/images/stories/stor1.jpeg';
+import Stor2 from '../assets/images/stories/stor2.jpg';
+import Stor3 from '../assets/images/stories/stor3.jpg';
+import Stor1 from '../assets/images/stories/stor4.jpg';
 
 export default function StoriesSection() {
   const testimonials = [
@@ -28,6 +31,8 @@ export default function StoriesSection() {
     }
   ];
 
+  const storyImages = [Stor1, Stor2, Stor3, Stor4];
+
   return (
     <section className="w-full bg-[#FFF6ED] py-16 md:pt-[50px] md:pb-12 px-3 sm:px-8 font-inter min-h-[700px] md:min-h-[850px]">
       <div className="max-w-[90rem] mx-auto">
@@ -43,7 +48,7 @@ export default function StoriesSection() {
               <div key={idx} className="relative w-full aspect-square flex-shrink-0">
                 {/* Square Image */}
                 <img
-                  src={StoryImage}
+                  src={storyImages[idx % storyImages.length]}
                   alt="Story Interior"
                   className="w-full h-full object-cover object-center"
                   style={{ borderRadius: 0 }}

@@ -29,12 +29,12 @@ export default function AboutUsSection() {
               <div className="relative flex-1 min-w-[94px] sm:min-w-[140px] md:min-w-[180px]">
                 {/* Divider positioned at 25% of the number area */}
                 <div
-                  className="absolute top-[75%] w-screen -translate-x-1/3 h-[1px] bg-[#969696] z-30"
+                  className="absolute top-[75%] w-screen -translate-x-1/3 h-[2px] bg-[#969696] z-30"
                 />
                 {/* Overlay from divider downwards to hide the number using bgline.png */}
                 <div
                   className="absolute left-0 right-0 z-20 pointer-events-none"
-                  style={{ top: 'calc(75% + 2px)', bottom: 0, backgroundImage: `url(${BgLine})`, backgroundRepeat: 'repeat-x', backgroundPosition: 'top left', backgroundSize: 'auto 6px', backgroundColor: '#FFF6ED' }}
+                  style={{ top: 'calc(75% + 3px)', bottom: 0, backgroundImage: `url(${BgLine})`, backgroundRepeat: 'repeat-x', backgroundPosition: 'top left', backgroundSize: 'auto 12px', backgroundColor: '#FFF6ED' }}
                 />
                 {/* The number itself */}
                 <div className="relative z-10 text-black text-[3.6rem] md:text-[5.2rem] tracking-[-0.08em] lg:text-[16rem] font-[350] leading-none">

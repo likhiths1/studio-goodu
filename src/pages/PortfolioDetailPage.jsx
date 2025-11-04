@@ -4,7 +4,7 @@ import Navbar from "../components/NavbarBlack";
 import FeatureBar from "../components/FeatureBar";
 import ExtraContactSection from "../components/ExtraContactSection";
 import PortfolioDetailSection from "../components/PortfolioDetailSection";
-import ResponsiveImage from "../components/ImageBackground";
+import ResponsiveImageBlack from "../components/ImageBackgroundBlack";
 import StartImg from "../assets/images/aboutuspage/banner2.png"
 export default function PortfolioDetailPage() {
   return (
@@ -13,7 +13,7 @@ export default function PortfolioDetailPage() {
       <PortfolioHeader />
       <FeatureBar />
       <PortfolioDetailSection />
-      <ResponsiveImage src={StartImg} alt="Portfolio Hero" />
+      <ResponsiveImageBlack src={StartImg} alt="Portfolio Hero" />
       <ExtraContactSection />
       <FooterSection />
       {/* ... */}

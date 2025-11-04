@@ -33,7 +33,7 @@ export default function ContactUsSection() {
           </form>
           <button
             type="submit"
-            className="mt-5 w-fit px-6 py-2 rounded-none font-inter font-medium text-white bg-[#4D696C] hover:bg-[#3a5051] transition"
+            className="mt-16 w-fit px-6 py-2 rounded-none font-inter font-medium text-white bg-[#4D696C] hover:bg-[#3a5051] transition"
             style={{ letterSpacing: 0.5 }}
           >
             START YOUR JOURNEY
@@ -55,17 +55,17 @@ export default function ContactUsSection() {
         {/* Email/Phone */}
         <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] flex flex-col gap-1 text-justify max-w-xs">
           <span className="font-inter text-[#4D696C] uppercase mb-1">OUR EMAIL & PHONE</span>
-          <span className="font-playfairdisplay md:text-[1.25rem] text-black">info@velainteriors.com</span>
-          <span className="font-playfairdisplay md:text-[1.25rem] text-black">003 404 507 1200</span>
+          <span className="font-playfairdisplay md:text-[1.4rem] text-black">info@velainteriors.com</span>
+          <span className="font-playfairdisplay md:text-[1.4rem] text-black">003 404 507 1200</span>
         </div>
         {/* Line Image */}
         <div className="hidden md:flex flex-col items-center justify-center">
           <img src={LineImg} alt="" className="h-16 w-auto" />
         </div>
         {/* Address - centered */}
-        <div className="col-span-1 text-[1.01rem] md:text-[1.25rem] font-inter text-black flex flex-col gap-1 items-center text-center max-w-xs mx-auto">
+        <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] font-inter text-black flex flex-col gap-1 items-center text-center max-w-xs mx-auto">
           <span className="text-[#4D696C] uppercase mb-1">STUDIO ADDRESS</span>
-          <span className="font-playfairdisplay md:text-[1.25rem]">
+          <span className="font-playfairdisplay md:text-[1.4rem]">
             123 Peachtree Lane,<br />Suite 400, Atlanta, GA 30309
           </span>
         </div>
@@ -74,9 +74,9 @@ export default function ContactUsSection() {
           <img src={LineImg} alt="" className="h-16 w-auto" />
         </div>
         {/* Hours */}
-        <div className="col-span-1 text-[1.01rem] md:text-[1.25rem] flex flex-col gap-1 text-justify max-w-xs">
+        <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] flex flex-col gap-1 text-justify max-w-xs">
           <span className="font-inter text-[#4D696C] uppercase mb-1">STUDIO HOURS</span>
-          <span className="font-playfairdisplay md:text-[1.25rem] text-black">Monday – Friday<br />10am – 6pm</span>
+          <span className="font-playfairdisplay md:text-[1.4rem] text-black">Monday – Friday<br />10am – 6pm</span>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
-import Img1 from "../assets/images/contact/1.png";
-import Img2 from "../assets/images/contact/2.png";
-import Img3 from "../assets/images/contact/3.png";
+import Img1 from "../assets/images/works/12.jpg";
+import Img2 from "../assets/images/contact/transform2.jpeg";
+import Img3 from "../assets/images/contact/transform3.jpg";
 
 export default function ContactSection() {
   return (

@@ -78,7 +78,7 @@ export default function HeroSection() {
         </div>
 
         {/* Info Card above the blur overlay */}
-        <div className="absolute right-3 md:right-10 lg:right-20 bottom-6 md:bottom-16 max-w-[92vw] md:max-w-lg rounded-md px-4 md:px-6 py-3 text-base md:text-2xl text-white font-light tracking-wide font-inter bg-transparent shadow-none z-30 text-left">
+        <div className="absolute right-3 md:right-10 lg:right-20 bottom-6 md:bottom-20 max-w-[92vw] md:max-w-lg rounded-md px-4 md:px-6 py-3 text-base md:text-2xl text-white font-light tracking-wide font-inter bg-transparent shadow-none z-30 text-left">
           LOREM IPSUM DOLOR SIT AMET CONSECTETUR, SUSPENDISSE ORCI NISI, CONGUE EGESTAS EGESTAS DUIS PORTA TURPIS, JUSTO GRAVIDA FDDZDF GRSDDFT LOREM FDZFFFERGA DSAFDFW FEARHR3ER6HTFTWSFT
         </div>
       </header>

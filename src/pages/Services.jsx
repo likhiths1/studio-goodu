@@ -35,19 +35,19 @@ export default function AboutUs() {
     {/* Timeline */}
     <div className="relative flex flex-col items-center gap-20">
       {/* Center vertical line */}
-      <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 w-px h-full bg-[#2F2F2F]/30"></div>
+      <div className="pointer-events-none hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-px h-full bg-[#2F2F2F]/30"></div>
 
       {/* Top diamond marker */}
       <div className="w-2.5 h-2.5 rotate-45 bg-black/80"></div>
 
       {/* 01 - Right side */}
       <div className="relative flex justify-end w-full">
-        <div className="max-w-[28rem] text-right md:mr-[calc(50%-1.25rem)]">
-          <div className="text-black/50 italic mb-2 md:mb-4 text-sm md:text-base">01.</div>
-          <h3 className="font-playfairdisplay text-xl md:text-2xl text-black mb-2">
+        <div className="max-w-[40rem] text-right px-4 md:px-0 md:mr-[calc(60%-6rem)] md:pr-10">
+          <div className="text-black/50 italic mb-2 md:mb-4 text-sm md:text-3xl">01.</div>
+          <h3 className="font-playfairdisplay text-xl md:text-6xl text-black mb-2">
             Discovery Call
           </h3>
-          <p className="font-inter text-xs md:text-[1.05rem] text-black/70 leading-relaxed">
+          <p className="font-inter text-xs md:text-[1.6rem] text-black/70 leading-relaxed">
             As the founder of Vela, I’ve always believed that interior design is more than just creating
             beautiful spaces — it’s about crafting environments that inspire, comfort, and elevate the
             everyday experience.
@@ -57,12 +57,12 @@ export default function AboutUs() {
 
       {/* 02 - Left side */}
       <div className="relative flex justify-start w-full">
-        <div className="max-w-[28rem] text-left md:ml-[calc(50%-1.25rem)]">
-          <div className="text-black/50 italic mb-2 md:mb-4 text-sm md:text-base">02.</div>
-          <h3 className="font-playfairdisplay text-xl md:text-2xl text-black mb-2">
+        <div className="max-w-[40rem] text-left px-4 md:px-0 md:ml-[calc(60%-6rem)] md:pl-10">
+          <div className="text-black/50 italic mb-2 md:mb-4 text-sm md:text-3xl">02.</div>
+          <h3 className="font-playfairdisplay text-xl md:text-6xl text-black mb-2">
             Contract / Proposal
           </h3>
-          <p className="font-inter text-xs md:text-[1.05rem] text-black/70 leading-relaxed">
+          <p className="font-inter text-xs md:text-[1.6rem] text-black/70 leading-relaxed">
             As the founder of Vela, I’ve always believed that interior design is more than just creating
             beautiful spaces — it’s about crafting environments that inspire, comfort, and elevate the
             everyday experience.
@@ -72,12 +72,12 @@ export default function AboutUs() {
 
       {/* 03 - Right side */}
       <div className="relative flex justify-end w-full">
-        <div className="max-w-[28rem] text-right md:mr-[calc(50%-1.25rem)]">
-          <div className="text-black/50 italic mb-2 md:mb-4 text-sm md:text-base">03.</div>
-          <h3 className="font-playfairdisplay text-xl md:text-2xl text-black mb-2">
+        <div className="max-w-[40rem] text-right md:mr-[calc(60%-6rem)]">
+          <div className="text-black/50 italic mb-2 md:mb-4 text-sm md:text-3xl">03.</div>
+          <h3 className="font-playfairdisplay text-xl md:text-6xl text-black mb-2">
             Initial Concept
           </h3>
-          <p className="font-inter text-xs md:text-[1.05rem] text-black/70 leading-relaxed">
+          <p className="font-inter text-xs md:text-[1.6rem] text-black/70 leading-relaxed">
             As the founder of Vela, I’ve always believed that interior design is more than just creating
             beautiful spaces — it’s about crafting environments that inspire, comfort, and elevate the
             everyday experience.
@@ -87,12 +87,12 @@ export default function AboutUs() {
 
       {/* 04 - Left side */}
       <div className="relative flex justify-start w-full">
-        <div className="max-w-[28rem] text-left md:ml-[calc(50%-1.25rem)]">
-          <div className="text-black/50 italic mb-2 md:mb-4 text-sm md:text-base">04.</div>
-          <h3 className="font-playfairdisplay text-xl md:text-2xl text-black mb-2">
+        <div className="max-w-[40rem] text-left md:ml-[calc(60%-6rem)]">
+          <div className="text-black/50 italic mb-2 md:mb-4 text-sm md:text-3xl">04.</div>
+          <h3 className="font-playfairdisplay text-xl md:text-6xl text-black mb-2">
             Project Implementation
           </h3>
-          <p className="font-inter text-xs md:text-[1.05rem] text-black/70 leading-relaxed">
+          <p className="font-inter text-xs md:text-[1.6rem] text-black/70 leading-relaxed">
             As the founder of Vela, I’ve always believed that interior design is more than just creating
             beautiful spaces — it’s about crafting environments that inspire, comfort, and elevate the
             everyday experience.
@@ -102,12 +102,12 @@ export default function AboutUs() {
 
       {/* 05 - Right side */}
       <div className="relative flex justify-end w-full">
-        <div className="max-w-[28rem] text-right md:mr-[calc(50%-1.25rem)]">
-          <div className="text-black/50 italic mb-2 md:mb-4 text-sm md:text-base">05.</div>
-          <h3 className="font-playfairdisplay text-xl md:text-2xl text-black mb-2">
+        <div className="max-w-[40rem] text-right md:mr-[calc(60%-6rem)]">
+          <div className="text-black/50 italic mb-2 md:mb-4 text-sm md:text-3xl">05.</div>
+          <h3 className="font-playfairdisplay text-xl md:text-6xl text-black mb-2">
             Finishing Touches
           </h3>
-          <p className="font-inter text-xs md:text-[1.05rem] text-black/70 leading-relaxed">
+          <p className="font-inter text-xs md:text-[1.6rem] text-black/70 leading-relaxed">
             As the founder of Vela, I’ve always believed that interior design is more than just creating
             beautiful spaces — it’s about crafting environments that inspire, comfort, and elevate the
             everyday experience.
@@ -120,6 +120,8 @@ export default function AboutUs() {
     </div>
   </div>
 </section>
+
+
 
 
 
