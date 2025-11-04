@@ -11,7 +11,7 @@ export default function ContactSection() {
           {/* TRANSFORM Row */}
           <div className="flex items-center w-full justify-start gap-0 md:-ml-[6vw]">
             <span
-              className="block text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular tracking-[-0.07em] ml-[1vw]"
+              className="block text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular tracking-[-0.08em] ml-[1vw]"
               style={{ color: "#D6AF60" }}
             >
               TRANSFORM
@@ -26,7 +26,7 @@ export default function ContactSection() {
           {/* YOUR LIVING Row */}
           <div className="flex items-center justify-center w-full gap-0 -mt-[1.2rem] md:-mt-[2.3rem]">
             <span
-              className="block text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular md:tracking-[-0.09em] whitespace-nowrap"
+              className="block text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular md:tracking-[-0.04em] whitespace-nowrap"
               style={{ color: "#4D696C" }}
             >
               YOUR LIVING
@@ -37,11 +37,11 @@ export default function ContactSection() {
             <img
               src={Img1}
               alt=""
-              className="mr-0 md:mr-0 w-[88px] h-[88px] md:w-[176px] md:h-[176px] object-cover"
+              className="mr-0 md:mr-36 w-[88px] h-[88px] md:w-[176px] md:h-[176px] object-cover"
               draggable={false}
             />
             <span
-              className="block text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular md:tracking-[-0.07em] -ml-20 md:-ml-40"
+              className="block text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular md:tracking-[-0.08em] -ml-20 md:-ml-40"
               style={{ color: "#D6AF60" }}
             >
               INTO A
@@ -50,7 +50,7 @@ export default function ContactSection() {
           {/* MASTERPIECE Row - overlap text on image and move text left on mobiles */}
           <div className="relative flex items-center w-full justify-end gap-0 -mt-[1.3rem] md:-mt-[2.5rem]">
             <span
-              className="block absolute md:static text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular md:tracking-[-0.07em] ml-0 md:-mr-[12rem]"
+              className="block absolute md:static text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular md:tracking-[-0.08em] ml-0 md:-mr-[24rem]"
               style={{
                 color: "#4D696C",
                 right: "1.5rem", // move left from right edge on mobile by 1.5rem
@@ -62,7 +62,7 @@ export default function ContactSection() {
             <img
               src={Img3}
               alt=""
-              className="ml-2 md:ml-8 w-[88px] h-[88px] md:w-[176px] md:h-[176px] object-cover relative z-10"
+              className="ml-2 md:ml-36 md:mb-24 w-[88px] h-[88px] md:w-[176px] md:h-[176px] object-cover relative z-10"
               draggable={false}
             />
           </div>

@@ -1,25 +1,28 @@
-import ConstructionImg from "../assets/images/services/construction.png";
+import ArchitectureImg from "../assets/images/services/architecture.jpg";
+import ConstructionImg from "../assets/images/services/construction.jpg";
+import InteriorImg from "../assets/images/services/interior.jpg";
+import TurnkeyImg from "../assets/images/services/turnkey.jpg";
 
 const services = [
   {
     title: "ARCHITECTURE",
-    description: "Lorem ipsum dolor sit amet consectetur. Massa mattis lorem magna non elit. Mauris suscipit erat turpis nulla sit amet proin. Amet posuere ac ligula diam sed rhoncus suspendisse euismod. Imperdiet a ornare adipcing scelerisq.",
+    description: "Designing structures that inspire and endure.We approach architecture as an art of balance between form and feeling, innovation and integrity. Each project is guided by context, purpose, and the human experience it holds. From spatial planning to material selection, every line is drawn with intention.",
     included: [
-      "DESIGN CONSULTATIONS",
-      "PERSONALIZED FURNITURE SELECTION",
-      "CUSTOM COLOR PALETTE"
+      "⁠Conceptual & Schematic Design",
+      "Structural Coordination & Site Planning",
+      "Spatial Flow & Elevation Detailing"
     ],
     price: "₹5,000 to 30,000 inr*",
-    image: ConstructionImg,
+    image: ArchitectureImg,
     imagePosition: "right"
   },
   {
     title: "CONSTRUCTION",
-    description: "Lorem ipsum dolor sit amet consectetur. Massa mattis lorem magna non elit. Mauris suscipit erat turpis nulla sit amet proin. Amet posuere ac ligula diam sed rhoncus suspendisse euismod. Imperdiet a ornare adipcing scelerisq.",
+    description: "Building design into lasting reality. Our construction services bring design to life with precision, integrity, and craftsmanship. From foundation to finish, we ensure every element reflects both function and finesse. Guided by timelines, transparency, and trust, we turn architectural visions into tangible experiences that stand the test of time.",
     included: [
-      "DESIGN CONSULTATIONS",
-      "PERSONALIZED FURNITURE SELECTION",
-      "CUSTOM COLOR PALETTE"
+      "Structural Planning & Coordination",
+      "Material Procurement & Quality Management",
+      "On-Site Supervision & Project Delivery"
     ],
     price: "₹5,000 to 30,000 inr*",
     image: ConstructionImg,
@@ -27,26 +30,26 @@ const services = [
   },
   {
     title: "INTERIORS",
-    description: "Lorem ipsum dolor sit amet consectetur. Massa mattis lorem magna non elit. Mauris suscipit erat turpis nulla sit amet proin. Amet posuere ac ligula diam sed rhoncus suspendisse euismod. Imperdiet a ornare adipcing scelerisq.",
+    description: "Designing spaces that feel as good as they look.At Studio Goodu, interiors go beyond aesthetics they’re about emotion, flow, and everyday ease. We curate light, texture, and proportion to craft spaces that reflect your personality while maintaining timeless sophistication. Each element is designed with intention, blending comfort with understated luxury.",
     included: [
-      "DESIGN CONSULTATIONS",
-      "PERSONALIZED FURNITURE SELECTION",
-      "CUSTOM COLOR PALETTE"
+      "Interior Concept & Space Planning",
+      "Bespoke Furniture & Lighting Selection",
+      "Custom Material & Color Palettes"
     ],
     price: "₹5,000 to 30,000 inr*",
-    image: ConstructionImg,
+    image: InteriorImg,
     imagePosition: "right"
   },
   {
     title: "TURNKEY PROJECTS",
-    description: "Lorem ipsum dolor sit amet consectetur. Massa mattis lorem magna non elit. Mauris suscipit erat turpis nulla sit amet proin. Amet posuere ac ligula diam sed rhoncus suspendisse euismod. Imperdiet a ornare adipcing scelerisq.",
+    description: "From concept to completion seamlessly executed. Our turnkey solutions offer a complete design-to-delivery experience. From the first sketch to the final handover, we manage every detail with precision, transparency, and craftsmanship. Each project reflects our commitment to quality, ensuring your vision is realized effortlessly and elegantly.",
     included: [
-      "DESIGN CONSULTATIONS",
-      "PERSONALIZED FURNITURE SELECTION",
-      "CUSTOM COLOR PALETTE"
+      "End-to-End Project Management",
+      "Material Sourcing & Quality Control",
+      "Material Sourcing & Quality Control"
     ],
     price: "₹5,000 to 30,000 inr*",
-    image: ConstructionImg,
+    image: TurnkeyImg,
     imagePosition: "left"
   }
 ];
@@ -62,10 +65,10 @@ export default function ServicesDetailSection() {
               service.imagePosition === "right" 
                 ? "md:flex-row" 
                 : "md:flex-row-reverse"
-            } gap-8 md:gap-12 items-start`}
+            } gap-8 md:gap-12 items-stretch`}
           >
             {/* Content Side */}
-            <div className="flex-1 space-y-6">
+            <div className="flex-1 space-y-12">
               {/* Title */}
               <h2 className="font-inter font-medium text-2xl md:text-[3.3rem] text-black tracking-tight">
                 {service.title}
@@ -94,22 +97,14 @@ export default function ServicesDetailSection() {
               </div>
             </div>
 
-            {/* Image Side with Price Below */}
-            <div className="flex-shrink-0 w-full md:w-[280px] lg:w-[320px] space-y-4">
+            {/* Image Side (expanded) */}
+            <div className="flex-shrink-0 w-full md:w-[380px] lg:w-[440px] self-stretch">
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-[240px] md:h-[280px] object-cover shadow-md"
+                className="w-full h-full md:h-full object-cover shadow-md min-h-[360px]"
                 draggable={false}
               />
-              
-              {/* Pricing under image */}
-              <div>
-                <p className="font-inter text-xs md:text-lg text-black mb-2 inline-block border-b border-black/20 pb-2">INVESTMENT</p>
-                <p className="font-playfairdisplay text-lg md:text-[2.0rem] text-[#8D8271]">
-                  {service.price}
-                </p>
-              </div>
             </div>
           </div>
         ))}

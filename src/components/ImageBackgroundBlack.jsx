@@ -11,7 +11,7 @@ const ResponsiveImageBlack = ({ src, alt = "", className = "" }) => {
       />
 
       {/* Overlay Box - Centered, 1.2x size, half on/half off image */}
-      <div className="absolute h-full left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2 bg-black text-white p-10 sm:p-12 md:p-14 lg:p-16 w-[336px] sm:w-[384px] md:w-[432px] shadow-2xl">
+      <div className="absolute h-full left-1/2 bottom-0 -translate-x-1/2 translate-y-1/4 bg-black text-white p-10 sm:p-12 md:p-14 lg:p-16 w-[336px] sm:w-[384px] md:w-[432px] shadow-2xl">
         {/* Chair Icon */}
         <div className="flex justify-center mb-7">
           <svg

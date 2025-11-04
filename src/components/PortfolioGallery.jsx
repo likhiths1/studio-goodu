@@ -55,7 +55,7 @@ export default function PortfolioGallery() {
               </div>
               <div className="pt-3 pb-1">
                 <div className="mt-8 font-playfairdisplay font-medium text-[1.3rem] md:text-[2.8rem] text-black mb-1">{item.title}</div>
-                <Link to={`/portfolio/${i + 1}`} className="flex items-center gap-1 font-inter text-xs text-[1.8rem] text-black mt-4 hover:opacity-80 transition">
+                <Link to={`/portfolio/${i + 1}`} className="flex items-center gap-1 font-inter text-xs text-[1.4rem] text-black mt-4 hover:opacity-80 transition">
                   {item.details}
                 </Link>
               </div>

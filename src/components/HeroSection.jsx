@@ -1,5 +1,5 @@
 import Navbar from './Navbar';
-import HeroBg from '../assets/images/herosection/hero-background.png';
+import HeroBg from '../assets/images/herosection/hero-back.jpg';
 import BlurOverlay from '../assets/images/herosection/blur.png';
 
 export default function HeroSection() {
@@ -17,6 +17,8 @@ export default function HeroSection() {
           className="absolute inset-0 z-0 w-full h-full object-cover brightness-100"
           draggable={false}
         />
+        {/* Dark blur overlay */}
+        <div className="absolute inset-0 z-[5] bg-black/40 backdrop-blur-[1px] pointer-events-none" />
 
         {/* Navbar */}
         <div className="relative z-50">
@@ -26,7 +28,7 @@ export default function HeroSection() {
         {/* Hero Content */}
         <div className="relative z-10 w-full h-full pt-14 md:pt-24 pb-16 md:pb-24 lg:pb-28 flex flex-col">
           <span className="text-lg md:text-2xl text-white tracking-[0.08em] font-light mb-7 mt-2 md:mt-0 ml-6 md:ml-36">
-            LOREM IPSUM DOLOR
+            THE ART OF LIVING WELL
           </span>
 
           {/* Centered Studio/Goodu block with special alignment */}
@@ -79,7 +81,8 @@ export default function HeroSection() {
 
         {/* Info Card above the blur overlay */}
         <div className="absolute right-3 md:right-10 lg:right-20 bottom-6 md:bottom-20 max-w-[92vw] md:max-w-lg rounded-md px-4 md:px-6 py-3 text-base md:text-2xl text-white font-light tracking-wide font-inter bg-transparent shadow-none z-30 text-left">
-          LOREM IPSUM DOLOR SIT AMET CONSECTETUR, SUSPENDISSE ORCI NISI, CONGUE EGESTAS EGESTAS DUIS PORTA TURPIS, JUSTO GRAVIDA FDDZDF GRSDDFT LOREM FDZFFFERGA DSAFDFW FEARHR3ER6HTFTWSFT
+          ARCHITECTURAL & INTERIOR DESIGN STUDIO INSPIRED BY CULTURE, CRAFT, AND CONSCIOUS LIVING
+
         </div>
       </header>
     </>

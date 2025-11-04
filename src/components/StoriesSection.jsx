@@ -43,9 +43,9 @@ export default function StoriesSection() {
         </h2>
         {/* Responsive grid for layout control */}
         <div className="relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 md:ml-[-4vw]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8 md:ml-[-4vw]">
             {testimonials.map((item, idx) => (
-              <div key={idx} className="relative w-full aspect-square flex-shrink-0">
+              <div key={idx} className="relative w-full aspect-square sm:aspect-[5/6] lg:aspect-[4/5] flex-shrink-0">
                 {/* Square Image */}
                 <img
                   src={storyImages[idx % storyImages.length]}
@@ -57,7 +57,7 @@ export default function StoriesSection() {
                 {/* Bridge box between image and testimonial */}
                 <div
                   className="absolute right-0 bottom-[124px] bg-[#EBD9C9] z-10"
-                  style={{ borderRadius: 0, width: "76%", height: "32px", maxWidth: "95%" }}
+                  style={{ borderRadius: 0, width: "88%", height: "32px", maxWidth: "99%" }}
                   aria-hidden="true"
                 />
                 {/* Sharp-edged Testimonial Card */}
@@ -65,9 +65,9 @@ export default function StoriesSection() {
                   className="absolute right-0 bottom-0 bg-[#495B58] text-white shadow-xl px-5 py-5 sm:px-6 sm:py-6 md:px-6 md:py-7 flex flex-col justify-between z-20"
                   style={{
                     borderRadius: 0,
-                    width: "76%",
+                    width: "88%",
                     minHeight: "120px",
-                    maxWidth: "95%",
+                    maxWidth: "99%",
                   }}
                 >
                   <span className="block text-2xl md:text-3xl leading-none mb-2 select-none">“</span>
@@ -85,7 +85,7 @@ export default function StoriesSection() {
           </div>
           {/* Right Arrow affordance */}
           <button
-            className="hidden sm:flex items-center justify-center absolute top-1/2 right-[-6px] sm:right-[-8px] md:right-[-12px] translate-y-[-50%] bg-white/80 hover:bg-white text-black shadow-sm p-2 rounded-full border border-gray-200 transition z-30"
+            className="hidden sm:flex items-center justify-center absolute top-1/2 right-0 translate-x-[calc(100%+1rem)] -translate-y-1/2 bg-white/80 hover:bg-white text-black shadow-sm p-2 rounded-full border border-gray-200 transition z-30"
             aria-label="More stories"
             type="button"
           >

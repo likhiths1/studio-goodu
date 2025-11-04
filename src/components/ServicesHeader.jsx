@@ -1,4 +1,4 @@
-import AboutImg from "../assets/images/services/servicesheader.png";
+import AboutImg from "../assets/images/services/servicesheader.jpg";
 
 export default function ServicesHeader() {
   return (

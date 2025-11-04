@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import BlogBg from "../assets/images/blogs/bg.png";
+import BlogBg from "../assets/images/blogs/blog1.jpg";
+import BlogBg2 from "../assets/images/blogs/stor3.jpg";
 
 const BLOGS = [
   {
@@ -12,7 +13,7 @@ const BLOGS = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   },
   {
-    bg: BlogBg,
+    bg: BlogBg2,
     cat: "INTERIORS",
     date: "22 March 2025",
     title: "The Future of Living Spaces",
@@ -51,7 +52,7 @@ export default function BlogsSection() {
             </div>
           </div>
         </div>
-        <div className="w-full relative rounded-sm overflow-hidden shadow-none h-[380px] sm:h-[520px] md:h-[760px] md:ml-[-4vw]">
+        <div className="w-full relative rounded-sm overflow-visible shadow-none h-[380px] sm:h-[520px] md:h-[760px] md:ml-[-2vw]">
           {/* Slides container */}
           <div className="absolute inset-0 w-full h-full"
                style={{ perspective: 900, overflow: "clip" }}>
@@ -80,7 +81,7 @@ export default function BlogsSection() {
           </div>
           {/* Arrow navigation */}
           <button
-            className="absolute top-1/2 right-2 sm:-right-4 z-30 translate-y-[-50%] bg-white/80 hover:bg-white text-black shadow-sm p-2 rounded-full border border-gray-200 transition"
+            className="absolute top-1/2 right-0 translate-x-full z-30 -translate-y-1/2 bg-white/80 hover:bg-white text-black shadow-sm p-2 rounded-full border border-gray-200 transition"
             onClick={nextBlog}
             aria-label="Next blog"
             disabled={direction !== 0}
@@ -92,7 +93,7 @@ export default function BlogsSection() {
         </div>
         {/* CTA button */}
         <div className="w-full flex justify-center mt-8 md:mt-12">
-          <Link to="/blog" className="inline-block px-6 md:px-7 py-2.5 md:py-3 bg-black text-white text-xs md:text-sm tracking-tight hover:opacity-90 transition" style={{ borderRadius: 0 }}>
+          <Link to="/blog" className="inline-block px-8 md:px-9 py-2.5 md:py-3 bg-black text-white text-xs md:text-sm tracking-tight hover:opacity-90 transition" style={{ borderRadius: 0 }}>
             VIEW ALL
           </Link>
         </div>
@@ -116,7 +117,7 @@ function BlogSlide({ blog }) {
           absolute bottom-0 right-0 
           bg-white shadow-md 
           px-5 py-6 sm:px-7 sm:py-8 md:px-9 md:py-10
-          w-[94%] xs:w-[88%] sm:w-[82%] md:w-[70%] lg:w-[70%]
+          w-[96%] xs:w-[90%] sm:w-[86%] md:w-[82%] lg:w-[80%]
           h-[62%] sm:h-[65%] md:h-[68%]
           flex flex-col justify-start
         " 

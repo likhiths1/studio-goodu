@@ -6,23 +6,23 @@ import Process04 from '../assets/images/process/04.png';
 const steps = [
   {
     img: Process01,
-    title: "TETUR. SUSPENDISSE ORCI NISL",
-    desc: "Lorem ipsum dolor sit amet consectetur. Ac sagittis ultrices est nisl dictum. Ultrices magna ut integer neque. Sed magnis augue feugiat tristique. Pellentesque fringilla vel etiam cursus placerat id. Faucibus odio arcu dapibus mauris. Ut morbi quam consectetur convallis id. Tincidunt pretium tellus facilisis egestas. Risus sit quam rhoncus risus. Elit tellus elit scelerisque enim vitae volutpat.",
+    title: "DISCOVER",
+    desc: "Understanding You. Every great space begins with a story of yours. We start by listening, observing, and uncovering how you live, work, and feel. This stage defines not just what we build, but why we build it.",
   },
   {
     img: Process02,
-    title: "TETUR. SUSPENDISSE ORCI NISL",
-    desc: "Congue risus purus feugiat non. Sed sagittis nisi sagittis dui turpis. Volutpat dictum dolor dictum erat id. Quisque aliquam pharetra lectus ipsum. Vestibulum id dictum donec risus blandit. Mauris donec ac magna. Etiam elit dictum ultrices.",
+    title: "DESIGN",
+    desc: "Concept to Creation. Here, imagination meets precision. We translate your aspirations into spatial concepts, balancing form, material, and emotion. Each detail is thoughtfully sketched, ensuring harmony between function and beauty.",
   },
   {
     img: Process03,
-    title: "TETUR. SUSPENDISSE ORCI NISL",
-    desc: "Mauris eget pretium nullam nec. Faucibus a velit dictum cursus blandit. Et nulla varius pharetra enim feugiat placerat. Quisque tortor orci porttitor. Vestibulum consequat mauris enim tortor. Scelerisque posuere orci placerat feugiat euismod. Tempus dolor.",
+    title: "DEVELOP",
+    desc: "Refine. Resolve. Realize. Our team collaborates closely with artisans, engineers, and partners to bring every element to life. From materials and finishes to lighting and ergonomics, perfection is in the process.",
   },
   {
     img: Process04,
-    title: "TETUR. SUSPENDISSE ORCI NISL",
-    desc: "Cras ornare gravida molestie. Leo integer pulvinar magna pretium. Urna gravida arcu quam aliquam. Ut fermentum commodo risus cursus dictum. Nunc dictum in sit mi gravida tincidunt. Nulla mattis viverra tortor erat dictumst facilisis sagittis.",
+    title: "DELIVER",
+    desc: "Beyond Handover. When your space is ready, it’s more than complete, it’s alive. We walk with you through the final reveal, ensuring every line, light, and layer resonates with your vision. Our relationship doesn’t end here; it evolves, just like your space.",
   },
 ];
 
@@ -65,11 +65,11 @@ export default function OurProcess() {
                   i % 2 === 1 ? 'md:text-right md:pr-12' : 'md:text-left md:pr-12'
                 }`}
               >
-                <h3 className={`text-xl sm:text-2xl md:text-3xl font-bold text-[#222] tracking-wide mb-2 font-inter uppercase ${i % 2 === 1 ? '' : 'md:ml-12'}`}>
+                <h3 className={`text-xl sm:text-2xl md:text-[43px] tracking-[-0.08em] font-bold text-[#222] tracking-wide mb-8 font-inter uppercase ${i % 2 === 1 ? '' : 'md:ml-12'}`}>
                   {step.title}
                 </h3>
                 <p
-                  className={`text-sm sm:text-base md:text-lg font-normal text-[#2b2623] leading-[1.8] font-inter max-w-3xl mx-auto ${
+                  className={`text-sm sm:text-base md:text-xl font-normal text-[#2b2623] leading-[1.8] font-inter max-w-3xl mx-auto ${
                     i % 2 === 1 ? 'md:ml-auto md:mr-0 text-right' : 'md:mx-12'
                   }`}
                 >

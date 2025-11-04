@@ -11,7 +11,7 @@ export default function ContactSection() {
           {/* TRANSFORM Row */}
           <div className="flex items-center w-full justify-start gap-0 md:-ml-[6vw]">
             <span
-              className="block text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular tracking-[-0.07em] ml-[1vw]"
+              className="block text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular tracking-[-0.08em] ml-[1vw]"
               style={{ color: "#D6AF60" }}
             >
               TRANSFORM
@@ -41,7 +41,7 @@ export default function ContactSection() {
               draggable={false}
             />
             <span
-              className="block text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular md:tracking-[-0.07em] -ml-20 md:-ml-40"
+              className="block text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular md:tracking-[-0.08em] -ml-20 md:-ml-40"
               style={{ color: "#D6AF60" }}
             >
               INTO A
@@ -50,7 +50,7 @@ export default function ContactSection() {
           {/* MASTERPIECE Row - overlap text on image and move text left on mobiles */}
           <div className="relative flex items-center w-full justify-end gap-0 -mt-[1.3rem] md:-mt-[2.5rem]">
             <span
-              className="block absolute md:static text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular md:tracking-[-0.07em] ml-0 md:-mr-[24rem]"
+              className="block absolute md:static text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular md:tracking-[-0.08em] ml-0 md:-mr-[24rem]"
               style={{
                 color: "#4D696C",
                 right: "1.5rem", // move left from right edge on mobile by 1.5rem

@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import Work1 from '../assets/images/works/1.jpg';
 import Work2 from '../assets/images/works/2.jpeg';
 import Work3 from '../assets/images/works/3.jpeg';
@@ -16,7 +17,7 @@ import Work16 from '../assets/images/works/16.jpg';
 
 const collage = [
   // Row 1 (left, middle, right)
-  { src: Work1, style: "top-[40px] left-[0px] sm:left-[60px] md:left-[110px] lg:left-[110px] xl:left-[150px] 2xl:left-[160px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[320px] xl:w-[460px] 2xl:w-[500px] z-10" },
+  { src: Work1, style: "top-[40px] left-[0px] sm:left-[60px] md:left-[80px] lg:left-[80px] xl:left-[120px] 2xl:left-[40px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[320px] xl:w-[460px] 2xl:w-[560px] z-10" },
   { src: Work2, style: "top-[20px] left-[110px] sm:left-[320px] md:left-[400px] lg:left-[680px] xl:left-[940px] 2xl:left-[1000px] w-[180px] sm:w-[180px] md:w-[2200px] lg:w-[300px] xl:w-[320px] 2xl:w-[360px] z-20" },
   { src: Work3, style: "top-[20px] left-[300px] sm:left-[560px] md:left-[700px] lg:left-[1070px] xl:left-[1300px] 2xl:left-[1460px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[360px] xl:w-[420px] 2xl:w-[460px] z-10" },
   // Row 2 (staggered and denser)
@@ -39,8 +40,39 @@ const collage = [
 ];
 
 export default function OurWorks() {
+  const [activeImage, setActiveImage] = useState(null);
+  const hoverTimerRef = useRef(null);
+
+  const startHoverTimer = (src) => {
+    clearHoverTimer();
+    hoverTimerRef.current = setTimeout(() => setActiveImage(src), 5000);
+  };
+  const clearHoverTimer = () => {
+    if (hoverTimerRef.current) {
+      clearTimeout(hoverTimerRef.current);
+      hoverTimerRef.current = null;
+    }
+  };
+  const closeOverlay = () => setActiveImage(null);
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape') closeOverlay();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
   return (
-    <section className="w-full bg-[#FFF6ED] pb-8 md:pb-[80px] pt-14 px-0 sm:px-4 md:px-12 font-inter">
+    <section className="w-full bg-[#FFF6ED] pb-8 md:pb-[80px] pt-24 px-0 sm:px-4 md:px-12 font-inter">
+      {/* Hover-only animations (scoped) */}
+      <style>{`
+        @keyframes wobbleSoft { 0%,100% { transform: translate3d(0,0,0) rotate(0); } 25% { transform: translate3d(1px,-1px,0) rotate(-0.35deg);} 50% { transform: translate3d(-1px,1px,0) rotate(0.35deg);} 75% { transform: translate3d(0.6px,-0.6px,0) rotate(-0.2deg);} }
+        @keyframes squiggle { 0% { filter: drop-shadow(0 0 0 rgba(0,0,0,0)); } 50% { filter: drop-shadow(0 6px 10px rgba(0,0,0,0.22)); } 100% { filter: drop-shadow(0 0 0 rgba(0,0,0,0)); } }
+        .work-hover { transition: transform 480ms cubic-bezier(.2,.9,.2,1), box-shadow 480ms, filter 480ms; will-change: transform, filter; }
+        .work-hover:hover { animation: wobbleSoft 520ms ease-out, squiggle 520ms ease-out; transform: scale(1.02); box-shadow: 0 14px 34px -12px rgba(0,0,0,0.28); }
+      `}</style>
+
       <div className="max-w-[90rem] w-full mx-auto">
         {/* Heading + Subtitle */}
         <div className="relative flex flex-col gap-2 mb-8 md:mb-16">
@@ -63,13 +95,30 @@ export default function OurWorks() {
               key={i}
               src={src}
               alt={`work example ${i + 1}`}
-              className={`absolute object-cover object-center ${style}`}
+              className={`absolute object-cover object-center ${style} work-hover`}
               style={{ borderRadius: 0 }}
               draggable={false}
+              onMouseEnter={() => startHoverTimer(src)}
+              onMouseLeave={clearHoverTimer}
             />
           ))}
         </div>
       </div>
+
+      {/* Fullscreen overlay when hovered for >5s */}
+      {activeImage && (
+        <div
+          className="fixed inset-0 z-[1000] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 md:p-8 transition-opacity"
+          onClick={closeOverlay}
+        >
+          <img
+            src={activeImage}
+            alt="Highlighted work"
+            className="max-w-[92vw] max-h-[90vh] object-contain shadow-2xl"
+            draggable={false}
+          />
+        </div>
+      )}
     </section>
   );
 }
