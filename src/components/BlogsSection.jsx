@@ -40,16 +40,16 @@ export default function BlogsSection() {
   return (
     <section className="w-full bg-[#FFF6ED] py-14 md:py-24 px-2 sm:px-8 font-inter">
       <div className="max-w-[90rem] mx-auto">
-        <div className="flex flex-row justify-between items-start mb-7 md:mb-10">
-          <h2 className="text-[3.2rem] sm:text-[4rem] md:text-[10rem] leading-none font-medium tracking-tight text-black">
+        <div className="flex flex-row justify-between items-end mb-7 md:mb-10">
+          <h2 className="text-[3.2rem] sm:text-[4rem] md:text-[12rem] leading-none font-medium tracking-tight text-black md:-ml-[4vw]">
             BLOGS
           </h2>
-          <div className="mt-3 md:mt-0 md:text-right text-xs sm:text-base md:text-[1.2rem] md:leading-none text-black/80 font-inter font-regular">
+          <div className="md:text-right text-xs sm:text-base md:text-[1.6rem] md:leading-none text-black/80 font-inter font-regular md:mr-[4vw] md:w-94">
             TETUR. SUSPENDISSE ORCI NISL<br />
             CONGUE EGESTAS SAGITTIS
           </div>
         </div>
-        <div className="w-full relative rounded-sm overflow-hidden shadow-none h-[260px] sm:h-[340px] md:h-[420px]">
+        <div className="w-full relative rounded-sm overflow-hidden shadow-none h-[360px] sm:h-[480px] md:h-[720px]">
           {/* Slides container */}
           <div className="absolute inset-0 w-full h-full"
                style={{ perspective: 900, overflow: "clip" }}>
@@ -88,6 +88,12 @@ export default function BlogsSection() {
             </svg>
           </button>
         </div>
+        {/* CTA button */}
+        <div className="w-full flex justify-center mt-8 md:mt-12">
+          <Link to="/blogt" className="inline-block px-6 md:px-7 py-2.5 md:py-3 bg-black text-white text-xs md:text-sm tracking-tight hover:opacity-90 transition" style={{ borderRadius: 0 }}>
+            VIEW ALL
+          </Link>
+        </div>
       </div>
     </section>
   );
@@ -107,17 +113,19 @@ function BlogSlide({ blog }) {
       <div className="
           absolute bottom-0 right-0 
           bg-white shadow-md 
-          px-4 py-5 sm:px-6 sm:py-7 md:px-8 md:py-8
-          w-[96%] xs:w-[90%] sm:w-[78%] md:w-[66%] 
+          px-5 py-6 sm:px-7 sm:py-8 md:px-9 md:py-10
+          w-[96%] xs:w-[90%] sm:w-[78%] md:w-[64%]
+          h-[50%]
+          flex flex-col justify-start
         " 
         style={{ borderRadius: "16px 0 0 0.5rem" }}>
-        <div className="text-[0.72rem] sm:text-xs md:text-sm font-normal mb-1 text-gray-500">
+        <div className="text-[10px] sm:text-xs md:text-sm lg:text-base font-normal mb-3 text-gray-500">
           {blog.cat} &nbsp;&nbsp;|&nbsp;&nbsp; {blog.date}
         </div>
-        <div className="font-semibold text-[1.1rem] sm:text-xl mb-2 text-black">
+        <div className="font-semibold text-xl sm:text-2xl md:text-4xl lg:text-5xl mb-3 text-black leading-tight">
           {blog.title}
         </div>
-        <div className="text-xs md:text-sm lg:text-base text-[#606060] leading-snug sm:leading-relaxed">
+        <div className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[1.35rem] text-[#404040] leading-snug sm:leading-normal md:leading-relaxed line-clamp-4 sm:line-clamp-5 md:line-clamp-6">
           {blog.summary}
         </div>
       </div>

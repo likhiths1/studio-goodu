@@ -5,9 +5,11 @@ import GooduLogo from '../assets/images/herosection/goodu-logo.png';
 const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
   { name: 'Portfolio', href: '/portfolio' },
   { name: 'Pricing', href: '#' },
-  { name: 'Services', href: '/services' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact Us', href: '/contact' },
 ];
 
 export default function Navbar() {

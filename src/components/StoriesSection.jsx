@@ -23,10 +23,10 @@ export default function StoriesSection() {
   ];
 
   return (
-    <section className="w-full bg-[#FFF6ED] py-16 md:py-24 px-3 sm:px-8 font-inter min-h-[700px] md:min-h-[850px]">
+    <section className="w-full bg-[#FFF6ED] py-16 md:pt-[50px] md:pb-24 px-3 sm:px-8 font-inter min-h-[700px] md:min-h-[850px]">
       <div className="max-w-[90rem] mx-auto">
         {/* Heading */}
-        <h2 className="text-[3.2rem] sm:text-[3.7rem] md:text-[10rem] font-medium tracking-tight text-black leading-none mb-8 text-left">
+        <h2 className="text-[3.2rem] sm:text-[3.7rem] md:text-[12rem] font-medium tracking-tight text-black leading-none mb-8 text-left md:-ml-[4vw]">
           NAMMA<br />
           <span className="block">GOODU STORIES</span>
         </h2>
@@ -42,9 +42,15 @@ export default function StoriesSection() {
                 style={{ borderRadius: 0 }}
                 draggable={false}
               />
+              {/* Bridge box between image and testimonial */}
+              <div
+                className="absolute right-0 bottom-[124px] bg-[#EBD9C9] z-10"
+                style={{ borderRadius: 0, width: "76%", height: "32px", maxWidth: "95%" }}
+                aria-hidden="true"
+              />
               {/* Sharp-edged Testimonial Card */}
               <div
-                className="absolute right-0 bottom-0 bg-[#495B58] text-white shadow-xl px-5 py-5 sm:px-6 sm:py-6 md:px-6 md:py-7 flex flex-col justify-between"
+                className="absolute right-0 bottom-0 bg-[#495B58] text-white shadow-xl px-5 py-5 sm:px-6 sm:py-6 md:px-6 md:py-7 flex flex-col justify-between z-20"
                 style={{
                   borderRadius: 0,
                   width: "76%",
@@ -64,6 +70,16 @@ export default function StoriesSection() {
               </div>
             </div>
           ))}
+        </div>
+        {/* CTA button */}
+        <div className="w-full flex justify-center mt-10 md:mt-14">
+          <a
+            href="/contact"
+            className="inline-block px-6 md:px-7 py-2.5 md:py-3 bg-black text-white text-xs md:text-sm tracking-tight hover:opacity-90 transition"
+            style={{ borderRadius: 0 }}
+          >
+            CONTACT US
+          </a>
         </div>
       </div>
     </section>

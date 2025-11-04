@@ -29,22 +29,22 @@ const steps = [
 export default function OurProcess() {
   return (
     <section className="w-full py-16 px-3 sm:px-8 md:px-14 bg-[#FFF6ED] font-inter">
-      <div className="max-w-6xl w-full mx-auto">
+      <div className="max-w-[90rem] w-full mx-auto">
         {/* Section Title with left-center alignment */}
         <div className="relative flex flex-col mb-16">
-          <h2 className="font-inter font-medium text-black tracking-tight leading-tight text-5xl md:text-[10rem] mx-auto md:mx-0 md:-ml-[4vw] md:max-w-full">
+          <h2 className="font-inter font-medium text-black tracking-tight leading-tight text-5xl md:text-[12rem] mx-auto md:mx-0 md:-ml-[4vw] md:max-w-full">
             OUR PROCESS
           </h2>
           {/* Subtitle with right-center alignment */}
           <div className="mt-4 w-full flex justify-center md:justify-end">
-            <div className="text-xs md:text-[1.2rem] font-regular text-[#3a3532] leading-none md:mr-[4vw] text-center md:text-right max-w-full md:w-94">
+            <div className="text-xs md:text-[1.6rem] font-regular text-[#3a3532] leading-none md:mr-[4vw] text-center md:text-right max-w-full md:w-94">
               TETUR. SUSPENDISSE ORCI NISL.<br/>CONGUE EGESTAS SAGITTIS
             </div>
           </div>
         </div>
 
         {/* Steps */}
-        <div className="flex flex-col gap-16 md:gap-12">
+        <div className="flex flex-col gap-28 md:gap-32">
           {steps.map((step, i) => (
             <div
               key={i}
@@ -56,7 +56,7 @@ export default function OurProcess() {
                 <img
                   src={step.img}
                   alt={`Step 0${i + 1}`}
-                  className="w-28 md:w-44 select-none pointer-events-none"
+                  className="w-32 md:w-56 select-none pointer-events-none object-contain"
                   draggable={false}
                 />
               </div>
@@ -65,12 +65,12 @@ export default function OurProcess() {
                   i % 2 === 1 ? 'md:text-right md:pr-12' : 'md:text-left md:pr-12'
                 }`}
               >
-                <h3 className="text-lg md:text-xl md:ml-12 font-bold text-[#222] tracking-wide mb-1 font-inter uppercase">
+                <h3 className={`text-xl sm:text-2xl md:text-3xl font-bold text-[#222] tracking-wide mb-2 font-inter uppercase ${i % 2 === 1 ? '' : 'md:ml-12'}`}>
                   {step.title}
                 </h3>
                 <p
-                  className={`text-sm md:text-base font-normal text-[#2b2623] leading-[1.75] font-inter max-w-2xl mx-auto md:mx-0 ${
-                    i % 2 === 1 ? 'md:ml-[16rem] lg:ml-[16rem] xl:ml-[16rem] sm:ml-[16rem]' : 'md:mx-12'
+                  className={`text-sm sm:text-base md:text-lg font-normal text-[#2b2623] leading-[1.8] font-inter max-w-3xl mx-auto ${
+                    i % 2 === 1 ? 'md:ml-auto md:mr-0 text-right' : 'md:mx-12'
                   }`}
                 >
                   {step.desc}

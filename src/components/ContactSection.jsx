@@ -9,9 +9,9 @@ export default function ContactSection() {
         {/* Headline and decorative image alignment exactly as in Figma */}
         <div className="w-full mb-0 md:mb-0 mt-0 flex flex-col gap-0 leading-tight">
           {/* TRANSFORM Row */}
-          <div className="flex items-center w-full justify-start gap-0">
+          <div className="flex items-center w-full justify-start gap-0 md:-ml-[6vw]">
             <span
-              className="block text-[3.2rem] sm:text-[4rem] md:text-[12rem] font-regular tracking-tight ml-[3vw]"
+              className="block text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular tracking-[-0.07em] ml-[1vw]"
               style={{ color: "#D6AF60" }}
             >
               TRANSFORM
@@ -19,14 +19,14 @@ export default function ContactSection() {
             <img
               src={Img2}
               alt=""
-              className="ml-2 md:ml-8 w-[80px] h-[80px] md:w-[160px] md:h-[160px] object-cover"
+              className="ml-2 md:ml-2 w-[88px] h-[88px] md:w-[176px] md:h-[176px] object-cover"
               draggable={false}
             />
           </div>
           {/* YOUR LIVING Row */}
           <div className="flex items-center justify-center w-full gap-0 -mt-[1.2rem] md:-mt-[2.3rem]">
             <span
-              className="block text-[3.2rem] sm:text-[4rem] md:text-[12rem] font-regular tracking-tight"
+              className="block text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular md:tracking-[-0.09em] whitespace-nowrap"
               style={{ color: "#4D696C" }}
             >
               YOUR LIVING
@@ -37,11 +37,11 @@ export default function ContactSection() {
             <img
               src={Img1}
               alt=""
-              className="mr-0 md:mr-0 w-[80px] h-[80px] md:w-[160px] md:h-[160px] object-cover"
+              className="mr-0 md:mr-0 w-[88px] h-[88px] md:w-[176px] md:h-[176px] object-cover"
               draggable={false}
             />
             <span
-              className="block text-[3.2rem] sm:text-[4rem] md:text-[12rem] font-regular tracking-tight -ml-20 md:-ml-40"
+              className="block text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular md:tracking-[-0.07em] -ml-20 md:-ml-40"
               style={{ color: "#D6AF60" }}
             >
               INTO A
@@ -50,7 +50,7 @@ export default function ContactSection() {
           {/* MASTERPIECE Row - overlap text on image and move text left on mobiles */}
           <div className="relative flex items-center w-full justify-end gap-0 -mt-[1.3rem] md:-mt-[2.5rem]">
             <span
-              className="block absolute md:static text-[3.2rem] sm:text-[4rem] md:text-[12rem] font-regular tracking-tight ml-0 md:-mr-[12rem]"
+              className="block absolute md:static text-[3.2rem] sm:text-[4rem] md:text-[16rem] font-regular md:tracking-[-0.07em] ml-0 md:-mr-[12rem]"
               style={{
                 color: "#4D696C",
                 right: "1.5rem", // move left from right edge on mobile by 1.5rem
@@ -62,17 +62,17 @@ export default function ContactSection() {
             <img
               src={Img3}
               alt=""
-              className="ml-2 md:ml-8 w-[80px] h-[80px] md:w-[160px] md:h-[160px] object-cover relative z-10"
+              className="ml-2 md:ml-8 w-[88px] h-[88px] md:w-[176px] md:h-[176px] object-cover relative z-10"
               draggable={false}
             />
           </div>
         </div>
 
         {/* Row: Left text | Right form */}
-        <div className="w-full flex flex-col md:flex-row md:items-start md:justify-between mt-4">
+        <div className="w-full flex flex-col md:flex-row md:items-end md:justify-between mt-4">
           {/* Left Text */}
-          <div className="w-full md:w-1/2 flex md:justify-start justify-center pb-6 md:pb-0">
-            <span className="text-black font-bold text-base sm:text-lg leading-snug text-left">
+          <div className="w-full md:w-1/2 flex md:justify-start justify-center items-end pb-6 md:pb-0">
+            <span className="text-black font-bold text-2xl sm:text-3xl md:text-4xl leading-snug text-left">
               Lorem Ipsum
               <br />
               Dolor Sit Amet
@@ -102,7 +102,7 @@ export default function ContactSection() {
             />
             <button
               type="submit"
-              className="mt-2 text-black font-semibold text-[0.97rem] underline underline-offset-4 hover:opacity-80 transition"
+              className="mt-2 w-full bg-transparent border-b border-[#AAA] py-[9px] text-right text-black font-bold text-[1.05rem] tracking-wide hover:opacity-80 transition focus:outline-none"
               style={{ background: "none", border: "none" }}
             >
               CONTACT ME
