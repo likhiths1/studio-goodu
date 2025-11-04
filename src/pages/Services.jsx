@@ -5,6 +5,8 @@ import Navbar from "../components/NavbarBlack";
 import ExtraContactSection from "../components/ExtraContactSection";
 import ResponsiveImage from "../components/ImageBackground";
 import ServicesBanner from "../assets/images/services/servicesbanner.png";
+import ServicesSection from "../components/ServicesSection";
+import ServicesDetailSection from "../components/ServicesDetailSection";
 
 export default function AboutUs() {
   return (
@@ -12,6 +14,8 @@ export default function AboutUs() {
       <Navbar />
       <ServicesHeader />
       <FeatureBar />
+      <ServicesSection />
+      <ServicesDetailSection />
       <ResponsiveImage src={ServicesBanner} alt="" />
       <ExtraContactSection />
       <FooterSection />
