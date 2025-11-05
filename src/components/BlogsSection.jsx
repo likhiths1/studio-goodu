@@ -39,10 +39,10 @@ export default function BlogsSection() {
   const next = BLOGS[nextIdx];
 
   return (
-    <section className="w-full bg-[#FFF6ED] py-14 md:py-24 px-2 sm:px-8 font-inter">
+    <section className="w-full bg-[#FFF6ED] py-14 md:py-24 px-3 sm:px-8 md:px-14 font-inter">
       <div className="max-w-[90rem] mx-auto">
         <div className="flex flex-row justify-between items-end mb-7 md:mb-10">
-          <h2 className="text-[3.2rem] sm:text-[4rem] md:text-[12rem] leading-none font-medium tracking-[-0.08em] text-black md:-ml-[4vw]">
+          <h2 className="text-[3.2rem] sm:text-[4rem] md:text-[12rem] leading-none font-medium tracking-[-0.08em] text-black">
             BLOGS
           </h2>
           <div className="w-full">

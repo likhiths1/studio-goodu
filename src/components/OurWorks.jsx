@@ -64,7 +64,7 @@ export default function OurWorks() {
   }, []);
 
   return (
-    <section className="w-full bg-[#FFF6ED] pb-8 md:pb-[80px] pt-24 px-0 sm:px-4 md:px-12 font-inter">
+    <section className="w-full bg-[#FFF6ED] pb-8 md:pb-[80px] pt-24 px-3 sm:px-8 md:px-14 font-inter">
       {/* Hover-only animations (scoped) */}
       <style>{`
         @keyframes wobbleSoft { 0%,100% { transform: translate3d(0,0,0) rotate(0); } 25% { transform: translate3d(1px,-1px,0) rotate(-0.35deg);} 50% { transform: translate3d(-1px,1px,0) rotate(0.35deg);} 75% { transform: translate3d(0.6px,-0.6px,0) rotate(-0.2deg);} }
