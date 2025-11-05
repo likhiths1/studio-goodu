@@ -7,6 +7,7 @@ import AboutUsSection from "../components/AboutUsSection";
 import BlogsSection from "../components/BlogsSection";
 import ContactSection from "../components/ContactSection";
 import FooterSection from "../components/FooterSection";
+import PricingTable from "../components/PricingTable";
 
 
 export default function Home() {

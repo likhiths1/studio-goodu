@@ -1,4 +1,4 @@
-import PricingBanner from '../assets/images/pricing/banner.png';
+import PricingTable from './PricingTable';
 
 export default function PricingSection() {
   return (
@@ -17,15 +17,7 @@ export default function PricingSection() {
           </div>
         </div>
         {/* Banner Image/Table */}
-        <div className="w-full max-w-[90rem] mx-auto">
-          <img
-            src={PricingBanner}
-            alt="Pricing table"
-            className="w-full h-auto object-contain object-center block"
-            draggable={false}
-            style={{ borderRadius: 0 }}
-          />
-        </div>
+        <PricingTable />
       </div>
     </section>
   );

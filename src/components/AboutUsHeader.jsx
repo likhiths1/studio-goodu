@@ -1,4 +1,4 @@
-import AboutImg from "../assets/images/aboutuspage/1.png";
+import AboutImg from "../assets/images/aboutuspage/aboutuspage.jpeg";
 
 export default function AboutUsHeader() {
   return (
