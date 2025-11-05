@@ -79,7 +79,7 @@ export default function ContactSection() {
             </span>
           </div>
           {/* Right Form */}
-          <form className="w-full md:w-[340px] max-w-md flex flex-col items-end space-y-5">
+          <form className="w-full md:w-1/2 max-w-2xl flex flex-col items-end space-y-5">
             <input
               type="text"
               placeholder="Your Name"
