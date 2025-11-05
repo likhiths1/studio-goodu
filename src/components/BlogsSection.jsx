@@ -122,13 +122,13 @@ function BlogSlide({ blog }) {
           flex flex-col justify-start
         " 
         style={{ borderRadius: "16px 0 0 0.5rem" }}>
-        <div className="text-[10px] sm:text-xs md:text-sm lg:text-base font-normal mb-3 text-gray-500">
+        <div className="text-[10px] sm:text-xs md:text-sm font-normal mb-2 md:mb-3 text-gray-500">
           {blog.cat} &nbsp;&nbsp;|&nbsp;&nbsp; {blog.date}
         </div>
-        <div className="font-semibold text-xl sm:text-2xl md:text-4xl lg:text-5xl mb-3 text-black leading-tight">
+        <div className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2 md:mb-3 text-black leading-tight">
           {blog.title}
         </div>
-        <div className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[1.35rem] text-[#404040] leading-snug sm:leading-normal md:leading-relaxed line-clamp-4 sm:line-clamp-5 md:line-clamp-6">
+        <div className="text-xs sm:text-sm md:text-base text-[#404040] leading-relaxed line-clamp-4 sm:line-clamp-5 md:line-clamp-6">
           {blog.summary}
         </div>
       </div>

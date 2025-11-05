@@ -43,7 +43,7 @@ export default function StoriesSection() {
         </h2>
         {/* Responsive grid for layout control */}
         <div className="relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8 md:ml-[-4vw]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
             {testimonials.map((item, idx) => (
               <div key={idx} className="relative w-full aspect-square sm:aspect-[5/6] lg:aspect-[4/5] flex-shrink-0">
                 {/* Square Image */}

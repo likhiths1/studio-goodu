@@ -56,7 +56,7 @@ const services = [
 
 export default function ServicesDetailSection() {
   return (
-    <section className="w-full bg-[#FFF6ED] py-12 md:py-20 px-4 md:px-6">
+    <section className="w-full bg-[#FFF6ED] py-12 md:py-20 px-3 sm:px-8 md:px-14">
       <div className="max-w-[90rem] mx-auto space-y-16 md:space-y-24">
         {services.map((service, index) => (
           <div
