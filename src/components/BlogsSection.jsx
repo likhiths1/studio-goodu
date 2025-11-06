@@ -52,7 +52,7 @@ export default function BlogsSection() {
             </div>
           </div>
         </div>
-        <div className="w-full relative rounded-sm overflow-visible shadow-none h-[380px] sm:h-[520px] md:h-[760px] md:ml-[-2vw]">
+        <div className="w-[95%] max-w-[1200px] mx-auto relative rounded-lg overflow-hidden shadow-sm h-[320px] sm:h-[420px] md:h-[500px]">
           {/* Slides container */}
           <div className="absolute inset-0 w-full h-full"
                style={{ perspective: 900, overflow: "clip" }}>
@@ -105,30 +105,36 @@ export default function BlogsSection() {
 function BlogSlide({ blog }) {
   return (
     <Link to="/blog"><div className="w-full h-full relative">
-      <img
-        src={blog.bg}
-        alt="Blog post"
-        className="block w-full h-full object-cover object-center"
-        style={{ borderRadius: "12px" }}
-        draggable={false}
-      />
-      {/* Overlay card */}
+      <div className="absolute inset-0 overflow-hidden" style={{ borderRadius: "12px" }}>
+        <img
+          src={blog.bg}
+          alt="Blog post"
+          className="w-full h-full object-cover object-center"
+          style={{ objectPosition: 'center 30%' }}
+          draggable={false}
+        />
+      </div>
+      {/* Overlay card - positioned to cover bottom right 50% */}
       <div className="
-          absolute bottom-0 right-0 
+          absolute right-0 bottom-0
           bg-white shadow-md 
-          px-5 py-6 sm:px-7 sm:py-8 md:px-9 md:py-10
-          w-[96%] xs:w-[90%] sm:w-[86%] md:w-[82%] lg:w-[80%]
-          h-[62%] sm:h-[65%] md:h-[68%]
+          px-4 py-4 sm:px-5 sm:py-5
+          w-[70%] md:w-[65%]
+          h-1/2
           flex flex-col justify-start
+          overflow-hidden
         " 
-        style={{ borderRadius: "16px 0 0 0.5rem" }}>
-        <div className="text-[10px] sm:text-xs md:text-sm font-normal mb-2 md:mb-3 text-gray-500">
+        style={{ 
+          borderTopLeftRadius: "12px",
+          maxWidth: '70%'
+        }}>
+        <div className="text-[10px] sm:text-xs font-normal mb-1 text-gray-500">
           {blog.cat} &nbsp;&nbsp;|&nbsp;&nbsp; {blog.date}
         </div>
-        <div className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2 md:mb-3 text-black leading-tight">
+        <h3 className="font-semibold text-sm sm:text-base md:text-lg lg:text-xl mb-1 text-black leading-tight">
           {blog.title}
-        </div>
-        <div className="text-xs sm:text-sm md:text-base text-[#404040] leading-relaxed line-clamp-4 sm:line-clamp-5 md:line-clamp-6">
+        </h3>
+        <div className="text-xs text-[#404040] leading-relaxed line-clamp-2 sm:line-clamp-3">
           {blog.summary}
         </div>
       </div>

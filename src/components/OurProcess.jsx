@@ -29,7 +29,7 @@ const steps = [
 export default function OurProcess() {
   return (
     <section className="w-full py-16 px-3 sm:px-8 md:px-14 bg-[#FFF6ED] font-inter">
-      <div className="max-w-[90rem] w-full mx-auto">
+      <div className="max-w-[85rem] w-full mx-auto">
         {/* Section Title with left-center alignment */}
         <div className="relative flex flex-col mb-16">
           <h2 className="font-inter font-medium text-black tracking-[-0.08em] leading-tight text-5xl md:text-[12rem] mx-auto md:mx-0 md:-ml-[4vw] md:max-w-full">

@@ -37,11 +37,11 @@ export default function Navbar() {
         {navLinks.map(link => (
           <li key={link.name}>
             {link.href.startsWith('/') ? (
-              <Link to={link.href} className="text-[#EDE1D5]">
+              <Link to={link.href} className="text-white">
                 {link.name}
               </Link>
             ) : (
-              <a href={link.href} className="text-[#EDE1D5]">
+              <a href={link.href} className="text-white">
                 {link.name}
               </a>
             )}

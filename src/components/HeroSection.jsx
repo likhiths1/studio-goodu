@@ -29,32 +29,22 @@ export default function HeroSection() {
             THE ART OF LIVING WELL
           </span>
 
-          {/* Centered Studio/Goodu block with special alignment */}
+          {/* Centered INTERIOR text behind the building */}
           <div className="w-full flex justify-center">
-            <div className="flex flex-col items-center -mt-[14px] md:-mt-[16px]">
+            <div className="flex flex-col items-center -mt-[14px] md:-mt-[16px] relative">
               <span
-                className="block font-inter text-[#EDE1D5] uppercase font-[400] leading-none tracking-[-0.08em]"
+                className="block font-inter text-white uppercase font-[400] leading-none tracking-[-0.08em]"
                 style={{
-                  fontSize: 'clamp(7rem, 16vw, 28rem)',
-                  marginLeft: '16vw',
-                  marginBottom: '24px',
-                  transition: 'margin 0.3s'
+                  fontSize: 'clamp(7rem, 20vw, 32rem)',
+                  marginTop: '8vh',
+                  zIndex: 10, // Lower than building image (z-30) but above background
+                  opacity: 1.0,
+                  textShadow: '0 0 10px rgba(0,0,0,0.3)'
                 }}
               >
-                STUDIO
+                INTERIOR
               </span>
-              <span
-                className="block font-inter text-[#EDE1D5] uppercase font-[400] leading-none tracking-[-0.08em] -mt-[8px] md:-mt-[14px]"
-                style={{
-                  fontSize: 'clamp(7rem, 16vw, 28rem)',
-                  marginLeft: '-12vw',
-                  marginBottom: '24px',
-                  transition: 'margin 0.3s'
-                }}
-              >
-                GOODU
-              </span>
-              <span className="block text-base md:text-2xl text-white tracking-wide font-light -mt-8 ml-12 self-start">
+              <span className="block text-base md:text-2xl text-white tracking-wide font-light mt-4 md:mt-6 self-start ml-4 md:ml-8 relative z-20">
                 THE NEST WE BUILD TOGETHER
               </span>
             </div>

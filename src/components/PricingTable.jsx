@@ -78,14 +78,14 @@ const PricingComparison = () => {
   };
 
   return (
-    <section className="w-full bg-[#FFF6ED] py-16 sm:py-20 md:py-24">
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+    <section className="w-full bg-[#FFF6ED] py-16 sm:py-20 md:py-24 overflow-hidden px-4 sm:px-6 md:px-8">
+      <div className="w-full max-w-[90rem] mx-auto">
         {/* Header - Mobile */}
         <div className="mb-8 lg:hidden">
           <h2
             className="text-2xl sm:text-3xl mb-3"
             style={{
-              fontFamily: "Poppins, sans-serif",
+              fontFamily: "Inter, sans-serif",
               fontWeight: 400,
               color: "#5A6C6F",
             }}
@@ -95,7 +95,7 @@ const PricingComparison = () => {
           <p
             className="text-sm sm:text-base leading-relaxed"
             style={{
-              fontFamily: "Poppins, sans-serif",
+              fontFamily: "Inter, sans-serif",
               fontWeight: 300,
               color: "#8A9EA2",
             }}
@@ -221,12 +221,12 @@ const PricingComparison = () => {
         </div>
 
         {/* Desktop - Table Layout */}
-        <div className="hidden lg:block overflow-x-auto">
+        <div className="hidden lg:block w-full -ml-2">
           <table className="w-full border-collapse">
             <thead>
               <tr>
                 {/* Column 1: Compare Plans Header */}
-                <th className="bg-white border border-gray-300 p-6 text-left align-top min-w-[280px]">
+                <th className="bg-white border border-gray-300 p-4 text-left align-top w-[300px]">
                   <h2
                     className="text-2xl xl:text-3xl mb-3"
                     style={{
@@ -254,7 +254,7 @@ const PricingComparison = () => {
                 {plans.map((plan) => (
                   <th
                     key={plan.id}
-                    className="bg-white border border-gray-300 p-0 text-center align-top min-w-[180px] xl:min-w-[200px] relative"
+                    className="bg-white border border-gray-300 p-0 text-center align-top w-[220px] relative"
                   >
                     {/* Most Popular Badge */}
                     {plan.isPopular && (
@@ -269,7 +269,7 @@ const PricingComparison = () => {
                         Most Popular
                       </div>
                     )}
-                    <div className={plan.isPopular ? "p-6" : "p-6 pt-8"}>
+                    <div className={plan.isPopular ? "p-4" : "p-4 pt-8"}>
                       <p
                         className="text-xs uppercase mb-2"
                         style={{
@@ -322,7 +322,7 @@ const PricingComparison = () => {
               {/* Floor Area Row */}
               <tr>
                 <td
-                  className="bg-white border border-gray-300 p-6"
+                  className="bg-white border border-gray-300 p-4 whitespace-normal"
                   style={{
                     fontFamily: "Poppins, sans-serif",
                     fontWeight: 400,
@@ -334,7 +334,7 @@ const PricingComparison = () => {
                 {plans.map((plan) => (
                   <td
                     key={plan.id}
-                    className="bg-white border border-gray-300 p-6 text-center"
+                    className="bg-white border border-gray-300 p-4 text-center whitespace-normal"
                     style={{
                       fontFamily: "Poppins, sans-serif",
                       fontWeight: 300,
@@ -350,7 +350,7 @@ const PricingComparison = () => {
               {Object.keys(featureNames).map((featureKey) => (
                 <tr key={featureKey}>
                   <td
-                    className="bg-white border border-gray-300 p-6"
+                    className="bg-white border border-gray-300 p-4 whitespace-normal"
                     style={{
                       fontFamily: "Poppins, sans-serif",
                       fontWeight: 400,
@@ -362,7 +362,7 @@ const PricingComparison = () => {
                   {plans.map((plan) => (
                     <td
                       key={plan.id}
-                      className="bg-white border border-gray-300 p-6 text-center"
+                      className="bg-white border border-gray-300 p-4 text-center whitespace-normal"
                     >
                       {plan.features[featureKey] ? <CheckIcon /> : <CrossIcon />}
                     </td>
