@@ -1,6 +1,6 @@
 import Navbar from './Navbar';
-import BackSky from '../assets/images/back-sky.jpg';
-import BackSkyless from '../assets/images/back-skyless.png';
+import BackSky from '../assets/images/back-sky1.png';
+import BackSkyless from '../assets/images/back-skyless1.png';
 
 export default function HeroSection() {
   return (
@@ -14,7 +14,7 @@ export default function HeroSection() {
         <img 
           src={BackSky} 
           alt="" 
-          className="absolute inset-0 z-0 w-full h-full object-cover"
+          className="absolute inset-0 z-0 w-full h-full object-cover object-center"
           draggable={false}
         />
 
@@ -23,29 +23,32 @@ export default function HeroSection() {
           <Navbar />
         </div>
 
-        {/* Layer 2: Hero Text Content (between the two images) */}
-        <div className="relative z-20 w-full h-full pt-14 md:pt-24 pb-16 md:pb-24 lg:pb-28 flex flex-col">
-          <span className="text-lg md:text-2xl text-white tracking-[0.08em] font-light mb-7 mt-2 md:mt-0 ml-6 md:ml-36">
-            THE ART OF LIVING WELL
-          </span>
-
-          {/* Centered INTERIOR text behind the building */}
-          <div className="w-full flex justify-center">
-            <div className="flex flex-col items-center -mt-[14px] md:-mt-[16px] relative">
-              <span
-                className="block font-inter text-white uppercase font-[400] leading-none tracking-[-0.08em]"
-                style={{
-                  fontSize: 'clamp(5rem, 15vw, 20rem)',
-                  marginTop: '8vh',
-                  zIndex: 10, // Lower than building image (z-30) but above background
-                  opacity: 1.0,
-                }}
-              >
-                INTERIOR
-              </span>
-              <span className="block text-base md:text-2xl text-white tracking-wide font-light mt-4 md:mt-6 self-start ml-4 md:ml-8 relative z-20">
-                THE NEST WE BUILD TOGETHER
-              </span>
+        {/* Layer 2: Hero Text Content */}
+        <div className="absolute inset-0 z-30 flex items-center justify-center">
+          <div className="w-full max-w-[90rem] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+            <div className="w-full">
+              {/* INTERIOR text */}
+              <div className="w-full text-center">
+                <h1 
+                  className="font-inter text-white uppercase font-[400] leading-[0.85] tracking-[-0.08em] mx-auto"
+                  style={{
+                    fontSize: 'clamp(3.5rem, 14vw, 18rem)',
+                    lineHeight: '0.85',
+                    textShadow: '0 0 15px rgba(0,0,0,0.3)',
+                    marginTop: 'calc(-10vh - 200px)', // Moved up 35px for better desktop alignment
+                    marginBottom: 'clamp(0.5rem, 2vw, 2rem)'
+                  }}
+                >
+                  INTERIOR
+                </h1>
+                
+                {/* Subtitle */}
+                <div className="w-full max-w-2xl mx-auto px-4 sm:px-6">
+                  <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl tracking-wide font-light mt-2 sm:mt-3 md:mt-4 text-left">
+                    THE NEST WE BUILD TOGETHER
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

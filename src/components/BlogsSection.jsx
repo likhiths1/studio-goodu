@@ -92,8 +92,12 @@ export default function BlogsSection() {
           </button>
         </div>
         {/* CTA button */}
-        <div className="w-full flex justify-center mt-8 md:mt-12">
-          <Link to="/blog" className="inline-block px-8 md:px-9 py-2.5 md:py-3 bg-black text-white text-xs md:text-sm tracking-tight hover:opacity-90 transition" style={{ borderRadius: 0 }}>
+        <div className="w-full flex justify-center mt-10 md:mt-14">
+          <Link 
+            to="/blog" 
+            className="inline-block px-8 md:px-10 py-3.5 md:py-4 bg-black text-white text-sm md:text-base font-medium tracking-wide hover:opacity-90 transition min-w-[180px] text-center" 
+            style={{ borderRadius: 0 }}
+          >
             VIEW ALL
           </Link>
         </div>

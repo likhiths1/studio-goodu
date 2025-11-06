@@ -99,7 +99,7 @@ export default function StoriesSection() {
         <div className="w-full flex justify-center mt-10 md:mt-14">
           <a
             href="/contact"
-            className="inline-block px-6 md:px-7 py-2.5 md:py-3 bg-black text-white text-xs md:text-sm tracking-tight hover:opacity-90 transition"
+            className="inline-block px-8 md:px-10 py-3.5 md:py-4 bg-black text-white text-sm md:text-base font-medium tracking-wide hover:opacity-90 transition min-w-[180px] text-center"
             style={{ borderRadius: 0 }}
           >
             CONTACT US
