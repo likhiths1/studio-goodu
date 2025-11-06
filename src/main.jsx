@@ -42,23 +42,22 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <AnimatePresence mode="wait">
-          {loading ? (
-            <LoadingScreen onComplete={handleLoadingComplete}>
-              <Home />
-            </LoadingScreen>
-          ) : (
-            <Routes>
-              <Route path="/" element={<Home loading={!isLoadingComplete} />} />
-              <Route path="/contact" element={<ContactUs />} />
-              <Route path="/about" element={<AboutUs />} />
-              <Route path="/portfolio" element={<Portfolio/>} />
-              <Route path="/blog" element={<Blog/>} />
-              <Route path="/services" element={<Services/>} />
-              <Route path="/blog/:id" element={<BlogDetailPage/>} />
-              <Route path="/portfolio/:id" element={<PortfolioDetailPage/>} />
-            </Routes>
+          {/* Loading overlay always present, exits when complete */}
+          {loading && (
+            <LoadingScreen onComplete={handleLoadingComplete} />
           )}
         </AnimatePresence>
+
+        <Routes>
+          <Route path="/" element={<Home loading={!isLoadingComplete} />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/portfolio" element={<Portfolio/>} />
+          <Route path="/blog" element={<Blog/>} />
+          <Route path="/services" element={<Services/>} />
+          <Route path="/blog/:id" element={<BlogDetailPage/>} />
+          <Route path="/portfolio/:id" element={<PortfolioDetailPage/>} />
+        </Routes>
       </BrowserRouter>
     </React.StrictMode>
   );
