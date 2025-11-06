@@ -1,3 +1,4 @@
+import PricingComparison from './PricingTable';
 import PricingTable from './PricingTable';
 
 export default function PricingSection() {
@@ -17,7 +18,7 @@ export default function PricingSection() {
           </div>
         </div>
         {/* Banner Image/Table */}
-        <PricingTable />
+        <PricingComparison  />
       </div>
     </section>
   );

@@ -1,338 +1,374 @@
 import React from "react";
 
-const PricingTable = () => {
+const PricingComparison = () => {
+  const plans = [
+    {
+      id: 1,
+      label: "Architecture",
+      name: "Economy",
+      price: "₹180",
+      isPopular: false,
+      floorArea: "Up to 4000 Sq. Ft.",
+      features: {
+        architecturalDesign: false,
+        mepDesign: true,
+        structuralDesign: true,
+        billOfQuantities: false,
+        interiorDesign: false,
+        landscapeDesign: false,
+      },
+    },
+    {
+      id: 2,
+      label: "Interiors",
+      name: "Premium",
+      price: "₹180-350",
+      isPopular: false,
+      floorArea: "Up to 4000 Sq. Ft.",
+      features: {
+        architecturalDesign: false,
+        mepDesign: true,
+        structuralDesign: false,
+        billOfQuantities: true,
+        interiorDesign: true,
+        landscapeDesign: false,
+      },
+    },
+    {
+      id: 3,
+      label: "Interiors + arch",
+      name: "Elite",
+      price: "₹300-650",
+      isPopular: true,
+      floorArea: "Up to 4000 Sq. Ft.",
+      features: {
+        architecturalDesign: false,
+        mepDesign: true,
+        structuralDesign: true,
+        billOfQuantities: true,
+        interiorDesign: true,
+        landscapeDesign: true,
+      },
+    },
+    {
+      id: 4,
+      label: "Customise",
+      name: "Bespoke",
+      price: null,
+      isPopular: false,
+      floorArea: "Above 4000 Sq. Ft.",
+      features: {
+        architecturalDesign: true,
+        mepDesign: true,
+        structuralDesign: true,
+        billOfQuantities: true,
+        interiorDesign: true,
+        landscapeDesign: true,
+      },
+    },
+  ];
+
+  const featureNames = {
+    architecturalDesign: "Architectural Design",
+    mepDesign: "MEP Design",
+    structuralDesign: "Structural Design",
+    billOfQuantities: "Bill of Quantities",
+    interiorDesign: "Interior Design",
+    landscapeDesign: "Landscape Design",
+  };
+
   return (
-    <section className="w-full bg-[#FAF8F5] py-16 sm:py-20 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Table Container */}
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse bg-white shadow-sm">
-            {/* Header Row */}
+    <section className="w-full bg-[#FFF6ED] py-16 sm:py-20 md:py-24">
+      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        {/* Header - Mobile */}
+        <div className="mb-8 lg:hidden">
+          <h2
+            className="text-2xl sm:text-3xl mb-3"
+            style={{
+              fontFamily: "Poppins, sans-serif",
+              fontWeight: 400,
+              color: "#5A6C6F",
+            }}
+          >
+            Compare plans
+          </h2>
+          <p
+            className="text-sm sm:text-base leading-relaxed"
+            style={{
+              fontFamily: "Poppins, sans-serif",
+              fontWeight: 300,
+              color: "#8A9EA2",
+            }}
+          >
+            Choose your workspace plan according to your organisational plan
+          </p>
+        </div>
+
+        {/* Mobile & Tablet - Card Layout */}
+        <div className="lg:hidden grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {plans.map((plan) => (
+            <div
+              key={plan.id}
+              className="bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm"
+            >
+              {/* Popular Badge */}
+              {plan.isPopular && (
+                <div
+                  className="w-full py-2 text-white text-xs uppercase tracking-wide text-center"
+                  style={{
+                    backgroundColor: "#5A6C6F",
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: 500,
+                  }}
+                >
+                  Most Popular
+                </div>
+              )}
+
+              {/* Card Content */}
+              <div className="p-6">
+                {/* Plan Header */}
+                <div className="text-center mb-6">
+                  <p
+                    className="text-xs uppercase mb-2"
+                    style={{
+                      fontFamily: "Inter, sans-serif",
+                      fontWeight: 400,
+                      color: "#8A9EA2",
+                    }}
+                  >
+                    {plan.label}
+                  </p>
+                  <h3
+                    className="text-2xl mb-3"
+                    style={{
+                      fontFamily: "Poppins, sans-serif",
+                      fontWeight: 500,
+                      color: "#5A6C6F",
+                    }}
+                  >
+                    {plan.name}
+                  </h3>
+                  {plan.price ? (
+                    <p
+                      className="text-3xl font-bold"
+                      style={{
+                        fontFamily: "Poppins, sans-serif",
+                        color: "#3A4D50",
+                      }}
+                    >
+                      {plan.price}
+                    </p>
+                  ) : (
+                    <button
+                      className="w-full py-3 text-white text-sm uppercase tracking-wide hover:opacity-90 transition-opacity"
+                      style={{
+                        backgroundColor: "#5A6C6F",
+                        fontFamily: "Inter, sans-serif",
+                        fontWeight: 500,
+                      }}
+                    >
+                      Contact for Details
+                    </button>
+                  )}
+                </div>
+
+                {/* Floor Area */}
+                <div className="mb-4 pb-4 border-b border-gray-200">
+                  <p
+                    className="text-xs uppercase mb-1"
+                    style={{
+                      fontFamily: "Inter, sans-serif",
+                      fontWeight: 400,
+                      color: "#7A8C8F",
+                    }}
+                  >
+                    Floor Area
+                  </p>
+                  <p
+                    className="text-sm"
+                    style={{
+                      fontFamily: "Poppins, sans-serif",
+                      fontWeight: 300,
+                      color: "#8A9EA2",
+                    }}
+                  >
+                    {plan.floorArea}
+                  </p>
+                </div>
+
+                {/* Features List */}
+                <div className="space-y-3">
+                  {Object.entries(plan.features).map(([key, value]) => (
+                    <div key={key} className="flex items-center justify-between">
+                      <span
+                        className="text-sm"
+                        style={{
+                          fontFamily: "Poppins, sans-serif",
+                          fontWeight: 400,
+                          color: "#7A8C8F",
+                        }}
+                      >
+                        {featureNames[key]}
+                      </span>
+                      {value ? <CheckIcon /> : <CrossIcon />}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop - Table Layout */}
+        <div className="hidden lg:block overflow-x-auto">
+          <table className="w-full border-collapse">
             <thead>
-              <tr className="border-b border-gray-200">
-                {/* First Column - Title */}
-                <th className="text-left p-6 sm:p-8 align-top bg-[#FAF8F5] w-1/5">
+              <tr>
+                {/* Column 1: Compare Plans Header */}
+                <th className="bg-white border border-gray-300 p-6 text-left align-top min-w-[280px]">
                   <h2
-                    className="text-2xl sm:text-3xl text-[#5B6A6F] mb-3"
-                    style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400 }}
+                    className="text-2xl xl:text-3xl mb-3"
+                    style={{
+                      fontFamily: "Poppins, sans-serif",
+                      fontWeight: 400,
+                      color: "#5A6C6F",
+                    }}
                   >
                     Compare plans
                   </h2>
                   <p
-                    className="text-sm text-[#8B9598] leading-relaxed"
-                    style={{ fontFamily: "Poppins, sans-serif", fontWeight: 300 }}
+                    className="text-sm xl:text-base leading-relaxed"
+                    style={{
+                      fontFamily: "Poppins, sans-serif",
+                      fontWeight: 300,
+                      color: "#8A9EA2",
+                    }}
                   >
-                    Choose your workspace plan according to your organisational plan
+                    Choose your workspace plan according to your organisational
+                    plan
                   </p>
                 </th>
 
-                {/* Economy Plan */}
-                <th className="p-6 sm:p-8 align-top bg-white border-l border-gray-200 w-1/5">
-                  <div className="text-center">
-                    <p
-                      className="text-[#5B6A6F] text-base mb-1"
-                      style={{ fontFamily: "Poppins, sans-serif", fontWeight: 500 }}
-                    >
-                      Economy
-                    </p>
-                    <p
-                      className="text-xs text-[#8B9598] mb-4"
-                      style={{ fontFamily: "Poppins, sans-serif", fontWeight: 300 }}
-                    >
-                      Architecture
-                    </p>
-                    <p
-                      className="text-3xl sm:text-4xl text-[#5B6A6F]"
-                      style={{ fontFamily: "Poppins, sans-serif", fontWeight: 500 }}
-                    >
-                      ₹180
-                    </p>
-                  </div>
-                </th>
-
-                {/* Premium Plan */}
-                <th className="p-6 sm:p-8 align-top bg-white border-l border-gray-200 w-1/5">
-                  <div className="text-center">
-                    <p
-                      className="text-[#5B6A6F] text-base mb-1"
-                      style={{ fontFamily: "Poppins, sans-serif", fontWeight: 500 }}
-                    >
-                      Premium
-                    </p>
-                    <p
-                      className="text-xs text-[#8B9598] mb-4"
-                      style={{ fontFamily: "Poppins, sans-serif", fontWeight: 300 }}
-                    >
-                      Interiors
-                    </p>
-                    <p
-                      className="text-3xl sm:text-4xl text-[#5B6A6F]"
-                      style={{ fontFamily: "Poppins, sans-serif", fontWeight: 500 }}
-                    >
-                      ₹180-350
-                    </p>
-                  </div>
-                </th>
-
-                {/* Elite Plan - Most Popular */}
-                <th className="p-0 align-top bg-white border-l border-gray-200 w-1/5 relative">
-                  <div className="bg-[#5B6A6F] text-white text-center py-2 text-xs tracking-wider uppercase" style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}>
-                    Most Popular
-                  </div>
-                  <div className="p-6 sm:p-8 text-center">
-                    <p
-                      className="text-[#5B6A6F] text-base mb-1"
-                      style={{ fontFamily: "Poppins, sans-serif", fontWeight: 500 }}
-                    >
-                      Elite
-                    </p>
-                    <p
-                      className="text-xs text-[#8B9598] mb-4"
-                      style={{ fontFamily: "Poppins, sans-serif", fontWeight: 300 }}
-                    >
-                      Interiors + arch
-                    </p>
-                    <p
-                      className="text-3xl sm:text-4xl text-[#5B6A6F]"
-                      style={{ fontFamily: "Poppings, sans-serif", fontWeight: 500 }}
-                    >
-                      ₹300-650
-                    </p>
-                  </div>
-                </th>
-
-                {/* Bespoke Plan */}
-                <th className="p-0 align-top bg-white border-l border-gray-200 w-1/5">
-                  <div className="p-6 sm:p-8 text-center">
-                    <p
-                      className="text-[#5B6A6F] text-base mb-1"
-                      style={{ fontFamily: "Poppins, sans-serif", fontWeight: 500 }}
-                    >
-                      Bespoke
-                    </p>
-                    <p
-                      className="text-xs text-[#8B9598] mb-4"
-                      style={{ fontFamily: "Poppins, sans-serif", fontWeight: 300 }}
-                    >
-                      Customise
-                    </p>
-                    <button
-                      className="bg-[#5B6A6F] text-white px-6 py-3 text-xs tracking-wider uppercase hover:bg-[#4A575C] transition-colors duration-300"
-                      style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}
-                    >
-                      Contact for Details
-                    </button>
-                  </div>
-                </th>
+                {/* Dynamic Plan Columns */}
+                {plans.map((plan) => (
+                  <th
+                    key={plan.id}
+                    className="bg-white border border-gray-300 p-0 text-center align-top min-w-[180px] xl:min-w-[200px] relative"
+                  >
+                    {/* Most Popular Badge */}
+                    {plan.isPopular && (
+                      <div
+                        className="w-full py-2 text-white text-xs uppercase tracking-wide"
+                        style={{
+                          backgroundColor: "#5A6C6F",
+                          fontFamily: "Inter, sans-serif",
+                          fontWeight: 500,
+                        }}
+                      >
+                        Most Popular
+                      </div>
+                    )}
+                    <div className={plan.isPopular ? "p-6" : "p-6 pt-8"}>
+                      <p
+                        className="text-xs uppercase mb-2"
+                        style={{
+                          fontFamily: "Inter, sans-serif",
+                          fontWeight: 400,
+                          color: "#8A9EA2",
+                        }}
+                      >
+                        {plan.label}
+                      </p>
+                      <h3
+                        className="text-xl xl:text-2xl mb-3"
+                        style={{
+                          fontFamily: "Poppins, sans-serif",
+                          fontWeight: 500,
+                          color: "#5A6C6F",
+                        }}
+                      >
+                        {plan.name}
+                      </h3>
+                      {plan.price ? (
+                        <p
+                          className="text-3xl xl:text-4xl font-bold"
+                          style={{
+                            fontFamily: "Poppins, sans-serif",
+                            color: "#3A4D50",
+                          }}
+                        >
+                          {plan.price}
+                        </p>
+                      ) : (
+                        <button
+                          className="w-full py-3 text-white text-sm uppercase tracking-wide hover:opacity-90 transition-opacity"
+                          style={{
+                            backgroundColor: "#5A6C6F",
+                            fontFamily: "Inter, sans-serif",
+                            fontWeight: 500,
+                          }}
+                        >
+                          Contact for Details
+                        </button>
+                      )}
+                    </div>
+                  </th>
+                ))}
               </tr>
             </thead>
 
-            {/* Table Body */}
             <tbody>
               {/* Floor Area Row */}
-              <tr className="border-b border-gray-200">
-                <td className="p-6 sm:p-8 bg-[#FAF8F5] text-[#5B6A6F]" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400 }}>
+              <tr>
+                <td
+                  className="bg-white border border-gray-300 p-6"
+                  style={{
+                    fontFamily: "Poppins, sans-serif",
+                    fontWeight: 400,
+                    color: "#7A8C8F",
+                  }}
+                >
                   Floor Area
                 </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200 text-[#8B9598] text-sm" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 300 }}>
-                  Up to 4000 Sq. Ft.
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200 text-[#8B9598] text-sm" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 300 }}>
-                  Up to 4000 Sq. Ft.
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200 text-[#8B9598] text-sm" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 300 }}>
-                  Up to 4000 Sq. Ft.
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200 text-[#8B9598] text-sm" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 300 }}>
-                  Above 4000 Sq. Ft.
-                </td>
+                {plans.map((plan) => (
+                  <td
+                    key={plan.id}
+                    className="bg-white border border-gray-300 p-6 text-center"
+                    style={{
+                      fontFamily: "Poppins, sans-serif",
+                      fontWeight: 300,
+                      color: "#8A9EA2",
+                    }}
+                  >
+                    {plan.floorArea}
+                  </td>
+                ))}
               </tr>
 
-              {/* Architectural Design Row */}
-              <tr className="border-b border-gray-200">
-                <td className="p-6 sm:p-8 bg-[#FAF8F5] text-[#5B6A6F]" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400 }}>
-                  Architectural Design
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <circle cx="12" cy="12" r="10" strokeWidth="2"/>
-                    <line x1="8" y1="8" x2="16" y2="16" strokeWidth="2"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <circle cx="12" cy="12" r="10" strokeWidth="2"/>
-                    <line x1="8" y1="8" x2="16" y2="16" strokeWidth="2"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <circle cx="12" cy="12" r="10" strokeWidth="2"/>
-                    <line x1="8" y1="8" x2="16" y2="16" strokeWidth="2"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-              </tr>
-
-              {/* MEP Design Row */}
-              <tr className="border-b border-gray-200">
-                <td className="p-6 sm:p-8 bg-[#FAF8F5] text-[#5B6A6F]" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400 }}>
-                  MEP Design
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-              </tr>
-
-              {/* Structural Design Row */}
-              <tr className="border-b border-gray-200">
-                <td className="p-6 sm:p-8 bg-[#FAF8F5] text-[#5B6A6F]" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400 }}>
-                  Structural Design
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <circle cx="12" cy="12" r="10" strokeWidth="2"/>
-                    <line x1="8" y1="8" x2="16" y2="16" strokeWidth="2"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-              </tr>
-
-              {/* Bill of Quantities Row */}
-              <tr className="border-b border-gray-200">
-                <td className="p-6 sm:p-8 bg-[#FAF8F5] text-[#5B6A6F]" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400 }}>
-                  Bill of Quantities
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <circle cx="12" cy="12" r="10" strokeWidth="2"/>
-                    <line x1="8" y1="8" x2="16" y2="16" strokeWidth="2"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-              </tr>
-
-              {/* Interior Design Row */}
-              <tr className="border-b border-gray-200">
-                <td className="p-6 sm:p-8 bg-[#FAF8F5] text-[#5B6A6F]" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400 }}>
-                  Interior Design
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <circle cx="12" cy="12" r="10" strokeWidth="2"/>
-                    <line x1="8" y1="8" x2="16" y2="16" strokeWidth="2"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-              </tr>
-
-              {/* Landscape Design Row */}
-              <tr>
-                <td className="p-6 sm:p-8 bg-[#FAF8F5] text-[#5B6A6F]" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 400 }}>
-                  Landscape Design
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <circle cx="12" cy="12" r="10" strokeWidth="2"/>
-                    <line x1="8" y1="8" x2="16" y2="16" strokeWidth="2"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <circle cx="12" cy="12" r="10" strokeWidth="2"/>
-                    <line x1="8" y1="8" x2="16" y2="16" strokeWidth="2"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-                <td className="p-6 sm:p-8 text-center border-l border-gray-200">
-                  <svg className="w-6 h-6 mx-auto text-[#5B6A6F]" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </td>
-              </tr>
+              {/* Feature Rows */}
+              {Object.keys(featureNames).map((featureKey) => (
+                <tr key={featureKey}>
+                  <td
+                    className="bg-white border border-gray-300 p-6"
+                    style={{
+                      fontFamily: "Poppins, sans-serif",
+                      fontWeight: 400,
+                      color: "#7A8C8F",
+                    }}
+                  >
+                    {featureNames[featureKey]}
+                  </td>
+                  {plans.map((plan) => (
+                    <td
+                      key={plan.id}
+                      className="bg-white border border-gray-300 p-6 text-center"
+                    >
+                      {plan.features[featureKey] ? <CheckIcon /> : <CrossIcon />}
+                    </td>
+                  ))}
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
@@ -341,4 +377,41 @@ const PricingTable = () => {
   );
 };
 
-export default PricingTable;
+// Check Icon Component
+const CheckIcon = () => (
+  <svg
+    className="w-5 h-5 sm:w-6 sm:h-6 mx-auto"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="12" cy="12" r="10" fill="#5A6C6F" />
+    <path
+      d="M8 12.5L10.5 15L16 9.5"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// Cross Icon Component
+const CrossIcon = () => (
+  <svg
+    className="w-5 h-5 sm:w-6 sm:h-6 mx-auto"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="12" cy="12" r="10" stroke="#B8C5C7" strokeWidth="1.5" />
+    <path
+      d="M15 9L9 15M9 9L15 15"
+      stroke="#B8C5C7"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
+export default PricingComparison;
