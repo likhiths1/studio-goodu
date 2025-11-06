@@ -14,7 +14,7 @@ export default function AboutUsSection() {
 
   return (
     <section className="w-full bg-[#FFF6ED] py-12 px-2 sm:px-6 md:px-14 font-inter">
-      <div className="max-w-[90rem] mx-auto">
+      <div className="max-w-[85rem] mx-auto">
         {/* Heading */}
         <h2 className="text-[3.2rem] sm:text-[3.5rem] md:text-[12rem] font-medium text-black tracking-[-0.08em] leading-none mb-2 md:mb-4 text-right">
           ABOUT US
@@ -32,7 +32,7 @@ export default function AboutUsSection() {
               <div
                 key={i}
                 className={`relative flex flex-row items-end min-h-[100px] md:min-h-[160px] pt-6 pb-10 md:pt-8 md:pb-14 md:px-14 mb-10 last:mb-0 transition-all duration-300 ease-in-out ${
-                  isActive ? "bg-[#fff2e0]" : "bg-[#FFF6ED]"
+                  isActive ? "bg-[#FFF6ED]" : "bg-[#FFF6ED]"
                 }`}
                 onMouseEnter={() => setActiveIndex(i)}
                 onMouseLeave={() => setActiveIndex(null)}
