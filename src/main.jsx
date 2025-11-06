@@ -25,9 +25,16 @@ function ScrollToTop() {
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [isLoadingComplete, setIsLoadingComplete] = useState(false);
 
   const handleLoadingComplete = () => {
-    setLoading(false);
+    // Wait for the exit animation to complete before updating the state
+    setTimeout(() => {
+      setLoading(false);
+      // Add a small delay to ensure the loading screen is completely gone
+      // before allowing HeroSection animations to start
+      setTimeout(() => setIsLoadingComplete(true), 100);
+    }, 1200); // Match this with the exit animation duration (1.2s)
   };
 
   return (
@@ -36,10 +43,12 @@ function App() {
         <ScrollToTop />
         <AnimatePresence mode="wait">
           {loading ? (
-            <LoadingScreen onComplete={handleLoadingComplete} />
+            <LoadingScreen onComplete={handleLoadingComplete}>
+              <Home />
+            </LoadingScreen>
           ) : (
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home loading={!isLoadingComplete} />} />
               <Route path="/contact" element={<ContactUs />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/portfolio" element={<Portfolio/>} />

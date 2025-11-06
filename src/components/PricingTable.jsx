@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PricingComparison = () => {
   const plans = [
@@ -160,8 +161,9 @@ const PricingComparison = () => {
                       {plan.price}
                     </p>
                   ) : (
-                    <button
-                      className="w-full py-3 text-white text-sm uppercase tracking-wide hover:opacity-90 transition-opacity"
+                    <Link 
+                      to="/contact"
+                      className="w-full py-3 text-white text-sm uppercase tracking-wide hover:opacity-90 transition-opacity block"
                       style={{
                         backgroundColor: "#5A6C6F",
                         fontFamily: "Inter, sans-serif",
@@ -169,7 +171,7 @@ const PricingComparison = () => {
                       }}
                     >
                       Contact for Details
-                    </button>
+                    </Link>
                   )}
                 </div>
 
@@ -301,8 +303,9 @@ const PricingComparison = () => {
                           {plan.price}
                         </p>
                       ) : (
-                        <button
-                          className="w-full py-3 text-white text-sm uppercase tracking-wide hover:opacity-90 transition-opacity"
+                        <Link
+                          to="/contact"
+                          className="w-full py-3 text-white text-sm uppercase tracking-wide hover:opacity-90 transition-opacity block"
                           style={{
                             backgroundColor: "#5A6C6F",
                             fontFamily: "Inter, sans-serif",
@@ -310,7 +313,7 @@ const PricingComparison = () => {
                           }}
                         >
                           Contact for Details
-                        </button>
+                        </Link>
                       )}
                     </div>
                   </th>

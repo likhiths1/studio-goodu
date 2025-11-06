@@ -10,10 +10,10 @@ import FooterSection from "../components/FooterSection";
 import PricingTable from "../components/PricingTable";
 
 
-export default function Home() {
+export default function Home({ loading = false }) {
   return (
     <>
-      <HeroSection />
+      <HeroSection loading={loading} />
       <OurProcess />
       <OurWorks />
       <StoriesSection />
