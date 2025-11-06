@@ -16,9 +16,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-[#FFF6ED] font-inter z-20 px-4 md:px-12 py-2 flex items-center justify-between relative">
+    <nav className="w-full bg-[#FFF6ED] font-inter z-20 px-4 md:px-0 py-2 flex items-center justify-between relative">
       <Link to="/">
-        <img src={GooduLogo} alt="Studio Goodu Logo" className="h-16 md:h-24 ml-48 w-auto" />
+        <img src={GooduLogo} alt="Studio Goodu Logo" className="h-16 md:h-20 ml-20 w-auto" />
       </Link>
 
       {/* Hamburger Icon Mobile */}
@@ -33,7 +33,7 @@ export default function Navbar() {
       </button>
 
       {/* Desktop Nav */}
-      <ul className="hidden md:flex gap-12 ml-[-60px] mr-48 text-lg font-inter font-medium">
+      <ul className="hidden md:flex gap-12 ml-[-60px] mr-20 text-lg font-inter font-medium">
         {navLinks.map(link => (
           <li key={link.name}>
             {link.href.startsWith('/') ? (

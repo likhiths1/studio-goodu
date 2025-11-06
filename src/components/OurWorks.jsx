@@ -67,7 +67,7 @@ export default function OurWorks() {
   }, []);
 
   return (
-    <section className="w-full bg-[#FFF6ED] pb-8 md:pb-[80px] pt-24 px-0 sm:px-4 md:px-12 font-inter">
+    <section className="w-full bg-[#FFF6ED] pb-8 md:pb-[80px] pt-24 px-3 sm:px-6 md:px-14 lg:px-20 xl:px-24 2xl:px-0 font-inter overflow-x-hidden">
       {/* Hover-only animations (scoped) */}
       <style>{`
         @keyframes wobbleSoft { 0%,100% { transform: translate3d(0,0,0) rotate(0); } 25% { transform: translate3d(1px,-1px,0) rotate(-0.35deg);} 50% { transform: translate3d(-1px,1px,0) rotate(0.35deg);} 75% { transform: translate3d(0.6px,-0.6px,0) rotate(-0.2deg);} }
@@ -86,7 +86,7 @@ export default function OurWorks() {
             OUR WORKS
           </h2>
           {/* Subtitle between center and left (all breakpoints) */}
-          <div className="text-xs md:text-[1.6rem] font-regular text-[#3a3532] leading-snug mt-2 text-left w-[90vw] md:w-94 max-w-full ml-0 mr-auto">
+          <div className="text-xs md:text-[1.6rem] font-regular text-[#3a3532] leading-snug mt-2 text-left w-full max-w-full ml-0 mr-auto">
             TETUR. SUSPENDISSE ORCI NISL.<br />
             CONGUE EGESTAS SAGITTIS
           </div>

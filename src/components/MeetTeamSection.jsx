@@ -58,7 +58,7 @@ export default function MeetTeamSection() {
   const fifthMember = TEAM[4];
 
   return (
-    <section className="w-full bg-[#FFF6ED] px-4 md:px-0 py-8 md:py-16 font-poppins">
+    <section className="w-full bg-[#FFF6ED] px-3 sm:px-8 md:px-14 py-8 md:py-16 font-poppins">
       <div className="max-w-[90rem] mx-auto">
         <div className="flex flex-row justify-start items-end mb-7 md:mb-10">
           <h2 className="font-medium text-black text-[3.2rem] md:text-[12rem] leading-none tracking-[-0.09em] text-left font-inter">

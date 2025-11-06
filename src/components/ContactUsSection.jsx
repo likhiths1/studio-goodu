@@ -3,7 +3,7 @@ import LineImg from "../assets/images/contact/line.png";
 
 export default function ContactUsSection() {
   return (
-    <section className="w-full bg-[#FFF6ED] py-10 px-4 flex flex-col items-center">
+    <section className="w-full bg-[#FFF6ED] py-10 px-3 sm:px-8 md:px-14 flex flex-col items-center">
       <div className="max-w-[90rem] w-full mx-auto grid grid-cols-1 md:mt-12 md:grid-cols-2 gap-x-12 gap-y-10 items-start bg-[#FFF6ED]">
         {/* Left Form */}
         <div className="flex flex-col pt-2 max-w-[40rem] w-full">

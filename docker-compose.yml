@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  studio-goodu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: studio-goodu-app
+    ports:
+      - "8040:80"
+    restart: unless-stopped
+    networks:
+      - studio-goodu-network
+
+networks:
+  studio-goodu-network:
+    driver: bridge

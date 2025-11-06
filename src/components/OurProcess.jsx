@@ -36,7 +36,7 @@ export default function OurProcess() {
             OUR PROCESS
           </h2>
           {/* Subtitle with right-center alignment */}
-          <div className="mt-4 w-full flex justify-center md:justify-end">
+          <div className="hidden mt-4 w-full flex justify-center md:justify-end">
             <div className="text-xs md:text-[1.6rem] font-regular text-[#3a3532] leading-snug md:mr-[4vw] text-center md:text-right max-w-full md:w-94">
               TETUR. SUSPENDISSE ORCI NISL.<br/>CONGUE EGESTAS SAGITTIS
             </div>

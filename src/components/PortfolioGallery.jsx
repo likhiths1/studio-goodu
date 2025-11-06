@@ -37,7 +37,7 @@ const portfolioData = [
 
 export default function PortfolioGallery() {
   return (
-    <section className="w-full bg-[#FFF6ED] py-9 px-4 flex flex-col items-center">
+    <section className="w-full bg-[#FFF6ED] py-9 px-3 sm:px-8 md:px-14 flex flex-col items-center">
       <div className="max-w-[90rem] w-full mx-auto md:mt-32">
         <h2 className="font-inter font-medium text-black text-[2.3rem] md:text-[4.0rem] md:mb-32 leading-tight mb-8 w-full text-center">
           EXPLORE OUR GALLERY OF<br />SOPHISTICATED INTERIORS

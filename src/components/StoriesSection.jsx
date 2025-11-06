@@ -34,16 +34,16 @@ export default function StoriesSection() {
   const storyImages = [Stor1, Stor2, Stor3, Stor4];
 
   return (
-    <section className="w-full bg-[#FFF6ED] py-16 md:pt-[50px] md:pb-12 px-3 sm:px-8 font-inter min-h-[700px] md:min-h-[850px]">
+    <section className="w-full bg-[#FFF6ED] py-16 md:pt-[50px] md:pb-12 px-3 sm:px-8 md:px-14 font-inter min-h-[700px] md:min-h-[850px]">
       <div className="max-w-[90rem] mx-auto">
         {/* Heading */}
-        <h2 className="text-[3.2rem] sm:text-[3.7rem] md:text-[12rem] font-medium tracking-[-0.08em] text-black leading-none mb-8 text-left md:-ml-[4vw]">
+        <h2 className="text-[3.2rem] sm:text-[3.7rem] md:text-[12rem] font-medium tracking-[-0.08em] text-black leading-none mb-8 text-left">
           NAMMA<br />
           <span className="block tracking-[-0.08em] leading-none -mt-[6px] md:-mt-[12px]">GOODU STORIES</span>
         </h2>
         {/* Responsive grid for layout control */}
         <div className="relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8 md:ml-[-4vw]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
             {testimonials.map((item, idx) => (
               <div key={idx} className="relative w-full aspect-square sm:aspect-[5/6] lg:aspect-[4/5] flex-shrink-0">
                 {/* Square Image */}

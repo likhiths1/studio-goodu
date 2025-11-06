@@ -2,9 +2,9 @@ import AboutImg from "../assets/images/portfolio/portfolioheader.jpg";
 
 export default function PortfolioHeader() {
   return (
-    <section className="w-full bg-[#FFF6ED] py-4 px-4 md:px-0">
-      <div className="max-w-[90rem] mx-auto bg-[#FFF6ED]">
-        <div className="flex flex-row items-start justify-between w-full pt-3 pb-2">
+    <section className="w-full bg-[#FFF6ED] py-4 px-3 sm:px-8 md:px-14">
+      <div className="max-w-[90rem] mx-auto font-inter">
+        <div className="flex flex-col items-start justify-start">
           <h2 className="font-inter text-black font-medium text-[3.2rem] md:text-[12rem] leading-none tracking-[-0.08em] text-left">
             PORTFOLIO
           </h2>

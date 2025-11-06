@@ -19,7 +19,7 @@ export default function AboutUs() {
       <ResponsiveImage src={ServicesBanner} alt="" />
 
       {/* PROCESS section */}
-      <section className="w-full bg-[#FFF6ED] px-6 md:px-0 py-16 md:py-28 font-inter">
+      <section className="w-full bg-[#FFF6ED] px-3 sm:px-8 md:px-14 py-16 md:py-28 font-inter">
         <div className="max-w-[90rem] mx-auto">
           {/* Heading row */}
           <div className="flex items-end justify-between mb-12 md:mb-20">
