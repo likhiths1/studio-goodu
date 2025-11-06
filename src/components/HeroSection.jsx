@@ -35,11 +35,10 @@ export default function HeroSection() {
               <span
                 className="block font-inter text-white uppercase font-[400] leading-none tracking-[-0.08em]"
                 style={{
-                  fontSize: 'clamp(7rem, 20vw, 32rem)',
+                  fontSize: 'clamp(5rem, 15vw, 20rem)',
                   marginTop: '8vh',
                   zIndex: 10, // Lower than building image (z-30) but above background
                   opacity: 1.0,
-                  textShadow: '0 0 10px rgba(0,0,0,0.3)'
                 }}
               >
                 INTERIOR
