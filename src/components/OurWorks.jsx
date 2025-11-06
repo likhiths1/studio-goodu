@@ -15,28 +15,31 @@ import Work14 from '../assets/images/works/14.jpg';
 import Work15 from '../assets/images/works/15.jpg';
 import Work16 from '../assets/images/works/16.jpg';
 
-const collage = [
-  // Row 1 (left, middle, right)
-  { src: Work1, style: "top-[40px] left-[0px] sm:left-[60px] md:left-[80px] lg:left-[80px] xl:left-[120px] 2xl:left-[40px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[320px] xl:w-[460px] 2xl:w-[560px] z-10" },
-  { src: Work2, style: "top-[20px] left-[110px] sm:left-[320px] md:left-[400px] lg:left-[680px] xl:left-[940px] 2xl:left-[1000px] w-[180px] sm:w-[180px] md:w-[2200px] lg:w-[300px] xl:w-[320px] 2xl:w-[360px] z-20" },
-  { src: Work3, style: "top-[20px] left-[300px] sm:left-[560px] md:left-[700px] lg:left-[1070px] xl:left-[1300px] 2xl:left-[1460px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[360px] xl:w-[420px] 2xl:w-[460px] z-10" },
-  // Row 2 (staggered and denser)
-  { src: Work10, style: "top-[510px] left-[20px] sm:left-[80px] md:left-[130px] lg:left-[280px] xl:left-[360px] 2xl:left-[440px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[310px] xl:w-[360px] 2xl:w-[390px] z-20" },
-  { src: Work6, style: "top-[400px] left-[330px] sm:left-[560px] md:left-[730px] lg:left-[620px] xl:left-[780px] 2xl:left-[900px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[260px] xl:w-[340px] 2xl:w-[400px] z-10" },
-  { src: Work5, style: "top-[580px] left-[180px] sm:left-[300px] md:left-[400px] lg:left-[960px] xl:left-[1140px] 2xl:left-[1280px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[360px] xl:w-[420px] 2xl:w-[460px] z-10" },
-  // Row 3 (staggered again differently)
-  { src: Work7, style: "top-[1300px] left-[20px] sm:left-[90px] md:left-[170px] lg:left-[120px] xl:left-[160px] 2xl:left-[180px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[280px] xl:w-[360px] 2xl:w-[400px] z-30" },
-  { src: Work9, style: "top-[980px] left-[300px] sm:left-[600px] md:left-[810px] lg:left-[420px] xl:left-[580px] 2xl:left-[760px] w-[120px] sm:w-[150px] md:w-[170px] lg:w-[280px] xl:w-[320px] 2xl:w-[340px] z-20" },
-  { src: Work8, style: "top-[940px] left-[200px] sm:left-[320px] md:left-[410px] lg:left-[1100px] xl:left-[1300px] 2xl:left-[1440px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[320px] xl:w-[380px] 2xl:w-[420px] z-20" },
-  { src: Work4, style: "top-[1200px] left-[180px] sm:left-[350px] md:left-[460px] lg:left-[880px] xl:left-[1060px] 2xl:left-[1200px] w-[120px] sm:w-[150px] md:w-[190px] lg:w-[340px] xl:w-[400px] 2xl:w-[440px] z-20" },
-  // Extra fillers (reuse some images) to cover whitespace on lg/xl/2xl
-  { src: Work11, style: "hidden lg:block top-[100px] left-[480px] xl:left-[580px] 2xl:left-[680px] w-[240px] xl:w-[280px] 2xl:w-[300px] z-1" },
-  { src: Work12, style: "hidden lg:block top-[770px] left-[640px] xl:left-[820px] 2xl:left-[920px] w-[210px] xl:w-[250px] 2xl:w-[270px] z-10" },
-  { src: Work14, style: "hidden lg:block top-[530px] left-[1220px] xl:left-[1420px] 2xl:left-[1560px] w-[200px] xl:w-[240px] 2xl:w-[260px] z-10" },
-  { src: Work3, style: "hidden lg:block top-[450px] left-[40px] xl:left-[80px] 2xl:left-[100px] w-[200px] xl:w-[240px] 2xl:w-[260px] z-10" },
-  { src: Work16, style: "hidden lg:block top-[800px] left-[40px] xl:left-[0px] 2xl:left-[0px] w-[220px] xl:w-[300px] 2xl:w-[330px] z-10" },
-  // New filler for bottom whitespace (desktop only)
-  { src: Work15, style: "hidden lg:block top-[1250px] left-[200px] xl:left-[400px] 2xl:left-[540px] w-[240px] xl:w-[280px] 2xl:w-[300px] z-10" }
+const works = [
+  // Row 1 - 3 images (33.33% each)
+  { src: Work1, row: 1, size: 'w-1/3' },
+  { src: Work2, row: 1, size: 'w-1/3' },
+  { src: Work3, row: 1, size: 'w-1/3' },
+  
+  // Row 2 - 2 images (50% each)
+  { src: Work4, row: 2, size: 'w-1/2' },
+  { src: Work5, row: 2, size: 'w-1/2' },
+  
+  // Row 3 - 3 images (33.33% each)
+  { src: Work6, row: 3, size: 'w-1/3' },
+  { src: Work7, row: 3, size: 'w-1/3' },
+  { src: Work8, row: 3, size: 'w-1/3' },
+  
+  // Additional images for larger screens
+  { src: Work9, row: 4, size: 'w-1/2' },
+  { src: Work10, row: 4, size: 'w-1/2' },
+  
+  { src: Work11, row: 5, size: 'w-1/3' },
+  { src: Work12, row: 5, size: 'w-1/3' },
+  { src: Work14, row: 5, size: 'w-1/3' },
+  
+  { src: Work15, row: 6, size: 'w-1/2' },
+  { src: Work16, row: 6, size: 'w-1/2' }
 ];
 
 export default function OurWorks() {
@@ -88,37 +91,63 @@ export default function OurWorks() {
             CONGUE EGESTAS SAGITTIS
           </div>
         </div>
-        {/* Collage: desktop is block grid, but mobile/tablet unchanged */}
-        <div className="relative h-[760px] sm:h-[1250px] md:h-[1200px] lg:h-[1650px] xl:h-[1570px] 2xl:h-[1670px] w-[400px] sm:w-[760px] md:w-[980px] lg:w-[1360px] xl:w-[1500px] 2xl:w-[1680px] mx-auto overflow-visible lg:translate-x-[-120px] xl:translate-x-[-180px] 2xl:translate-x-[-220px]">
-          {collage.map(({ src, style }, i) => (
-            <img
-              key={i}
-              src={src}
-              alt={`work example ${i + 1}`}
-              className={`absolute object-cover object-center ${style} work-hover`}
-              style={{ borderRadius: 0 }}
-              draggable={false}
-              onMouseEnter={() => startHoverTimer(src)}
-              onMouseLeave={clearHoverTimer}
-            />
-          ))}
+        <div className="w-full max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-4 sm:gap-6 md:gap-8">
+            {Array.from(new Set(works.map(work => work.row))).map(row => (
+              <div key={row} className="flex flex-wrap -mx-2">
+                {works
+                  .filter(work => work.row === row)
+                  .map(({ src, size }, i) => (
+                    <div key={`${row}-${i}`} className={`px-2 mb-4 ${size}`}>
+                      <div className="overflow-hidden rounded-lg aspect-video">
+                        <div className="h-full w-full overflow-hidden">
+                          <img
+                            src={src}
+                            alt={`work example ${row}-${i + 1}`}
+                            className="w-full h-full object-cover work-hover"
+                            style={{
+                              border: '1px solid #f0f0f0',
+                              boxSizing: 'border-box',
+                              imageRendering: 'crisp-edges',
+                              backfaceVisibility: 'hidden',
+                              transform: 'translateZ(0)'
+                            }}
+                            draggable={false}
+                            onMouseEnter={() => startHoverTimer(src)}
+                            onMouseLeave={clearHoverTimer}
+                            onClick={() => setActiveImage(src)}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* Fullscreen overlay when hovered for >5s */}
-      {activeImage && (
-        <div
-          className="fixed inset-0 z-[1000] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 md:p-8 transition-opacity"
-          onClick={closeOverlay}
-        >
-          <img
-            src={activeImage}
-            alt="Highlighted work"
-            className="max-w-[92vw] max-h-[90vh] object-contain shadow-2xl"
-            draggable={false}
-          />
-        </div>
-      )}
+        {/* Fullscreen overlay when hovered for >5s */}
+        {activeImage && (
+          <div
+            className="fixed inset-0 z-[1000] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 md:p-8 transition-opacity"
+            onClick={closeOverlay}
+          >
+            <img
+              src={activeImage}
+              alt="Highlighted work"
+              className="max-w-[92vw] max-h-[90vh] object-contain shadow-2xl"
+              style={{
+                border: '2px solid #fff',
+                boxShadow: '0 0 0 1px rgba(0,0,0,0.1)',
+                imageRendering: 'crisp-edges',
+                backfaceVisibility: 'hidden',
+                transform: 'translateZ(0)'
+              }}
+              draggable={false}
+            />
+          </div>
+        )}
+      </div>
     </section>
   );
 }
