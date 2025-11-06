@@ -118,24 +118,27 @@ function BlogSlide({ blog }) {
       <div className="
           absolute right-0 bottom-0
           bg-white shadow-md 
-          px-4 py-4 sm:px-5 sm:py-5
-          w-[70%] md:w-[65%]
-          h-1/2
-          flex flex-col justify-start
+          p-4 sm:p-5 md:p-6
+          w-full sm:w-[85%] md:w-[80%] lg:w-[75%]
+          h-auto min-h-[50%] max-h-[80%]
+          flex flex-col
           overflow-hidden
+          transition-all duration-300
         " 
         style={{ 
           borderTopLeftRadius: "12px",
-          maxWidth: '70%'
+          borderBottomRightRadius: "12px"
         }}>
-        <div className="text-[10px] sm:text-xs font-normal mb-1 text-gray-500">
-          {blog.cat} &nbsp;&nbsp;|&nbsp;&nbsp; {blog.date}
-        </div>
-        <h3 className="font-semibold text-sm sm:text-base md:text-lg lg:text-xl mb-1 text-black leading-tight">
-          {blog.title}
-        </h3>
-        <div className="text-xs text-[#404040] leading-relaxed line-clamp-2 sm:line-clamp-3">
-          {blog.summary}
+        <div className="flex-grow flex flex-col">
+          <div className="text-[10px] md:pl-8 md:pt-12 sm:text-xs font-normal mb-2 sm:mb-3 text-gray-500">
+            {blog.cat} &nbsp;&nbsp;|&nbsp;&nbsp; {blog.date}
+          </div>
+          <h3 className="font-semibold md:pl-8 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-2 sm:mb-3 text-black leading-tight">
+            {blog.title}
+          </h3>
+          <div className="max-w-[800px] text-sm md:pl-8 sm:text-base md:text-lg text-[#404040] leading-relaxed line-clamp-2 sm:line-clamp-3 md:line-clamp-4">
+            {blog.summary}
+          </div>
         </div>
       </div>
     </div></Link>
