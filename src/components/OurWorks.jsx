@@ -1,4 +1,6 @@
-import { useRef, useState, useEffect} from 'react';
+import { useRef, useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatedSection, AnimatedItem } from './AnimatedSection';
 import Img1 from '../assets/images/1.jpg';
 import Img2 from '../assets/images/2.jpg';
 import Img3 from '../assets/images/3.jpg';
@@ -95,20 +97,32 @@ export default function OurWorks() {
   }, []);
 
   return (
-    <div className="w-full bg-[#FFF6ED] py-12 md:py-16 px-4 sm:px-6 md:px-8 font-inter">
+    <AnimatedSection className="w-full bg-[#FFF6ED] py-12 md:py-16 px-4 sm:px-6 md:px-8 font-inter overflow-hidden">
       <div className="max-w-[85rem] w-full mx-auto">
         {/* Heading + Subtitle */}
-        <div className="relative flex flex-col gap-2 mb-12 md:mb-20">
-          <h2 className="text-[3.2rem] sm:text-[4rem] md:text-[12rem] leading-none font-medium tracking-[-0.08em] text-black text-center md:text-left">
+        <AnimatedItem className="relative flex flex-col gap-2 mb-12 md:mb-20">
+          <motion.h2 
+            className="text-[3.2rem] sm:text-[4rem] md:text-[12rem] leading-none font-medium tracking-[-0.08em] text-black text-center md:text-left"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '0px 0px -50px 0px' }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             OUR WORKS
-          </h2>
-          <div className="w-full">
+          </motion.h2>
+          <motion.div 
+            className="w-full"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '0px 0px -50px 0px' }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             <div className="w-full md:text-right text-xs sm:text-base md:text-[1.6rem] md:leading-none text-black/80 font-regular">
               TETUR. SUSPENDISSE ORCI NISL<br />
               CONGUE EGESTAS SAGITTIS
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </AnimatedItem>
 
         {/* Works Grid */}
         <div className="w-full space-y-2 md:space-y-4">
@@ -121,21 +135,76 @@ export default function OurWorks() {
                 key={row} 
                 className={`flex w-full gap-2 md:gap-4 ${row === 2 ? 'px-8 md:px-16 lg:px-32' : ''}`}
               >
-                {rowWorks.map((work, i) => (
-                  <div 
-                    key={i} 
-                    className={`${work.size} relative group cursor-pointer overflow-hidden`}
-                    onMouseEnter={() => startHoverTimer(work.src)}
-                    onMouseLeave={clearHoverTimer}
-                    onClick={() => setActiveImage(work.src)}
-                  >
-                    <img
-                      src={work.src}
-                      alt={work.title}
-                      className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                ))}
+                {rowWorks.map((work, i) => {
+                  const delay = i * 0.1 + (row - 1) * 0.3;
+                  return (
+                    <motion.div 
+                      key={i}
+                      className={`${work.size} relative group cursor-pointer overflow-hidden`}
+                      onMouseEnter={() => startHoverTimer(work.src)}
+                      onMouseLeave={clearHoverTimer}
+                      onClick={() => setActiveImage(work.src)}
+                      initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                      whileInView={{ 
+                        opacity: 1, 
+                        y: 0,
+                        scale: 1,
+                        transition: { 
+                          duration: 0.8,
+                          delay: delay,
+                          ease: [0.16, 0.77, 0.47, 0.97]
+                        }
+                      }}
+                      viewport={{ once: false, margin: '0px 0px -50px 0px' }}
+                      whileHover={{ 
+                        scale: 1.03,
+                        transition: { 
+                          duration: 0.3,
+                          type: 'spring',
+                          stiffness: 400,
+                          damping: 10
+                        }
+                      }}
+                    >
+                      <motion.div
+                        initial={{ opacity: 0, scale: 1.05 }}
+                        whileInView={{ 
+                          opacity: 1, 
+                          scale: 1,
+                          transition: { 
+                            duration: 1.2,
+                            delay: delay + 0.15,
+                            ease: [0.2, 0, 0.1, 1],
+                            scale: {
+                              type: 'spring',
+                              damping: 10,
+                              stiffness: 100
+                            }
+                          }
+                        }}
+                        viewport={{ once: false, margin: '0px 0px -100px 0px' }}
+                        className="w-full h-full will-change-transform"
+                      >
+                        <img
+                          src={work.src}
+                          alt={work.title}
+                          className="w-full h-full object-cover aspect-square"
+                        />
+                      </motion.div>
+                      <motion.div 
+                        className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center"
+                        initial={{ opacity: 0 }}
+                        whileHover={{ opacity: 1 }}
+                      >
+                        <motion.span 
+                          className="text-white text-lg font-medium opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                        >
+                          View Project
+                        </motion.span>
+                      </motion.div>
+                    </motion.div>
+                  );
+                })}
               </div>
             );
           })}
@@ -145,30 +214,44 @@ export default function OurWorks() {
       </div>
 
       {/* Fullscreen Image Modal */}
-      {activeImage && (
-        <div 
-          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 cursor-pointer"
-          onClick={() => setActiveImage(null)}
-        >
-          <div className="relative w-full max-w-6xl max-h-[90vh]">
-            <img
-              src={activeImage}
-              alt="Fullscreen work"
-              className="max-w-full max-h-[90vh] object-contain"
-              onClick={(e) => e.stopPropagation()}
-            />
-            <button 
-              className="absolute top-4 right-4 text-white hover:text-gray-300 text-3xl bg-black/50 rounded-full w-10 h-10 flex items-center justify-center"
-              onClick={(e) => {
-                e.stopPropagation();
-                setActiveImage(null);
-              }}
+      <AnimatePresence>
+        {activeImage && (
+          <motion.div 
+            className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 cursor-pointer"
+            onClick={() => setActiveImage(null)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.div 
+              className="relative w-full max-w-6xl max-h-[90vh]"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3, ease: [0.16, 0.77, 0.47, 0.97] }}
             >
-              &times;
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
+              <img
+                src={activeImage}
+                alt="Fullscreen work"
+                className="max-w-full max-h-[90vh] object-contain"
+                onClick={(e) => e.stopPropagation()}
+              />
+              <motion.button 
+                className="absolute top-4 right-4 text-white hover:text-gray-300 text-3xl bg-black/50 rounded-full w-10 h-10 flex items-center justify-center"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveImage(null);
+                }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                &times;
+              </motion.button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </AnimatedSection>
   );
 }
