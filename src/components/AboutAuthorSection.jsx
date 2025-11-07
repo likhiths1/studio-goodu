@@ -1,4 +1,4 @@
-import AuthorImg from "../assets/images/author/authorimage.jpeg";
+import AuthorImg from "../assets/images/team/person1.jpg";
 import LeftImg from "../assets/images/author/leftImg.png";
 import RightImg from "../assets/images/author/rightImg.png";
 import QuoteIcon from "../assets/images/author/quote.png";

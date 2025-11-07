@@ -1,69 +1,74 @@
 import Img1 from "../assets/images/works/12.jpg";
 import Img2 from "../assets/images/contact/transform2.jpeg";
 import Img3 from "../assets/images/contact/transform3.jpg";
+import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 export default function ContactSection() {
   return (
-    <section className="w-full bg-[#FFF6ED] lg:min-h-screen relative px-4 pt-6 pb-1 md:pt-20 md:pb-6 lg:pb-20 font-inter overflow-x-hidden">
+    <AnimatedSection className="w-full bg-[#FFF6ED] lg:min-h-screen relative px-4 pt-6 pb-1 md:pt-20 md:pb-6 lg:pb-20 font-inter overflow-x-hidden">
       <div className="max-w-7xl mx-auto flex flex-col items-center relative">
         {/* Headline and decorative image alignment exactly as in Figma */}
         <div className="w-full mb-0 md:mb-0 mt-0 flex flex-col gap-0 leading-tight md:px-[12rem]">
           {/* TRANSFORM Row - Left aligned */}
-          <div className="flex items-center w-full justify-start gap-0">
+          <AnimatedItem className="flex items-center w-full justify-start gap-0">
             <span
               className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em]"
               style={{ color: "#D6AF60" }}
             >
               TRANSFORM
             </span>
-            <img
-              src={Img2}
-              alt=""
-              className="hidden ml-2 md:ml-2 w-[88px] h-[88px] md:w-[176px] md:h-[176px] object-cover"
-              draggable={false}
-            />
-          </div>
+            <AnimatedItem delay={0.2}>
+              <img
+                src={Img2}
+                alt=""
+                className="hidden ml-2 md:ml-2 w-[88px] h-[88px] md:w-[176px] md:h-[176px] object-cover"
+                draggable={false}
+              />
+            </AnimatedItem>
+          </AnimatedItem>
           {/* YOUR LIVING Row - Right aligned */}
-          <div className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem]">
-            <span
-              className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular md:tracking-[-0.04em] whitespace-nowrap"
-              style={{ color: "#4D696C" }}
-            >
-              YOUR LIVING
-            </span>
-          </div>
+          <AnimatedItem delay={0.3} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem]">
+              <span
+                className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular md:tracking-[-0.04em] whitespace-nowrap"
+                style={{ color: "#4D696C" }}
+              >
+                YOUR LIVING
+              </span>
+          </AnimatedItem>
           {/* INTO A Row - Left aligned */}
-          <div className="flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem]">
-            <img
-              src={Img1}
-              alt=""
-              className="hidden mr-0 md:mr-36 w-[88px] h-[88px] md:w-[176px] md:h-[176px] object-cover"
-              draggable={false}
-            />
+          <AnimatedItem delay={0.4} className="flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem]">
+            <AnimatedItem delay={0.5}>
+              <img
+                src={Img1}
+                alt=""
+                className="hidden mr-0 md:mr-36 w-[88px] h-[88px] md:w-[176px] md:h-[176px] object-cover"
+                draggable={false}
+              />
+            </AnimatedItem>
             <span
               className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular md:tracking-[-0.08em]"
               style={{ color: "#D6AF60" }}
             >
               INTO A
             </span>
-          </div>
+          </AnimatedItem>
           {/* MASTERPIECE Row - Right aligned */}
-          <div className="relative flex items-center w-full justify-end gap-0 -mt-[0.8rem] md:-mt-[1.5rem]">
+          <AnimatedItem delay={0.5} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem]">
             <span
               className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular md:tracking-[-0.08em]"
-              style={{
-                color: "#4D696C",
-              }}
+              style={{ color: "#4D696C" }}
             >
               MASTERPIECE
             </span>
-            <img
-              src={Img3}
-              alt=""
-              className="hidden ml-2 md:ml-36 md:mb-24 w-[88px] h-[88px] md:w-[176px] md:h-[176px] object-cover relative z-10"
-              draggable={false}
-            />
-          </div>
+            <AnimatedItem delay={0.6}>
+              <img
+                src={Img3}
+                alt=""
+                className="hidden ml-8 md:ml-8 w-[88px] h-[88px] md:w-[176px] md:h-[176px] object-cover"
+                draggable={false}
+              />
+            </AnimatedItem>
+          </AnimatedItem>
         </div>
 
         {/* Row: Left text | Right form */}
@@ -107,6 +112,6 @@ export default function ContactSection() {
           </form>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

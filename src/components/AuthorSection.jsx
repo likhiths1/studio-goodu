@@ -1,4 +1,4 @@
-import AuthorImg from '../assets/images/author/author.png';
+import AuthorImg from '../assets/images/team/person1.jpg';
 
 export default function AuthorSection() {
   return (

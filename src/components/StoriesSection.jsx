@@ -3,6 +3,7 @@ import Stor2 from '../assets/images/stories/stor2.jpg';
 import Stor3 from '../assets/images/stories/stor3.jpg';
 import Stor1 from '../assets/images/stories/stor4.jpg';
 import GreenOverlay from '../assets/images/greenoverlay.png';
+import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 export default function StoriesSection() {
   const testimonials = [
@@ -35,18 +36,20 @@ export default function StoriesSection() {
   const storyImages = [Stor1, Stor2, Stor3, Stor4];
 
   return (
-    <section className="w-full bg-[#FFF6ED] py-16 md:pt-[50px] md:pb-12 px-3 sm:px-8 md:px-14 font-inter min-h-[700px] md:min-h-[850px] overflow-hidden">
+    <AnimatedSection className="w-full bg-[#FFF6ED] py-16 md:pt-[50px] md:pb-12 px-3 sm:px-8 md:px-14 font-inter min-h-[700px] md:min-h-[850px] overflow-hidden">
       <div className="max-w-[90rem] mx-auto">
         {/* Heading */}
-        <h2 className="text-[3.2rem] sm:text-[3.7rem] md:text-[12rem] font-medium tracking-[-0.08em] text-black leading-none mb-8 text-left">
-          NAMMA<br />
-          <span className="block tracking-[-0.08em] leading-none -mt-[6px] md:-mt-[12px]">GOODU STORIES</span>
-        </h2>
+        <AnimatedItem className="text-left">
+          <h2 className="text-[3.2rem] sm:text-[3.7rem] md:text-[12rem] font-medium tracking-[-0.08em] text-black leading-none mb-8">
+            NAMMA<br />
+            <span className="block tracking-[-0.08em] leading-none -mt-[6px] md:-mt-[12px]">GOODU STORIES</span>
+          </h2>
+        </AnimatedItem>
         {/* Responsive grid for layout control */}
-        <div className="relative">
+        <AnimatedItem delay={0.2} className="relative">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {testimonials.map((item, idx) => (
-              <div key={idx} className="relative w-full aspect-square overflow-hidden">
+              <AnimatedItem key={idx} delay={0.3 + (idx * 0.1)} className="relative w-full aspect-square overflow-hidden">
                 {/* Image with overlay */}
                 <div className="relative w-full h-full">
                   <img
@@ -81,7 +84,7 @@ export default function StoriesSection() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </AnimatedItem>
             ))}
           </div>
           {/* Right Arrow affordance */}
@@ -94,9 +97,9 @@ export default function StoriesSection() {
               <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
-        </div>
+        </AnimatedItem>
         {/* CTA button */}
-        <div className="w-full flex justify-center mt-10 md:mt-14">
+        <AnimatedItem delay={0.7} className="w-full flex justify-center mt-10 md:mt-14">
           <a
             href="/contact"
             className="inline-block px-8 md:px-10 py-3.5 md:py-4 bg-black text-white text-sm md:text-base font-medium tracking-wide hover:opacity-90 transition min-w-[180px] text-center"
@@ -104,8 +107,8 @@ export default function StoriesSection() {
           >
             CONTACT US
           </a>
-        </div>
+        </AnimatedItem>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

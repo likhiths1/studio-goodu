@@ -1,5 +1,6 @@
 import { useState } from "react";
 import BgLine from "../assets/images/contactuspage/bgline.png";
+import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 export default function AboutUsSection() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -13,19 +14,24 @@ export default function AboutUsSection() {
   ];
 
   return (
-    <section className="w-full bg-[#FFF6ED] py-12 px-2 sm:px-6 md:px-14 font-inter">
+    <AnimatedSection className="w-full bg-[#FFF6ED] py-12 px-2 sm:px-6 md:px-14 font-inter">
       <div className="max-w-[85rem] mx-auto">
         {/* Heading */}
-        <h2 className="text-[3.2rem] sm:text-[3.5rem] md:text-[12rem] font-medium text-black tracking-[-0.08em] leading-none mb-2 md:mb-4 text-right">
-          ABOUT US
-        </h2>
+        <AnimatedItem className="text-right">
+          <h2 className="text-[3.2rem] sm:text-[3.5rem] md:text-[12rem] font-medium text-black tracking-[-0.08em] leading-none mb-2 md:mb-4">
+            ABOUT US
+          </h2>
+        </AnimatedItem>
         {/* Subtitle between center and left */}
-        <div className="uppercase w-full text-xs md:leading-none md:text-[1.6rem] text-[#1d1d1d] opacity-80 font-inter font-regular mb-4 md:mb-6 text-left ml-0 mr-auto max-w-full md:max-w-full">
-          Designing spaces that <br /> feel as good as they look.
-        </div>
+        <AnimatedItem delay={1}>
+          <div className="uppercase w-full text-xs md:leading-none md:text-[1.6rem] text-[#1d1d1d] opacity-80 font-inter font-regular mb-4 md:mb-6 text-left ml-0 mr-auto max-w-full md:max-w-full">
+            Designing spaces that <br /> feel as good as they look.
+          </div>
+        </AnimatedItem>
 
         {/* Stats */}
-        <div className="flex flex-col bg-[#FFF6ED] md:mx-[-56px]">
+        <AnimatedItem delay={2}>
+          <div className="flex flex-col bg-[#FFF6ED] md:mx-[-56px]">
           {stats.map((item, i) => {
             const isActive = activeIndex === i;
             return (
@@ -106,8 +112,9 @@ export default function AboutUsSection() {
               </div>
             );
           })}
-        </div>
+          </div>
+        </AnimatedItem>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

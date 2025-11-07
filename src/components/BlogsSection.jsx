@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 import BlogBg from "../assets/images/blogs/blog1.jpg";
 import BlogBg2 from "../assets/images/blogs/stor3.jpg";
 
@@ -39,18 +40,20 @@ export default function BlogsSection() {
   const next = BLOGS[nextIdx];
 
   return (
-    <section className="w-full bg-[#FFF6ED] py-14 md:py-24 px-3 sm:px-8 md:px-14 font-inter">
+    <AnimatedSection className="w-full bg-[#FFF6ED] py-14 md:py-24 px-3 sm:px-8 md:px-14 font-inter">
       <div className="max-w-[90rem] mx-auto">
         <div className="flex flex-row justify-between items-end mb-7 md:mb-10">
-          <h2 className="text-[3.2rem] sm:text-[4rem] md:text-[12rem] leading-none font-medium tracking-[-0.08em] text-black">
-            BLOGS
-          </h2>
-          <div className="w-full">
+          <AnimatedItem>
+            <h2 className="text-[3.2rem] sm:text-[4rem] md:text-[12rem] leading-none font-medium tracking-[-0.08em] text-black">
+              BLOGS
+            </h2>
+          </AnimatedItem>
+          <AnimatedItem delay={1} className="w-full">
             <div className="w-full md:text-right text-xs sm:text-base md:text-[1.6rem] md:leading-none text-black/80 font-inter font-regular">
               TETUR. SUSPENDISSE ORCI NISL<br />
               CONGUE EGESTAS SAGITTIS
             </div>
-          </div>
+          </AnimatedItem>
         </div>
         <div className="w-[95%] max-w-[1200px] mx-auto relative rounded-lg overflow-hidden shadow-sm h-[320px] sm:h-[420px] md:h-[500px]">
           {/* Slides container */}
@@ -102,7 +105,7 @@ export default function BlogsSection() {
           </Link>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 
