@@ -75,7 +75,7 @@ export default function ServicesDetailSection() {
               </h2>
 
               {/* Description */}
-              <p className="font-poppins font-extralight text-sm md:text-[1.5rem] text-black/80 leading-relaxed">
+              <p className="font-inter font-extralight text-sm md:text-[1.5rem] text-black/80 leading-relaxed">
                 {service.description}
               </p>
 
@@ -88,7 +88,7 @@ export default function ServicesDetailSection() {
                   {service.included.map((item, idx) => (
                     <li key={idx} className="flex items-center gap-3">
                       <span className="text-black flex-shrink-0">•</span>
-                      <span className="font-poppins text-xs md:text-[1.4rem] text-black">
+                      <span className="font-inter text-xs md:text-[1.4rem] text-black">
                         {item}
                       </span>
                     </li>

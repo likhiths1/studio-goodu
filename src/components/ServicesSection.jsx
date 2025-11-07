@@ -5,10 +5,10 @@ import Img04 from "../assets/images/services/04.jpg";
 
 export default function ServicesSection() {
   const images = [
-    { src: Img01, alt: "Service 1", rotation: -8 },
-    { src: Img02, alt: "Service 2", rotation: 5 },
-    { src: Img03, alt: "Service 3", rotation: -6 },
-    { src: Img04, alt: "Service 4", rotation: 7 }
+    { src: Img01, alt: "Service 1" },
+    { src: Img02, alt: "Service 2" },
+    { src: Img03, alt: "Service 3" },
+    { src: Img04, alt: "Service 4" }
   ];
 
   return (
@@ -21,7 +21,6 @@ export default function ServicesSection() {
               key={index}
               className="relative group cursor-pointer"
               style={{
-                transform: `rotate(${image.rotation}deg)`,
                 transition: "transform 0.3s ease"
               }}
             >
