@@ -10,16 +10,21 @@ import ResponsiveImage from "../components/ImageBackground";
 import ServicesBanner from "../assets/images/services/imgback.jpg";
 import ServicesSection from "../components/ServicesSection";
 import ServicesDetailSection from "../components/ServicesDetailSection";
+import { AnimatedSection } from "../components/AnimatedSection";
 
 export default function AboutUs() {
   return (
     <>
       <Navbar />
       <ServicesHeader />
-      <FeatureBar />
+      <AnimatedSection>
+        <FeatureBar />
+      </AnimatedSection>
       <ServicesSection />
       <ServicesDetailSection />
-      <ResponsiveImage src={ServicesBanner} alt="" />
+      <AnimatedSection>
+        <ResponsiveImage src={ServicesBanner} alt="" />
+      </AnimatedSection>
 
       {/* PROCESS section */}
       {/* PROCESS section */}

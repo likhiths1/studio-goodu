@@ -2,6 +2,7 @@ import Img01 from "../assets/images/services/01.jpg";
 import Img02 from "../assets/images/services/02.jpg";
 import Img03 from "../assets/images/services/03.jpg";
 import Img04 from "../assets/images/services/04.jpg";
+import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 export default function ServicesSection() {
   const images = [
@@ -12,28 +13,24 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="w-full bg-[#FFF6ED] py-16 md:py-24 px-4 font-inter">
+    <AnimatedSection className="w-full bg-[#FFF6ED] py-16 md:py-24 px-4 font-inter">
       <div className="max-w-[90rem] mx-auto">
         {/* Image Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-stretch justify-items-stretch">
           {images.map((image, index) => (
-            <div
-              key={index}
-              className="relative group cursor-pointer"
-              style={{
-                transition: "transform 0.3s ease"
-              }}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-[220px] sm:h-[260px] md:h-[300px] object-cover"
-                draggable={false}
-              />
-            </div>
+            <AnimatedItem key={index} delay={index + 1}>
+              <div className="relative w-full h-[220px] sm:h-[260px] md:h-[300px] overflow-hidden">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover"
+                  draggable={false}
+                />
+              </div>
+            </AnimatedItem>
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

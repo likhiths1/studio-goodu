@@ -5,15 +5,20 @@ import FeatureBar from "../components/FeatureBar";
 import ContactUsSection from "../components/ContactUsSection";
 import ResponsiveImage from "../components/ImageBackground";
 import backImage from "../assets/images/contactuspage/back1.png";
+import { AnimatedSection } from "../components/AnimatedSection";
 
 export default function ContactUs() {
   return (
     <>
       <Navbar />
       <ContactUsHeader />
-      <FeatureBar />
+      <AnimatedSection>
+        <FeatureBar />
+      </AnimatedSection>
       <ContactUsSection />
-      <ResponsiveImage src={backImage}></ResponsiveImage>
+      <AnimatedSection>
+        <ResponsiveImage src={backImage}></ResponsiveImage>
+      </AnimatedSection>
       <FooterSection />
       {/* ... */}
     </>

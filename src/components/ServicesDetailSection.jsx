@@ -2,6 +2,7 @@ import ArchitectureImg from "../assets/images/services/architecture.jpg";
 import ConstructionImg from "../assets/images/services/construction.jpg";
 import InteriorImg from "../assets/images/services/interior.jpg";
 import TurnkeyImg from "../assets/images/services/turnkey.jpg";
+import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 const services = [
   {
@@ -56,11 +57,12 @@ const services = [
 
 export default function ServicesDetailSection() {
   return (
-    <section className="w-full bg-[#FFF6ED] py-12 md:py-20 px-3 sm:px-8 md:px-14">
+    <AnimatedSection className="w-full bg-[#FFF6ED] py-12 md:py-20 px-3 sm:px-8 md:px-14">
       <div className="max-w-[90rem] mx-auto space-y-16 md:space-y-24">
         {services.map((service, index) => (
-          <div
+          <AnimatedItem
             key={index}
+            delay={index + 1}
             className={`flex flex-col ${
               service.imagePosition === "right" 
                 ? "md:flex-row" 
@@ -106,16 +108,18 @@ export default function ServicesDetailSection() {
                 draggable={false}
               />
             </div>
-          </div>
+          </AnimatedItem>
         ))}
 
         {/* CTA Button - Sharp edges, centered */}
-        <div className="flex justify-center pt-8">
-          <button className="bg-black text-white px-10 md:px-12 py-3.5 md:py-4 text-sm md:text-base font-medium tracking-wide hover:bg-black/90 transition rounded-none">
-            ENQUIRE NOW
-          </button>
-        </div>
+        <AnimatedItem delay={services.length + 1}>
+          <div className="flex justify-center pt-8">
+            <button className="bg-black text-white px-10 md:px-12 py-3.5 md:py-4 text-sm md:text-base font-medium tracking-wide hover:bg-black/90 transition rounded-none">
+              ENQUIRE NOW
+            </button>
+          </div>
+        </AnimatedItem>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
