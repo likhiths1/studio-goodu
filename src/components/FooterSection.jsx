@@ -48,24 +48,24 @@ export default function FooterSection() {
         </div>
 
         {/* Right/meta column */}
-        <div className="md:col-span-3 flex flex-col h-full items-end justify-start gap-3 pt-2 pr-1 pl-0 md:pl-0 min-w-0">
-          <p className="text-[0.9rem] sm:text-base text-white text-right mt-[10px] sm:mt-[12px] md:mt-[14px]" style={{ lineHeight: 1.2, whiteSpace: 'normal' }}>TETUR. SUSPENDISSE ORCI NISL<br />CONGUE EGESTAS SAGITTIS</p>
+        <div className="md:col-span-3 flex flex-col h-full items-end justify-start gap-3 pt-2 pr-1 pl-0 md:pl-0 min-w-0 mt-3 md:mt-0">
+          <p className="text-[0.9rem] sm:text-base text-white text-right mt-[10px] sm:mt-[12px] md:mt-[14px] max-w-[90%] sm:max-w-[50%] md:max-w-none self-end" style={{ lineHeight: 1.2, whiteSpace: 'normal' }}>TETUR. SUSPENDISSE ORCI <br />NISL CONGUE EGESTAS SAGITTIS</p>
           {/* Footer social icons */}
           <div className="flex items-center gap-3 sm:gap-4 mt-auto -translate-y-1 sm:-translate-y-2 md:-translate-y-3">
             <a href="https://www.instagram.com/studiogoodu/?theme=dark" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <img src={Icon1} alt="Instagram" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[43px] md:h-[43px] object-cover opacity-90 hover:opacity-100 transition" />
+              <img src={Icon1} alt="Instagram" className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] md:w-[43px] md:h-[43px] object-cover opacity-90 hover:opacity-100 transition" />
             </a>
             <a href="https://www.facebook.com/profile.php?id=61570917755913" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <img src={Icon2} alt="Facebook" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[43px] md:h-[43px] object-cover opacity-90 hover:opacity-100 transition" />
+              <img src={Icon2} alt="Facebook" className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] md:w-[43px] md:h-[43px] object-cover opacity-90 hover:opacity-100 transition" />
             </a>
             <a href="https://www.linkedin.com/in/studio-goodu-103610309/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <img src={Icon3} alt="LinkedIn" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[43px] md:h-[43px] object-cover opacity-90 hover:opacity-100 transition" />
+              <img src={Icon3} alt="LinkedIn" className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] md:w-[43px] md:h-[43px] object-cover opacity-90 hover:opacity-100 transition" />
             </a>
             <a href="#" aria-label="Social Media">
-              <img src={Icon4} alt="" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[43px] md:h-[43px] object-cover" />
+              <img src={Icon4} alt="" className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] md:w-[43px] md:h-[43px] object-cover" />
             </a>
             <a href="#" aria-label="Social Media">
-              <img src={Icon5} alt="" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[43px] md:h-[43px] object-cover" />
+              <img src={Icon5} alt="" className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] md:w-[43px] md:h-[43px] object-cover" />
             </a>
           </div>
         </div>

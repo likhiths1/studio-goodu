@@ -117,7 +117,6 @@ export default function Navbar() {
                     {link.name}
                   </a>
                 )}
-              )
             </li>
           ))}
         </ul>
