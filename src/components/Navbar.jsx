@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import GooduLogo from '../assets/images/herosection/goodu-logo.png';
 
 const navLinks = [
@@ -7,13 +7,34 @@ const navLinks = [
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
   { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Pricing', href: '#' },
+  { name: 'Pricing', href: '#pricing' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact Us', href: '/contact' },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Scroll to anchor on route changes when hash is present
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [location]);
+
+  const handlePricingClick = (e) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      const el = document.getElementById('pricing');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      navigate('/#pricing');
+    }
+  };
 
   return (
     <nav className="w-full bg-transparent font-inter z-20 px-4 md:px-12 py-2 flex items-center justify-between relative">
@@ -36,12 +57,16 @@ export default function Navbar() {
       <ul className="hidden md:flex gap-12 ml-[-60px] mr-24 text-lg font-inter font-medium">
         {navLinks.map(link => (
           <li key={link.name}>
-            {link.href.startsWith('/') ? (
-              <Link to={link.href} className="text-white">
+            {link.name === 'Pricing' ? (
+              <a href="#pricing" onClick={handlePricingClick} className="text-white hover:text-white hover:underline underline-offset-4 decoration-current">
+                {link.name}
+              </a>
+            ) : link.href.startsWith('/') ? (
+              <Link to={link.href} className="text-white hover:text-white hover:underline underline-offset-4 decoration-current">
                 {link.name}
               </Link>
             ) : (
-              <a href={link.href} className="text-white">
+              <a href={link.href} className="text-white hover:text-white hover:underline underline-offset-4 decoration-current">
                 {link.name}
               </a>
             )}
@@ -70,20 +95,29 @@ export default function Navbar() {
               {link.href.startsWith('/') ? (
                 <Link
                   to={link.href}
-                  className="text-[#EDE1D5] px-4 py-2 block"
+                  className="text-[#EDE1D5] px-4 py-2 block hover:text-[#EDE1D5] hover:underline underline-offset-4 decoration-current"
                   onClick={() => setOpen(false)}
                 >
                   {link.name}
                 </Link>
-              ) : (
-                <a
-                  href={link.href}
-                  className="text-[#EDE1D5] px-4 py-2 block"
-                  onClick={() => setOpen(false)}
-                >
-                  {link.name}
-                </a>
-              )}
+              ) : link.name === 'Pricing' ? (
+                  <a
+                    href="#pricing"
+                    className="text-[#EDE1D5] px-4 py-2 block hover:underline underline-offset-4 decoration-current"
+                    onClick={(e) => { handlePricingClick(e); setOpen(false); }}
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <a
+                    href={link.href}
+                    className="text-[#EDE1D5] px-4 py-2 block"
+                    onClick={() => setOpen(false)}
+                  >
+                    {link.name}
+                  </a>
+                )}
+              )
             </li>
           ))}
         </ul>

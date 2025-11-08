@@ -70,14 +70,14 @@ export default function FeatureBar() {
           font-weight: 400;
           font-size: 1rem;
           letter-spacing: 0.08em;
-          padding: 0 0.5rem;
+          padding: 0 2.5rem;
           flex-shrink: 0;
         }
         
         @media (min-width: 768px) {
           .marquee-item {
             font-size: 2.25rem;
-            padding: 0 1.5rem;
+            padding: 0 3.5rem;
           }
         }
         

@@ -17,7 +17,7 @@ const footerLinks = [
 
 export default function FooterSection() {
   return (
-    <footer className="w-full bg-[#4D696C] pt-3 md:pt-5 lg:pt-2 pb-0 px-3 md:px-0 md:-mb-36 font-inter">
+    <footer className="w-full bg-[#4D696C] mt-14 md:mt-0 pt-3 md:pt-5 lg:pt-2 pb-0 px-3 md:px-0 md:-mb-36 font-inter">
       <div className="max-w-[90rem] mx-auto grid grid-cols-1 md:grid-cols-5 gap-y-5 gap-x-2 items-start md:items-stretch">
         {/* Left: Navigation links */}
         <div className="md:col-span-2 flex flex-col gap-1.5 sm:gap-2 pt-3 pb-4 min-w-0">
@@ -48,10 +48,10 @@ export default function FooterSection() {
         </div>
 
         {/* Right/meta column */}
-        <div className="md:col-span-3 flex flex-col h-full items-end justify-start gap-3 pt-2 pr-1 pl-6 sm:pl-10 md:pl-12 min-w-0">
-          <p className="text-[0.9rem] sm:text-base text-white" style={{ lineHeight: 1.2, whiteSpace: 'normal' }}>TETUR. SUSPENDISSE ORCI NISL<br />CONGUE EGESTAS SAGITTIS</p>
+        <div className="md:col-span-3 flex flex-col h-full items-end justify-start gap-3 pt-2 pr-1 pl-0 md:pl-0 min-w-0">
+          <p className="text-[0.9rem] sm:text-base text-white text-right mt-[10px] sm:mt-[12px] md:mt-[14px]" style={{ lineHeight: 1.2, whiteSpace: 'normal' }}>TETUR. SUSPENDISSE ORCI NISL<br />CONGUE EGESTAS SAGITTIS</p>
           {/* Footer social icons */}
-          <div className="flex items-center gap-3 sm:gap-4 mt-2 sm:mt-3">
+          <div className="flex items-center gap-3 sm:gap-4 mt-auto -translate-y-1 sm:-translate-y-2 md:-translate-y-3">
             <a href="https://www.instagram.com/studiogoodu/?theme=dark" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <img src={Icon1} alt="Instagram" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[43px] md:h-[43px] object-cover opacity-90 hover:opacity-100 transition" />
             </a>

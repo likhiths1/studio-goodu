@@ -29,7 +29,7 @@ export default function ContactSection() {
           {/* YOUR LIVING Row - Right aligned */}
           <AnimatedItem delay={0.3} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem]">
               <span
-                className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular md:tracking-[-0.04em] whitespace-nowrap"
+                className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.04em] md:tracking-[-0.04em] whitespace-nowrap"
                 style={{ color: "#4D696C" }}
               >
                 YOUR LIVING
@@ -46,7 +46,7 @@ export default function ContactSection() {
               />
             </AnimatedItem>
             <span
-              className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular md:tracking-[-0.08em]"
+              className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em]"
               style={{ color: "#D6AF60" }}
             >
               INTO A
@@ -55,7 +55,7 @@ export default function ContactSection() {
           {/* MASTERPIECE Row - Right aligned */}
           <AnimatedItem delay={0.5} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem]">
             <span
-              className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular md:tracking-[-0.08em]"
+              className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em]"
               style={{ color: "#4D696C" }}
             >
               MASTERPIECE

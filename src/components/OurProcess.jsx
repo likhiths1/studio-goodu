@@ -83,7 +83,7 @@ export default function OurProcess() {
                 </motion.h3>
                 <motion.p
                   className={`text-sm sm:text-base md:text-xl font-normal text-[#2b2623] leading-[1.8] font-inter max-w-3xl mx-auto ${
-                    i % 2 === 1 ? 'md:ml-auto md:mr-0 text-right' : 'md:mx-12'
+                    i % 2 === 1 ? 'md:ml-auto md:mr-0 md:text-right text-center' : 'md:mx-12'
                   }`}
                   whileInView={{ x: 0, opacity: 1 }}
                   initial={{ x: i % 2 === 0 ? -30 : 30, opacity: 0 }}

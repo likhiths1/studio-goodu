@@ -202,9 +202,9 @@ const PricingComparison = () => {
                 {/* Features List */}
                 <div className="space-y-3">
                   {Object.entries(plan.features).map(([key, value]) => (
-                    <div key={key} className="flex items-center justify-between">
+                    <div key={key} className="grid grid-cols-[1fr_auto] items-start gap-3">
                       <span
-                        className="text-sm"
+                        className="text-sm text-left"
                         style={{
                           fontFamily: "Poppins, sans-serif",
                           fontWeight: 400,
@@ -213,7 +213,9 @@ const PricingComparison = () => {
                       >
                         {featureNames[key]}
                       </span>
-                      {value ? <CheckIcon /> : <CrossIcon />}
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        {value ? <CheckIcon /> : <CrossIcon />}
+                      </div>
                     </div>
                   ))}
                 </div>

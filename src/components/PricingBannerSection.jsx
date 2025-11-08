@@ -4,8 +4,9 @@ import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 export default function PricingSection() {
   return (
-    <AnimatedSection className="w-full bg-[#FFF6ED] py-14 md:py-24 px-3 sm:px-8 md:px-14 font-inter relative">
-      <div className="max-w-[90rem] mx-auto relative z-10">
+    <section id="pricing">
+      <AnimatedSection className="w-full bg-[#FFF6ED] py-14 md:py-24 px-3 sm:px-8 md:px-14 font-inter relative">
+        <div className="max-w-[90rem] mx-auto relative z-10">
         {/* Headline and subtitle */}
         <div className="flex flex-col md:flex-row justify-between items-end md:items-end mb-8 md:mb-10">
           <AnimatedItem>
@@ -24,7 +25,8 @@ export default function PricingSection() {
         <AnimatedItem delay={0.4}>
           <PricingComparison />
         </AnimatedItem>
-      </div>
-    </AnimatedSection>
+        </div>
+      </AnimatedSection>
+    </section>
   );
 }

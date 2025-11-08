@@ -67,7 +67,7 @@ export default function HeroSection({ isLoading = false }) {
           className="absolute inset-0 z-0 w-full h-full object-cover object-center"
           draggable={false}
         />
-        <div className="relative z-50">
+        <div className="relative z-[60]">
           <Navbar />
         </div>
       </div>
@@ -122,13 +122,11 @@ export default function HeroSection({ isLoading = false }) {
                   >
                     <AnimatedText 
                       text="INTERIOR" 
-                      className="font-inter text-white uppercase font-[400] leading-[0.85] tracking-[-0.08em] block mx-auto"
+                      className="font-inter text-white uppercase font-[400] leading-[0.85] tracking-[-0.08em] block mx-auto mt-[calc(-10vh-35px)] md:mt-[calc(-10vh-200px)]"
                       delay={4.2}
                       style={{
                         fontSize: 'clamp(3.5rem, 14vw, 18rem)',
                         lineHeight: '0.85',
-                        textShadow: '0 0 15px rgba(0,0,0,0.3)',
-                        marginTop: 'calc(-10vh - 200px)',
                         marginBottom: 'clamp(0.5rem, 2vw, 2rem)',
                         display: 'block',
                         width: '100%',
@@ -138,18 +136,6 @@ export default function HeroSection({ isLoading = false }) {
                   </motion.div>
                 )}
                 
-                <motion.div 
-                  className="w-full max-w-2xl mx-auto px-4 sm:px-6 relative z-10"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={showContent ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 4.5, duration: 0.7 }}
-                >
-                  <AnimatedText 
-                    text="THE NEST WE BUILD TOGETHER" 
-                    className="text-white text-base sm:text-lg md:text-xl lg:text-2xl tracking-wide font-light mt-2 sm:mt-3 md:mt-4 text-left"
-                    delay={4.6}
-                  />
-                </motion.div>
               </div>
             </div>
           </div>
@@ -162,8 +148,27 @@ export default function HeroSection({ isLoading = false }) {
           draggable={false}
         />
 
+        {/* Subtext above the building, left-aligned */}
+        <div className="absolute inset-0 z-[60] pointer-events-none">
+          <div className="w-full max-w-[90rem] h-full mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 flex items-center">
+            <motion.div 
+              className="w-full max-w-2xl mr-auto ml-0 relative translate-y-64 sm:translate-y-6 md:translate-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={showContent ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 4.5, duration: 0.7 }}
+            >
+              <AnimatedText 
+                text="THE NEST WE BUILD TOGETHER" 
+                className="text-white text-base sm:text-lg md:text-xl lg:text-2xl tracking-[-0.08em] font-light text-center"
+                delay={4.6}
+                style={{ textShadow: '0 0 12px rgba(0,0,0,0.35)' }}
+              />
+            </motion.div>
+          </div>
+        </div>
+
         <motion.div 
-          className="absolute right-3 md:right-10 lg:right-20 bottom-6 md:bottom-20 max-w-[92vw] md:max-w-lg rounded-md px-4 md:px-6 py-3 text-base md:text-2xl text-white font-light tracking-wide font-inter bg-transparent shadow-none z-40 text-left"
+          className="absolute right-3 md:right-10 lg:right-20 bottom-6 md:bottom-20 max-w-[92vw] md:max-w-lg rounded-md px-4 md:px-6 py-3 text-base md:text-2xl text-white font-light tracking-[-0.08em] font-inter bg-transparent shadow-none z-40 text-left"
           initial={{ opacity: 0, y: 30 }}
           animate={showContent ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 4.8, duration: 0.7, ease: "easeOut" }}

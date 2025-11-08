@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate, useParams } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import './index.css';
 import Home from './pages/Home.jsx';
@@ -21,6 +21,11 @@ function ScrollToTop() {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, [pathname, search, hash]);
   return null;
+}
+
+function BlogsRedirect() {
+  const { id } = useParams();
+  return <Navigate to={id ? `/blog/${id}` : '/blog'} replace />;
 }
 
 function App() {
@@ -57,6 +62,9 @@ function App() {
           <Route path="/services" element={<Services/>} />
           <Route path="/blog/:id" element={<BlogDetailPage/>} />
           <Route path="/portfolio/:id" element={<PortfolioDetailPage/>} />
+          {/* Legacy aliases */}
+          <Route path="/blogs" element={<BlogsRedirect />} />
+          <Route path="/blogs/:id" element={<BlogsRedirect />} />
         </Routes>
       </BrowserRouter>
     </React.StrictMode>
