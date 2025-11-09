@@ -22,12 +22,12 @@ export default function ContactUsHeader() {
         </div>
         <AnimatedItem delay={2}>
           <div className="w-full mt-2 mb-1">
-            <img
+            {/*<img
               src={AboutImg}
               alt="About Us"
               className="block w-full h-full md:h-full object-cover"
               draggable={false}
-            />
+            /> */}
           </div>
         </AnimatedItem>
       </div>

@@ -49,7 +49,7 @@ export default function FooterSection() {
 
         {/* Right/meta column */}
         <div className="md:col-span-3 flex flex-col h-full items-end justify-start gap-3 pt-2 pr-1 pl-0 md:pl-0 min-w-0 mt-3 md:mt-0">
-          <p className="text-[0.9rem] sm:text-base text-white text-right mt-[10px] sm:mt-[12px] md:mt-[14px] max-w-[90%] sm:max-w-[50%] md:max-w-none self-end" style={{ lineHeight: 1.2, whiteSpace: 'normal' }}>TETUR. SUSPENDISSE ORCI <br />NISL CONGUE EGESTAS SAGITTIS</p>
+          <p className="text-[0.9rem] sm:text-[1.6rem] text-white text-right mt-[10px] sm:mt-[12px] md:mt-[14px] max-w-[90%] sm:max-w-[50%] md:max-w-none self-end" style={{ lineHeight: 1.2, whiteSpace: 'normal' }}>TETUR. SUSPENDISSE ORCI <br />NISL CONGUE EGESTAS SAGITTIS</p>
           {/* Footer social icons */}
           <div className="flex items-center gap-3 sm:gap-4 mt-auto -translate-y-1 sm:-translate-y-2 md:-translate-y-3">
             <a href="https://www.facebook.com/profile.php?id=61570917755913" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

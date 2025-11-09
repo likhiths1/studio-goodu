@@ -53,7 +53,7 @@ function TeamCard({ person }) {
     return () => obs.disconnect();
   }, []);
   return (
-    <div ref={cardRef} className="team-card group relative mx-4 sm:mx-8 md:mx-20 max-w-[80rem] flex flex-col bg-black overflow-hidden md:shadow-[0_4px_24px_-8px_rgba(0,0,0,0.05)] font-poppins py-4 md:py-7 px-4 md:px-5">
+    <div ref={cardRef} className="team-card group relative mx-4 sm:mx-8 md:mx-20 max-w-[80rem] flex flex-col h-full bg-black overflow-hidden md:shadow-[0_4px_24px_-8px_rgba(0,0,0,0.05)] font-poppins py-4 md:py-7 px-4 md:px-5">
       <div className="relative h-64 sm:h-80 md:h-[688px]">
         <img
           src={person.img}
@@ -62,7 +62,7 @@ function TeamCard({ person }) {
           draggable={false}
         />
       </div>
-      <div className="px-2 pt-3 pb-4 text-center md:pt-24">
+      <div className="px-2 pt-3 pb-4 text-center md:pt-24 min-h-[110px] sm:min-h-[120px] md:min-h-[180px]">
         <div className="uppercase font-poppins font-light text-white text-base md:text-4xl mb-2">
           {person.name}
         </div>
@@ -122,9 +122,9 @@ export default function MeetTeamSection() {
         </AnimatedItem>
         
         {/* First 4 team members in a grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-1 gap-y-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 items-stretch gap-x-1 gap-y-8">
           {firstFourMembers.map((person, i) => (
-            <AnimatedItem key={i} delay={i + 1}>
+            <AnimatedItem key={i} delay={i + 1} className="h-full">
               <TeamCard person={person} />
             </AnimatedItem>
           ))}

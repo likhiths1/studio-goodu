@@ -1,8 +1,8 @@
 import ArrowIcon from "../assets/images/arrow.png";
-import Port1 from "../assets/images/portfolio/port1.png";
-import Port2 from "../assets/images/portfolio/port2.png";
-import Port3 from "../assets/images/portfolio/port3.png";
-import Port4 from "../assets/images/portfolio/port4.png";
+import Port1 from "../assets/images/portfolio/arthavilla.jpg";
+import Port2 from "../assets/images/portfolio/snobsalon.jpg";
+import Port3 from "../assets/images/portfolio/tyd.jpg";
+import Port4 from "../assets/images/portfolio/srigangaresidence.png";
 import Port5 from "../assets/images/portfolio/port5.png";
 
 import { Link } from "react-router-dom";
@@ -10,22 +10,22 @@ import { Link } from "react-router-dom";
 const portfolioData = [
   {
     img: Port1,
-    title: "Contemporary Bachelor Pad",
+    title: "Artha Villa",
     details: "DETAILS ⇾",
   },
   {
     img: Port2,
-    title: "Modern Living Room",
+    title: "Snob Salon",
     details: "DETAILS ⇾",
   },
   {
     img: Port3,
-    title: "Olive Wood Opulence",
+    title: "TYD",
     details: "DETAILS ⇾",
   },
   {
     img: Port4,
-    title: "White Elegant Residential",
+    title: "Sriganga Residence",
     details: "DETAILS ⇾",
   },
   {
@@ -38,16 +38,16 @@ const portfolioData = [
 export default function PortfolioGallery() {
   return (
     <section className="w-full bg-[#FFF6ED] py-9 px-3 sm:px-8 md:px-14 flex flex-col items-center">
-      <div className="max-w-[90rem] w-full mx-auto md:mt-32">
-        <h2 className="font-inter font-medium text-black text-[2.3rem] md:text-[4.0rem] md:mb-32 leading-tight mb-8 w-full text-center">
+      <div className="max-w-[80rem] w-full mx-auto md:mt-32">
+        <h2 className="font-inter font-medium text-black text-[2.3rem] md:text-[4.6rem] md:mb-32 tracking-[-0.06em] leading-tight mb-8 w-full text-center">
           EXPLORE OUR GALLERY OF<br />SOPHISTICATED INTERIORS
         </h2>
         <div className="flex flex-col gap-y-12 md:gap-y-24 mb-12 md:mb-24">
-          {/* First row - 60/40 split */}
+          {/* First row - 50/50 split */}
           <div className="flex flex-col md:flex-row gap-x-9 gap-y-8">
-            {/* First item - 60% width */}
-            <div className="md:w-[60%] flex flex-col">
-              <div className="w-full h-[300px] md:h-[500px] bg-transparent overflow-hidden">
+            {/* First item - 50% width */}
+            <div className="md:w-1/2 flex flex-col">
+              <div className="w-full h-[420px] md:h-[800px] bg-transparent overflow-hidden">
                 <img
                   src={portfolioData[0].img}
                   alt={portfolioData[0].title}
@@ -68,9 +68,9 @@ export default function PortfolioGallery() {
               </div>
             </div>
             
-            {/* Second item - 40% width */}
-            <div className="md:w-[40%] flex flex-col">
-              <div className="w-full h-[300px] md:h-[500px] bg-transparent overflow-hidden">
+            {/* Second item - 50% width */}
+            <div className="md:w-1/2 flex flex-col">
+              <div className="w-full h-[420px] md:h-[800px] bg-transparent overflow-hidden">
                 <img
                   src={portfolioData[1].img}
                   alt={portfolioData[1].title}
@@ -92,11 +92,11 @@ export default function PortfolioGallery() {
             </div>
           </div>
 
-          {/* Second row - 40/60 split */}
+          {/* Second row - 50/50 split */}
           <div className="flex flex-col md:flex-row gap-x-9 gap-y-8">
-            {/* First item - 40% width */}
-            <div className="md:w-[40%] flex flex-col">
-              <div className="w-full h-[300px] md:h-[500px] bg-transparent overflow-hidden">
+            {/* First item - 50% width */}
+            <div className="md:w-1/2 flex flex-col">
+              <div className="w-full h-[420px] md:h-[800px] bg-transparent overflow-hidden">
                 <img
                   src={portfolioData[2].img}
                   alt={portfolioData[2].title}
@@ -117,9 +117,9 @@ export default function PortfolioGallery() {
               </div>
             </div>
 
-            {/* Second item - 60% width */}
-            <div className="md:w-[60%] flex flex-col">
-              <div className="w-full h-[300px] md:h-[500px] bg-transparent overflow-hidden">
+            {/* Second item - 50% width */}
+            <div className="md:w-1/2 flex flex-col">
+              <div className="w-full h-[420px] md:h-[800px] bg-transparent overflow-hidden">
                 <img
                   src={portfolioData[3].img}
                   alt={portfolioData[3].title}
@@ -139,28 +139,6 @@ export default function PortfolioGallery() {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-        {/* Last image (full row width) */}
-        <div className="mt-2 flex flex-col">
-          <div className="w-full h-[400px] md:h-[700px] bg-transparent overflow-hidden">
-            <img
-              src={portfolioData[4].img}
-              alt={portfolioData[4].title}
-              className="w-full h-full object-cover rounded-none"
-              draggable={false}
-            />
-          </div>
-          <div className="pt-6">
-            <div className="mt-4 font-playfairdisplay font-medium text-[1.3rem] md:text-[2.6rem] text-black">
-              {portfolioData[4].title}
-            </div>
-            <Link 
-              to="/portfolio/5" 
-              className="inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
-            >
-              {portfolioData[4].details}
-            </Link>
           </div>
         </div>
       </div>

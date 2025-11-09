@@ -14,12 +14,12 @@ export default function ServicesSection() {
 
   return (
     <AnimatedSection className="w-full bg-[#FFF6ED] py-16 md:py-24 px-4 font-inter">
-      <div className="max-w-[90rem] mx-auto">
+      <div className="max-w-[80rem] mx-auto">
         {/* Image Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-stretch justify-items-stretch">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 items-stretch justify-items-stretch">
           {images.map((image, index) => (
             <AnimatedItem key={index} delay={index + 1}>
-              <div className="relative w-full h-[220px] sm:h-[260px] md:h-[300px] overflow-hidden">
+              <div className="relative w-full h-[320px] sm:h-[380px] md:h-[420px] overflow-hidden">
                 <img
                   src={image.src}
                   alt={image.alt}

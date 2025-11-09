@@ -82,7 +82,7 @@ export default function AboutUs() {
                 <div className="overflow-hidden">
                   <p className="font-inter text-xs md:text-[1.6rem] text-black/70 leading-relaxed">
                     <Typewriter 
-                      text="Every collaboration begins with conversation. We take time to understand your lifestyle, vision, and aspirations what home means to you, and how design can elevate that experience. This stage sets the foundation for everything that follows." 
+                      text={("Every collaboration begins with conversation. We take time to understand your lifestyle, vision, and aspirations what home means to you, and how design can elevate that experience. This stage sets the foundation for everything that follows.") ?? ""}
                       delay={0.3} 
                       speed={0.03} 
                     />
@@ -108,7 +108,7 @@ export default function AboutUs() {
                 <div className="overflow-hidden">
                   <p className="font-inter text-xs md:text-[1.6rem] text-black/70 leading-relaxed">
                     <Typewriter 
-                      text="From your story, a vision emerges. We develop a conceptual design that captures your aesthetic and functional needs complete with mood boards, material palettes, and spatial ideas. A detailed proposal outlines scope, timeline, and deliverables before we move forward." 
+                      text={("From your story, a vision emerges. We develop a conceptual design that captures your aesthetic and functional needs complete with mood boards, material palettes, and spatial ideas. A detailed proposal outlines scope, timeline, and deliverables before we move forward.") ?? ""}
                       delay={0.3} 
                       speed={0.03} 
                     />
@@ -134,7 +134,7 @@ export default function AboutUs() {
                 <div className="overflow-hidden">
                   <p className="font-inter text-xs md:text-[1.6rem] text-black/70 leading-relaxed">
                     <Typewriter 
-                      text="This is where ideas take shape. We translate concepts into drawings, details, and 3D visualizations, refining every line and texture. From spatial layouts to finishes, this phase ensures every element aligns with your intent and lifestyle." 
+                      text={("This is where ideas take shape. We translate concepts into drawings, details, and 3D visualizations, refining every line and texture. From spatial layouts to finishes, this phase ensures every element aligns with your intent and lifestyle.") ?? ""}
                       delay={0.3} 
                       speed={0.03} 
                     />
@@ -160,7 +160,7 @@ export default function AboutUs() {
                 <div className="overflow-hidden">
                   <p className="font-inter text-xs md:text-[1.6rem] text-black/70 leading-relaxed">
                     <Typewriter 
-                      text="Precision meets craftsmanship. Our on-site team manages construction, coordination, and installation with care and clarity. We collaborate with trusted artisans, vendors, and craftsmen to bring each detail to life on time and to standard." 
+                      text={("Precision meets craftsmanship. Our on-site team manages construction, coordination, and installation with care and clarity. We collaborate with trusted artisans, vendors, and craftsmen to bring each detail to life on time and to standard.") ?? ""}
                       delay={0.3} 
                       speed={0.03} 
                     />
@@ -185,7 +185,7 @@ export default function AboutUs() {
                 </h3>
                 <div className="overflow-hidden">
                   <p className="font-inter text-xs md:text-[1.6rem] text-black/70 leading-relaxed">
-                    <Typewriter text="Where design meets emotion. Furniture, art, lighting, and accessories come together to complete the space. We style and fine-tune every corner, ensuring your home feels not just designed, but lived in beautifully." delay={0.3} speed={0.03} />
+                    <Typewriter text={("Where design meets emotion. Furniture, art, lighting, and accessories come together to complete the space. We style and fine-tune every corner, ensuring your home feels not just designed, but lived in beautifully.") ?? ""} delay={0.3} speed={0.03} />
                   </p>
                 </div>
               </div>

@@ -4,15 +4,24 @@ import Navbar from "../components/NavbarBlack";
 import FeatureBar from "../components/FeatureBar";
 import PortfolioGallery from "../components/PortfolioGallery";
 import ValueSection from "../components/ValueSection";
+import { AnimatedSection } from "../components/AnimatedSection";
 
 export default function Portfolio() {
   return (
     <>
       <Navbar />
-      <PortfolioHeader />
-      <FeatureBar />
-      <PortfolioGallery />
-      <ValueSection />
+      <AnimatedSection>
+        <PortfolioHeader />
+      </AnimatedSection>
+      <AnimatedSection>
+        <FeatureBar />
+      </AnimatedSection>
+      <AnimatedSection>
+        <PortfolioGallery />
+      </AnimatedSection>
+      <AnimatedSection>
+        <ValueSection />
+      </AnimatedSection>
       <FooterSection />
       {/* ... */}
     </>
