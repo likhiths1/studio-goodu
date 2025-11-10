@@ -1,4 +1,4 @@
-import AboutImg from "../assets/images/services/servicesheader.jpg";
+import AboutImg from "../assets/images/services/servicesheaderrr.png";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 export default function ServicesHeader() {
@@ -10,15 +10,6 @@ export default function ServicesHeader() {
             <h2 className="font-inter text-black font-medium text-[3.2rem] md:text-[12rem] leading-none tracking-[-0.08em] text-left">
               SERVICES
             </h2>
-          </AnimatedItem>
-          <AnimatedItem delay={1}>
-            <div className="flex flex-col items-end ml-auto pt-2">
-              <span className="block uppercase text-xs md:text-[1.2rem] text-black/80 text-right font-regular leading-none">
-                Lorem ipsum dolor sit <br />
-                amet consectetur. Suspendisse orci nisl <br/>
-                congue egestas porta turpis justo.
-              </span>
-            </div>
           </AnimatedItem>
         </div>
         <AnimatedItem delay={2}>

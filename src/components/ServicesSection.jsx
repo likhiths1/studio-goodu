@@ -1,6 +1,6 @@
-import Img01 from "../assets/images/services/01.jpg";
+import Img01 from "../assets/images/services/13.png";
 import Img02 from "../assets/images/services/02.jpg";
-import Img03 from "../assets/images/services/03.jpg";
+import Img03 from "../assets/images/services/21.jpg";
 import Img04 from "../assets/images/services/04.jpg";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 

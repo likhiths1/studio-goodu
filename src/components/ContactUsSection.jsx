@@ -1,4 +1,4 @@
-import BannerImg from "../assets/images/contact/banner.png";
+import BannerImg from "../assets/images/portfoliodetail/sree5.png";
 import LineImg from "../assets/images/contact/line.png";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
@@ -12,7 +12,7 @@ export default function ContactUsSection() {
             <div className="mb-7 font-inter text-[2.4rem] font-regular leading-tight text-black">
               We Are Ready to Help You<br />Elevate Your Space
             </div>
-            <form className="flex flex-col gap-12 bg-[#FFF6ED] p-0 border-none rounded-none">
+            <form className="flex flex-col gap-10 bg-[#FFF6ED] p-0 border-none rounded-none">
               <input
                 type="text"
                 placeholder="YOUR NAME"
@@ -35,7 +35,7 @@ export default function ContactUsSection() {
             </form>
             <button
               type="submit"
-              className="mt-16 w-fit px-6 py-2 rounded-none font-inter font-medium text-white bg-[#4D696C] hover:bg-[#3a5051] transition"
+              className="mt-8 w-fit px-6 py-2 rounded-none font-inter font-medium text-white bg-[#4D696C] hover:bg-[#3a5051] transition"
               style={{ letterSpacing: 0.5 }}
             >
               START YOUR JOURNEY
@@ -61,7 +61,7 @@ export default function ContactUsSection() {
         <AnimatedItem delay={2}>
           <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] flex flex-col gap-1 text-justify max-w-xs">
             <span className="font-inter text-[#4D696C] uppercase mb-1">OUR EMAIL & PHONE</span>
-            <span className="font-playfairdisplay md:text-[1.4rem] text-black">info@velainteriors.com</span>
+            <span className="font-playfairdisplay md:text-[1.4rem] text-black">studiogoodu@gmail.com</span>
             <span className="font-playfairdisplay md:text-[1.4rem] text-black">003 404 507 1200</span>
           </div>
         </AnimatedItem>
@@ -76,7 +76,7 @@ export default function ContactUsSection() {
           <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] font-inter text-black flex flex-col gap-1 items-center text-center max-w-xs mx-auto">
             <span className="text-[#4D696C] uppercase mb-1">STUDIO ADDRESS</span>
             <span className="font-playfairdisplay md:text-[1.4rem]">
-              123 Peachtree Lane,<br />Suite 400, Atlanta, GA 30309
+              3rd Block, 1st, 19/H, Main Road, 3rd Stage 4th Block, 3rd Stage, Basaveshwar Nagar, Bengaluru, Karnataka 560079
             </span>
           </div>
         </AnimatedItem>
@@ -90,7 +90,7 @@ export default function ContactUsSection() {
         <AnimatedItem delay={6}>
           <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] flex flex-col gap-1 text-justify max-w-xs">
             <span className="font-inter text-[#4D696C] uppercase mb-1">STUDIO HOURS</span>
-            <span className="font-playfairdisplay md:text-[1.4rem] text-black">Monday – Friday<br />10am – 6pm</span>
+            <span className="font-playfairdisplay md:text-[1.4rem] text-black">Monday – Friday<br />10am – 7pm</span>
           </div>
         </AnimatedItem>
       </div>

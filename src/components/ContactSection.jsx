@@ -75,11 +75,7 @@ export default function ContactSection() {
         <div className="w-full flex flex-col md:flex-row md:items-end md:justify-between mt-4">
           {/* Left Text */}
           <div className="w-full md:w-1/2 flex justify-start items-end pb-6 md:pb-0">
-            <span className="text-black font-medium text-2xl sm:text-3xl md:text-5xl tracking-[-0.08em]leading-snug text-left">
-              Lorem Ipsum
-              <br />
-              Dolor Sit Amet
-            </span>
+            {/* Left side intentionally left blank */}
           </div>
           {/* Right Form */}
           <form className="w-full md:w-1/2 max-w-2xl flex flex-col items-end space-y-5">

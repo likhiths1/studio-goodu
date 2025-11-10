@@ -7,7 +7,7 @@ import FeatureBar from "../components/FeatureBar";
 import Navbar from "../components/NavbarBlack";
 import ExtraContactSection from "../components/ExtraContactSection";
 import ResponsiveImage from "../components/ImageBackground";
-import ServicesBanner from "../assets/images/services/imgback.jpg";
+import ServicesBanner from "../assets/images/services/arthaback.jpg";
 import ServicesSection from "../components/ServicesSection";
 import ServicesDetailSection from "../components/ServicesDetailSection";
 import { AnimatedSection } from "../components/AnimatedSection";
@@ -82,7 +82,7 @@ export default function AboutUs() {
                 <div className="overflow-hidden">
                   <p className="font-inter text-xs md:text-[1.6rem] text-black/70 leading-relaxed">
                     <Typewriter 
-                      text={("Every collaboration begins with conversation. We take time to understand your lifestyle, vision, and aspirations what home means to you, and how design can elevate that experience. This stage sets the foundation for everything that follows.") ?? ""}
+                      text="Every collaboration begins with conversation. We take time to understand your lifestyle, vision, and aspirations what home means to you, and how design can elevate that experience. This stage sets the foundation for everything that follows."
                       delay={0.3} 
                       speed={0.03} 
                     />

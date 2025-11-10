@@ -35,7 +35,7 @@ const TEAM = [
     role: "In-House Support Ninja",
   },
   {
-    img: Person5,
+    img: Person6,
     name: "ArD. Nikitha Kolar Nagabhushan",
     role: "Architect, Designer & Artist",
   },

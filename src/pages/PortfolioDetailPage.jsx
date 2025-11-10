@@ -6,11 +6,41 @@ import FeatureBar from "../components/FeatureBar";
 import ExtraContactSection from "../components/ExtraContactSection";
 import PortfolioDetailSection from "../components/PortfolioDetailSection";
 import ResponsiveImageBlack from "../components/ImageBackgroundBlack";
-import StartImg from "../assets/images/aboutuspage/banner2.png";
+import StartImg from "../assets/images/artah.png";
 import Hero1 from "../assets/images/portfolio/arthavilla.jpg";
 import Hero2 from "../assets/images/portfolio/snobsalon.jpg";
 import Hero3 from "../assets/images/portfolio/tyd.jpg";
 import Hero4 from "../assets/images/portfolio/srigangaresidence.png";
+import snob1 from "../assets/images/portfoliodetail/snob1.jpg";
+import snob2 from "../assets/images/portfoliodetail/snob2.jpg";
+import snob3 from "../assets/images/portfoliodetail/snob3.jpg";
+import snob4 from "../assets/images/portfoliodetail/snob4.jpg";
+import snob5 from "../assets/images/portfoliodetail/snob5.jpg";
+import snob6 from "../assets/images/portfoliodetail/snob6.jpg";
+import snob7 from "../assets/images/portfoliodetail/snob7.jpg";
+import snob8 from "../assets/images/portfoliodetail/snob8.jpg";
+import snob9 from "../assets/images/portfoliodetail/snob9.jpg";
+import snob10 from "../assets/images/portfoliodetail/snob10.jpg";
+import tyd1 from "../assets/images/portfoliodetail/Tyd-5.jpg";
+import tyd2 from "../assets/images/portfoliodetail/Tyd-10.jpg";
+import tyd3 from "../assets/images/portfoliodetail/Tyd-12.jpg";
+import tyd4 from "../assets/images/portfoliodetail/Tyd-17.jpg";
+import tyd5 from "../assets/images/portfoliodetail/Tyd-19.jpg";
+import tyd6 from "../assets/images/portfoliodetail/Tyd-22.jpg";
+import tyd7 from "../assets/images/portfoliodetail/Tyd-23.jpg";
+import tyd8 from "../assets/images/portfoliodetail/Tyd-27.jpg";
+import tyd9 from "../assets/images/portfoliodetail/Tyd-29.jpg";
+import tyd10 from "../assets/images/portfoliodetail/Tyd-30.jpg";
+import sree1 from "../assets/images/portfoliodetail/sree1.png";
+import sree2 from "../assets/images/portfoliodetail/sree2.png";
+import sree3 from "../assets/images/portfoliodetail/sree3.png";
+import sree4 from "../assets/images/portfoliodetail/sree4.png";
+import sree5 from "../assets/images/portfoliodetail/sree5.png";
+import sree6 from "../assets/images/portfoliodetail/sree6.png";
+import sree7 from "../assets/images/portfoliodetail/sree7.png";
+import sree8 from "../assets/images/portfoliodetail/sree8.png";
+import sree9 from "../assets/images/portfoliodetail/sree9.png";
+import sree10 from "../assets/images/portfoliodetail/sree10.png"  
 
 const PROJECTS = {
   "1": {
@@ -37,8 +67,10 @@ const PROJECTS = {
     ],
     // Optional: control its image grid layout
     imageGroups: [
-      // { images: [ImgA, ImgB], columns: 2 },
-      // { images: [ImgC, ImgD, ImgE], columns: 3 },
+      { images: [snob1, snob9], columns: 2 },
+      { images: [snob3, snob4, snob5], columns: 3 },
+      { images: [snob6, snob7], columns: 2 },
+      { images: [snob8, snob2, snob10], columns: 3 }
     ]
   },
   "3": {
@@ -46,12 +78,25 @@ const PROJECTS = {
     hero: Hero3,
     serviceType: "Residential Interior",
     features: "Warm Woods, Open Plan, Statement Lighting",
+    imageGroups: [
+      { images: [tyd10, tyd2], columns: 2 },
+      { images: [tyd3, tyd4, tyd5], columns: 3 },
+      { images: [tyd6, tyd8], columns: 2 },
+      { images: [tyd1, tyd9, tyd7], columns: 3 }
+    ]
   },
   "4": {
     title: "SRIGANGA RESIDENCE",
     hero: Hero4,
     serviceType: "Residential Interior",
     features: "Natural Stone, Wooden Flooring, Custom Carpentry",
+    imageGroups: [
+      { images: [sree1, sree7], columns: 2 },
+      { images: [sree3, sree4, sree5], columns: 3 },
+      { images: [sree6, sree2], columns: 2 },
+      { images: [sree8, sree9, sree10], columns: 3 }
+    ]
+    
   },
 };
 

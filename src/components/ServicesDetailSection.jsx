@@ -1,7 +1,7 @@
-import ArchitectureImg from "../assets/images/services/architecture.jpg";
+import ArchitectureImg from "../assets/images/services/architecture.png";
 import ConstructionImg from "../assets/images/services/construction.jpg";
-import InteriorImg from "../assets/images/services/interior.jpg";
-import TurnkeyImg from "../assets/images/services/turnkey.jpg";
+import InteriorImg from "../assets/images/services/interior.png";
+import TurnkeyImg from "../assets/images/services/turnkey.jpeg";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 const services = [
@@ -58,7 +58,7 @@ const services = [
 export default function ServicesDetailSection() {
   return (
     <AnimatedSection className="w-full bg-[#FFF6ED] py-12 md:py-20 px-3 sm:px-8 md:px-14">
-      <div className="max-w-[90rem] mx-auto space-y-16 md:space-y-24">
+      <div className="max-w-[80rem] mx-auto space-y-16 md:space-y-24">
         {services.map((service, index) => (
           <AnimatedItem
             key={index}

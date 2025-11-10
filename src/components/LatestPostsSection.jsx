@@ -1,22 +1,27 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import BlogBg from "../assets/images/blogs/blogg1.png";
 
 const POSTS = [
   {
+    id: 1,
     bg: BlogBg,
     cat: "DEVELOPMENT",
     date: "18 March 2025",
     title: "Ze Art Galleries Worldwide, High End Art Gallery",
     summary:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    slug: "ze-art-galleries-worldwide"
   },
   {
+    id: 2,
     bg: BlogBg,
     cat: "INTERIORS",
     date: "22 March 2025",
     title: "The Future of Living Spaces",
     summary:
-      "Design for tomorrow’s lifestyle: trends, comfort, and technology combined. Discover how to transform your home for a modern world with warmth and efficiency."
+      "Design for tomorrow's lifestyle: trends, comfort, and technology combined. Discover how to transform your home for a modern world with warmth and efficiency.",
+    slug: "future-of-living-spaces"
   },
 ];
 
@@ -93,30 +98,32 @@ export default function LatestPostsSection() {
 
 function BlogSlide({ blog }) {
   return (
-    <div className="w-full h-full relative">
-      <div className="relative h-full w-full">
-        <img
-          src={blog.bg}
-          alt="Blog post"
-          className="block w-full h-full object-cover object-center rounded-md"
-          draggable={false}
-        />
-        {/* Overlay card */}
-        <div
-          className="absolute bottom-0 right-0 bg-white shadow-md px-6 py-5 sm:px-8 sm:py-7 md:px-10 md:py-8 w-full max-w-[90%]"
-          style={{ borderRadius: "16px 0 0 0" }}
-        >
-          <div className="text-[0.72rem] sm:text-xs md:text-sm font-normal mb-1 text-gray-500">
-            {blog.cat} &nbsp;&nbsp;|&nbsp;&nbsp; {blog.date}
-          </div>
-          <div className="font-semibold text-[1.1rem] sm:text-xl mb-2 text-black">
-            {blog.title}
-          </div>
-          <div className="text-xs md:text-sm lg:text-base text-[#606060] leading-snug sm:leading-relaxed">
-            {blog.summary}
+    <Link to={`/blog/${blog.slug}`} className="block w-full h-full group">
+      <div className="w-full h-full relative">
+        <div className="relative h-full w-full overflow-hidden rounded-md">
+          <img
+            src={blog.bg}
+            alt="Blog post"
+            className="block w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+            draggable={false}
+          />
+          {/* Overlay card */}
+          <div
+            className="absolute bottom-0 right-0 bg-white shadow-md px-6 py-5 sm:px-8 sm:py-7 md:px-10 md:py-8 w-full max-w-[90%] transition-all duration-300 group-hover:shadow-lg"
+            style={{ borderRadius: "16px 0 0 0" }}
+          >
+            <div className="text-[0.72rem] sm:text-xs md:text-sm font-normal mb-1 text-gray-500">
+              {blog.cat} &nbsp;&nbsp;|&nbsp;&nbsp; {blog.date}
+            </div>
+            <h3 className="font-semibold text-[1.1rem] sm:text-xl mb-2 text-black group-hover:text-[#4D696C] transition-colors">
+              {blog.title}
+            </h3>
+            <div className="text-xs md:text-sm lg:text-base text-[#606060] leading-snug sm:leading-relaxed">
+              {blog.summary}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

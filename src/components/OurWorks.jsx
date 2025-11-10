@@ -1,14 +1,14 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AnimatedSection, AnimatedItem } from './AnimatedSection';
-import Img1 from '../assets/images/1.jpg';
-import Img2 from '../assets/images/2.jpg';
-import Img3 from '../assets/images/3.jpg';
-import Img4 from '../assets/images/4.jpg';
-import Img5 from '../assets/images/5.jpg';
-import Img6 from '../assets/images/6.jpg';
-import Img7 from '../assets/images/7.jpg';
-import Img8 from '../assets/images/8.jpg';
+import Img1 from '../assets/images/works1.png';
+import Img2 from '../assets/images/works2.png';
+import Img3 from '../assets/images/works3.png';
+import Img4 from '../assets/images/works4.png';
+import Img5 from '../assets/images/works5.png';
+import Img6 from '../assets/images/works6.png';
+import Img7 from '../assets/images/works7.png';
+import Img8 from '../assets/images/works8.png';
 
 const works = [
   // First row - 3 images (33.33% each)
@@ -100,7 +100,7 @@ export default function OurWorks() {
     <AnimatedSection className="w-full bg-[#FFF6ED] py-12 md:py-16 px-4 sm:px-6 md:px-8 font-inter overflow-hidden">
       <div className="max-w-[85rem] w-full mx-auto">
         {/* Heading + Subtitle */}
-        <AnimatedItem className="relative flex flex-col gap-2 mb-12 md:mb-20">
+        <AnimatedItem className="relative flex flex-col gap-2 mb-6 md:mb-10">
           <motion.h2 
             className="text-[3.2rem] sm:text-[4rem] md:text-[12rem] leading-none font-medium tracking-[-0.08em] text-black text-center md:text-left"
             initial={{ opacity: 0, y: 30 }}
@@ -117,10 +117,6 @@ export default function OurWorks() {
             viewport={{ once: true, margin: '0px 0px -50px 0px' }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="w-full md:text-right text-xs sm:text-base md:text-[1.6rem] md:leading-none text-black/80 font-regular">
-              TETUR. SUSPENDISSE ORCI NISL<br />
-              CONGUE EGESTAS SAGITTIS
-            </div>
           </motion.div>
         </AnimatedItem>
 
@@ -188,7 +184,7 @@ export default function OurWorks() {
                         <img
                           src={work.src}
                           alt={work.title}
-                          className="w-full h-full object-cover aspect-square"
+                          className="w-full h-full object-cover aspect-[4/5]"
                         />
                       </motion.div>
                       <motion.div 

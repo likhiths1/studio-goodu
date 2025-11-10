@@ -1,71 +1,43 @@
 import AuthorImg from "../assets/images/team/studiogoodu.jpg";
-import LeftImg from "../assets/images/author/leftImg.png";
-import RightImg from "../assets/images/author/rightImg.png";
 import QuoteIcon from "../assets/images/author/quote.png";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 export default function AboutAuthorSection() {
   return (
-    <AnimatedSection className="w-full bg-[#FFF6ED] px-4 sm:px-6 md:px-6 lg:px-8 xl:px-12 2xl:px-0 py-8 md:py-16 font-inter">
-      <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between items-center gap-10 md:gap-6 relative">
-        {/* Left quote and text */}
-        <AnimatedItem className="flex flex-col flex-1 w-full max-w-full md:max-w-[32rem] pl-0 sm:pl-2">
-          <AnimatedItem delay={0} className="flex items-start gap-2">
-            <img src={QuoteIcon} alt="" className="w-6 sm:w-7 md:w-9 mt-1 mb-2" />
-          </AnimatedItem>
-          <AnimatedItem delay={1}>
-            <span className="font-playfairdisplay text-3xl sm:text-4xl lg:text-[4.6rem] font-regular text-black leading-tight sm:leading-snug tracking-[0.02em]">
-              I have always believed
-            </span>
-          </AnimatedItem>
-          <AnimatedItem delay={2}>
-            <div className="font-inter text-base sm:text-lg md:text-[1.6rem] lg:text-[1.8rem] text-black font-regular mt-6 sm:mt-10 md:mt-16 leading-relaxed sm:leading-snug tracking-[0.01em]">
-              that interior design is more
-              than just creating beautiful
-              spaces. It’s about crafting
-              environments that inspire,
-              comfort.
-            </div>
-          </AnimatedItem>
-          <AnimatedItem delay={3}>
-            <img
-              src={LeftImg}
-              alt=""
-              className="mt-6 sm:mt-8 md:mt-9 w-32 h-32 sm:w-44 sm:h-44 md:w-[266px] md:h-[263px] object-cover"
-            />
-          </AnimatedItem>
-        </AnimatedItem>
-
-        {/* Author centered image */}
-        <AnimatedItem delay={1} className="flex flex-col items-center flex-1 basis-auto md:basis-[620px] w-full">
+    <AnimatedSection className="w-full bg-[#FFF6ED] px-4 sm:px-6 md:px-6 lg:px-8 xl:px-12 2xl:px-0 py-12 md:py-20 font-inter">
+      <div className="max-w-[80rem] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        {/* Author image on left */}
+        <AnimatedItem className="flex justify-center md:justify-start">
           <img
             src={AuthorImg}
-            alt="Author"
-            className="w-full max-w-[280px] sm:max-w-[360px] md:max-w-[520px] lg:max-w-[620px] h-auto object-cover"
-            style={{ objectPosition: "center top" }}
+            alt="Studio Goodu"
+            className="w-full max-w-[400px] md:max-w-[500px] h-auto object-cover rounded-lg shadow-lg"
           />
         </AnimatedItem>
 
-        {/* Right text block and image */}
-        <AnimatedItem delay={2} className="flex flex-col flex-1 w-full max-w-full md:max-w-[40rem] pr-0 sm:pr-2 items-center md:items-end">
-          <AnimatedItem delay={2}>
-            <img
-              src={RightImg}
-              alt=""
-              className="w-32 h-32 sm:w-44 sm:h-44 md:w-[272.47px] md:h-[279.79px] object-cover mb-10 sm:mb-16 md:mb-28"
-            />
-          </AnimatedItem>
-          <AnimatedItem delay={3}>
-            <div className="font-inter text-black text-base sm:text-lg md:text-[1.6rem] lg:text-[1.8rem] font-regular text-center md:text-right leading-relaxed sm:leading-snug tracking-[0.01em]">
-              My approach to design is
-              centered around blending
-              timeless beauty with
-              modern functionality.
-              I believe that every design
-              should reflect the unique
-              personality of its owner.
-            </div>
-          </AnimatedItem>
+        {/* Text content on right */}
+        <AnimatedItem delay={1} className="space-y-6">
+          <div className="flex items-start gap-4">
+            <img src={QuoteIcon} alt="" className="w-8 h-8 mt-1" />
+            <p className="font-playfairdisplay text-4xl md:text-5xl lg:text-6xl font-regular text-black leading-tight mt-4">
+              At Studio Goodu
+            </p>
+          </div>
+          
+          <div className="space-y-6 text-gray-700 text-lg md:text-xl leading-relaxed text-justify">
+            <p>
+              We believe a home is more than walls and windows it's an intimate expression of the people who live within it. Every project begins with listening, understanding, and translating emotions into spatial form.
+            </p>
+            <p>
+              Our design philosophy lies at the intersection of architecture, artistry, and emotion. We blend modern sensibilities with traditional warmth, creating spaces that breathe, flow, and feel alive.
+            </p>
+            <p>
+              From cozy apartments to sprawling villas, every detail every texture, every curve, every light is curated to bring harmony and depth to your living experience.
+            </p>
+            <p className="text-xl md:text-2xl font-semibold">
+              We don't just design, <br/> we craft stories that can be lived in.
+            </p>
+          </div>
         </AnimatedItem>
       </div>
     </AnimatedSection>

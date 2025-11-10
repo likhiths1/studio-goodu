@@ -4,7 +4,7 @@ import Navbar from "../components/NavbarBlack";
 import FeatureBar from "../components/FeatureBar";
 import ContactUsSection from "../components/ContactUsSection";
 import ResponsiveImage from "../components/ImageBackground";
-import backImage from "../assets/images/contactuspage/back1.png";
+import backImage from "../assets/images/contactback.jpg";
 import { AnimatedSection } from "../components/AnimatedSection";
 
 export default function ContactUs() {

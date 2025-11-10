@@ -1,5 +1,5 @@
 import React from "react";
-import CallToActionImg from "../assets/images/works/1.png";
+import CallToActionImg from "../assets/images/snoba.jpg";
 const CallToActionSection = () => {
   return (
     <section className="w-full bg-black py-16 sm:py-20 md:py-24">

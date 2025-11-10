@@ -9,13 +9,13 @@ export default function AboutUsHeader() {
           <h2 className="font-inter text-black font-medium text-[3.2rem] md:text-[12rem] leading-none tracking-[-0.08em] text-left">
             ABOUT US
           </h2>
-          <div className="flex flex-col items-end ml-auto pt-2">
+          {/*<div className="flex flex-col items-end ml-auto pt-2">
             <span className="block uppercase text-xs md:text-[1.2rem] text-black/80 text-right font-regular leading-none">
               Lorem ipsum dolor sit <br />
               amet consectetur. Suspendisse orci nisl <br/>
               congue egestas porta turpis justo.
             </span>
-          </div>
+          </div> */}
         </AnimatedItem>
         <AnimatedItem delay={1} className="w-full mt-2 mb-1">
           <img

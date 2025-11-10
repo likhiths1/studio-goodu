@@ -1,4 +1,4 @@
-import BannerImg from "../assets/images/blogdetail/banner1.png";
+import BannerImg from "../assets/images/snob.png";
 import GooduLogo from "../assets/images/herosection/goodu-logoblue.png";
 
 export default function BlogDetailSection() {
@@ -11,7 +11,7 @@ export default function BlogDetailSection() {
         </p>
 
         {/* Title */}
-        <h1 className="text-3xl md:text-7xl font-medium text-center text-black mb-12 tracking-tight">
+        <h1 className="text-3xl md:text-7xl font-medium text-center text-black mb-12 tracking-[-0.08em]">
           THE ROLE OF ART IN LUXURY
           <br />
           INTERIOR DESIGN
@@ -45,7 +45,7 @@ export default function BlogDetailSection() {
 
         {/* Quote Block */}
         <div className="text-center mb-12">
-          <p className="text-2xl md:text-5xl font-normal text-black leading-relaxed">
+          <p className="text-2xl md:text-5xl font-normal text-black tracking-[-0.06em] leading-relaxed">
             The details are not the details.
             <br />
             They make the design.

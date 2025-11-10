@@ -1,6 +1,6 @@
 import BgImg from "../assets/images/blogs/back.png";
 import GradientImg from "../assets/images/blogs/grad2.png";
-import BlogImg from "../assets/images/blogs/img1.png";
+import BlogImg from "../assets/images/portfoliodetail/snob1.jpg";
 
 export default function FeaturedBlogSection() {
   return (

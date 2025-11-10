@@ -43,13 +43,16 @@ export default function Typewriter({ text = '', delay = 0, speed = 0.03 }) {
 
   if (!hasText) return null;
 
+  // Ensure we never render undefined
+  const safeDisplayedText = displayedText || '';
+  
   return (
     <motion.span 
       initial={{ opacity: 0, y: 20 }}
       animate={controls}
       className="inline-block"
     >
-      {displayedText}
+      {safeDisplayedText}
       {isTyping && (
         <motion.span 
           className="inline-block w-[2px] h-6 bg-black/70 ml-1 align-middle"

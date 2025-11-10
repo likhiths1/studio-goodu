@@ -11,15 +11,6 @@ export default function PortfolioHeader() {
               PORTFOLIO
             </h2>
           </AnimatedItem>
-          <AnimatedItem delay={1}>
-            <div className="flex flex-col items-end ml-auto pt-2">
-              <span className="uppercase block text-xs md:text-[1.2rem] text-black/80 text-right font-regular leading-5">
-                Lorem ipsum dolor sit <br />
-                amet consectetur. Suspendisse orci nisl <br />
-                congue egestas porta turpis justo.
-              </span>
-            </div>
-          </AnimatedItem>
         </div>
         <AnimatedItem delay={2}>
           <div className="w-full mt-2 mb-1">
