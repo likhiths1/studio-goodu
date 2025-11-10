@@ -3,6 +3,7 @@ import Person2 from "../assets/images/team/person2.jpg";
 import Person3 from "../assets/images/team/person3.jpg";
 import Person4 from "../assets/images/team/person4.jpg";
 import Person5 from "../assets/images/team/person5.jpg";
+import Person6 from "../assets/images/team/person6.jpg"
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 import { useId, useEffect, useRef } from "react";
 
@@ -32,6 +33,11 @@ const TEAM = [
     img: Person5,
     name: "Babul",
     role: "In-House Support Ninja",
+  },
+  {
+    img: Person5,
+    name: "ArD. Nikitha Kolar Nagabhushan",
+    role: "Architect, Designer & Artist",
   },
 ];
 
@@ -105,8 +111,7 @@ const teamCardScribbleCSS = `
 `;
 
 export default function MeetTeamSection() {
-  const firstFourMembers = TEAM.slice(0, 4);
-  const fifthMember = TEAM[4];
+  // All team members will be displayed in a 2x3 grid
 
   return (
     <AnimatedSection className="w-full bg-[#FFF6ED] px-3 sm:px-8 md:px-14 py-8 md:py-16 font-poppins">
@@ -114,26 +119,21 @@ export default function MeetTeamSection() {
       <div className="max-w-[90rem] mx-auto">
         <AnimatedItem className="flex flex-row justify-start items-end mb-7 md:mb-10">
           <h2 className="font-medium text-black text-[3.2rem] md:text-[12rem] leading-none tracking-[-0.09em] text-left font-inter">
-            MEET OUR TEAM
+            MEET OUR GOODU
           </h2>
           <div className="text-xs md:text-[1.6rem] text-black opacity-90 font-regular text-right mt-2 mr-24 md:mt- md:max-w-[100rem] font-inter tracking-[-0.08em] leading-none">
             TETUR. SUSPENDISSE ORCI NISL CONGUE EGESTAS SAGITTIS
           </div>
         </AnimatedItem>
         
-        {/* First 4 team members in a grid */}
+        {/* All team members in a 2x3 grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 items-stretch gap-x-1 gap-y-8">
-          {firstFourMembers.map((person, i) => (
+          {TEAM.map((person, i) => (
             <AnimatedItem key={i} delay={i + 1} className="h-full">
               <TeamCard person={person} />
             </AnimatedItem>
           ))}
         </div>
-
-        {/* 5th team member in its own centered section */}
-        <AnimatedItem delay={firstFourMembers.length + 1} className="mt-12 flex justify-center">
-          <TeamCard person={fifthMember} />
-        </AnimatedItem>
       </div>
     </AnimatedSection>
   );
