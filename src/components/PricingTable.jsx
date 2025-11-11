@@ -7,7 +7,7 @@ const PricingComparison = () => {
       id: 1,
       label: "Architecture",
       name: "Economy",
-      price: "₹180",
+      price: "₹220",
       isPopular: false,
       floorArea: "Up to 4000 Sq. Ft.",
       features: {
@@ -23,7 +23,7 @@ const PricingComparison = () => {
       id: 2,
       label: "Interiors",
       name: "Premium",
-      price: "₹180-350",
+      price: "₹220-390",
       isPopular: false,
       floorArea: "Up to 4000 Sq. Ft.",
       features: {
@@ -39,7 +39,7 @@ const PricingComparison = () => {
       id: 3,
       label: "Interiors + arch",
       name: "Elite",
-      price: "₹300-650",
+      price: "₹340-690",
       isPopular: true,
       floorArea: "Up to 4000 Sq. Ft.",
       features: {

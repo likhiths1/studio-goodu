@@ -1,6 +1,6 @@
 import ArchitectureImg from "../assets/images/services/architecture.png";
 import ConstructionImg from "../assets/images/services/construction.jpg";
-import InteriorImg from "../assets/images/services/interior.png";
+import InteriorImg from "../assets/images/services/interior.jpg";
 import TurnkeyImg from "../assets/images/services/turnkey.jpeg";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 

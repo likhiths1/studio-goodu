@@ -11,14 +11,6 @@ export default function ContactUsHeader() {
               CONTACT US
             </h2>
           </AnimatedItem>
-          <AnimatedItem delay={1}>
-            <div className="flex flex-col items-end ml-auto pt-2">
-              <span className="block text-xs md:text-[1.2rem] text-black/80 text-right font-regular leading-5">
-                LOREM IPSUM DOLOR SIT AMET<br />
-                TETUR. SUSPENDISSE ORCI NISL<br />
-              </span>
-            </div>
-          </AnimatedItem>
         </div>
         <AnimatedItem delay={2}>
           <div className="w-full mt-2 mb-1">
