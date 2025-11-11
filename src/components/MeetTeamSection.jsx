@@ -30,14 +30,14 @@ const TEAM = [
     role: "Talent in Training",
   },
   {
-    img: Person5,
-    name: "Babul",
-    role: "In-House Support Ninja",
-  },
-  {
     img: Person6,
     name: "ArD. Nikitha Kolar Nagabhushan",
     role: "Architect, Designer & Artist",
+  },
+  {
+    img: Person5,
+    name: "Babul",
+    role: "In-House Support Ninja",
   },
 ];
 
@@ -121,9 +121,6 @@ export default function MeetTeamSection() {
           <h2 className="font-medium text-black text-[3.2rem] md:text-[12rem] leading-none tracking-[-0.09em] text-left font-inter">
             MEET OUR GOODU
           </h2>
-          <div className="text-xs md:text-[1.6rem] text-black opacity-90 font-regular text-right mt-2 mr-24 md:mt- md:max-w-[100rem] font-inter tracking-[-0.08em] leading-none">
-            TETUR. SUSPENDISSE ORCI NISL CONGUE EGESTAS SAGITTIS
-          </div>
         </AnimatedItem>
         
         {/* All team members in a 2x3 grid */}

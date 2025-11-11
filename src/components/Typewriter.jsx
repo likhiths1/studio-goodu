@@ -18,6 +18,9 @@ export default function Typewriter({ text = '', delay = 0, speed = 0.03 }) {
         setDisplayedText(prev => prev + safeText[currentIndex]);
         currentIndex++;
         timeoutId = setTimeout(typeNextCharacter, speed * 1000);
+      } else {
+        // Typing completed
+        setIsTyping(false);
       }
     };
 

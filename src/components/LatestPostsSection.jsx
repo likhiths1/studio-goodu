@@ -96,29 +96,43 @@ export default function LatestPostsSection() {
   );
 }
 
+import GreenOverlay from "../assets/images/greenoverlay.png";
+
 function BlogSlide({ blog }) {
   return (
-    <Link to={`/blog/${blog.slug}`} className="block w-full h-full group">
-      <div className="w-full h-full relative">
-        <div className="relative h-full w-full overflow-hidden rounded-md">
+    <Link to={`/blog/${blog.slug}`} className="block w-full h-full">
+      <div className="relative w-full h-full">
+        <div className="absolute inset-0 w-full h-full">
           <img
             src={blog.bg}
             alt="Blog post"
-            className="block w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+            className="w-full h-full object-cover object-center"
             draggable={false}
           />
-          {/* Overlay card */}
-          <div
-            className="absolute bottom-0 right-0 bg-white shadow-md px-6 py-5 sm:px-8 sm:py-7 md:px-10 md:py-8 w-full max-w-[90%] transition-all duration-300 group-hover:shadow-lg"
-            style={{ borderRadius: "16px 0 0 0" }}
-          >
-            <div className="text-[0.72rem] sm:text-xs md:text-sm font-normal mb-1 text-gray-500">
-              {blog.cat} &nbsp;&nbsp;|&nbsp;&nbsp; {blog.date}
+        </div>
+        <div 
+          className="absolute inset-0 bg-cover bg-left"
+          style={{ 
+            backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%), url(${GreenOverlay})`,
+            backgroundSize: '100% 100%',
+            backgroundBlendMode: 'overlay',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-end',
+            alignItems: 'flex-start',
+            padding: '2rem 2rem 3rem 2rem',
+            color: 'white',
+            paddingBottom: '4rem'
+          }}
+        >
+          <div className="w-full text-left">
+            <div className="text-sm sm:text-base font-normal mb-2 text-white/80">
+              {blog.cat} <span className="mx-2">|</span> {blog.date}
             </div>
-            <h3 className="font-semibold text-[1.1rem] sm:text-xl mb-2 text-black group-hover:text-[#4D696C] transition-colors">
+            <h3 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 sm:mb-4 leading-tight">
               {blog.title}
             </h3>
-            <div className="text-xs md:text-sm lg:text-base text-[#606060] leading-snug sm:leading-relaxed">
+            <div className="text-base sm:text-lg text-white/90 leading-relaxed break-words">
               {blog.summary}
             </div>
           </div>
