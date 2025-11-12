@@ -8,7 +8,7 @@ import Process04 from '../assets/images/process/04.png';
 const steps = [
   {
     img: Process01,
-    title: "DISCOVER",
+    title: "UNVEIL",
     desc: "Understanding You. Every great space begins with a story of yours. We start by listening, observing, and uncovering how you live, work, and feel. This stage defines not just what we build, but why we build it.",
   },
   {
@@ -18,12 +18,12 @@ const steps = [
   },
   {
     img: Process03,
-    title: "DEVELOP",
+    title: "MOULD",
     desc: "Refine. Resolve. Realize. Our team collaborates closely with artisans, engineers, and partners to bring every element to life. From materials and finishes to lighting and ergonomics, perfection is in the process.",
   },
   {
     img: Process04,
-    title: "DELIVER",
+    title: "CONVEY",
     desc: "Beyond Handover. When your space is ready, it’s more than complete, it’s alive. We walk with you through the final reveal, ensuring every line, light, and layer resonates with your vision. Our relationship doesn’t end here; it evolves, just like your space.",
   },
 ];

@@ -7,15 +7,15 @@ export default function ContactSection() {
   return (
     <AnimatedSection className="w-full bg-[#FFF6ED] lg:min-h-screen relative px-4 pt-6 pb-1 md:pt-20 md:pb-6 lg:pb-20 font-inter overflow-x-hidden">
       <div className="max-w-7xl mx-auto flex flex-col items-center relative">
-        {/* Headline and decorative image alignment exactly as in Figma */}
+        {/* Service Categories */}
         <div className="w-full mb-0 md:mb-0 mt-0 flex flex-col gap-0 leading-tight md:px-[12rem]">
-          {/* TRANSFORM Row - Left aligned */}
-          <AnimatedItem className="flex items-center w-full justify-start gap-0">
+          {/* Row 1 - Left aligned with negative margin */}
+          <AnimatedItem className="flex items-center w-full justify-start gap-0 -ml-2 md:-ml-4">
             <span
               className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em]"
               style={{ color: "#D6AF60" }}
             >
-              TRANSFORM
+              COMMERCIAL
             </span>
             <AnimatedItem delay={0.2}>
               <img
@@ -26,17 +26,19 @@ export default function ContactSection() {
               />
             </AnimatedItem>
           </AnimatedItem>
-          {/* YOUR LIVING Row - Right aligned */}
-          <AnimatedItem delay={0.3} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem]">
-              <span
-                className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.04em] md:tracking-[-0.04em] whitespace-nowrap"
-                style={{ color: "#4D696C" }}
-              >
-                YOUR LIVING
-              </span>
+          
+          {/* Row 2 - Right aligned with offset */}
+          <AnimatedItem delay={0.3} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-8 md:pr-16">
+            <span
+              className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.04em] md:tracking-[-0.04em] whitespace-nowrap"
+              style={{ color: "#4D696C" }}
+            >
+              RESIDENTIAL
+            </span>
           </AnimatedItem>
-          {/* INTO A Row - Left aligned */}
-          <AnimatedItem delay={0.4} className="flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem]">
+          
+          {/* Row 3 - Left aligned with more offset */}
+          <AnimatedItem delay={0.4} className="flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-12 md:pl-24">
             <AnimatedItem delay={0.5}>
               <img
                 src={Img1}
@@ -49,16 +51,17 @@ export default function ContactSection() {
               className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em]"
               style={{ color: "#D6AF60" }}
             >
-              INTO A
+              F&B
             </span>
           </AnimatedItem>
-          {/* MASTERPIECE Row - Right aligned */}
-          <AnimatedItem delay={0.5} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem]">
+          
+          {/* Row 4 - Right aligned with less offset */}
+          <AnimatedItem delay={0.5} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-4 md:pr-8">
             <span
               className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em]"
               style={{ color: "#4D696C" }}
             >
-              MASTERPIECE
+              HOSPITALITY
             </span>
             <AnimatedItem delay={0.6}>
               <img
@@ -68,6 +71,36 @@ export default function ContactSection() {
                 draggable={false}
               />
             </AnimatedItem>
+          </AnimatedItem>
+          
+          {/* Row 5 - Left aligned with medium offset */}
+          <AnimatedItem delay={0.6} className="flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-6 md:pl-12">
+            <span
+              className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em]"
+              style={{ color: "#D6AF60" }}
+            >
+              EXPERIENCE & LIFESTYLE
+            </span>
+          </AnimatedItem>
+          
+          {/* Row 6 - Right aligned with maximum offset */}
+          <AnimatedItem delay={0.7} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-16 md:pr-32">
+            <span
+              className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em]"
+              style={{ color: "#4D696C" }}
+            >
+              INSTITUTIONAL & PUBLIC
+            </span>
+          </AnimatedItem>
+          
+          {/* Row 7 - Left aligned with slight offset */}
+          <AnimatedItem delay={0.8} className="flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-2 md:pl-4">
+            <span
+              className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em]"
+              style={{ color: "#D6AF60" }}
+            >
+              INDUSTRIAL & INFRASTRUCTURE
+            </span>
           </AnimatedItem>
         </div>
 

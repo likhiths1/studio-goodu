@@ -118,8 +118,8 @@ export default function MeetTeamSection() {
       <style>{teamCardScribbleCSS}</style>
       <div className="max-w-[90rem] mx-auto">
         <AnimatedItem className="flex flex-row justify-start items-end mb-7 md:mb-10">
-          <h2 className="font-medium text-black text-[3.2rem] md:text-[12rem] leading-none tracking-[-0.09em] text-left font-inter">
-            MEET OUR GOODU
+          <h2 className="uppercase font-medium text-black text-[3rem] md:text-[10rem] leading-none tracking-[-0.09em] text-left font-inter">
+            Meet the Faces Behind the Space
           </h2>
         </AnimatedItem>
         

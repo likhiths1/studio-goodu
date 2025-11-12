@@ -1,6 +1,7 @@
-import { useRef, useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import { AnimatedSection, AnimatedItem } from './AnimatedSection';
+import { useNavigate } from 'react-router-dom';
 import Img1 from '../assets/images/works1.png';
 import Img2 from '../assets/images/works2.png';
 import Img3 from '../assets/images/works3.png';
@@ -73,28 +74,12 @@ const works = [
 ];
 
 export default function OurWorks() {
-  const [activeImage, setActiveImage] = useState(null);
-  const hoverTimerRef = useRef(null);
-
-  const startHoverTimer = (src) => {
-    clearHoverTimer();
-    hoverTimerRef.current = setTimeout(() => setActiveImage(src), 5000);
+  const navigate = useNavigate();
+  
+  const handleProjectClick = (projectId) => {
+    // Navigate to the portfolio detail page with the project ID
+    navigate(`/portfolio/${projectId}`);
   };
-  const clearHoverTimer = () => {
-    if (hoverTimerRef.current) {
-      clearTimeout(hoverTimerRef.current);
-      hoverTimerRef.current = null;
-    }
-  };
-  const closeOverlay = () => setActiveImage(null);
-
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === 'Escape') closeOverlay();
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, []);
 
   return (
     <AnimatedSection className="w-full bg-[#FFF6ED] py-12 md:py-16 px-4 sm:px-6 md:px-8 font-inter overflow-hidden">
@@ -136,10 +121,8 @@ export default function OurWorks() {
                   return (
                     <motion.div 
                       key={i}
-                      className={`${work.size} relative group cursor-pointer overflow-hidden`}
-                      onMouseEnter={() => startHoverTimer(work.src)}
-                      onMouseLeave={clearHoverTimer}
-                      onClick={() => setActiveImage(work.src)}
+                      className={`${work.size} relative group overflow-hidden`}
+                      onClick={() => handleProjectClick(i + 1)} // Using index + 1 as project ID
                       initial={{ opacity: 0, y: 50, scale: 0.95 }}
                       whileInView={{ 
                         opacity: 1, 
@@ -209,45 +192,6 @@ export default function OurWorks() {
         {/* View More Button */}
       </div>
 
-      {/* Fullscreen Image Modal */}
-      <AnimatePresence>
-        {activeImage && (
-          <motion.div 
-            className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 cursor-pointer"
-            onClick={() => setActiveImage(null)}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <motion.div 
-              className="relative w-full max-w-6xl max-h-[90vh]"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.3, ease: [0.16, 0.77, 0.47, 0.97] }}
-            >
-              <img
-                src={activeImage}
-                alt="Fullscreen work"
-                className="max-w-full max-h-[90vh] object-contain"
-                onClick={(e) => e.stopPropagation()}
-              />
-              <motion.button 
-                className="absolute top-4 right-4 text-white hover:text-gray-300 text-3xl bg-black/50 rounded-full w-10 h-10 flex items-center justify-center"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setActiveImage(null);
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                &times;
-              </motion.button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </AnimatedSection>
   );
 }

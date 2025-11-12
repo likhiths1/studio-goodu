@@ -36,7 +36,7 @@ export default function FeaturedBlogSection() {
               With meticulous attention to detail and an unwavering commitment to quality, we design spaces that are as exceptional as you are.
             </p>
             <a href="#" className="font-poppins text-white text-[1.2rem] tracking-tight underline underline-offset-4">
-              READ POST &mdash;
+              READ POST
             </a>
           </div>
         </div>

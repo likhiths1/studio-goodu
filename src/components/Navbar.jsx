@@ -6,7 +6,7 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
-  { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Design Archive', href: '/portfolio' },
   { name: 'Pricing', href: '#pricing' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact Us', href: '/contact' },
@@ -37,7 +37,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-full bg-transparent font-inter z-20 px-4 md:px-12 py-2 flex items-center justify-between relative">
+    <nav className="w-full bg-transparent font-inter z-[9999] px-4 md:px-12 py-2 flex items-center justify-between relative">
       <Link to="/">
         <img src={GooduLogo} alt="Studio Goodu Logo" className="h-16 md:h-20 md:ml-20 w-auto" />
       </Link>
@@ -76,9 +76,11 @@ export default function Navbar() {
 
       {/* Mobile Nav */}
       <div
+        className={`fixed inset-0 bg-black/80 transition-opacity duration-300 z-[9998] ${open ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}></div>
+      <div
         className={`fixed inset-0 w-full bg-[#1e1c1a] transition-all duration-300 ease-in-out overflow-hidden ${
           open ? 'max-h-[100vh] py-10 visible' : 'max-h-0 py-0 invisible'
-        } md:hidden z-50`}
+        } md:hidden z-[9998]`}
       >
         {/* Close Icon */}
         <button

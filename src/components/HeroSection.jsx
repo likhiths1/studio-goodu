@@ -81,7 +81,7 @@ export default function HeroSection({ isLoading = false, children }) {
     <>
       {/* Fixed Hero Section */}
       <div 
-        className="w-full min-h-[100svh] md:min-h-[120svh] lg:min-h-[130svh] relative font-inter overflow-hidden fixed top-0 left-0 z-10"
+        className="w-full min-h-[100svh] md:min-h-[120svh] lg:min-h-[130svh] relative font-inter overflow-hidden fixed top-0 left-0 z-0"
         style={{
           opacity: 1 - (scrollProgress * 0.9), // Fade out as user scrolls
           transition: 'opacity 0.3s ease-out'
@@ -109,11 +109,11 @@ export default function HeroSection({ isLoading = false, children }) {
           draggable={false}
         />
 
-        <div className="relative z-50">
+        <div className="relative z-[9999]">
           <Navbar />
         </div>
 
-        <div className="absolute inset-0 z-30 flex items-center justify-start">
+        <div className="absolute inset-0 z-10 flex items-center justify-start">
           <div className="w-full max-w-[90rem] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <div className="w-full">
               <div className="w-full text-left mt-2 md:mt-4">
@@ -175,13 +175,13 @@ export default function HeroSection({ isLoading = false, children }) {
         <img 
           src={BackSkyless} 
           alt="" 
-          className="absolute inset-0 z-30 w-full h-full object-cover pointer-events-none"
+          className="absolute inset-0 z-10 w-full h-full object-cover pointer-events-none"
           draggable={false}
         />
 
         {/* Bottom overlay texts: address, central blurb, right blurb */}
         <motion.div 
-          className="absolute inset-x-0 bottom-0 z-[60] pointer-events-none"
+          className="absolute inset-x-0 bottom-0 z-20 pointer-events-none"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 5.1, duration: 0.7 }}

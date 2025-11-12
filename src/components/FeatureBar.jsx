@@ -3,7 +3,12 @@ export default function FeatureBar() {
     "LUXURY",
     "CRAFTSMANSHIP",
     "ELEGANCE",
-    "CREATIVE"
+    "CREATIVE",
+    "SERENE",
+    "OPULENT",
+    "TRANQUIL",
+    "ARTISTIC"
+
   ];
 
   // Create multiple duplicates for a smoother infinite effect

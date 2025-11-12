@@ -16,8 +16,8 @@ export default function ContactUs() {
         <FeatureBar />
       </AnimatedSection>
       <ContactUsSection />
-      <AnimatedSection>
-        <ResponsiveImage src={backImage}></ResponsiveImage>
+      <AnimatedSection className="px-0 py-12 md:py-20">
+        <ResponsiveImage src={backImage} />
       </AnimatedSection>
       <FooterSection />
       {/* ... */}

@@ -1,4 +1,4 @@
-import ArchitectureImg from "../assets/images/services/architecture.png";
+import ArchitectureImg from "../assets/images/services/architecture1.jpg";
 import ConstructionImg from "../assets/images/services/construction.jpg";
 import InteriorImg from "../assets/images/services/interior.jpg";
 import TurnkeyImg from "../assets/images/services/turnkey.jpeg";
@@ -70,7 +70,7 @@ export default function ServicesDetailSection() {
             } gap-8 md:gap-12 items-stretch`}
           >
             {/* Content Side */}
-            <div className="flex-1 space-y-12">
+            <div className="flex-1 space-y-8">
               {/* Title */}
               <h2 className="font-inter font-medium text-2xl md:text-[3.3rem] text-black tracking-tight">
                 {service.title}
@@ -100,11 +100,11 @@ export default function ServicesDetailSection() {
             </div>
 
             {/* Image Side (expanded) */}
-            <div className="flex-shrink-0 w-full md:w-[380px] lg:w-[440px] self-stretch">
+            <div className="flex-shrink-0 w-full md:w-[380px] lg:w-[440px] h-[400px] md:h-[500px]">
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-full md:h-full object-cover shadow-md min-h-[360px]"
+                className="w-full h-full object-cover shadow-md"
                 draggable={false}
               />
             </div>
