@@ -93,7 +93,7 @@ export default function BlogsSection() {
             </h2>
           </AnimatedItem>
         </div>
-        <div className="w-full relative rounded-lg overflow-hidden shadow-sm h-[380px] sm:h-[450px] md:h-[550px] lg:h-[650px] group">
+        <div className="w-full relative rounded-lg overflow-hidden shadow-sm h-[380px] sm:h-[420px] md:h-[500px] lg:h-[600px] group">
           {/* Slides container */}
           <div className="absolute inset-0 w-full h-full"
                style={{ perspective: 900, overflow: "visible" }}>
@@ -128,7 +128,7 @@ export default function BlogsSection() {
           {/* Arrow navigation */}
           <button
             onClick={prevBlog}
-            className="hidden md:flex items-center justify-center absolute left-6 top-1/2 -translate-y-1/2 z-20 w-14 h-14 bg-black/60 hover:bg-black/80 text-white rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 shadow-lg hover:scale-105"
+            className="flex items-center justify-center absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-black/60 hover:bg-black/80 text-white rounded-full transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 shadow-lg hover:scale-105"
             aria-label="Previous blog"
             disabled={direction !== 0}
           >
@@ -138,7 +138,7 @@ export default function BlogsSection() {
           </button>
           <button
             onClick={nextBlog}
-            className="hidden md:flex items-center justify-center absolute right-6 top-1/2 -translate-y-1/2 z-20 w-14 h-14 bg-black/60 hover:bg-black/80 text-white rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 shadow-lg hover:scale-105"
+            className="flex items-center justify-center absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-black/60 hover:bg-black/80 text-white rounded-full transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 shadow-lg hover:scale-105"
             aria-label="Next blog"
             disabled={direction !== 0}
           >
@@ -148,7 +148,7 @@ export default function BlogsSection() {
           </button>
         </div>
         {/* CTA button */}
-        <div className="w-full flex justify-center mt-10 md:mt-14">
+        <div className="w-full flex justify-center mt-8 sm:mt-10 md:mt-14">
           <Link 
             to="/blog" 
             className="inline-block px-8 md:px-10 py-3.5 md:py-4 bg-black text-white text-sm md:text-base font-medium tracking-wide hover:opacity-90 transition min-w-[180px] text-center" 
@@ -184,19 +184,34 @@ function BlogSlide({ blog }) {
             flexDirection: 'column',
             justifyContent: 'flex-end',
             alignItems: 'flex-start',
-            padding: '2rem 2rem 3rem 2rem',
+            padding: '1rem 0.75rem 1.5rem',
+            '@media (min-width: 640px)': {
+              padding: '1.25rem 1.25rem 2.5rem',
+            },
+            '@media (min-width: 768px)': {
+              padding: '1.5rem 1.5rem 3rem',
+            },
+            '@media (min-width: 1024px)': {
+              padding: '2rem 2rem 3rem',
+            },
             color: 'white',
-            paddingBottom: '4rem'
+            paddingBottom: '2.5rem',
+            '@media (min-width: 640px)': {
+              paddingBottom: '3rem',
+            },
+            '@media (min-width: 1024px)': {
+              paddingBottom: '4rem',
+            }
           }}
         >
-          <div className="w-full max-w-[60%] text-left ml-[40%] pr-10 mb-6">
-            <div className="text-sm sm:text-base font-normal mb-2 text-white/80">
+          <div className="w-full lg:max-w-[60%] text-left lg:ml-[40%] px-3 sm:px-6 md:pr-10 mb-4 sm:mb-6">
+            <div className="text-[10px] xs:text-xs sm:text-sm md:text-base font-normal mb-1 sm:mb-2 text-white/80">
               {blog.cat} <span className="mx-2">|</span> {blog.date}
             </div>
-            <h3 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 sm:mb-4 leading-tight">
+            <h3 className="font-semibold text-base sm:text-2xl md:text-3xl lg:text-4xl mb-1 sm:mb-3 leading-tight">
               {blog.title}
             </h3>
-            <div className="text-base sm:text-lg text-white/90 leading-relaxed break-words">
+            <div className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 leading-relaxed break-words line-clamp-2 sm:line-clamp-3 md:line-clamp-4">
               {blog.summary}
             </div>
           </div>
