@@ -1,9 +1,9 @@
-import Person1 from "../assets/images/team/person1.jpg";
-import Person2 from "../assets/images/team/person2.jpg";
-import Person3 from "../assets/images/team/person3.jpg";
-import Person4 from "../assets/images/team/person4.jpg";
-import Person5 from "../assets/images/team/person5.jpg";
-import Person6 from "../assets/images/team/person6.jpg"
+import Person1 from "../assets/images/team/person1.2.jpg";
+import Person2 from "../assets/images/team/colored-image3.jpg";
+import Person3 from "../assets/images/team/colored-image2.jpg";
+import Person4 from "../assets/images/team/colored-image1.jpg";
+import Person5 from "../assets/images/team/colored-image.jpg";
+import Person6 from "../assets/images/team/person1.1.jpg"
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 import { useId, useEffect, useRef } from "react";
 
@@ -11,27 +11,27 @@ import { useId, useEffect, useRef } from "react";
 const TEAM = [
   {
     img: Person1,
-    name: "Ar. Tharun Mahesh",
-    role: "Founder & Mastermind of Design and Architecture",
+    name: "Mahesh Babu K",
+    role: "Director",
   },
   {
     img: Person2,
-    name: "Mr. Rishab Mahesh",
+    name: "Rishab Mahesh",
     role: "Head of Ground Realities",
   },
   {
     img: Person3,
-    name: "Mrs. Sakshi Summariya",
+    name: "Sakshi Summariya",
     role: "Junior Moodboard Magician of Spaces",
   },
   {
     img: Person4,
-    name: "Mrs. Prapthi Prasad",
+    name: "Prapthi Prasad",
     role: "Talent in Training",
   },
   {
     img: Person6,
-    name: "ArD. Nikitha Kolar Nagabhushan",
+    name: "Nikitha Kolar Nagabhushan",
     role: "Architect, Designer & Artist",
   },
   {
@@ -68,7 +68,7 @@ function TeamCard({ person }) {
           draggable={false}
         />
       </div>
-      <div className="px-2 pt-3 pb-4 text-center md:pt-24 min-h-[110px] sm:min-h-[120px] md:min-h-[180px]">
+      <div className="px-2 pt-3 pb-4 text-center md:pt-16 min-h-[110px] sm:min-h-[120px] md:min-h-[180px]">
         <div className="uppercase font-poppins font-light text-white text-base md:text-4xl mb-2">
           {person.name}
         </div>

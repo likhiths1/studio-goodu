@@ -1,29 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import BlogBg from "../assets/images/blogs/blogg1.png";
+import { BLOG_POSTS } from "../data/blogPosts";
 
-const POSTS = [
-  {
-    id: 1,
-    bg: BlogBg,
-    cat: "DEVELOPMENT",
-    date: "18 March 2025",
-    title: "Ze Art Galleries Worldwide, High End Art Gallery",
-    summary:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    slug: "ze-art-galleries-worldwide"
-  },
-  {
-    id: 2,
-    bg: BlogBg,
-    cat: "INTERIORS",
-    date: "22 March 2025",
-    title: "The Future of Living Spaces",
-    summary:
-      "Design for tomorrow's lifestyle: trends, comfort, and technology combined. Discover how to transform your home for a modern world with warmth and efficiency.",
-    slug: "future-of-living-spaces"
-  },
-];
+// Convert BLOG_POSTS object to array and take the first 2 posts
+const POSTS = Object.values(BLOG_POSTS)
+  .slice(0, 2)
+  .map(post => ({
+    id: post.id,
+    bg: post.featuredImage,
+    cat: post.sections?.[0]?.title?.split(' ')[0]?.toUpperCase() || 'DESIGN',
+    date: post.date,
+    title: post.title,
+    summary: post.intro?.[0] || ''
+  }));
 
 export default function LatestPostsSection() {
   const [active, setActive] = useState(0);
@@ -100,7 +89,7 @@ import GreenOverlay from "../assets/images/greenoverlay.png";
 
 function BlogSlide({ blog }) {
   return (
-    <Link to={`/blog/${blog.slug}`} className="block w-full h-full">
+    <Link to={`/blog/${blog.id}`} className="block w-full h-full">
       <div className="relative w-full h-full">
         <div className="absolute inset-0 w-full h-full">
           <img

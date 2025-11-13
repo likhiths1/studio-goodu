@@ -1,47 +1,21 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
-import BlogBg from "../assets/images/blogs/blog1.jpg";
-import BlogBg2 from "../assets/images/blogs/stor3.jpg";
+import { BLOG_POSTS } from "../data/blogPosts";
 import GreenOverlay from "../assets/images/greenoverlay.png";
 
-const BLOGS = [
-  {
-    bg: BlogBg,
-    cat: "DEVELOPMENT",
-    date: "18 March 2025",
-    title: "Ze Art Galleries Worldwide, High End Art Gallery",
-    summary: "The intersection of art and interior design has never been more prominent than in today's high-end galleries. Our latest project showcases how we transformed a traditional gallery space into a modern, interactive experience. By carefully considering lighting, flow, and spatial relationships, we've created an environment that enhances both the artwork and visitor experience. The design incorporates sustainable materials and smart technology to create a space that's both beautiful and functional."
-  },
-  {
-    bg: BlogBg2,
-    cat: "INTERIORS",
-    date: "22 March 2025",
-    title: "The Future of Living Spaces",
-    summary: "As we move further into the decade, the way we think about living spaces continues to evolve. Our latest research shows a growing demand for multi-functional areas that can adapt to various needs throughout the day. From home offices that transform into entertainment spaces to kitchens that serve as social hubs, the future is all about flexibility. We're incorporating smart home technology, sustainable materials, and innovative storage solutions to create spaces that are as practical as they are beautiful."
-  },
-  {
-    bg: BlogBg,
-    cat: "DESIGN",
-    date: "30 March 2025",
-    title: "Modern Architecture Trends 2025",
-    summary: "This year's architectural trends focus on creating harmony between indoor and outdoor spaces. Large, floor-to-ceiling windows, open floor plans, and natural materials dominate the scene. We're seeing a strong emphasis on sustainability, with features like green roofs, solar panels, and rainwater harvesting systems becoming standard. The use of smart home technology is also on the rise, allowing for greater energy efficiency and convenience. These trends reflect a growing desire for homes that are both environmentally responsible and technologically advanced."
-  },
-  {
-    bg: BlogBg2,
-    cat: "SUSTAINABILITY",
-    date: "5 April 2025",
-    title: "Eco-Friendly Materials Revolution",
-    summary: "The construction industry is undergoing a green revolution with innovative, sustainable materials. From recycled plastics and reclaimed wood to self-healing concrete and mycelium-based materials, we're exploring cutting-edge solutions that reduce environmental impact. These materials not only benefit the planet but also offer superior performance and aesthetic appeal. Our latest projects showcase how sustainable design can be both beautiful and responsible."
-  },
-  {
-    bg: BlogBg,
-    cat: "TECHNOLOGY",
-    date: "12 April 2025",
-    title: "Smart Homes of the Future",
-    summary: "The integration of AI and IoT in home design is transforming how we interact with our living spaces. Voice-controlled environments, automated climate control, and predictive maintenance are just the beginning. We're working on homes that learn from your habits and adapt to your needs, creating personalized experiences that enhance comfort and efficiency. The future of smart homes is about seamless integration of technology that serves the inhabitants, not the other way around."
-  }
-];
+// Convert BLOG_POSTS object to array, sort by ID, and take the first 4 posts
+const BLOGS = Object.entries(BLOG_POSTS)
+  .map(([id, post]) => ({
+    id: id,
+    bg: post.featuredImage,
+    cat: post.sections?.[0]?.title?.split(' ')[0]?.toUpperCase() || 'DESIGN',
+    date: post.date,
+    title: post.title,
+    summary: post.intro?.[0] || ''
+  }))
+  .sort((a, b) => parseInt(a.id) - parseInt(b.id))
+  .slice(0, 4);
 
 export default function BlogsSection() {
   const [active, setActive] = useState(0);
@@ -164,7 +138,7 @@ export default function BlogsSection() {
 
 function BlogSlide({ blog }) {
   return (
-    <Link to="/blog" className="block w-full h-full">
+    <Link to={`/blog/${blog.id}`} className="block w-full h-full">
       <div className="relative w-full h-full">
         <div className="absolute inset-0 w-full h-full">
           <img

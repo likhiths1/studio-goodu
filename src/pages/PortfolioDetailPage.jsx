@@ -31,16 +31,16 @@ import tyd7 from "../assets/images/portfoliodetail/Tyd-23.jpg";
 import tyd8 from "../assets/images/portfoliodetail/Tyd-27.jpg";
 import tyd9 from "../assets/images/portfoliodetail/Tyd-29.jpg";
 import tyd10 from "../assets/images/portfoliodetail/Tyd-30.jpg";
-import sree1 from "../assets/images/portfoliodetail/sree1.png";
-import sree2 from "../assets/images/portfoliodetail/sree2.png";
-import sree3 from "../assets/images/portfoliodetail/sree3.png";
-import sree4 from "../assets/images/portfoliodetail/sree4.png";
-import sree5 from "../assets/images/portfoliodetail/sree5.png";
-import sree6 from "../assets/images/portfoliodetail/sree6.png";
-import sree7 from "../assets/images/portfoliodetail/sree7.png";
-import sree8 from "../assets/images/portfoliodetail/sree8.png";
-import sree9 from "../assets/images/portfoliodetail/sree9.png";
-import sree10 from "../assets/images/portfoliodetail/sree10.png"  
+import sree1 from "../assets/images/portfoliodetail/sreee1.jpg";
+import sree2 from "../assets/images/portfoliodetail/sreee2.jpg";
+import sree3 from "../assets/images/portfoliodetail/sreee3.jpg";
+import sree4 from "../assets/images/portfoliodetail/sreee4.jpg";
+import sree5 from "../assets/images/portfoliodetail/sreee5.jpg";
+import sree6 from "../assets/images/portfoliodetail/sreee6.jpg";
+import sree7 from "../assets/images/portfoliodetail/sreee7.jpg";
+import sree8 from "../assets/images/portfoliodetail/sreee8.jpg";
+import sree9 from "../assets/images/portfoliodetail/sreee9.jpg";
+import sree10 from "../assets/images/portfoliodetail/sreee10.jpg"  
 
 const PROJECTS = {
   "1": {

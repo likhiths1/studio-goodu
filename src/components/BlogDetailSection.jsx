@@ -1,78 +1,96 @@
-import BannerImg from "../assets/images/snob.png";
 import GooduLogo from "../assets/images/herosection/goodu-logoblue.png";
+import { useNavigate } from "react-router-dom";
 
-export default function BlogDetailSection() {
+export default function BlogDetailSection({ 
+  post,
+  onPrev, 
+  onNext, 
+  hasPrev = false, 
+  hasNext = false 
+}) {
+  const navigate = useNavigate();
+  
+  if (!post) {
+    return (
+      <div className="w-full bg-[#FEF6ED] py-12 md:py-20 font-inter text-center">
+        <p>Post not found</p>
+      </div>
+    );
+  }
+  
+  const { date, title, intro = [], sections = [], imageGroups = [] } = post;
   return (
-    <section className="w-full bg-[#FEF6ED] py-12 md:py-20 px-4 md:px-6 font-inter">
-      <div className="max-w-[90rem] mx-auto">
+    <section className="w-full bg-[#FEF6ED] py-12 md:py-20 font-inter">
+      <div className="w-full max-w-[1300px] mx-auto px-4 md:px-6">
         {/* Date */}
         <p className="text-sm md:text-[1.6rem] text-center text-gray-500 tracking-wide mb-6">
-          APRIL 23, 2025
+          {date}
         </p>
 
         {/* Title */}
-        <h1 className="text-3xl md:text-7xl font-medium text-center text-black mb-12 tracking-[-0.08em]">
-          THE ROLE OF ART IN LUXURY
-          <br />
-          INTERIOR DESIGN
+        <h1 className="text-3xl md:text-6xl font-medium text-center text-black mb-12 leading-tight tracking-[-0.02em]">
+          {title}
         </h1>
 
-        {/* Intro Paragraph */}
-        <p className="md:mx-36 font-inter font-light text-base md:text-2xl text-black/80 leading-relaxed mb-8 text-justify">
-          Art has long been a defining element of luxury interior design,
-          serving as both an aesthetic centerpiece and a reflection of personal
-          taste. In a luxury space, the integration of fine art elevates the
-          environment, transforming it into a sophisticated and engaging
-          experience.
-        </p>
-
-        <p className="md:mx-36 font-inter font-light text-base md:text-2xl text-black/80 leading-relaxed mb-12 text-justify">
-          The placement of art in a luxury interior is equally important. A
-          carefully curated gallery wall or an oversized painting above a grand
-          fireplace can create focal points that define a room's atmosphere.
-        </p>
-
-        {/* Banner Image */}
-        {/* Banner Image */}
-        <div className="w-full mb-12 flex justify-center">
-          <img
-            src={BannerImg}
-            alt="Luxury Interior"
-            className="w-full max-w-[1300px] h-auto object-cover"
-            draggable={false}
-          />
-        </div>
-
-        {/* Quote Block */}
-        <div className="text-center mb-12">
-          <p className="text-2xl md:text-5xl font-normal text-black tracking-[-0.06em] leading-relaxed">
-            The details are not the details.
-            <br />
-            They make the design.
+        {/* Intro Paragraphs */}
+        {intro.map((paragraph, index) => (
+          <p key={`intro-${index}`} className="font-inter font-light text-base md:text-2xl text-black/80 leading-relaxed mb-8">
+            {paragraph}
           </p>
-        </div>
+        ))}
 
-        {/* Content Paragraphs */}
-        <p className="font-inter md:mx-36 font-light text-sm md:text-2xl text-black/80 leading-relaxed mb-8 text-justify">
-          In addition to its visual impact, art in luxury interior design often
-          reflects the homeowner's values, interests, or life experiences.
-          Whether it's evoking nostalgia, honors cultural heritage, or supports
-          a cause, art becomes a form of storytelling that enriches the space
-          and the lives of those who live within it.
-        </p>
+        {/* Render image groups and sections */}
+        {imageGroups.map((group, groupIndex) => (
+          <div key={`group-${groupIndex}`} className="w-full mb-12">
+            {/* Image Group */}
+            <div className={`flex ${group.columns === 2 ? 'flex-col md:flex-row' : 'flex-col sm:flex-row'} gap-4 ${groupIndex < imageGroups.length - 1 ? 'mb-4' : ''}`}>
+              {group.images.map((image, imgIndex) => (
+                <div 
+                  key={`img-${groupIndex}-${imgIndex}`} 
+                  className={`w-full ${group.columns === 2 ? 'md:w-1/2' : 'sm:w-1/3'} ${group.heights?.[imgIndex] ? `h-[${group.heights[imgIndex]}]` : 'h-[500px]'} overflow-hidden`}
+                >
+                  <img
+                    src={image}
+                    alt={`${title} - Image ${imgIndex + 1}`}
+                    className="w-full h-full object-cover"
+                    draggable={false}
+                  />
+                </div>
+              ))}
+            </div>
 
-        <p className="font-inter md:mx-36 font-light text-sm md:text-2xl text-black/80 leading-relaxed mb-16 text-justify">
-          In conclusion, art plays a multifaceted role in luxury interior design
-          by enhancing the aesthetic appeal, fostering emotional connection, and
-          creating a refined atmosphere. It is not only a display of beauty but
-          also a symbol of sophistication and individuality that transforms a
-          house into a true home.
-        </p>
+            {/* Section content after image group if exists */}
+            {sections[groupIndex] && (
+              <div className="my-16">
+                <h2 className="text-2xl md:text-4xl font-medium text-black mb-6 tracking-tight">
+                  {sections[groupIndex].title}
+                </h2>
+                <p className="font-inter font-light text-base md:text-2xl text-black/80 leading-relaxed">
+                  {sections[groupIndex].content}
+                </p>
+              </div>
+            )}
+          </div>
+        ))}
+
+        {/* Render any remaining sections without images */}
+        {sections.slice(imageGroups.length).map((section, index) => (
+          <div key={`section-${index}`} className="my-16">
+            <h2 className="text-2xl md:text-4xl font-medium text-black mb-6 tracking-tight">
+              {section.title}
+            </h2>
+            <p className="font-inter font-light text-base md:text-2xl text-black/80 leading-relaxed">
+              {section.content}
+            </p>
+          </div>
+        ))}
 
         {/* Navigation - Previous/Next with centered Goodu logo */}
         <div className="flex items-center justify-between border-t border-[#969696] pt-6 md:pt-8">
           <button
-            className="inline-flex items-center gap-2 font-playfairdisplay tracking-[0.08em] text-[1.05rem] md:text-[1.25rem] text-black hover:opacity-80 transition bg-transparent border-none"
+            onClick={onPrev}
+            disabled={!hasPrev}
+            className={`inline-flex items-center gap-2 font-playfairdisplay tracking-[0.08em] text-[1.05rem] md:text-[1.25rem] transition bg-transparent border-none ${hasPrev ? 'text-black hover:opacity-80' : 'text-gray-400 cursor-not-allowed'}`}
             style={{ background: "none", border: "none" }}
           >
             <svg
@@ -92,7 +110,10 @@ export default function BlogDetailSection() {
           </button>
 
           {/* Center Logo (larger) */}
-          <div className="flex items-center justify-center">
+          <div 
+            className="flex items-center justify-center cursor-pointer"
+            onClick={() => navigate('/blog')}
+          >
             <img
               src={GooduLogo}
               alt="Studio Goodu"
@@ -101,7 +122,9 @@ export default function BlogDetailSection() {
           </div>
 
           <button
-            className="inline-flex items-center gap-2 font-playfairdisplay tracking-[0.08em] text-[0.95rem] md:text-[1.1rem] text-black hover:opacity-80 transition bg-transparent border-none"
+            onClick={onNext}
+            disabled={!hasNext}
+            className={`inline-flex items-center gap-2 font-playfairdisplay tracking-[0.08em] text-[1.05rem] md:text-[1.25rem] transition bg-transparent border-none ${hasNext ? 'text-black hover:opacity-80' : 'text-gray-400 cursor-not-allowed'}`}
             style={{ background: "none", border: "none" }}
           >
             <span>NEXT</span>

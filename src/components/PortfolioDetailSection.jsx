@@ -88,11 +88,11 @@ export default function PortfolioDetailSection({ title, hero, detailSections: de
             {title ?? "ARTHA VILLA"}
           </h1>
           {/* Top banner image */}
-          <div className="w-full mt-12 mb-12 place-items-center">
+          <div className="w-full mt-12 mb-12 flex justify-center">
             <img
               src={hero ?? StartImg}
               alt="Portfolio Hero"
-              className="w-[60%] h-[800px] object-cover"
+              className="w-full max-w-4xl h-auto max-h-[80vh] object-contain mx-auto"
               draggable={false}
             />
           </div>
