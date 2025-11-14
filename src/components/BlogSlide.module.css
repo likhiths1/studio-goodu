@@ -1,0 +1,30 @@
+.blogOverlay {
+  position: absolute;
+  inset: 0;
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  color: white;
+  padding: 1rem 0.75rem 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .blogOverlay {
+    padding: 1.25rem 1.25rem 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .blogOverlay {
+    padding: 1.5rem 1.5rem 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blogOverlay {
+    padding: 2rem 2rem 4rem;
+  }
+}

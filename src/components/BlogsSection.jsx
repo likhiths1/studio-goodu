@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 import { BLOG_POSTS } from "../data/blogPosts";
 import GreenOverlay from "../assets/images/greenoverlay.png";
+import styles from './BlogSlide.module.css';
 
 // Convert BLOG_POSTS object to array, sort by ID, and take the first 4 posts
 const BLOGS = Object.entries(BLOG_POSTS)
@@ -149,33 +150,9 @@ function BlogSlide({ blog }) {
           />
         </div>
         <div 
-          className="absolute inset-0 bg-cover bg-left"
-          style={{ 
-            backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%), url(${GreenOverlay})`,
-            backgroundSize: '100% 100%',
-            backgroundBlendMode: 'overlay',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-end',
-            alignItems: 'flex-start',
-            padding: '1rem 0.75rem 1.5rem',
-            '@media (min-width: 640px)': {
-              padding: '1.25rem 1.25rem 2.5rem',
-            },
-            '@media (min-width: 768px)': {
-              padding: '1.5rem 1.5rem 3rem',
-            },
-            '@media (min-width: 1024px)': {
-              padding: '2rem 2rem 3rem',
-            },
-            color: 'white',
-            paddingBottom: '2.5rem',
-            '@media (min-width: 640px)': {
-              paddingBottom: '3rem',
-            },
-            '@media (min-width: 1024px)': {
-              paddingBottom: '4rem',
-            }
+          className={`${styles.blogOverlay} absolute inset-0 bg-cover bg-left`}
+          style={{
+            backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%), url(${GreenOverlay})`
           }}
         >
           <div className="w-full lg:max-w-[60%] text-left lg:ml-[40%] px-3 sm:px-6 md:pr-10 mb-4 sm:mb-6">
