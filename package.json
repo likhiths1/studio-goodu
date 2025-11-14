@@ -8,8 +8,7 @@
     "build": "vite build",
     "preview": "vite preview --port 4173",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview:build": "vite build && vite preview",
-    "postinstall": "npm run build"
+    "preview:build": "vite build && vite preview"
   },
   "engines": {
     "node": ">=18.0.0 <=20.0.0",
