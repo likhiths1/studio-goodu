@@ -1,11 +1,22 @@
 [build]
-  command = "npm install && npm run build"
+  command = "npm ci && npm run build"
   publish = "dist"
   ignore = "git diff --quiet HEAD^ HEAD -- ."
 
 [build.environment]
   NODE_VERSION = "18.x"
   NPM_FLAGS = "--legacy-peer-deps"
+  CI = "false"
+  NODE_ENV = "production"
+  VITE_APP_ENV = "production"
+  
+  # Disable telemetry
+  NEXT_TELEMETRY_DISABLED = "1"
+  GATSBY_TELEMETRY_DISABLED = "1"
+  HUSKY = "0"
+  
+  # Node options
+  NODE_OPTIONS = "--max_old_space_size=4096"
 
 [dev]
   command = "npm run dev"
