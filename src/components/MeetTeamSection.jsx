@@ -1,9 +1,9 @@
-import Person1 from "../assets/images/team/person1.2.jpg";
+import Person1 from "../assets/images/team/person12.jpg";
 import Person2 from "../assets/images/team/colored-image3.jpg";
 import Person3 from "../assets/images/team/colored-image2.jpg";
 import Person4 from "../assets/images/team/colored-image1.jpg";
 import Person5 from "../assets/images/team/colored-image.jpg";
-import Person6 from "../assets/images/team/person1.1.jpg"
+import Person6 from "../assets/images/team/person11.jpg"
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 import { useId, useEffect, useRef } from "react";
 

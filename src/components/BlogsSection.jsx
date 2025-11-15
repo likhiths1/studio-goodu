@@ -161,21 +161,16 @@ function BlogSlide({ blog }) {
             padding: '1rem 0.75rem 1.5rem',
             '@media (min-width: 640px)': {
               padding: '1.25rem 1.25rem 2.5rem',
+              paddingBottom: '3rem',
             },
             '@media (min-width: 768px)': {
               padding: '1.5rem 1.5rem 3rem',
             },
             '@media (min-width: 1024px)': {
               padding: '2rem 2rem 3rem',
+              paddingBottom: '4rem',
             },
             color: 'white',
-            paddingBottom: '2.5rem',
-            '@media (min-width: 640px)': {
-              paddingBottom: '3rem',
-            },
-            '@media (min-width: 1024px)': {
-              paddingBottom: '4rem',
-            }
           }}
         >
           <div className="w-full lg:max-w-[60%] text-left lg:ml-[40%] px-3 sm:px-6 md:pr-10 mb-4 sm:mb-6">
