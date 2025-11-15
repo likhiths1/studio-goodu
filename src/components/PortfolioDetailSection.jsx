@@ -111,9 +111,8 @@ export default function PortfolioDetailSection({ title, hero, detailSections: de
                       <p
                         key={i}
                         className="font-inter text-justify font-light text-sm md:text-2xl max-w-[80rem] text-black/80 leading-relaxed"
-                      >
-                        {p}
-                      </p>
+                        dangerouslySetInnerHTML={{ __html: p }}
+                      />
                     ))}
                   </div>
                 ))}

@@ -2,14 +2,10 @@ import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { AnimatedSection, AnimatedItem } from './AnimatedSection';
 import { useNavigate } from 'react-router-dom';
-import Img1 from '../assets/images/works1.png';
-import Img2 from '../assets/images/works2.png';
-import Img3 from '../assets/images/works3.png';
-import Img4 from '../assets/images/works4.png';
-import Img5 from '../assets/images/works5.png';
-import Img6 from '../assets/images/works6.png';
-import Img7 from '../assets/images/works7.png';
-import Img8 from '../assets/images/works8.png';
+import Img1 from '../assets/images/work1.png';
+import Img2 from '../assets/images/work2.png';
+import Img3 from '../assets/images/work3.png';
+import Img4 from '../assets/images/work4.png';
 
 const works = [
   // First row - 3 images (33.33% each)
@@ -34,38 +30,31 @@ const works = [
     title: 'Cozy Bedroom',
     category: 'Interior Design'
   },
-  // Second row - 2 images (50% each)
+  // Second row - 1 image (100% width)
   { 
     src: Img4, 
     row: 2, 
-    size: 'w-1/2',
-    title: 'Elegant Dining',
-    category: 'Interior Design'
-  },
-  { 
-    src: Img5, 
-    row: 2, 
-    size: 'w-1/2',
-    title: 'Luxury Bathroom',
+    size: 'w-full',
+    title: 'Elegant Dining Space',
     category: 'Interior Design'
   },
   // Third row - 3 images (33.33% each)
   { 
-    src: Img6, 
+    src: Img1, 
     row: 3, 
     size: 'w-1/3',
     title: 'Modern Workspace',
     category: 'Office Design'
   },
   { 
-    src: Img7, 
+    src: Img2, 
     row: 3, 
     size: 'w-1/3',
     title: 'Stylish Lounge',
     category: 'Interior Design'
   },
   { 
-    src: Img8, 
+    src: Img3, 
     row: 3, 
     size: 'w-1/3',
     title: 'Outdoor Living',
@@ -114,7 +103,7 @@ export default function OurWorks() {
             return (
               <div 
                 key={row} 
-                className={`flex w-full gap-2 md:gap-4 ${row === 2 ? 'px-8 md:px-16 lg:px-32' : ''}`}
+                className={`flex w-full gap-2 md:gap-4`}
               >
                 {rowWorks.map((work, i) => {
                   const delay = i * 0.1 + (row - 1) * 0.3;
@@ -167,7 +156,7 @@ export default function OurWorks() {
                         <img
                           src={work.src}
                           alt={work.title}
-                          className="w-full h-full object-cover aspect-[4/5]"
+                          className={`w-full h-full object-cover ${work.size === 'w-full' ? 'aspect-[16/5]' : 'aspect-[4/5]'}`}
                         />
                       </motion.div>
                       <motion.div 

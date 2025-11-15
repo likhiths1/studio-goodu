@@ -76,8 +76,97 @@ const PROJECTS = {
   "3": {
     title: "TYD",
     hero: Hero3,
-    serviceType: "Residential Interior",
+    serviceType: "Commercial Interior",
     features: "Warm Woods, Open Plan, Statement Lighting",
+    detailSections: [
+      { 
+        heading: "TYD: Elevating Bangalore's Rooftop Dining Experience", 
+        paragraphs: [
+          "Nestled in the vibrant heart of North Bangalore, TYD (Taste Your Desires) is more than just a rooftop kitchen and bar; it's an immersive escape designed to delight all your senses. This unique culinary destination masterfully blends contemporary aesthetics with a relaxed, inviting ambiance, offering guests an unforgettable experience under the open sky."
+        ] 
+      },
+      { 
+        heading: "A Design Philosophy Rooted in Comfort and Charm", 
+        paragraphs: [
+          "From the moment you step into TYD, you're greeted by a thoughtful design narrative that prioritizes comfort, warmth, and a touch of sophisticated whimsy. The interiors are a harmonious blend of natural textures and modern elements. Exposed brick walls, bathed in a warm, earthy palette, create an inviting backdrop, while strategically placed lighting fixtures cast a soft, ambient glow, perfect for intimate conversations or lively gatherings.",
+          "The interplay of natural light during the day and the enchanting glow of the various lighting elements by night transforms the ambiance, offering a distinct experience at different times."
+        ] 
+      },
+      { 
+        heading: "Architectural Details and Thoughtful Touches", 
+        paragraphs: [
+          "The design language extends to every detail, from the stylish rattan chairs and comfortable upholstered seating to the patterned tabletops. An eye-catching element is the use of grand, oversized wicker pendant lamps, which create a striking visual statement and contribute to the warm, inviting glow."
+        ] 
+      },
+      { 
+        heading: "An Oasis of Greenery and Open Skies", 
+        paragraphs: [
+          "One of TYD's most captivating features is its seamless integration with nature. Lush greenery is thoughtfully incorporated throughout the space, creating a refreshing contrast against the architectural elements. The open-air sections, adorned with charming wicker lamp shades and elegant street lamp-style fixtures, allow diners to fully embrace Bangalore's pleasant weather and enjoy stunning views as the sun sets.",
+          "The interior spaces also feature unique architectural accents like a charming white facade with a Juliet balcony, adding a touch of European elegance amidst the rustic brickwork. The blend of textures – from the smooth wooden tables to the rough-hewn stone flooring – adds depth and character to the overall design."
+        ] 
+      },
+      { 
+        heading: "A Culinary Journey in a Captivating Setting", 
+        paragraphs: [
+          "TYD's layout offers a variety of seating options, catering to different preferences, whether it's a cozy corner for two, a communal table for a group celebration, or a spot right under the vast, open skylight.",
+          "This thoughtful design ensures that every visit to TYD is a personalized and memorable one."
+        ] 
+      },
+      { 
+        heading: "Experience TYD", 
+        paragraphs: [
+          "TYD is more than just a place to eat and drink; it's a destination where stunning design, captivating ambiance, and a promise of delightful culinary experiences converge. It invites guests to unwind, socialize, and savor the moments, making it a standout addition to Bangalore's dynamic dining scene. Come, taste your desires at TYD."
+        ] 
+      },
+      { 
+        heading: "TYD – A Rooftop Kitchen & Bar: Elevating Experiences in North Bangalore", 
+        paragraphs: [
+          "Nestled in the vibrant landscape of North Bangalore, TYD (Taste Your Desires) is more than just a dining destination; it's an elevated experience. This rooftop kitchen and bar masterfully blends sophisticated design with a relaxed, inviting ambiance, offering a sanctuary where culinary artistry meets breathtaking views.",
+          "From the moment you step into TYD, you are transported. The interior design is a thoughtful symphony of textures and tones. Exposed brick walls, bathed in warm, inviting hues, create an intimate and cozy atmosphere. This rustic charm is beautifully contrasted with sleek wooden tables and comfortable seating, inviting guests to linger and unwind. Elegant lighting, ranging from contemporary hanging bulbs to charming wall sconces, casts a soft glow, enhancing the overall warmth and creating a perfect setting for any occasion."
+        ] 
+      },
+      { 
+        heading: "Design Zones and Features", 
+        paragraphs: [
+          "As you move through TYD, you'll discover distinct zones, each with its own character.",
+          "<strong style=\"color: black;\">Main Dining Areas</strong> - Feature a mix of tables, some with plush, upholstered chairs that promise comfort, others with intricately woven rattan backs that add a touch of natural elegance.",
+          "<strong style=\"color: black;\">Statement Lighting</strong> - Particularly the large, exquisitely crafted wicker chandeliers become immediate focal points, diffusing light warmly and adding a bohemian chic sensibility to the space.",
+          "<strong style=\"color: black;\">Lush Greenery</strong> - Strategically placed throughout, bringing a refreshing natural element indoors and creating a sense of tranquility."
+        ] 
+      },
+      { 
+        heading: "Outdoor and Semi-Outdoor Spaces", 
+        paragraphs: [
+          "The transition to the outdoor or semi-outdoor spaces reveals TYD's commitment to creating diverse experiences. Here, the design opens up to embrace the sky and the surrounding views.",
+          "<strong style=\"color: black;\">Street Lamp-Style Lights</strong> - Line pathways, guiding guests through a verdant landscape of tropical plants and trees.",
+          "<strong style=\"color: black;\">Wicker Dome Structure</strong> - A remarkable, large-scale structure stands as an iconic design feature, offering a unique, semi-private dining experience that feels both enclosed and connected to the open air.",
+          "This area truly capitalizes on the 'rooftop' aspect, providing a fresh, airy environment perfect for enjoying Bangalore's pleasant evenings."
+        ] 
+      },
+      { 
+        heading: "Attention to Detail", 
+        paragraphs: [
+          "TYD's attention to detail is evident in every corner:",
+          "<strong style=\"color: black;\">Elegant Archways</strong> and <strong style=\"color: black;\">Classical Architectural Balcony Features</strong> add a touch of grandeur",
+          "<strong style=\"color: black;\">Intricately Designed Door Handles</strong> and <strong style=\"color: black;\">Wrought-Iron Detailing</strong> speak to a commitment to quality craftsmanship",
+          "The blend of indoor comfort with the expansive feel of a rooftop venue makes TYD versatile for both intimate dinners and lively gatherings."
+        ] 
+      },
+      { 
+        heading: "Culinary Excellence", 
+        paragraphs: [
+          "Beyond its stunning aesthetics, TYD is dedicated to a culinary journey that tantalizes the palate.",
+          "<strong style=\"color: black;\">Diverse Menu</strong> - Crafted with fresh, high-quality ingredients to 'Taste Your Desires'",
+          "<strong style=\"color: black;\">Thoughtfully Curated Bar Menu</strong> - Featuring an array of innovative cocktails, fine spirits, and refreshing beverages, all designed to enhance your dining experience"
+        ] 
+      },
+      { 
+        heading: "More Than Just a Meal", 
+        paragraphs: [
+          "TYD – A Rooftop Kitchen & Bar is more than just a meal; it's an escape, a celebration of design, and a feast for the senses. It's where memories are made, laughter resonates, and every visit leaves you wanting to return. Discover your new favorite destination in North Bangalore."
+        ] 
+      }
+    ],
     imageGroups: [
       { images: [tyd10, tyd2], columns: 2 },
       { images: [tyd3, tyd4, tyd5], columns: 3 },
@@ -90,6 +179,74 @@ const PROJECTS = {
     hero: Hero4,
     serviceType: "Residential Interior",
     features: "Natural Stone, Wooden Flooring, Custom Carpentry",
+    detailSections: [
+      { 
+        heading: "A sanctuary of light and craft", 
+        paragraphs: [
+          "Welcome to a home that is more than just a structure- it is a serene sanctuary tailored for a family of five. Spanning about 6000 sq.ft this home is a masterful blend of bespoke craftsmanship, rich materiality, and an intuitive connection to nature, resulting in spaces that are both luxurious and deeply personal."
+        ] 
+      },
+      { 
+        heading: "The Architectural Embrace: Exterior and Elevation", 
+        paragraphs: [
+          "The residence presents a contemporary yet warm elevation, thoughtfully integrated with its verdant surroundings. The facade utilizes a balanced composition of textures featuring stark white and earthy, brown-toned panels, softened by inclusion of expansive dark-framed windows and balconies. These elements are enveloped by the mature, lush green trees of the neighbourhood, ensuring the home feels anchored and harmonious, a modern structure nested within nature."
+        ] 
+      },
+      { 
+        heading: "Interiors: A Symphony of Texture and Light", 
+        paragraphs: [
+          "Stepping inside a design narrative unfolds through tactile surfaces, custom details and an orchestrated flow of natural light."
+        ] 
+      },
+      { 
+        heading: "The Social Core: Foyer, Living and Dining", 
+        paragraphs: [
+          "The journey begins in the foyer which seamlessly transitions into the double height-ed living area. Here custom artistry takes centre stage.",
+          "The TV wall in the living room and the partition between the living and foyer feature stunning, subtle hand-painted elements. This bespoke touch elevates simple walls to artwork, adding a unique soft texture and narrative to the primary gathering space."
+        ] 
+      },
+      { 
+        heading: "The Puja Room", 
+        paragraphs: [
+          "Visible from the dining area, puja room is the spiritual focal point designed with elegant transparency. It is composed of lattice of vertical and horizontal wooden elements, offering a sense of sacred enclosure without being completely closed off, allowing light and energy to flow."
+        ] 
+      },
+      { 
+        heading: "Dining and Balcony", 
+        paragraphs: [
+          "The dining area is a bright hub, enjoying generous early morning light. It opens directly onto a balcony, creating a lovely indoor-outdoor connection for family meals."
+        ] 
+      },
+      { 
+        heading: "Informal Living Area", 
+        paragraphs: [
+          "Beyond the formal spaces, this residence unveils a truly enchanting informal living space - a versatile retreat designed for relaxation, play and contemplation. This boasts a privileged vantage point, on one side it looks down into the double height living space and a large door opens into a terrace/balcony on the other side."
+        ] 
+      },
+      { 
+        heading: "Illumination and Design Highlights", 
+        paragraphs: [
+          "A key element in the design is the use of dramatic custom lighting and textured walls:",
+          "<strong style=\"color: black;\">Statement Lighting</strong> - The home is graced with remarkable light fixtures from the organic woven rattan ceiling installation in the dining area, linear rattan pendant lights in the double height formal living space and the unique, cloud-like pendant lights in the staircase well.",
+          "<strong style=\"color: black;\">Texture walls</strong> - Across the common areas walls are characterized by vertical fluting and subtle three-dimensional patterns lending an immediate sense of richness and depth to the neutral color palette.",
+          "<strong style=\"color: black;\">Skylight</strong> - The ceiling in the informal living area is punctuated by a series of precisely angled skylights sculpting daylight into dramatic shafts. This illuminates a captivating wall decor feature- a collection of whimsical climbing figures that add a playful dimension."
+        ] 
+      },
+      { 
+        heading: "Private Retreats: The Bedrooms", 
+        paragraphs: [
+          "The four bedrooms, including the master bedroom with a dedicated walk-in closet, two specialized kids' bedrooms and a grandparents' room are designed as individualized havens.",
+          "<strong style=\"color: black;\">Sun-Kissed Comfort</strong>: The master bedroom, one of the kids' bedrooms and the grandparents' room are perfectly oriented to receive the afternoon sunlight. This delightful positioning allows the family to enjoy golden-hour warmth in their private spaces.",
+          "<strong style=\"color: black;\">Bay Windows and Green Views</strong>: Three out of four bedrooms feature inviting bay windows. These are not just functional windows; they are designated resting spots that offer idyllic views out to the lush green neighbourhood, perfectly framing the natural scenery and reinforcing the home's connection to the outdoors."
+        ] 
+      },
+      { 
+        heading: "A Testament to Luxurious Living", 
+        paragraphs: [
+          "This 6000 sq. ft. residence is a testament to luxurious living rooted in thoughtful execution. From the play of light in the common spaces to the bespoke, hand-painted details, it's a home where every material tells a story and every space feels intentionally crafted for the family who calls it sanctuary."
+        ] 
+      }
+    ],
     imageGroups: [
       { images: [sree1, sree7], columns: 2 },
       { images: [sree3, sree4, sree5], columns: 3 },

@@ -6,6 +6,7 @@ import FeaturedBlogSection from "../components/FeaturedBlogSection";
 import LatestPostsSection from "../components/LatestPostsSection";
 import ExtraContactSection from "../components/ExtraContactSection";
 import { AnimatedSection } from "../components/AnimatedSection";
+import AwardsSection from "../components/AwardsSection";
 
 export default function Blog() {
   return (
@@ -21,8 +22,11 @@ export default function Blog() {
         <FeaturedBlogSection />
       </AnimatedSection>
       <AnimatedSection>
-        <LatestPostsSection />
+        <AwardsSection />
       </AnimatedSection>
+     {/* <AnimatedSection>
+        <LatestPostsSection />
+      </AnimatedSection> */}
       <ExtraContactSection />
       <FooterSection />
       {/* ... */}
