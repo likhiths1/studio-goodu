@@ -4,6 +4,7 @@ import Navbar from "../components/NavbarBlack";
 import FeatureBar from "../components/FeatureBar";
 import PortfolioGallery from "../components/PortfolioGallery";
 import ValueSection from "../components/ValueSection";
+import MoreProjectsSection from "../components/MoreProjectsSection";
 import { AnimatedSection } from "../components/AnimatedSection";
 
 export default function Portfolio() {
@@ -21,6 +22,9 @@ export default function Portfolio() {
       </AnimatedSection>
       <AnimatedSection>
         <ValueSection />
+      </AnimatedSection>
+      <AnimatedSection>
+        <MoreProjectsSection />
       </AnimatedSection>
       <FooterSection />
       {/* ... */}

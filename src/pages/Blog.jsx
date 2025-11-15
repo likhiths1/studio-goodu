@@ -7,6 +7,7 @@ import LatestPostsSection from "../components/LatestPostsSection";
 import ExtraContactSection from "../components/ExtraContactSection";
 import { AnimatedSection } from "../components/AnimatedSection";
 import AwardsSection from "../components/AwardsSection";
+import InternalSection from "../components/InternalSection";
 
 export default function Blog() {
   return (
@@ -17,6 +18,12 @@ export default function Blog() {
       </AnimatedSection>
       <AnimatedSection>
         <FeatureBar />
+      </AnimatedSection>
+      <AnimatedSection>
+        <InternalSection />
+      </AnimatedSection>
+      <AnimatedSection>
+        <div className="py-12 sm:py-16 md:py-20"></div>
       </AnimatedSection>
       <AnimatedSection>
         <FeaturedBlogSection />

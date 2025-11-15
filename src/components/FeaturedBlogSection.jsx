@@ -7,6 +7,10 @@ export default function FeaturedBlogSection() {
     <section className="w-full flex flex-col items-center justify-center relative bg-[#FFF6ED] pb-[120px] md:pb-[180px]">
       {/* Background image and gradient, both object-contain */}
       <div className="relative w-full flex items-end justify-center" style={{ height: "840px" }}>
+        {/* Featured heading at the top border with Inter font */}
+        <h2 className="tracking-[-0.08em] absolute left-4 sm:left-8 md:left-24 top-0 z-20 font-inter font-medium text-5xl sm:text-8xl md:text-10xl lg:text-[12rem] text-black text-left -mt-24">
+          FEATURED
+        </h2>
         <img
           src={BgImg}
           alt=""
@@ -27,7 +31,7 @@ export default function FeaturedBlogSection() {
         }}
       >
         <div className="flex flex-col items-start">
-          <span className="font-aerotis text-[3.2rem] text-left text-black mb-5 w-[420px] md:w-[520px]">Featured</span>
+          {/* The floating "Featured" heading below is unchanged */}
           <div className="bg-black px-10 py-10 flex flex-col justify-between w-[420px] md:w-[520px] h-[520px] md:h-[640px]">
             <h3 className="font-britishgreen text-white text-[1.28rem] md:text-[2.6rem] leading-tight mb-1">
               A Featured Blog Post<br />Title Would Go Here

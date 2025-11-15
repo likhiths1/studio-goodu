@@ -36,7 +36,7 @@ export default function AwardsSection() {
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 max-w-full sm:max-w-2xl">
             <img src={awardIcon} alt="Award" className="w-20 h-20 sm:w-24 sm:h-24 bg-[#D9D9D9] p-4 sm:p-6 rounded-none flex-shrink-0" />
             <div className="text-center sm:text-left">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-inter">{awards[0].title}</h3>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black font-inter">{awards[0].title}</h3>
               <p className="mt-2 text-base sm:text-lg md:text-xl font-inter text-black leading-relaxed">{awards[0].description}</p>
             </div>
           </div>
@@ -45,7 +45,7 @@ export default function AwardsSection() {
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 max-w-full sm:max-w-2xl ml-0 sm:ml-auto">
             <img src={awardIcon} alt="Award" className="w-20 h-20 sm:w-24 sm:h-24 bg-[#D9D9D9] p-4 sm:p-6 rounded-none flex-shrink-0" />
             <div className="text-center sm:text-left">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-inter">{awards[1].title}</h3>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black font-inter">{awards[1].title}</h3>
               <p className="mt-2 text-base sm:text-lg md:text-xl font-inter text-black leading-relaxed">{awards[1].description}</p>
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function AwardsSection() {
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 max-w-full sm:max-w-2xl">
             <img src={awardIcon} alt="Award" className="w-20 h-20 sm:w-24 sm:h-24 bg-[#D9D9D9] p-4 sm:p-6 rounded-none flex-shrink-0" />
             <div className="text-center sm:text-left">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-inter">{awards[2].title}</h3>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black font-inter">{awards[2].title}</h3>
               <p className="mt-2 text-base sm:text-lg md:text-xl font-inter text-black leading-relaxed">{awards[2].description}</p>
             </div>
           </div>
