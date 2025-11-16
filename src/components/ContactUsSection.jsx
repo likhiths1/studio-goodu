@@ -59,10 +59,10 @@ export default function ContactUsSection() {
       <div className="max-w-[90rem] w-full mt-24 flex flex-col md:grid md:grid-cols-5 md:justify-center gap-y-6 tracking-tight items-center text-center">
         {/* Email/Phone */}
         <AnimatedItem delay={2}>
-          <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] flex flex-col gap-1 text-justify max-w-xs">
+          <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] flex flex-col gap-1 text-center max-w-xs">
             <span className="font-inter text-[#4D696C] uppercase mb-1">OUR EMAIL & PHONE</span>
             <span className="font-playfairdisplay md:text-[1.4rem] text-black">studiogoodu@gmail.com</span>
-            <span className="font-playfairdisplay md:text-[1.4rem] text-black">003 404 507 1200</span>
+            <span className="font-playfairdisplay md:text-[1.4rem] text-black">9980767546 </span>
           </div>
         </AnimatedItem>
         {/* Line Image */}
@@ -88,7 +88,7 @@ export default function ContactUsSection() {
         </AnimatedItem>
         {/* Hours */}
         <AnimatedItem delay={6}>
-          <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] flex flex-col gap-1 text-justify max-w-xs">
+          <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] flex flex-col gap-1 text-center max-w-xs">
             <span className="font-inter text-[#4D696C] uppercase mb-1">STUDIO HOURS</span>
             <span className="font-playfairdisplay md:text-[1.4rem] text-black">Monday – Friday<br />10am – 7pm</span>
           </div>

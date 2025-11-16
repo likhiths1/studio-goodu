@@ -66,7 +66,7 @@ export default function FooterSection() {
             <a href="#" aria-label="Social Media">
               <img src={Icon4} alt="" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[32px] md:h-[32px] object-cover" />
             </a>
-            <a href="#" aria-label="Social Media">
+            <a href="https://wa.me/919980767546" aria-label="Social Media">
               <img src={Icon5} alt="" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[32px] md:h-[32px] object-cover" />
             </a>
           </div>

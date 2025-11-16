@@ -34,12 +34,24 @@ const AnimatedText = ({ text, className = '', delay = 0, style = {} }) => {
   );
 };
 
-export default function HeroSection({ isLoading = false, children }) {
+export default function HeroSection({ children }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  
-  // Only show content after initial load and when not in loading state
-  const showContent = !isLoading;
+  const [animationDelay, setAnimationDelay] = useState(6);
+
+  // Content is always shown now since we removed the loading state
+  const showContent = true;
+
+  // Calculate delay based on whether loader was shown
+  useEffect(() => {
+    // Check if the loader was shown by checking if BirdNestAnimation is active
+    const loaderElement = document.querySelector('[data-bird-loader]');
+    if (loaderElement) {
+      setAnimationDelay(6); // Start after 6 seconds
+    } else {
+      setAnimationDelay(0); // No delay if no loader
+    }
+  }, []);
 
   useEffect(() => {
     // Set loaded to true when component mounts
@@ -54,25 +66,7 @@ export default function HeroSection({ isLoading = false, children }) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isLoading]);
-
-  // Hide all content during loading
-  if (isLoading) {
-    return (
-      <div className="w-full min-h-[100svh] md:min-h-[120svh] lg:min-h-[130svh] relative font-inter overflow-hidden fixed top-0 left-0 z-10">
-        {/* Keep the background elements but hide all text */}
-        <img 
-          src={BackSky} 
-          alt="" 
-          className="absolute inset-0 z-0 w-full h-full object-cover object-center"
-          draggable={false}
-        />
-        <div className="relative z-[60]">
-          <Navbar />
-        </div>
-      </div>
-    );
-  }
+  }, []);
 
   // Calculate scroll progress (0 to 1) based on viewport height
   const scrollProgress = Math.min(1, Math.max(0, scrollY / (window.innerHeight * 0.75)));
@@ -83,8 +77,8 @@ export default function HeroSection({ isLoading = false, children }) {
       <div 
         className="w-full min-h-[100svh] md:min-h-[120svh] lg:min-h-[130svh] relative font-inter overflow-hidden fixed top-0 left-0 z-0"
         style={{
-          opacity: 1 - (scrollProgress * 0.9), // Fade out as user scrolls
-          transition: 'opacity 0.3s ease-out'
+          opacity: showContent ? (1 - (scrollProgress * 0.9)) : 0, // Hide completely during delay
+          transition: showContent ? 'opacity 0.3s ease-out' : 'none'
         }}
       >
         {/* Notification Bar */}
@@ -92,12 +86,12 @@ export default function HeroSection({ isLoading = false, children }) {
           className="w-full bg-[#FFF6ED] text-[#474747] py-2 px-2 md:px-0 text-center text-base font-medium tracking-tight relative z-[60]"
           initial={{ opacity: 0, y: -20 }}
           animate={showContent ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 4, duration: 0.8 }}
+          transition={{ delay: animationDelay, duration: 0.8 }}
         >
           {showContent && (
             <AnimatedText 
               text="Namaste! Welcome to Namma Studio Goodu" 
-              delay={4.4}
+              delay={animationDelay + 0.4}
             />
           )}
         </motion.div>
@@ -121,13 +115,13 @@ export default function HeroSection({ isLoading = false, children }) {
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 4.2 }}
+                    transition={{ delay: animationDelay + 0.2 }}
                   >
                     <div>
                       <AnimatedText 
                         text="TRANSFORMING SPACES INTO" 
                         className="font-inter text-white uppercase font-[400] leading-[0.85] tracking-[-0.08em] block mt-[calc(-10vh-35px)] md:mt-[calc(-10vh-200px)] text-left pl-12 sm:pl-16 md:pl-24 lg:pl-32 xl:pl-40"
-                        delay={4.2}
+                        delay={animationDelay + 0.2}
                         style={{
                           fontSize: 'clamp(1.8rem, 5vw, 5rem)',
                           lineHeight: '1',
@@ -140,7 +134,7 @@ export default function HeroSection({ isLoading = false, children }) {
                       <AnimatedText 
                         text="EXPERIENCES THAT BALANCE" 
                         className="font-inter text-white uppercase font-[400] leading-[0.85] tracking-[-0.08em] block text-left pl-12 sm:pl-16 md:pl-24 lg:pl-32 xl:pl-40"
-                        delay={4.35}
+                        delay={animationDelay + 0.35}
                         style={{
                           fontSize: 'clamp(1.8rem, 5vw, 5rem)',
                           lineHeight: '1',
@@ -153,7 +147,7 @@ export default function HeroSection({ isLoading = false, children }) {
                       <AnimatedText 
                         text="UTILITY AND ELEGANCE" 
                         className="font-inter text-white uppercase font-[400] leading-[0.85] tracking-[-0.08em] block text-left pl-12 sm:pl-16 md:pl-24 lg:pl-32 xl:pl-40"
-                        delay={4.5}
+                        delay={animationDelay + 0.5}
                         style={{
                           fontSize: 'clamp(1.8rem, 5vw, 5rem)',
                           lineHeight: '1',
@@ -184,7 +178,7 @@ export default function HeroSection({ isLoading = false, children }) {
           className="absolute inset-x-0 bottom-0 z-20 pointer-events-none"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 5.1, duration: 0.7 }}
+          transition={{ delay: animationDelay + 1.1, duration: 0.7 }}
         >
           {/* Full width gradient background */}
           <div 
