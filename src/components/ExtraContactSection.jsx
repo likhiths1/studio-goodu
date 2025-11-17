@@ -12,7 +12,7 @@ export default function ContactSection() {
           {/* TRANSFORM Row - Left aligned */}
           <AnimatedItem className="flex items-center w-full justify-start gap-0 -ml-2 md:-ml-4">
                       <span
-                        className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em]"
+                        className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em]"
                         style={{ color: "#D6AF60" }}
                       >
                         COMMERCIAL
@@ -30,7 +30,7 @@ export default function ContactSection() {
                     {/* Row 2 - Right aligned with offset */}
                     <AnimatedItem delay={0.3} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-8 md:pr-16">
                       <span
-                        className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.04em] md:tracking-[-0.04em] whitespace-nowrap"
+                        className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.04em] md:tracking-[-0.04em] whitespace-nowrap"
                         style={{ color: "#4D696C" }}
                       >
                         RESIDENTIAL
@@ -48,7 +48,7 @@ export default function ContactSection() {
                         />
                       </AnimatedItem>
                       <span
-                        className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em]"
+                        className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em]"
                         style={{ color: "#D6AF60" }}
                       >
                         F&B
@@ -58,7 +58,7 @@ export default function ContactSection() {
                     {/* Row 4 - Right aligned with less offset */}
                     <AnimatedItem delay={0.5} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-4 md:pr-8">
                       <span
-                        className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em]"
+                        className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em]"
                         style={{ color: "#4D696C" }}
                       >
                         HOSPITALITY
@@ -76,7 +76,7 @@ export default function ContactSection() {
                     {/* Row 5 - Left aligned with medium offset */}
                     <AnimatedItem delay={0.6} className="flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-6 md:pl-12">
                       <span
-                        className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em]"
+                        className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em]"
                         style={{ color: "#D6AF60" }}
                       >
                         EXPERIENCE & LIFESTYLE
@@ -86,7 +86,7 @@ export default function ContactSection() {
                     {/* Row 6 - Right aligned with maximum offset */}
                     <AnimatedItem delay={0.7} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-16 md:pr-32">
                       <span
-                        className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em]"
+                        className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em]"
                         style={{ color: "#4D696C" }}
                       >
                         INSTITUTIONAL & PUBLIC
@@ -96,7 +96,7 @@ export default function ContactSection() {
                     {/* Row 7 - Left aligned with slight offset */}
                     <AnimatedItem delay={0.8} className="flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-2 md:pl-4">
                       <span
-                        className="block text-[2.5rem] sm:text-[3rem] md:text-[8rem] font-regular tracking-[-0.08em]"
+                        className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em]"
                         style={{ color: "#D6AF60" }}
                       >
                         INDUSTRIAL & INFRASTRUCTURE
