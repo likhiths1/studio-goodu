@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 
 // ⬇️ Import your new images
 import HeroBG from '../assets/images/herro/1.jpg';
-import HeroOverlay from '../assets/images/herro/2.png';
+// import HeroOverlay from '../assets/images/herro/2.png';
 import BrownGrad from '../assets/images/browngrad.png';
 
 // Helper component for letter animations
@@ -117,24 +117,24 @@ export default function HeroSection({ children }) {
         </div>
 
         {/* Overlay Image - Positioned over everything */}
-        <div className="absolute inset-0 flex items-start justify-center z-[100]" style={{
+        {/* <div className="absolute inset-0 flex items-start justify-center z-[100]" style={{
             paddingTop: '20%',
-            paddingRight: '4%',  /* Adjust this value to move the overlay up/down */
+            paddingRight: '4%',  // Adjust this value to move the overlay up/down
             pointerEvents: 'none'
           }}>
             <img
               src={HeroOverlay}
               alt="Hero Overlay"
               style={{
-                width: '250%',  /* Much larger width */
+                width: '250%',  // Much larger width
                 height: 'auto',
-                maxHeight: '3000vh',  /* Much larger max height */
-                objectFit: 'contain',  /* Changed to contain */
-                transform: 'translateY(-10%) scale(1.1)',  /* Added scale transform */
+                maxHeight: '3000vh',  // Much larger max height
+                objectFit: 'contain',  // Changed to contain
+                transform: 'translateY(-10%) scale(1.1)',  // Added scale transform
               }}
               draggable={false}
             />
-          </div>
+          </div> */}
 
         {/* Main Text Block - Behind overlay */}
         <div className="absolute inset-0 z-5 flex items-center justify-start" style={{ transform: 'translateY(-20%)' }}>
@@ -147,10 +147,11 @@ export default function HeroSection({ children }) {
                     className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
                     delay={animationDelay + 7.2}
                     style={{
-                      fontSize: 'clamp(1.8rem, 5vw, 5rem)',
+                      fontSize: 'clamp(2.5rem, 7vw, 7rem)',
                       lineHeight: '1.1',
                       marginBottom: '0.2em',
-                      paddingLeft: '12vw',
+                      paddingLeft: '4vw',
+                      whiteSpace: 'nowrap',
                     }}
                   />
                   <AnimatedText
@@ -158,10 +159,11 @@ export default function HeroSection({ children }) {
                     className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
                     delay={animationDelay + 7.35}
                     style={{
-                      fontSize: 'clamp(1.8rem, 5vw, 5rem)',
+                      fontSize: 'clamp(2.5rem, 7vw, 7rem)',
                       lineHeight: '0.9',
                       marginBottom: '0.1em',
-                      paddingLeft: '12vw',
+                      paddingLeft: '4vw',
+                      whiteSpace: 'nowrap',
                     }}
                   />
                   <AnimatedText
@@ -169,10 +171,11 @@ export default function HeroSection({ children }) {
                     className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
                     delay={animationDelay + 7.5}
                     style={{
-                      fontSize: 'clamp(1.8rem, 5vw, 5rem)',
+                      fontSize: 'clamp(2.5rem, 7vw, 7rem)',
                       lineHeight: '0.9',
                       marginBottom: '0',
-                      paddingLeft: '12vw',
+                      paddingLeft: '4vw',
+                      whiteSpace: 'nowrap',
                     }}
                   />
                 </div>
@@ -193,7 +196,7 @@ export default function HeroSection({ children }) {
                 animate={thoughtfulInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <p className="text-left text-base sm:text-lg md:text-xl font-medium">
+                <p className="text-left text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium">
                   Thoughtful, designed layouts,<br />
                   premium service, Interiors,<br />
                   architecture, and construction
@@ -208,7 +211,7 @@ export default function HeroSection({ children }) {
                 animate={forThoseWhoValueInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <p className="text-right text-base sm:text-lg md:text-xl font-medium">
+                <p className="text-right text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium">
                   For Those Who Value<br />
                   Quality, Style, And<br />
                   Long-Term Living Solutions
