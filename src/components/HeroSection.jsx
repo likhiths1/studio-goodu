@@ -85,12 +85,14 @@ export default function HeroSection({ children }) {
         </div>
 
         {/* Background Image Container */}
-        <div className="absolute inset-0 z-0 w-full h-full">
+        <div className="absolute inset-0 md:relative z-0 w-full h-full md:h-auto" style={{
+          paddingTop: window.innerWidth >= 768 ? '150%' : '0'
+        }}>
           {/* Background Image */}
           <img
             src={HeroBG}
             alt="Hero Background"
-            className="absolute top-0 left-0 w-full h-full object-cover md:object-contain"
+            className="w-full h-full object-cover md:absolute md:top-0 md:left-0 md:w-full md:h-full md:object-contain"
             style={{
               objectPosition: 'center top',
             }}
