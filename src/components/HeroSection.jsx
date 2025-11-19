@@ -62,7 +62,7 @@ export default function HeroSection({ children }) {
   return (
     <>
       {/* Fixed Hero Section */}
-      <div className="relative font-inter overflow-hidden fixed top-0 left-0 w-full h-[100vh] md:h-[200vh] z-0">
+      <div className="relative font-inter overflow-hidden fixed top-0 left-0 w-full h-[100vh] md:h-full z-0">
         {/* Notification Bar and Navbar Container */}
         <div className="absolute top-0 left-0 w-full z-[9999]">
           {/* Notification Bar */}
@@ -131,17 +131,16 @@ export default function HeroSection({ children }) {
           </div> */}
 
         {/* Main Text Block - Behind overlay */}
-        <div className="absolute inset-0 z-5 flex items-center justify-start" style={{ transform: 'translateY(-10%)' }}>
+        <div className="absolute inset-0 z-5 flex items-center justify-start transform -translate-y-[10%] md:-translate-y-[20%]">
           <div className="w-full max-w-[90rem] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <div className="w-full text-center">
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: animationDelay + 0.2 }}>
                 <div>
                   <AnimatedText
                     text="TRANSFORMING SPACES INTO"
-                    className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
+                    className="font-inter text-white uppercase font-[400] tracking-[-0.08em] text-[1.6rem] md:text-[4.5vw] lg:text-[5rem]"
                     delay={animationDelay + 7.2}
                     style={{
-                      fontSize: 'clamp(1.4rem, 4.5vw, 6.5rem)',
                       lineHeight: '1.1',
                       marginBottom: '0.1em',
                       textAlign: 'center',
@@ -151,10 +150,9 @@ export default function HeroSection({ children }) {
                   />
                   <AnimatedText
                     text="EXPERIENCES THAT BALANCE"
-                    className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
+                    className="font-inter text-white uppercase font-[400] tracking-[-0.08em] text-[1.6rem] md:text-[4.5vw] lg:text-[5rem]"
                     delay={animationDelay + 7.35}
                     style={{
-                      fontSize: 'clamp(1.4rem, 4.5vw, 6.5rem)',
                       lineHeight: '1.1',
                       marginBottom: '0.1em',
                       textAlign: 'center',
@@ -164,10 +162,9 @@ export default function HeroSection({ children }) {
                   />
                   <AnimatedText
                     text="UTILITY AND ELEGANCE"
-                    className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
+                    className="font-inter text-white uppercase font-[400] tracking-[-0.08em] text-[1.6rem] md:text-[4.5vw] lg:text-[5rem]"
                     delay={animationDelay + 7.5}
                     style={{
-                      fontSize: 'clamp(1.4rem, 4.5vw, 6.5rem)',
                       lineHeight: '1.1',
                       marginBottom: '0',
                       textAlign: 'center',
