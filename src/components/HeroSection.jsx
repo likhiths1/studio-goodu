@@ -139,7 +139,7 @@ export default function HeroSection({ children }) {
         {/* Main Text Block - Behind overlay */}
         <div className="absolute inset-0 z-5 flex items-center justify-start" style={{ transform: 'translateY(-20%)' }}>
           <div className="w-full max-w-[90rem] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-            <div className="w-full text-left">
+            <div className="w-full text-center">
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: animationDelay + 0.2 }}>
                 <div>
                   <AnimatedText
@@ -147,10 +147,11 @@ export default function HeroSection({ children }) {
                     className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
                     delay={animationDelay + 7.2}
                     style={{
-                      fontSize: 'clamp(2.5rem, 7vw, 7rem)',
+                      fontSize: 'clamp(2.2rem, 6.5vw, 6.5rem)',
                       lineHeight: '1.1',
-                      marginBottom: '0.2em',
-                      paddingLeft: '2vw',
+                      marginBottom: '0.1em',
+                      textAlign: 'center',
+                      width: '100%',
                       whiteSpace: 'nowrap',
                     }}
                   />
@@ -159,10 +160,11 @@ export default function HeroSection({ children }) {
                     className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
                     delay={animationDelay + 7.35}
                     style={{
-                      fontSize: 'clamp(2.5rem, 7vw, 7rem)',
-                      lineHeight: '0.9',
+                      fontSize: 'clamp(2.2rem, 6.5vw, 6.5rem)',
+                      lineHeight: '1.1',
                       marginBottom: '0.1em',
-                      paddingLeft: '2vw',
+                      textAlign: 'center',
+                      width: '100%',
                       whiteSpace: 'nowrap',
                     }}
                   />
@@ -171,10 +173,11 @@ export default function HeroSection({ children }) {
                     className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
                     delay={animationDelay + 7.5}
                     style={{
-                      fontSize: 'clamp(2.5rem, 7vw, 7rem)',
-                      lineHeight: '0.9',
+                      fontSize: 'clamp(2.2rem, 6.5vw, 6.5rem)',
+                      lineHeight: '1.1',
                       marginBottom: '0',
-                      paddingLeft: '2vw',
+                      textAlign: 'center',
+                      width: '100%',
                       whiteSpace: 'nowrap',
                     }}
                   />
@@ -224,7 +227,7 @@ export default function HeroSection({ children }) {
         {/* Bottom Text - Moved up */}
         <motion.div 
           ref={moreThanSpaceRef}
-          className="absolute bottom-32 left-0 right-0 z-20 text-center"
+          className="absolute bottom-64 left-0 right-0 z-20 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={moreThanSpaceInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, ease: "easeOut" }}

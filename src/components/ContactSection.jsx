@@ -68,8 +68,8 @@ export default function ContactSection() {
           
           {/* Row 4 - Right aligned - With image */}
           <AnimatedItem delay={0.5} className="relative flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-0 md:pr-0" direction="right">
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 opacity-80">
-              <img src={Trans3} alt="" className="h-48 md:h-[24rem] w-auto" />
+            <div className="absolute right-[-12rem] top-1/2 -translate-y-1/2 z-10 opacity-80">
+              <img src={Trans3} alt="" className="h-48 md:h-[30rem] w-auto" />
             </div>
             <span
               className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em] relative z-20"

@@ -1,7 +1,7 @@
 // src/components/InternalSection.jsx
 
-import img1 from '../assets/images/internal1.png';
-import img2 from '../assets/images/internal2.png';
+import img1 from '../assets/images/blogs/bg.png';
+import img2 from '../assets/images/blogs/stor3.jpg';
 import img3 from '../assets/images/internal3.png';
 
 const internals = [
