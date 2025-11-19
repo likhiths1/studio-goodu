@@ -101,6 +101,142 @@ export const BLOG_POSTS = {
       }
     ]
   },
+  "3": {
+    id: "3",
+    date: "NOVEMBER 20, 2025",
+    featuredImage: Snobi1,
+    title: "2025 Interior Design Trends: What's In, What's Out, and What's Next",
+    intro: [
+      "Interior design in 2025 is all about comfort, calmness, and character. Homes are no longer just places to live they've become spaces that reflect personality, promote well-being, and offer smart functionality. If you're planning a makeover this year, here's the ultimate guide to what's trending, what's fading out, and what's about to take over the world of interiors."
+    ],
+    sections: [
+      {
+        title: "WHAT'S IN",
+        content: "The Biggest Interior Trends of 2025 include Quiet Luxury & Soft Minimalism - simple, timeless, and calming interiors are replacing loud and cluttered décor. Think clean lines, soft tones, layered neutrals, and high-quality natural materials. This trend focuses on elegance without trying too hard. Earthy & Moody Palettes are taking over with warm taupes, olive greens, moody browns, charcoal greys, and terracotta accents. People want homes that feel grounded and connected to nature."
+      },
+      {
+        title: "Texture & Technology",
+        content: "Textures Over Patterns are winning - velvet, linen, cane, raw wood, bouclé, micro-cement, limewash walls, textures that add depth and warmth. 2025 is all about touch-feel aesthetics. Smart Homes with Human Touch are rising - AI-powered lighting, climate control, and automated furniture are becoming popular but with a focus on keeping the space warm and personal. Smart interiors now blend tech with craftsmanship."
+      },
+      {
+        title: "Nature & Functionality",
+        content: "Biophilic Design 2.0 is trending - indoor plants are still popular, but now we're seeing green walls, indoor ponds, natural stone, and organic curves. Homes are becoming nature-inspired retreats. Multi-Functional Spaces are in demand with hybrid work and compact homes, where each room must serve multiple purposes. Foldable furniture, sliding partitions, and modular cabinetry are trending."
+      },
+      {
+        title: "WHAT'S OUT",
+        content: "Trends We're Leaving Behind include All-White Interiors - they're too sterile, too high-maintenance, and lack personality. 2025 homes want warmth and life. Overly Maximalist Designs with heavy prints and too much décor create visual overload. Minimal but meaningful is the new mood. Glossy Finishes Everywhere are being replaced by matte, textured, and natural finishes that rule this year."
+      },
+      {
+        title: "Fading Trends",
+        content: "Open Shelving in Kitchens looks aesthetic until you have to clean it. Closed storage with sleek designs is trending instead. Grey-on-Grey Interiors dominated previous years, but it's now considered flat and cold. Warm neutrals and darker tones have replaced it. Industrial Brutalism with raw concrete and metal everywhere is too cold, too heavy, too 2018. Homes are shifting towards softer shapes and earthy warmth."
+      },
+      {
+        title: "WHAT'S NEXT",
+        content: "The Future of Interior Design includes AI-Personalized Homes - AI will soon help design homes based on your lifestyle, mood, time, and habits. Imagine lighting that changes based on your mental state! Sustainable Everything will dominate with eco-friendly materials, reclaimed wood, recycled stone, and energy-saving lighting."
+      },
+      {
+        title: "Future Living",
+        content: "Emotional Interiors are emerging - homes designed to support mental well-being with calming colours, low-stimulation décor, and soothing textures. Modular Living Pods will take over in urban cities as flexible, movable living units. Fusion Design will see bold cultural mashups - Indian craftsmanship blended with Japandi, Scandinavian mixed with Mediterranean, Boho fused with Minimalism."
+      }
+    ],
+    imageGroups: []
+  },
+  "4": {
+    id: "4",
+    date: "NOVEMBER 20, 2025",
+    featuredImage: Snobi2,
+    title: "Parametric Design The Future of Creative Architecture",
+    intro: [
+      "Architecture is evolving at lightning speed and at the center of this transformation is parametric design, a futuristic approach that uses algorithms, data, and digital tools to shape buildings like never before. From fluid curves to complex geometric patterns, parametric design is pushing architecture into a new era where creativity and precision go hand in hand. In 2025 and beyond, parametric design isn't just a trend it's becoming the backbone of modern architectural thinking."
+    ],
+    sections: [
+      {
+        title: "What Is Parametric Design?",
+        content: "Parametric design is a process where architects use parameters (rules, inputs, and constraints) to generate dynamic forms through computational tools. Instead of manually drawing each detail, the design adapts automatically when a parameter changes resulting in infinite possibilities. Think of it as designing with logic, not just lines."
+      },
+      {
+        title: "Parameters Examples",
+        content: "Examples of parameters include:\n- Sunlight direction\n- Wind flow\n- Material behavior\n- Structure geometry\n- Cost constraints\n- Human movement patterns\n\nThis makes architecture more responsive, efficient, and visually striking."
+      },
+      {
+        title: "Why Parametric Design Is Shaping the Future",
+        content: "Limitless Creativity - Parametric tools allow architects to create forms that were once impossible to draw by hand organic curves, fluid shells, intricate patterns, and iconic shapes. Buildings no longer have to fit into a box."
+      },
+      {
+        title: "Environmental Optimization",
+        content: "Parametric design helps design buildings based on real environmental data:\n- Ideal shading\n- Natural cooling\n- Ventilation efficiency\n- Solar energy optimization\n\nThis leads to greener, smarter buildings that perform better in their surroundings."
+      },
+      {
+        title: "Efficiency & Sustainability",
+        content: "Faster Design, Faster Refinement - Changing one parameter updates the entire design in seconds. This saves time, reduces errors, and allows architects to test multiple design options instantly. More Sustainable Construction - Parametric modeling can calculate minimum material waste, strongest structural framework, cost-efficient fabrication. It's sustainability, not just style."
+      },
+      {
+        title: "Technology Integration",
+        content: "Integration with AI & Robotics - 2025 marks the era where parametric design merges with:\n- AI analytics\n- Generative design\n- 3D printing\n- Robotic fabrication."
+      },
+      {
+        title: "Iconic Examples",
+        content: "Even though the technology is futuristic, many iconic structures already use parametric methods:\n- The Louvre Abu Dhabi – Complex geometric shading dome\n- Zaha Hadid's Heydar Aliyev Center – Fluid curves that define modern architecture\n- The Beijing National Stadium (Bird's Nest) – Algorithm-driven structural web\n- The Yas Hotel's LED Grid Shell – Responsive façade technology\n\nThese buildings prove parametric design is not just beauty it's engineering brilliance."
+      },
+      {
+        title: "Industry Tools",
+        content: "Parametric Tools Leading the Industry in 2025 include:\n- Rhino + Grasshopper\n- Autodesk Dynamo\n- Houdini\n- Blender Geometry Nodes\n- CATIA\n- Fusion 360\n\nThese tools allow architects to test geometry, materials, performance, and fabrication all before construction begins."
+      },
+      {
+        title: "Future Innovations",
+        content: "What's Next for Parametric Architecture? The future promises even more innovation:\n✔ Generative AI-powered concept models\nAI will propose hundreds of design variations based on goals like sustainability or aesthetics.\n✔ Responsive buildings\nStructures that adjust shading, airflow, or lighting automatically.\n✔ Fully 3D-printed buildings\nParametric geometry + robotic construction = faster + cheaper + stronger.\n✔ Customized architecture at scale\nMass customization will allow unique homes, not cookie-cutter designs."
+      }
+    ],
+    imageGroups: []
+  },
+  "5": {
+    id: "5",
+    date: "NOVEMBER 20, 2025",
+    featuredImage: Snobi3,
+    title: "Common On-Site Challenges and How Professionals Solve Them (2025 Guide)",
+    intro: [
+      "Construction sites are high-pressure environments where dozens of tasks, teams, materials, and timelines must work together perfectly. But in real life, things rarely go exactly as planned. From delays to labour shortages, on-site challenges can disrupt progress and if not managed properly, can escalate into costly problems. The good news? Experienced construction professionals are trained to handle these hurdles with strategy, technology, and smart planning. Here's a deep dive into the most common on-site challenges and how professionals solve them efficiently."
+    ],
+    sections: [
+      {
+        title: "Labour Shortages & Skill Gaps",
+        content: "The Challenge: Skilled labour is becoming harder to find, especially for specialized tasks. Untrained labour leads to slower work, safety risks, and poor-quality output.\n\n \n✔ How Professionals Solve It:\n- Conducting regular training & skill development workshops\n- Leveraging labour subcontracting agencies\n- Using semi-automated or automated tools to reduce labour-intensive tasks\n- Implementing better scheduling to avoid overworking teams\n- Providing worker-friendly site conditions to improve retention."
+      },
+      {
+        title: "Project Delays",
+        content: "The Challenge: Delays can occur due to weather, slow approvals, material shortages, or coordination issues.\n\n✔ How Professionals Solve It:\n- Using detailed Gantt charts & timeline monitoring tools\n- Maintaining buffer time for critical tasks\n- Ensuring parallel workflows wherever possible\n- Having backup suppliers for essential materials\n- Weekly site meetings to identify bottlenecks early."
+      },
+      {
+        title: "Material Shortages & Mismanagement",
+        content: "The Challenge: Materials arriving late, being stored poorly, or getting damaged leads to wasted money and time.\n\n✔ How Professionals Solve It:\n- Using digital inventory systems\n- Maintaining early procurement schedules\n- Working with multiple vendors instead of relying on one\n- On-site storage solutions like covered sheds & waterproofing\n- Conducting material quality checks upon arrival."
+      },
+      {
+        title: "Safety Hazards on Site",
+        content: "The Challenge: Construction sites involve heavy machinery, heights, electrical work, and hazardous materials. Safety lapses can lead to accidents.\n\n✔ How Professionals Solve It:\n- Daily safety briefings & toolbox talks\n- Mandatory PPE (helmets, gloves, boots, harnesses)\n- Clear signages and barricades\n- Regular inspections by safety officers\n- Safety certifications and compliance audits\n\nSafety is always non-negotiable for professionals."
+      },
+      {
+        title: "Poor Coordination Between Teams",
+        content: "The Challenge: Architects, engineers, contractors, labour, vendors so many teams must work in sync. Miscommunication causes errors and rework.\n\n✔ How Professionals Solve It:\n- Using digital collaboration platforms like Trello, Procore, or WhatsApp groups\n- Having a single project manager overseeing communication\n- Clear drawings, BOQs, and daily task lists\n- Weekly coordination meetings."
+      },
+      {
+        title: "Weather-Related Disruptions",
+        content: "The Challenge: Rains, extreme heat, or unexpected weather changes can halt work and damage materials.\n\n✔ How Professionals Solve It:\n- Planning critical activities (slab casting, painting) based on forecast\n- Protecting materials with waterproof covers\n- Creating temporary shelters or site sheds\n- Adjusting schedules seasonally."
+      },
+      {
+        title: "Design Errors or Last-Minute Changes",
+        content: "The Challenge: Changes in design during construction lead to delays, cost overruns, and confused teams.\n\n✔ How Professionals Solve It:\n- Conducting detailed plan reviews before execution\n- Using 3D/VR models to help clients visualize beforehand\n- Having a formal change request process\n- Keeping contingency funds & timelines for client-driven changes."
+      },
+      {
+        title: "Cost Overruns",
+        content: "The Challenge: Costs can rise due to price hikes, wastage, rework, or poor planning.\n\n✔ How Professionals Solve It:\n- Transparent budgeting and BOQ breakdown\n- Tracking expenses weekly\n- Value engineering (choosing smart alternate materials)\n- Negotiating long-term vendor contracts\n- Monitoring material wastage and rework."
+      },
+      {
+        title: "Professional Approach",
+        content: "Construction challenges are inevitable but professional teams know how to anticipate, manage, and overcome them. With the right planning, communication, technology, and safety protocols, even the toughest on-site issues can be handled smoothly. The best construction companies aren't the ones with zero challenges they're the ones that respond quickly, adapt intelligently, and deliver consistently."
+      }
+    ],
+    imageGroups: []
+  },
 };
 
 // Function to convert title to URL-friendly slug

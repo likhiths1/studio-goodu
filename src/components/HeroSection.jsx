@@ -90,7 +90,7 @@ export default function HeroSection({ children }) {
           <img
             src={HeroBG}
             alt="Hero Background"
-            className="absolute top-0 left-0 w-full h-full object-contain"
+            className="absolute top-0 left-0 w-full h-full sm:h-[200vh] object-contain"
             style={{
               objectFit: 'contain',
               width: '100%',

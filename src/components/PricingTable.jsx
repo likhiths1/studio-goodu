@@ -11,7 +11,7 @@ const PricingComparison = () => {
       isPopular: false,
       floorArea: "Up to 4000 Sq. Ft.",
       features: {
-        architecturalDesign: false,
+        architecturalDesign: true,
         mepDesign: true,
         structuralDesign: true,
         billOfQuantities: false,
@@ -43,7 +43,7 @@ const PricingComparison = () => {
       isPopular: true,
       floorArea: "Up to 4000 Sq. Ft.",
       features: {
-        architecturalDesign: false,
+        architecturalDesign: true,
         mepDesign: true,
         structuralDesign: true,
         billOfQuantities: true,

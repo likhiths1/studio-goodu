@@ -1,4 +1,4 @@
-import Person1 from "../assets/images/team/person12.jpg";
+import Person1 from "../assets/images/team/personn1.jpg";
 import Person2 from "../assets/images/team/colored-image3.jpg";
 import Person3 from "../assets/images/team/colored-image2.jpg";
 import Person4 from "../assets/images/team/colored-image1.jpg";
@@ -118,7 +118,7 @@ export default function MeetTeamSection() {
       <style>{teamCardScribbleCSS}</style>
       <div className="max-w-[90rem] mx-auto">
         <AnimatedItem className="flex flex-row justify-start items-end mb-7 md:mb-10">
-          <h2 className="uppercase font-medium text-black text-[3rem] md:text-[10rem] leading-none tracking-[-0.09em] text-left font-inter">
+          <h2 className="uppercase font-medium text-black text-[3rem] md:text-[9rem] leading-none tracking-[-0.09em] text-left font-inter">
             Meet the Faces Behind the Space
           </h2>
         </AnimatedItem>

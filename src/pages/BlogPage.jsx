@@ -46,7 +46,7 @@ export default function BlogPage() {
                   <p className="text-gray-600 line-clamp-3 mb-4">
                     {post.intro[0]}
                   </p>
-                  <span className="text-black font-medium hover:underline">
+                  <span className="text-black font-medium hover:opacity-80 transition-opacity">
                     Read More →
                   </span>
                 </div>

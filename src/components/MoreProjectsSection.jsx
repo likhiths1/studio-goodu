@@ -10,17 +10,17 @@ const portfolioData = [
   {
     img: Port1,
     title: "The Runway Retreat",
-    details: "DETAILS ⇾",
+    details: "VIEW PROJECT ⇾",
   },
   {
     img: Port2,
-    title: "Jankal Group",
-    details: "DETAILS ⇾",
+    title: "Jankal Marketing Office",
+    details: "VIEW PROJECT ⇾",
   },
   {
     img: mahacover,
     title: "226 Duplex Apartment, Mahalakshmi Layout",
-    details: "DETAILS ⇾",
+    details: "VIEW PROJECT ⇾",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function MoreProjectsSection() {
                 </div>
                 <Link 
                   to="/portfolio/5" 
-                  className="inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
+                  className="portfolio-link inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
                 >
                   {portfolioData[0].details}
                 </Link>
@@ -73,7 +73,7 @@ export default function MoreProjectsSection() {
                 </div>
                 <Link 
                   to="/portfolio/6" 
-                  className="inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
+                  className="portfolio-link inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
                 >
                   {portfolioData[1].details}
                 </Link>
@@ -97,7 +97,7 @@ export default function MoreProjectsSection() {
               </div>
               <Link 
                 to="/portfolio/7" 
-                className="inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
+                className="portfolio-link inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
               >
                 {portfolioData[2].details}
               </Link>

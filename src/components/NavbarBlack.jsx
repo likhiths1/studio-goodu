@@ -57,15 +57,15 @@ export default function Navbar() {
         {navLinks.map(link => (
           <li key={link.name}>
             {link.name === 'Pricing' ? (
-              <a href="#pricing" onClick={handlePricingClick} className="text-black hover:text-black hover:underline underline-offset-4 decoration-current">
+              <a href="#pricing" onClick={handlePricingClick} className="navbar-link text-[#4D696C] hover:text-[#4D696C] hover:underline underline-offset-4 decoration-current">
                 {link.name}
               </a>
             ) : link.href.startsWith('/') ? (
-              <Link to={link.href} className="text-black hover:text-black hover:underline underline-offset-4 decoration-current">
+              <Link to={link.href} className="navbar-link text-[#4D696C] hover:text-[#4D696C] hover:underline underline-offset-4 decoration-current">
                 {link.name}
               </Link>
             ) : (
-              <a href={link.href} className="text-black hover:text-black hover:underline underline-offset-4 decoration-current">
+              <a href={link.href} className="navbar-link text-[#4D696C] hover:text-[#4D696C] hover:underline underline-offset-4 decoration-current">
                 {link.name}
               </a>
             )}

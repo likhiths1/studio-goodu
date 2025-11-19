@@ -8,7 +8,7 @@ const languages = [
   { word: "கூடு", lang: "Tamil" },
   { word: "గూడు", lang: "Telugu" },
   { word: "കൂട്", lang: "Malayalam" },
-  { word: "Nest", lang: "English" }
+  { word: "Goodu", lang: "English" }
 ];
 
 export default function BirdNestAnimation({ onComplete }) {

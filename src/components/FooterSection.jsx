@@ -20,7 +20,7 @@ export default function FooterSection() {
     <footer className="w-full bg-[#4D696C] mt-8 md:mt-0 pt-2 md:pt-3 pb-0 px-3 md:px-0 md:-mb-24 font-inter">
       <div className="max-w-[90rem] mx-auto grid grid-cols-1 md:grid-cols-5 gap-y-5 gap-x-2 items-start md:items-stretch">
         {/* Left: Navigation links */}
-        <div className="md:col-span-2 flex flex-col gap-1.5 sm:gap-2 pt-3 pb-4 min-w-0">
+        <div className="md:col-span-2 flex flex-col gap-1.5 sm:gap-2 pt-3 pb-4 pl-6 pr-6 md:pl-8 md:pr-8 min-w-0">
           {footerLinks.map((link) => {
             const content = (
               <>
@@ -48,7 +48,7 @@ export default function FooterSection() {
         </div>
 
         {/* Right/meta column */}
-        <div className="md:col-span-3 flex flex-col h-full items-end justify-start gap-3 pt-2 pr-1 pl-0 md:pl-0 min-w-0 mt-3 md:mt-0">
+        <div className="md:col-span-3 flex flex-col h-full items-end justify-start gap-3 pt-2 pr-6 pl-6 md:pr-8 md:pl-8 min-w-0 mt-3 md:mt-0">
           <p className="text-[1rem] sm:text-[1.6rem] text-white text-right mt-[6px] sm:mt-[8px] md:mt-[10px] max-w-[90%] sm:max-w-[50%] md:max-w-none self-end" style={{ lineHeight: 1.2, whiteSpace: 'normal' }}>
             DESIGNING SPACES THAT<br />FEEL AS GOOD AS THEY LOOK.
           </p>

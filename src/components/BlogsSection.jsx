@@ -102,7 +102,7 @@ export default function BlogsSection() {
           {/* Arrow navigation */}
           <button
             onClick={prevBlog}
-            className="flex items-center justify-center absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-black/60 hover:bg-black/80 text-white rounded-full transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 shadow-lg hover:scale-105"
+            className="blog-arrow-button flex items-center justify-center absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-black/60 hover:bg-black/80 text-white hover:text-white rounded-full transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:text-white"
             aria-label="Previous blog"
             disabled={direction !== 0}
           >
@@ -112,7 +112,7 @@ export default function BlogsSection() {
           </button>
           <button
             onClick={nextBlog}
-            className="flex items-center justify-center absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-black/60 hover:bg-black/80 text-white rounded-full transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 shadow-lg hover:scale-105"
+            className="blog-arrow-button flex items-center justify-center absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-black/60 hover:bg-black/80 text-white hover:text-white rounded-full transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:text-white"
             aria-label="Next blog"
             disabled={direction !== 0}
           >

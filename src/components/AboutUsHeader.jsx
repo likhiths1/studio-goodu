@@ -1,4 +1,4 @@
-import AboutImg from "../assets/images/aboutuspage/aboutuspage.jpeg";
+import AboutImg from "../assets/images/aboutuspage/aboutusheader.png";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 export default function AboutUsHeader() {

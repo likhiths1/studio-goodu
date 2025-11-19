@@ -17,8 +17,8 @@ const valueData = [
 
 export default function ValuesSection() {
   return (
-    <section className="w-full bg-[#FEF6ED] py-10 flex items-center justify-center">
-      <div className="max-w-[100rem] w-full grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-[#E7DCCB] md:mt-32 md:mb-32 px-1 gap-y-10">
+    <section className="w-full bg-[#FEF6ED] py-6 flex items-center justify-center">
+      <div className="max-w-[100rem] w-full grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-[#E7DCCB] md:mt-4 md:mb-4 px-1 gap-y-10">
         {valueData.map((item) => (
           <div key={item.title} className="flex flex-col items-center text-center px-8 md:px-10 py-6">
             <div className="font-aerotis text-[2rem] md:text-[3.4rem] mb-3 text-black">{item.title}</div>

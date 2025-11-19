@@ -12,7 +12,7 @@ import Img10 from "../assets/images/portfoliodetail/arthavilla10.jpg";
 import StartImg from "../assets/images/portfolio/arthavilla.jpg";
 import GooduLogo from "../assets/images/herosection/goodu-logoblue.png";
 
-export default function PortfolioDetailSection({ title, hero, detailSections: detailSectionsProp, imageGroups: imageGroupsProp, serviceType = "Residential Interior", features = "Marble Counter, Wooden Flooring, Custom Lighting", onPrev, onNext, hasPrev = true, hasNext = true }) {
+export default function PortfolioDetailSection({ title, hero, detailSections: detailSectionsProp, imageGroups: imageGroupsProp, serviceType, features, onPrev, onNext, hasPrev = true, hasNext = true }) {
   // Organize images in groups: 2, 3, 2, 3, etc.
   const imageGroupsDefault = [
     { images: [Img1, Img7], columns: 2 }, // Row 1: 2 images (50-50)
@@ -120,22 +120,26 @@ export default function PortfolioDetailSection({ title, hero, detailSections: de
             </div>
             {/* Right side - Service Type and Features */}
             <div className="flex-shrink-0 md:w-64 space-y-6 mt-12 text-left">
-              <div>
-                <h3 className="font-inter text-left text-xs md:text-2xl font-medium text-black tracking-wide mb-2 inline-block border-b border-black/20 pb-2">
-                  SERVICE TYPE:
-                </h3>
-                <p className="font-inter text-left text-sm md:text-xl text-black/70 leading-snug max-w-[16rem]">
-                  {serviceType}
-                </p>
-              </div>
-              <div>
-                <h3 className="font-inter text-left text-xs md:text-2xl font-medium text-black tracking-wide mb-2 inline-block border-b border-black/20 pb-2">
-                  FEATURES:
-                </h3>
-                <p className="font-inter text-left text-sm md:text-lg text-black/70 leading-snug max-w-[16rem]">
-                  {features}
-                </p>
-              </div>
+              {serviceType && (
+                <div>
+                  <h3 className="font-inter text-left text-xs md:text-2xl font-medium text-black tracking-wide mb-2 inline-block border-b border-black/20 pb-2">
+                    SERVICE TYPE:
+                  </h3>
+                  <p className="font-inter text-left text-sm md:text-xl text-black/70 leading-snug max-w-[16rem]">
+                    {serviceType}
+                  </p>
+                </div>
+              )}
+              {features && (
+                <div>
+                  <h3 className="font-inter text-left text-xs md:text-2xl font-medium text-black tracking-wide mb-2 inline-block border-b border-black/20 pb-2">
+                    FEATURES:
+                  </h3>
+                  <p className="font-inter text-left text-sm md:text-lg text-black/70 leading-snug max-w-[16rem]">
+                    {features}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>

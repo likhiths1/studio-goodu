@@ -6,7 +6,7 @@ export default function AboutUsSection() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const stats = [
-    { number: "01+", desc: "YEARS OF CRAFT\nShaping spaces that unite \narchitecture,artistry, and emotion." },
+    { number: "06+", desc: "YEARS OF CRAFT\nShaping spaces that unite \narchitecture,artistry, and emotion." },
     { number: "100+", desc: "PROJECTS DELIVERED\nFrom intimate residences to expansive spaces, each crafted with intention and precision." },
     { number: "24hrs", desc: "RESPONSE TIME\nDesign conversations shouldn’t wait. \nWe’re always within reach, always listening." },
     { number: "5+", desc: "DESIGN EXPERTS\nA multidisciplinary team of architects, \ndesigners,and dreamers, united by craft." },

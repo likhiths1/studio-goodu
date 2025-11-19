@@ -11,27 +11,27 @@ const portfolioData = [
   {
     img: Port1,
     title: "Artha Villa",
-    details: "DETAILS ⇾",
+    details: "VIEW PROJECT ⇾",
   },
   {
     img: Port2,
     title: "Snob Salon",
-    details: "DETAILS ⇾",
+    details: "VIEW PROJECT ⇾",
   },
   {
     img: Port3,
     title: "TYD",
-    details: "DETAILS ⇾",
+    details: "VIEW PROJECT ⇾",
   },
   {
     img: Port4,
     title: "Sriganga Residence",
-    details: "DETAILS ⇾",
+    details: "VIEW PROJECT ⇾",
   },
   {
     img: Port5,
     title: "Exquisite Marble Bathroom",
-    details: "DETAILS ⇾",
+    details: "VIEW PROJECT ⇾",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function PortfolioGallery() {
     <section className="w-full bg-[#FFF6ED] py-9 px-3 sm:px-8 md:px-14 flex flex-col items-center">
       <div className="max-w-[80rem] w-full mx-auto md:mt-32">
         <h2 className="font-inter font-medium text-black text-[2.3rem] md:text-[4.6rem] md:mb-32 tracking-[-0.06em] leading-tight mb-8 w-full text-center">
-          EXPLORE OUR GALLERY OF<br />SOPHISTICATED INTERIORS
+          EXPLORE OUR GALLERY OF <br/>SOPHISTICATED <br/>ARCHITECTURE AND INTERIORS
         </h2>
         <div className="flex flex-col gap-y-12 md:gap-y-24 mb-12 md:mb-24">
           {/* First row - 50/50 split */}
@@ -61,7 +61,7 @@ export default function PortfolioGallery() {
                 </div>
                 <Link 
                   to="/portfolio/1" 
-                  className="inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
+                  className="portfolio-link inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
                 >
                   {portfolioData[0].details}
                 </Link>
@@ -84,7 +84,7 @@ export default function PortfolioGallery() {
                 </div>
                 <Link 
                   to="/portfolio/2" 
-                  className="inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
+                  className="portfolio-link inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
                 >
                   {portfolioData[1].details}
                 </Link>
@@ -110,7 +110,7 @@ export default function PortfolioGallery() {
                 </div>
                 <Link 
                   to="/portfolio/3" 
-                  className="inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
+                  className="portfolio-link inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
                 >
                   {portfolioData[2].details}
                 </Link>
@@ -133,7 +133,7 @@ export default function PortfolioGallery() {
                 </div>
                 <Link 
                   to="/portfolio/4" 
-                  className="inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
+                  className="portfolio-link inline-block mt-2 font-inter text-xs text-[1.4rem] text-black hover:opacity-80 transition"
                 >
                   {portfolioData[3].details}
                 </Link>

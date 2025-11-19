@@ -41,7 +41,7 @@ export default function AboutUs() {
             <h2 className="text-[3.2rem] md:text-[12rem] leading-none font-medium tracking-[-0.08em] text-black">
               PROCESS
             </h2>
-            <div className="hidden md:block text-[1.6rem] text-black/80 tracking-tight font-inter text-right">
+            <div className="hidden md:block text-[1.2rem] text-black/80 tracking-tight font-inter text-right">
               Crafting spaces with intention, detail, and emotion, every step
               designed to make your journey seamless.
             </div>

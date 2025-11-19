@@ -1,9 +1,37 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import BgImg from "../assets/images/blogs/back.png";
 import GradientImg from "../assets/images/blogs/grad2.png";
 import BlogImg from "../assets/images/portfoliodetail/snob1.jpg";
+import ArthaImg from "../assets/images/portfoliodetail/arthavilla1.jpg";
 
 export default function FeaturedBlogSection() {
+  const [currentProject, setCurrentProject] = useState(0);
+  
+  const featuredProjects = [
+    {
+      title: "Snob Salon",
+      description: "In Bengaluru: This salon design by Studio Goodu melds residential intimacy with Art Deco flourishes. We wanted people to come back not only for the service but also for the place itself,\" notes Tharun. \"The idea was to evoke comfort, almost like a home, but with that wow factor that makes you stop and look,\" he explains.",
+      image: BlogImg,
+      link: "/blog/1"
+    },
+    {
+      title: "Artha Villa",
+      description: "A sanctuary of light and craft, this 6000 sq.ft home is a masterful blend of bespoke craftsmanship, rich materiality, and an intuitive connection to nature. Spanning about 6000 sq.ft this home is a serene sanctuary tailored for a family of five, resulting in spaces that are both luxurious and deeply personal.",
+      image: ArthaImg,
+      link: "/blog/2"
+    }
+  ];
+
+  const nextProject = () => {
+    setCurrentProject((prev) => (prev + 1) % featuredProjects.length);
+  };
+
+  const prevProject = () => {
+    setCurrentProject((prev) => (prev - 1 + featuredProjects.length) % featuredProjects.length);
+  };
+
+  const project = featuredProjects[currentProject];
   return (
     <section className="w-full flex flex-col items-center justify-center relative bg-[#FFF6ED] pb-[120px] md:pb-[180px]">
       {/* Max-width container for heading only (matches Internal) */}
@@ -38,19 +66,35 @@ export default function FeaturedBlogSection() {
         <div className="flex flex-col items-start">
           <div className="bg-black px-10 py-10 flex flex-col justify-between w-[420px] md:w-[520px] h-[520px] md:h-[640px]">
             <h3 className="font-inter text-white text-[1.28rem] md:text-[2rem] leading-tight mb-1">
-              Snob Salon
+              {project.title}
             </h3>
             <p className="font-inter text-white text-[1rem] md:text-[1.3rem] leading-relaxed mb-5 pr-2 opacity-85">
-              In Bengaluru: This salon design by Studio Goodu melds residential intimacy with Art Deco flourishes
+              {project.description}
             </p>
-            <Link to="/blog/2" className="font-inter text-white text-[1.2rem] tracking-tight underline underline-offset-4">
+            <Link to={project.link} className="font-inter text-white text-[1.2rem] tracking-tight underline underline-offset-4">
               READ POST
             </Link>
+            
+            {/* Navigation arrows */}
+            <div className="flex gap-4 mt-4">
+              <button
+                onClick={prevProject}
+                className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+              >
+                ←
+              </button>
+              <button
+                onClick={nextProject}
+                className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+              >
+                →
+              </button>
+            </div>
           </div>
         </div>
         <div className="flex flex-col justify-center items-center">
           <img
-            src={BlogImg}
+            src={project.image}
             alt="Featured Room"
             className="w-[420px] md:w-[520px] h-[520px] md:h-[780px] object-cover border-2 border-[#4795D1] rounded-none shadow-lg"
             draggable={false}

@@ -65,9 +65,12 @@ export default function BlogDetailSection({
                 <h2 className="text-2xl md:text-4xl font-medium text-black mb-6 tracking-tight">
                   {sections[groupIndex].title}
                 </h2>
-                <p className="font-inter font-light text-base md:text-2xl text-black/80 leading-relaxed">
-                  {sections[groupIndex].content}
-                </p>
+                <div 
+                  className="font-inter font-light text-base md:text-2xl text-black/80 leading-relaxed"
+                  dangerouslySetInnerHTML={{ 
+                    __html: sections[groupIndex].content.replace(/\n\n/g, '<br><br>').replace(/✔/g, '<br>✔')
+                  }}
+                />
               </div>
             )}
           </div>
@@ -79,9 +82,12 @@ export default function BlogDetailSection({
             <h2 className="text-2xl md:text-4xl font-medium text-black mb-6 tracking-tight">
               {section.title}
             </h2>
-            <p className="font-inter font-light text-base md:text-2xl text-black/80 leading-relaxed">
-              {section.content}
-            </p>
+            <div 
+              className="font-inter font-light text-base md:text-2xl text-black/80 leading-relaxed"
+              dangerouslySetInnerHTML={{ 
+                __html: section.content.replace(/\n\n/g, '<br><br>').replace(/✔/g, '<br>✔')
+              }}
+            />
           </div>
         ))}
 

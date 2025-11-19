@@ -2,6 +2,9 @@ import Stor4 from '../assets/images/stories/stor1.jpeg';
 import Stor2 from '../assets/images/stories/stor2.jpg';
 import Stor3 from '../assets/images/stories/stor3.jpg';
 import Stor1 from '../assets/images/stories/stor4.jpg';
+import jovo from '../assets/images/testsmall.png'
+import jankal from '../assets/images/jankal.jpeg'
+import sriganga from '../assets/images/sriganga.jpeg'
 import GreenOverlay from '../assets/images/greenoverlay.png';
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 import { useRef, useState, useEffect } from 'react';
@@ -35,53 +38,23 @@ export default function StoriesSection() {
   }, []);
   const testimonials = [
     {
-      text: "Working with your design team was an absolute pleasure. The attention to detail and creativity exceeded my expectations. Thank you for making my home beautiful!",
-      name: "Sophie Carter",
-      place: "New York, USA",
-      avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+      text: '"A rare combination of creativity and precision."',
+      name: "Prajwal Ramesh",
+      place: "Managing Director, JANKAL Group",
+      avatar: jankal
     },
     {
-      text: "Absolutely loved the process and the fantastic results. Highly recommend for anyone seeking great interiors!",
-      name: "Aisha Patel",
-      place: "Bangalore, India",
-      avatar: "https://randomuser.me/api/portraits/women/47.jpg"
+      text: '"A distinguished blend of design brilliance and skilled workmanship."',
+      name: "",
+      place: "Sriganga Residence",
+      avatar: sriganga
     },
     {
-      text: "A wonderful interior design experience. The team was attentive and went above and beyond.",
-      name: "Clara Schmidt",
-      place: "Berlin, Germany",
-      avatar: "https://randomuser.me/api/portraits/women/50.jpg"
+      text: "An exquisite orchestration of creativity and craftsmanship.",
+      name: "Mahesh Surasgar",
+      place: "Founder JÖVÖ INDIA",
+      avatar: jovo
     },
-    {
-      text: "Transformed our living space into something extraordinary. The design perfectly reflects our style.",
-      name: "James Wilson",
-      place: "London, UK",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg"
-    },
-    {
-      text: "Exceptional service from start to finish. The team understood our vision perfectly.",
-      name: "Maria Garcia",
-      place: "Madrid, Spain",
-      avatar: "https://randomuser.me/api/portraits/women/63.jpg"
-    },
-    {
-      text: "The attention to detail is remarkable. Every corner of our home tells a story now.",
-      name: "Chen Wei",
-      place: "Shanghai, China",
-      avatar: "https://randomuser.me/api/portraits/men/45.jpg"
-    },
-    {
-      text: "Professional, creative, and delivered beyond our expectations. Highly recommended!",
-      name: "Olivia Martin",
-      place: "Paris, France",
-      avatar: "https://randomuser.me/api/portraits/women/28.jpg"
-    },
-    {
-      text: "Turned our dream home into reality with their innovative design solutions.",
-      name: "David Kim",
-      place: "Seoul, South Korea",
-      avatar: "https://randomuser.me/api/portraits/men/22.jpg"
-    }
   ];
 
   const storyImages = [Stor1, Stor2, Stor3, Stor4, Stor1, Stor2, Stor3, Stor4];
@@ -156,11 +129,11 @@ export default function StoriesSection() {
                     }}
                   >
                     <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                      <div className="text-sm md:text-base font-normal mb-3 leading-tight">{item.text}</div>
+                      <div className="text-lg md:text-xl font-normal mb-8 leading-tight">{item.text}</div>
                       <div className="flex items-center gap-3 mt-3">
                         <img 
                           src={item.avatar} 
-                          className="w-10 h-10 rounded-full object-cover border-2 border-white" 
+                          className="w-14 h-14 rounded-full object-cover border-2 border-white" 
                           alt={item.name} 
                           draggable="false"
                         />

@@ -290,76 +290,7 @@ const PROJECTS = {
   "5": {
     title: "THE RUNWAY RETREAT",
     hero: run2,
-    serviceType: "Residential Interior",
-    features: "Natural Stone, Wooden Flooring, Custom Carpentry",
-    detailSections: [
-      { 
-        heading: "A sanctuary of light and craft", 
-        paragraphs: [
-          "Welcome to a home that is more than just a structure- it is a serene sanctuary tailored for a family of five. Spanning about 6000 sq.ft this home is a masterful blend of bespoke craftsmanship, rich materiality, and an intuitive connection to nature, resulting in spaces that are both luxurious and deeply personal."
-        ] 
-      },
-      { 
-        heading: "The Architectural Embrace: Exterior and Elevation", 
-        paragraphs: [
-          "The residence presents a contemporary yet warm elevation, thoughtfully integrated with its verdant surroundings. The facade utilizes a balanced composition of textures featuring stark white and earthy, brown-toned panels, softened by inclusion of expansive dark-framed windows and balconies. These elements are enveloped by the mature, lush green trees of the neighbourhood, ensuring the home feels anchored and harmonious, a modern structure nested within nature."
-        ] 
-      },
-      { 
-        heading: "Interiors: A Symphony of Texture and Light", 
-        paragraphs: [
-          "Stepping inside a design narrative unfolds through tactile surfaces, custom details and an orchestrated flow of natural light."
-        ] 
-      },
-      { 
-        heading: "The Social Core: Foyer, Living and Dining", 
-        paragraphs: [
-          "The journey begins in the foyer which seamlessly transitions into the double height-ed living area. Here custom artistry takes centre stage.",
-          "The TV wall in the living room and the partition between the living and foyer feature stunning, subtle hand-painted elements. This bespoke touch elevates simple walls to artwork, adding a unique soft texture and narrative to the primary gathering space."
-        ] 
-      },
-      { 
-        heading: "The Puja Room", 
-        paragraphs: [
-          "Visible from the dining area, puja room is the spiritual focal point designed with elegant transparency. It is composed of lattice of vertical and horizontal wooden elements, offering a sense of sacred enclosure without being completely closed off, allowing light and energy to flow."
-        ] 
-      },
-      { 
-        heading: "Dining and Balcony", 
-        paragraphs: [
-          "The dining area is a bright hub, enjoying generous early morning light. It opens directly onto a balcony, creating a lovely indoor-outdoor connection for family meals."
-        ] 
-      },
-      { 
-        heading: "Informal Living Area", 
-        paragraphs: [
-          "Beyond the formal spaces, this residence unveils a truly enchanting informal living space - a versatile retreat designed for relaxation, play and contemplation. This boasts a privileged vantage point, on one side it looks down into the double height living space and a large door opens into a terrace/balcony on the other side."
-        ] 
-      },
-      { 
-        heading: "Illumination and Design Highlights", 
-        paragraphs: [
-          "A key element in the design is the use of dramatic custom lighting and textured walls:",
-          "<strong style=\"color: black;\">Statement Lighting</strong> - The home is graced with remarkable light fixtures from the organic woven rattan ceiling installation in the dining area, linear rattan pendant lights in the double height formal living space and the unique, cloud-like pendant lights in the staircase well.",
-          "<strong style=\"color: black;\">Texture walls</strong> - Across the common areas walls are characterized by vertical fluting and subtle three-dimensional patterns lending an immediate sense of richness and depth to the neutral color palette.",
-          "<strong style=\"color: black;\">Skylight</strong> - The ceiling in the informal living area is punctuated by a series of precisely angled skylights sculpting daylight into dramatic shafts. This illuminates a captivating wall decor feature- a collection of whimsical climbing figures that add a playful dimension."
-        ] 
-      },
-      { 
-        heading: "Private Retreats: The Bedrooms", 
-        paragraphs: [
-          "The four bedrooms, including the master bedroom with a dedicated walk-in closet, two specialized kids' bedrooms and a grandparents' room are designed as individualized havens.",
-          "<strong style=\"color: black;\">Sun-Kissed Comfort</strong>: The master bedroom, one of the kids' bedrooms and the grandparents' room are perfectly oriented to receive the afternoon sunlight. This delightful positioning allows the family to enjoy golden-hour warmth in their private spaces.",
-          "<strong style=\"color: black;\">Bay Windows and Green Views</strong>: Three out of four bedrooms feature inviting bay windows. These are not just functional windows; they are designated resting spots that offer idyllic views out to the lush green neighbourhood, perfectly framing the natural scenery and reinforcing the home's connection to the outdoors."
-        ] 
-      },
-      { 
-        heading: "A Testament to Luxurious Living", 
-        paragraphs: [
-          "This 6000 sq. ft. residence is a testament to luxurious living rooted in thoughtful execution. From the play of light in the common spaces to the bespoke, hand-painted details, it's a home where every material tells a story and every space feels intentionally crafted for the family who calls it sanctuary."
-        ] 
-      }
-    ],
+    detailSections: [],
     imageGroups: [
       { images: [run1, run2], columns: 2 },
       { images: [run3, run4, run5], columns: 3 },
@@ -369,78 +300,9 @@ const PROJECTS = {
     
   },
   "6": {
-    title: "JANKAL GROUP",
+    title: "JANKAL MARKETING OFFICE",
     hero: jankalhero,
-    serviceType: "Residential Interior",
-    features: "Natural Stone, Wooden Flooring, Custom Carpentry",
-    detailSections: [
-      { 
-        heading: "A sanctuary of light and craft", 
-        paragraphs: [
-          "Welcome to a home that is more than just a structure- it is a serene sanctuary tailored for a family of five. Spanning about 6000 sq.ft this home is a masterful blend of bespoke craftsmanship, rich materiality, and an intuitive connection to nature, resulting in spaces that are both luxurious and deeply personal."
-        ] 
-      },
-      { 
-        heading: "The Architectural Embrace: Exterior and Elevation", 
-        paragraphs: [
-          "The residence presents a contemporary yet warm elevation, thoughtfully integrated with its verdant surroundings. The facade utilizes a balanced composition of textures featuring stark white and earthy, brown-toned panels, softened by inclusion of expansive dark-framed windows and balconies. These elements are enveloped by the mature, lush green trees of the neighbourhood, ensuring the home feels anchored and harmonious, a modern structure nested within nature."
-        ] 
-      },
-      { 
-        heading: "Interiors: A Symphony of Texture and Light", 
-        paragraphs: [
-          "Stepping inside a design narrative unfolds through tactile surfaces, custom details and an orchestrated flow of natural light."
-        ] 
-      },
-      { 
-        heading: "The Social Core: Foyer, Living and Dining", 
-        paragraphs: [
-          "The journey begins in the foyer which seamlessly transitions into the double height-ed living area. Here custom artistry takes centre stage.",
-          "The TV wall in the living room and the partition between the living and foyer feature stunning, subtle hand-painted elements. This bespoke touch elevates simple walls to artwork, adding a unique soft texture and narrative to the primary gathering space."
-        ] 
-      },
-      { 
-        heading: "The Puja Room", 
-        paragraphs: [
-          "Visible from the dining area, puja room is the spiritual focal point designed with elegant transparency. It is composed of lattice of vertical and horizontal wooden elements, offering a sense of sacred enclosure without being completely closed off, allowing light and energy to flow."
-        ] 
-      },
-      { 
-        heading: "Dining and Balcony", 
-        paragraphs: [
-          "The dining area is a bright hub, enjoying generous early morning light. It opens directly onto a balcony, creating a lovely indoor-outdoor connection for family meals."
-        ] 
-      },
-      { 
-        heading: "Informal Living Area", 
-        paragraphs: [
-          "Beyond the formal spaces, this residence unveils a truly enchanting informal living space - a versatile retreat designed for relaxation, play and contemplation. This boasts a privileged vantage point, on one side it looks down into the double height living space and a large door opens into a terrace/balcony on the other side."
-        ] 
-      },
-      { 
-        heading: "Illumination and Design Highlights", 
-        paragraphs: [
-          "A key element in the design is the use of dramatic custom lighting and textured walls:",
-          "<strong style=\"color: black;\">Statement Lighting</strong> - The home is graced with remarkable light fixtures from the organic woven rattan ceiling installation in the dining area, linear rattan pendant lights in the double height formal living space and the unique, cloud-like pendant lights in the staircase well.",
-          "<strong style=\"color: black;\">Texture walls</strong> - Across the common areas walls are characterized by vertical fluting and subtle three-dimensional patterns lending an immediate sense of richness and depth to the neutral color palette.",
-          "<strong style=\"color: black;\">Skylight</strong> - The ceiling in the informal living area is punctuated by a series of precisely angled skylights sculpting daylight into dramatic shafts. This illuminates a captivating wall decor feature- a collection of whimsical climbing figures that add a playful dimension."
-        ] 
-      },
-      { 
-        heading: "Private Retreats: The Bedrooms", 
-        paragraphs: [
-          "The four bedrooms, including the master bedroom with a dedicated walk-in closet, two specialized kids' bedrooms and a grandparents' room are designed as individualized havens.",
-          "<strong style=\"color: black;\">Sun-Kissed Comfort</strong>: The master bedroom, one of the kids' bedrooms and the grandparents' room are perfectly oriented to receive the afternoon sunlight. This delightful positioning allows the family to enjoy golden-hour warmth in their private spaces.",
-          "<strong style=\"color: black;\">Bay Windows and Green Views</strong>: Three out of four bedrooms feature inviting bay windows. These are not just functional windows; they are designated resting spots that offer idyllic views out to the lush green neighbourhood, perfectly framing the natural scenery and reinforcing the home's connection to the outdoors."
-        ] 
-      },
-      { 
-        heading: "A Testament to Luxurious Living", 
-        paragraphs: [
-          "This 6000 sq. ft. residence is a testament to luxurious living rooted in thoughtful execution. From the play of light in the common spaces to the bespoke, hand-painted details, it's a home where every material tells a story and every space feels intentionally crafted for the family who calls it sanctuary."
-        ] 
-      }
-    ],
+    detailSections: [],
     imageGroups: [
       { images: [jankal1, jankal2], columns: 2 },
       { images: [jankal3, jankal4, jankal5], columns: 3 },
@@ -452,76 +314,7 @@ const PROJECTS = {
   "7": {
     title: "226 DUPLEX APARTMENT, MAHALAKSHMI LAYOUT",
     hero: mahacover,
-    serviceType: "Residential Interior",
-    features: "Natural Stone, Wooden Flooring, Custom Carpentry",
-    detailSections: [
-      { 
-        heading: "A sanctuary of light and craft", 
-        paragraphs: [
-          "Welcome to a home that is more than just a structure- it is a serene sanctuary tailored for a family of five. Spanning about 6000 sq.ft this home is a masterful blend of bespoke craftsmanship, rich materiality, and an intuitive connection to nature, resulting in spaces that are both luxurious and deeply personal."
-        ] 
-      },
-      { 
-        heading: "The Architectural Embrace: Exterior and Elevation", 
-        paragraphs: [
-          "The residence presents a contemporary yet warm elevation, thoughtfully integrated with its verdant surroundings. The facade utilizes a balanced composition of textures featuring stark white and earthy, brown-toned panels, softened by inclusion of expansive dark-framed windows and balconies. These elements are enveloped by the mature, lush green trees of the neighbourhood, ensuring the home feels anchored and harmonious, a modern structure nested within nature."
-        ] 
-      },
-      { 
-        heading: "Interiors: A Symphony of Texture and Light", 
-        paragraphs: [
-          "Stepping inside a design narrative unfolds through tactile surfaces, custom details and an orchestrated flow of natural light."
-        ] 
-      },
-      { 
-        heading: "The Social Core: Foyer, Living and Dining", 
-        paragraphs: [
-          "The journey begins in the foyer which seamlessly transitions into the double height-ed living area. Here custom artistry takes centre stage.",
-          "The TV wall in the living room and the partition between the living and foyer feature stunning, subtle hand-painted elements. This bespoke touch elevates simple walls to artwork, adding a unique soft texture and narrative to the primary gathering space."
-        ] 
-      },
-      { 
-        heading: "The Puja Room", 
-        paragraphs: [
-          "Visible from the dining area, puja room is the spiritual focal point designed with elegant transparency. It is composed of lattice of vertical and horizontal wooden elements, offering a sense of sacred enclosure without being completely closed off, allowing light and energy to flow."
-        ] 
-      },
-      { 
-        heading: "Dining and Balcony", 
-        paragraphs: [
-          "The dining area is a bright hub, enjoying generous early morning light. It opens directly onto a balcony, creating a lovely indoor-outdoor connection for family meals."
-        ] 
-      },
-      { 
-        heading: "Informal Living Area", 
-        paragraphs: [
-          "Beyond the formal spaces, this residence unveils a truly enchanting informal living space - a versatile retreat designed for relaxation, play and contemplation. This boasts a privileged vantage point, on one side it looks down into the double height living space and a large door opens into a terrace/balcony on the other side."
-        ] 
-      },
-      { 
-        heading: "Illumination and Design Highlights", 
-        paragraphs: [
-          "A key element in the design is the use of dramatic custom lighting and textured walls:",
-          "<strong style=\"color: black;\">Statement Lighting</strong> - The home is graced with remarkable light fixtures from the organic woven rattan ceiling installation in the dining area, linear rattan pendant lights in the double height formal living space and the unique, cloud-like pendant lights in the staircase well.",
-          "<strong style=\"color: black;\">Texture walls</strong> - Across the common areas walls are characterized by vertical fluting and subtle three-dimensional patterns lending an immediate sense of richness and depth to the neutral color palette.",
-          "<strong style=\"color: black;\">Skylight</strong> - The ceiling in the informal living area is punctuated by a series of precisely angled skylights sculpting daylight into dramatic shafts. This illuminates a captivating wall decor feature- a collection of whimsical climbing figures that add a playful dimension."
-        ] 
-      },
-      { 
-        heading: "Private Retreats: The Bedrooms", 
-        paragraphs: [
-          "The four bedrooms, including the master bedroom with a dedicated walk-in closet, two specialized kids' bedrooms and a grandparents' room are designed as individualized havens.",
-          "<strong style=\"color: black;\">Sun-Kissed Comfort</strong>: The master bedroom, one of the kids' bedrooms and the grandparents' room are perfectly oriented to receive the afternoon sunlight. This delightful positioning allows the family to enjoy golden-hour warmth in their private spaces.",
-          "<strong style=\"color: black;\">Bay Windows and Green Views</strong>: Three out of four bedrooms feature inviting bay windows. These are not just functional windows; they are designated resting spots that offer idyllic views out to the lush green neighbourhood, perfectly framing the natural scenery and reinforcing the home's connection to the outdoors."
-        ] 
-      },
-      { 
-        heading: "A Testament to Luxurious Living", 
-        paragraphs: [
-          "This 6000 sq. ft. residence is a testament to luxurious living rooted in thoughtful execution. From the play of light in the common spaces to the bespoke, hand-painted details, it's a home where every material tells a story and every space feels intentionally crafted for the family who calls it sanctuary."
-        ] 
-      }
-    ],
+    detailSections: [],
     imageGroups: [
       { images: [maha1, maha2], columns: 2 },
       { images: [maha3, maha4, maha5], columns: 3 },
@@ -563,10 +356,14 @@ export default function PortfolioDetailPage() {
     smoothTop();
   };
 
+  // Determine header title based on project ID
+  const isUpcomingProject = ["5", "6", "7"].includes(id);
+  const headerTitle = isUpcomingProject ? "UPCOMING PROJECTS" : "DESIGN ARCHIVE";
+
   return (
     <>
       <Navbar />
-      <PortfolioHeader />
+      <PortfolioHeader title={headerTitle} />
       <FeatureBar />
       <PortfolioDetailSection
         title={project.title}
@@ -580,7 +377,6 @@ export default function PortfolioDetailPage() {
         hasPrev={hasPrev}
         hasNext={hasNext}
       />
-      <ResponsiveImageBlack src={StartImg} alt="Portfolio Hero" />
       <ExtraContactSection />
       <FooterSection />
       {/* ... */}

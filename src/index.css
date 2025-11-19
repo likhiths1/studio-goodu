@@ -99,3 +99,45 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Override global link styles to prevent purple hover color, but exclude navbar links */
+a:not(.navbar-link):not(.portfolio-link):not(.enquire-button), a:hover:not(.navbar-link):not(.portfolio-link):not(.enquire-button), a:visited:not(.navbar-link):not(.portfolio-link):not(.enquire-button), a:focus:not(.navbar-link):not(.portfolio-link):not(.enquire-button), a:active:not(.navbar-link):not(.portfolio-link):not(.enquire-button) {
+  color: inherit !important;
+}
+
+/* More specific override for any links that might still have purple, but exclude navbar and portfolio links */
+#root a:not(.navbar-link):not(.portfolio-link):not(.enquire-button), #root a:hover:not(.navbar-link):not(.portfolio-link):not(.enquire-button), #root a:visited:not(.navbar-link):not(.portfolio-link):not(.enquire-button), #root a:focus:not(.navbar-link):not(.portfolio-link):not(.enquire-button), #root a:active:not(.navbar-link):not(.portfolio-link):not(.enquire-button) {
+  color: inherit !important;
+}
+
+/* Specific override for navbar links to use #4D696C color */
+nav a, nav a:hover, nav a:visited, nav a:focus, nav a:active {
+  color: #4D696C !important;
+}
+
+/* Even more specific override for NavbarBlack component */
+nav[class*="font-inter"] a, nav[class*="font-inter"] a:hover, nav[class*="font-inter"] a:visited, nav[class*="font-inter"] a:focus, nav[class*="font-inter"] a:active {
+  color: #4D696C !important;
+}
+
+/* Most specific override for navbar-link class */
+.navbar-link, .navbar-link:hover, .navbar-link:visited, .navbar-link:focus, .navbar-link:active {
+  color: #4D696C !important;
+}
+
+/* Specific override for portfolio links to ensure they stay black */
+.portfolio-link, .portfolio-link:hover, .portfolio-link:visited, .portfolio-link:focus, .portfolio-link:active {
+  color: black !important;
+}
+
+/* Specific override for enquire button to prevent purple outline */
+.enquire-button, .enquire-button:hover, .enquire-button:focus, .enquire-button:active {
+  color: white !important;
+  outline: none !important;
+}
+
+/* Specific override for blog arrow buttons only */
+.blog-arrow-button:focus {
+  outline: 2px solid white !important;
+  outline-offset: 2px !important;
+}

@@ -11,12 +11,12 @@ import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 export default function ContactSection() {
   return (
-    <AnimatedSection className="w-full bg-[#FFF6ED] lg:min-h-screen relative px-4 pt-6 pb-1 md:pt-20 md:pb-6 lg:pb-20 font-inter overflow-x-hidden">
+    <AnimatedSection className="w-full bg-[#FFF6ED] lg:min-h-screen relative px-4 pt-6 pb-1 md:pt-20 md:pb-6 lg:pb-20 font-inter overflow-x-hidden overflow-y-hidden">
           <div className="max-w-[85rem] mx-auto flex flex-col items-center relative">
             {/* Service Categories */}
             <div className="w-full mb-0 md:mb-0 mt-0 flex flex-col gap-0 leading-tight md:px-[12rem]">
-              {/* Row 1 - Left aligned - No image */}
-              <AnimatedItem className="relative flex items-center w-full justify-start gap-0 pl-0 md:pl-0" direction="left">
+              {/* Row 1 - Center aligned */}
+              <AnimatedItem className="relative flex items-center w-full justify-center gap-0" direction="left">
                 <span
                   className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] relative z-20"
                   style={{ color: "#D6AF60" }}
@@ -33,10 +33,10 @@ export default function ContactSection() {
                 </AnimatedItem>
               </AnimatedItem>
               
-              {/* Row 2 - Right aligned - With image */}
-              <AnimatedItem delay={0.3} className="relative flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-0 md:pr-20" direction="right">
+              {/* Row 2 - Center aligned */}
+              <AnimatedItem delay={0.3} className="relative flex items-center justify-center w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem]" direction="right">
                 <div className="absolute left-[-20px] md:left-[-40px] top-[-35%] -translate-y-1/2 z-0 opacity-80">
-                  <img src={Trans2} alt="" className="h-48 md:h-96 w-auto" />
+                  <img src={Trans2} alt="" className="h-48 md:h-[30rem] w-auto" />
                 </div>
                 <span
                   className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.04em] md:tracking-[-0.04em] whitespace-nowrap"
@@ -46,10 +46,9 @@ export default function ContactSection() {
                 </span>
               </AnimatedItem>
               
-              {/* Row 3 - Left aligned - With image */}
-              <AnimatedItem delay={0.4} className="relative flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-0 md:pl-0" direction="left">
-                <div className="absolute left-[-40px] md:left-[-80px] top-[55%] -translate-y-1/2 z-0 opacity-80">
-                </div>
+              {/* Row 3 - Center aligned */}
+              <AnimatedItem delay={0.4} className="relative flex items-center w-full justify-center gap-0 -mt-[0.8rem] md:-mt-[1.5rem]" direction="left">
+                <div className="absolute left-[-40px] md:left-[-80px] top-[55%] -translate-y-1/2 z-0 opacity-80" />
                 <AnimatedItem delay={0.5} className="relative z-10">
                   <img
                     src={Img1}
@@ -66,10 +65,10 @@ export default function ContactSection() {
                 </span>
               </AnimatedItem>
               
-              {/* Row 4 - Right aligned - With image */}
-              <AnimatedItem delay={0.5} className="relative flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-0 md:pr-0" direction="right">
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 opacity-80">
-                  <img src={Trans3} alt="" className="h-48 md:h-[24rem] w-auto" />
+              {/* Row 4 - Center aligned */}
+              <AnimatedItem delay={0.5} className="relative flex items-center justify-center w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem]" direction="right">
+                <div className="absolute right-[-12rem] top-1/2 -translate-y-1/2 z-10 opacity-80">
+                  <img src={Trans3} alt="" className="h-48 md:h-[30rem] w-auto" />
                 </div>
                 <span
                   className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em] relative z-20"
@@ -87,27 +86,27 @@ export default function ContactSection() {
                 </AnimatedItem>
               </AnimatedItem>
               
-              {/* Row 5 - Left aligned - With image */}
-              <AnimatedItem delay={0.6} className="relative flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-0 md:pl-0" direction="left">
+              {/* Row 5 - Center aligned */}
+              <AnimatedItem delay={0.6} className="relative flex items-center w-full justify-center gap-0 -mt-[0.8rem] md:-mt-[1.5rem]" direction="left">
                 <div className="absolute left-[-40px] md:left-[-80px] top-[15%] -translate-y-1/2 z-0 opacity-80">
                   <img src={Trans5} alt="" className="h-40 md:h-80 w-auto" />
                 </div>
                 <span
-                  className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] relative z-20"
+                  className="block text-center text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] relative z-20"
                   style={{ color: "#D6AF60" }}
                 >
                   EXPERIENCE & LIFESTYLE
                 </span>
               </AnimatedItem>
               
-              {/* Row 6 - Right aligned - With image */}
-              <AnimatedItem delay={0.7} className="relative w-full -mt-[0.8rem] md:-mt-[1.5rem] pr-0 md:pl-[12rem]" direction="right">
-                <div className="relative w-full flex justify-end">
-                  <div className="absolute right-0 top-[30%] -translate-y-1/2 z-0 opacity-80">
+              {/* Row 6 - Center aligned */}
+              <AnimatedItem delay={0.7} className="relative w-full -mt-[0.8rem] md:-mt-[1.5rem]" direction="right">
+                <div className="relative w-full flex justify-center">
+                  <div className="absolute right-0 top-[10%] -translate-y-1/2 z-0 opacity-80">
                     <img src={Trans6} alt="" className="h-32 md:h-64 w-auto" />
                   </div>
                   <span
-                    className="text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em] relative z-20"
+                    className="text-center text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em] relative z-20"
                     style={{ color: "#4D696C" }}
                   >
                     INSTITUTIONAL & PUBLIC
@@ -115,8 +114,8 @@ export default function ContactSection() {
                 </div>
               </AnimatedItem>
               
-              {/* Row 7 - Left aligned - With two images */}
-              <AnimatedItem delay={0.8} className="relative flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-0 md:pl-0" direction="left">
+              {/* Row 7 - Center aligned */}
+              <AnimatedItem delay={0.8} className="relative flex items-center w-full justify-center gap-0 -mt-[0.8rem] md:-mt-[1.5rem]" direction="left">
                 <div className="absolute left-[-40px] md:left-[-80px] top-[35%] -translate-y-1/2 z-10 opacity-80">
                   <img src={Trans4} alt="" className="h-40 md:h-80 w-auto" />
                 </div>
@@ -124,14 +123,14 @@ export default function ContactSection() {
                   <img src={Trans1} alt="" className="h-40 md:h-80 w-auto" />
                 </div>
                 <span
-                  className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] relative z-20"
+                  className="block text-center text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] relative z-20"
                   style={{ color: "#D6AF60" }}
                 >
                   INDUSTRIAL & INFRASTRUCTURE
                 </span>
               </AnimatedItem>
             </div>
-          </div>
+            </div>
     </AnimatedSection>
   );
 }

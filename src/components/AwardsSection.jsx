@@ -42,7 +42,7 @@ function AwardSlide({ award }) {
         <div 
           className="absolute inset-0 bg-cover bg-left"
           style={{
-            backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%)`,
+            backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.4) 100%)`,
             backgroundSize: '100% 100%',
             backgroundBlendMode: 'overlay',
             display: 'flex',

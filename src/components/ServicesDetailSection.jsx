@@ -3,6 +3,7 @@ import ConstructionImg from "../assets/images/services/construction.jpg";
 import InteriorImg from "../assets/images/services/interior.jpg";
 import TurnkeyImg from "../assets/images/services/turnkey.jpeg";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -114,9 +115,12 @@ export default function ServicesDetailSection() {
         {/* CTA Button - Sharp edges, centered */}
         <AnimatedItem delay={services.length + 1}>
           <div className="flex justify-center pt-8">
-            <button className="bg-black text-white px-10 md:px-12 py-3.5 md:py-4 text-sm md:text-base font-medium tracking-wide hover:bg-black/90 transition rounded-none">
+            <Link 
+              to="/contact" 
+              className="enquire-button bg-black text-white px-10 md:px-12 py-3.5 md:py-4 text-sm md:text-base font-medium tracking-wide hover:bg-black/90 transition rounded-none focus:outline-none"
+            >
               ENQUIRE NOW
-            </button>
+            </Link>
           </div>
         </AnimatedItem>
       </div>

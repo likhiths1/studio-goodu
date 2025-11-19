@@ -9,6 +9,7 @@ import Img4 from '../assets/images/work4.png';
 import Img5 from '../assets/images/work5.png';
 import Img6 from '../assets/images/work6.png';
 import Img7 from '../assets/images/work7.png';
+import sreeimg from '../assets/images/portfoliodetail/sreee3.jpg';
 
 const works = [
   // First row - 3 images (33.33% each)
@@ -57,7 +58,7 @@ const works = [
     category: 'Interior Design'
   },
   { 
-    src: Img7, 
+    src: sreeimg, 
     row: 3, 
     size: 'w-1/3',
     title: 'Outdoor Living',
@@ -68,9 +69,22 @@ const works = [
 export default function OurWorks() {
   const navigate = useNavigate();
   
-  const handleProjectClick = (projectId) => {
-    // Navigate to the portfolio detail page with the project ID
-    navigate(`/portfolio/${projectId}`);
+  const handleProjectClick = (index) => {
+    // Map specific images to their portfolio IDs
+    const portfolioMapping = {
+      0: '4', // 1st image → SRIGANGA RESIDENCE
+      1: null, // 2nd image → no function
+      2: '3', // 3rd image → TYD
+      3: '1', // 4th image → ARTHA VILLA
+      4: null, // 5th image → no function
+      5: '2', // 6th image → SNOB SALON
+      6: '4', // 7th image → SRIGANGA RESIDENCE again
+    };
+    
+    const projectId = portfolioMapping[index];
+    if (projectId) {
+      navigate(`/portfolio/${projectId}`);
+    }
   };
 
   return (
@@ -110,32 +124,35 @@ export default function OurWorks() {
               >
                 {rowWorks.map((work, i) => {
                   const delay = i * 0.1 + (row - 1) * 0.3;
+                  const globalIndex = works.indexOf(work);
+                  const isClickable = globalIndex !== 1 && globalIndex !== 4; // Don't click 2nd and 5th images
+                  
                   return (
-                    <motion.div 
+                    <motion.div
                       key={i}
-                      className={`${work.size} relative group overflow-hidden`}
-                      onClick={() => handleProjectClick(i + 1)} // Using index + 1 as project ID
+                      className={`${work.size} relative group overflow-hidden ${!isClickable ? 'cursor-default' : ''}`}
+                      onClick={() => isClickable && handleProjectClick(globalIndex)}
                       initial={{ opacity: 0, y: 50, scale: 0.95 }}
                       whileInView={{ 
                         opacity: 1, 
-                        y: 0,
-                        scale: 1,
+                        y: 0, 
+                        scale: 1, 
                         transition: { 
-                          duration: 0.8,
-                          delay: delay,
-                          ease: [0.16, 0.77, 0.47, 0.97]
+                          duration: 0.8, 
+                          delay: delay, 
+                          ease: [0.16, 0.77, 0.47, 0.97] 
                         }
                       }}
                       viewport={{ once: false, margin: '0px 0px -50px 0px' }}
-                      whileHover={{ 
-                        scale: 1.03,
+                      whileHover={isClickable ? {
+                        scale: 1.03, 
                         transition: { 
-                          duration: 0.3,
-                          type: 'spring',
-                          stiffness: 400,
-                          damping: 10
+                          duration: 0.3, 
+                          type: 'spring', 
+                          stiffness: 400, 
+                          damping: 10 
                         }
-                      }}
+                      } : {}}
                     >
                       <motion.div
                         initial={{ opacity: 0, scale: 1.05 }}
@@ -165,13 +182,15 @@ export default function OurWorks() {
                       <motion.div 
                         className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center"
                         initial={{ opacity: 0 }}
-                        whileHover={{ opacity: 1 }}
+                        whileHover={isClickable ? { opacity: 1 } : {}}
                       >
-                        <motion.span 
-                          className="text-white text-lg font-medium opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300"
-                        >
-                          View Project
-                        </motion.span>
+                        {isClickable && (
+                          <motion.span 
+                            className="text-white text-lg font-medium opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                          >
+                            View Project
+                          </motion.span>
+                        )}
                       </motion.div>
                     </motion.div>
                   );
