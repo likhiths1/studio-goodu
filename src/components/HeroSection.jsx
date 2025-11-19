@@ -62,7 +62,7 @@ export default function HeroSection({ children }) {
   return (
     <>
       {/* Fixed Hero Section */}
-      <div className="relative font-inter overflow-hidden fixed top-0 left-0 w-full min-h-[200vh] z-0">
+      <div className="relative font-inter overflow-hidden fixed top-0 left-0 w-full h-[100vh] md:h-[200vh] z-0">
         {/* Notification Bar and Navbar Container */}
         <div className="absolute top-0 left-0 w-full z-[9999]">
           {/* Notification Bar */}
@@ -85,16 +85,13 @@ export default function HeroSection({ children }) {
         </div>
 
         {/* Background Image Container */}
-        <div className="relative z-0 w-full" style={{ paddingTop: '150%' }}>
+        <div className="absolute inset-0 z-0 w-full h-full">
           {/* Background Image */}
           <img
             src={HeroBG}
             alt="Hero Background"
-            className="absolute top-0 left-0 w-full h-full sm:h-[200vh] object-contain"
+            className="absolute top-0 left-0 w-full h-full object-cover md:object-contain"
             style={{
-              objectFit: 'contain',
-              width: '100%',
-              height: '100%',
               objectPosition: 'center top',
             }}
             draggable={false}
@@ -105,11 +102,6 @@ export default function HeroSection({ children }) {
             src={BrownGrad}
             alt="Brown Gradient Overlay"
             className="absolute bottom-0 left-0 w-full h-1/2 object-cover"
-            style={{
-              objectFit: 'cover',
-              width: '100%',
-              height: '50%',
-            }}
             draggable={false}
           />
           
@@ -137,7 +129,7 @@ export default function HeroSection({ children }) {
           </div> */}
 
         {/* Main Text Block - Behind overlay */}
-        <div className="absolute inset-0 z-5 flex items-center justify-start" style={{ transform: 'translateY(-20%)' }}>
+        <div className="absolute inset-0 z-5 flex items-center justify-start" style={{ transform: 'translateY(-10%)' }}>
           <div className="w-full max-w-[90rem] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             <div className="w-full text-center">
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: animationDelay + 0.2 }}>
@@ -147,11 +139,10 @@ export default function HeroSection({ children }) {
                     className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
                     delay={animationDelay + 7.2}
                     style={{
-                      fontSize: 'clamp(2.2rem, 6.5vw, 6.5rem)',
+                      fontSize: 'clamp(1.4rem, 4.5vw, 6.5rem)',
                       lineHeight: '1.1',
                       marginBottom: '0.1em',
                       textAlign: 'center',
-                      marginLeft: '5vw',
                       width: '100%',
                       whiteSpace: 'nowrap',
                     }}
@@ -161,11 +152,10 @@ export default function HeroSection({ children }) {
                     className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
                     delay={animationDelay + 7.35}
                     style={{
-                      fontSize: 'clamp(2.2rem, 6.5vw, 6.5rem)',
+                      fontSize: 'clamp(1.4rem, 4.5vw, 6.5rem)',
                       lineHeight: '1.1',
                       marginBottom: '0.1em',
                       textAlign: 'center',
-                      marginLeft: '5vw',
                       width: '100%',
                       whiteSpace: 'nowrap',
                     }}
@@ -175,11 +165,10 @@ export default function HeroSection({ children }) {
                     className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
                     delay={animationDelay + 7.5}
                     style={{
-                      fontSize: 'clamp(2.2rem, 6.5vw, 6.5rem)',
+                      fontSize: 'clamp(1.4rem, 4.5vw, 6.5rem)',
                       lineHeight: '1.1',
                       marginBottom: '0',
                       textAlign: 'center',
-                      marginLeft: '5vw',
                       width: '100%',
                       whiteSpace: 'nowrap',
                     }}
@@ -191,9 +180,9 @@ export default function HeroSection({ children }) {
         </div>
 
         {/* Bottom Text Blocks - Moved up */}
-        <div className="absolute bottom-[35%] left-0 right-0 z-20">
+        <div className="absolute bottom-[25%] md:bottom-[35%] left-0 right-0 z-20">
           <div className="w-full max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start text-white text-sm sm:text-base md:text-lg font-light tracking-[-0.02em]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-start text-white text-sm sm:text-base md:text-lg font-light tracking-[-0.02em]">
               {/* LEFT */}
               <motion.div 
                 ref={thoughtfulRef}
@@ -202,7 +191,7 @@ export default function HeroSection({ children }) {
                 animate={thoughtfulInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <p className="text-left text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium">
+                <p className="text-left text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium">
                   Thoughtful, designed layouts,<br />
                   premium service, Interiors,<br />
                   architecture, and construction
@@ -217,7 +206,7 @@ export default function HeroSection({ children }) {
                 animate={forThoseWhoValueInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <p className="text-right text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium">
+                <p className="text-right text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium">
                   For Those Who Value<br />
                   Quality, Style, And<br />
                   Long-Term Living Solutions
@@ -230,12 +219,12 @@ export default function HeroSection({ children }) {
         {/* Bottom Text - Moved up */}
         <motion.div 
           ref={moreThanSpaceRef}
-          className="absolute bottom-64 left-0 right-0 z-20 text-center"
+          className="absolute bottom-16 sm:bottom-32 md:bottom-48 lg:bottom-64 left-0 right-0 z-20 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={moreThanSpaceInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <p className="text-white tracking-[-0.08em] text-4xl sm:text-5xl md:text-6xl font-medium leading-tight max-w-6xl mx-auto px-6">
+          <p className="text-white tracking-[-0.08em] text-lg sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight max-w-6xl mx-auto px-6">
             More than a space, an expertly<br />
             curated ecosystem designed for<br />
             effortless, comfortable living.
@@ -244,10 +233,10 @@ export default function HeroSection({ children }) {
       </div>
 
       {/* Spacer - Matches the hero section height */}
-      <div style={{ height: '150vh', pointerEvents: 'none' }} />
+      <div className="h-[100vh] md:h-[150vh]" style={{ pointerEvents: 'none' }} />
 
       {/* Remaining Page Content */}
-      <div className="relative z-20 bg-white" style={{ marginTop: '-150vh' }}>
+      <div className="relative z-20 bg-white -mt-[100vh] md:-mt-[150vh]">
         {children}
       </div>
     </>
