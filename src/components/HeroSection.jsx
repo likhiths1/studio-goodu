@@ -150,7 +150,7 @@ export default function HeroSection({ children }) {
                       fontSize: 'clamp(2.5rem, 7vw, 7rem)',
                       lineHeight: '1.1',
                       marginBottom: '0.2em',
-                      paddingLeft: '4vw',
+                      paddingLeft: '2vw',
                       whiteSpace: 'nowrap',
                     }}
                   />
@@ -162,7 +162,7 @@ export default function HeroSection({ children }) {
                       fontSize: 'clamp(2.5rem, 7vw, 7rem)',
                       lineHeight: '0.9',
                       marginBottom: '0.1em',
-                      paddingLeft: '4vw',
+                      paddingLeft: '2vw',
                       whiteSpace: 'nowrap',
                     }}
                   />
@@ -174,7 +174,7 @@ export default function HeroSection({ children }) {
                       fontSize: 'clamp(2.5rem, 7vw, 7rem)',
                       lineHeight: '0.9',
                       marginBottom: '0',
-                      paddingLeft: '4vw',
+                      paddingLeft: '2vw',
                       whiteSpace: 'nowrap',
                     }}
                   />
