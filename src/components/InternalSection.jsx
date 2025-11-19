@@ -7,21 +7,15 @@ import img3 from '../assets/images/internal3.png';
 const internals = [
   {
     label: "BEST PRACTICES",
-    text: "Lorem ipsum dolor sit amet consectetur. Molestie arcu nulla",
+    text: "2025 Interior Design Trends: What’s In, What’s Out, and What’s Next",
     image: img1,
     alt: "Internal Best Practice 1",
   },
   {
     label: "BEST PRACTICES",
-    text: "Lorem ipsum dolor sit amet consectetur. Molestie arcu nulla",
+    text: "Parametric Design The Future of Creative Architecture",
     image: img2,
     alt: "Internal Best Practice 2",
-  },
-  {
-    label: "BEST PRACTICES",
-    text: "Lorem ipsum dolor sit amet consectetur. Molestie arcu nulla",
-    image: img3,
-    alt: "Internal Best Practice 3",
   },
 ];
 

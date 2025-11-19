@@ -1,8 +1,11 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Navbar from './Navbar';
-import BackSky from '../assets/images/back-sky1.png';
-import BackSkyless from '../assets/images/back-skyless1.png';
+
+// ⬇️ Import your new images
+import HeroBG from '../assets/images/herro/1.jpg';
+import HeroOverlay from '../assets/images/herro/2.png';
+import BrownGrad from '../assets/images/browngrad.png';
 
 // Helper component for letter animations
 const AnimatedText = ({ text, className = '', delay = 0, style = {} }) => {
@@ -16,15 +19,15 @@ const AnimatedText = ({ text, className = '', delay = 0, style = {} }) => {
           key={index}
           style={{ display: 'inline-block', whiteSpace: 'pre' }}
           initial={{ opacity: 0, y: 20, scale: 0.8 }}
-          animate={{ 
-            opacity: 1, 
-            y: 0, 
+          animate={{
+            opacity: 1,
+            y: 0,
             scale: 1,
             transition: {
-              delay: delay + (index * 0.03),
+              delay: delay + index * 0.03,
               duration: 0.5,
               ease: [0.16, 0.77, 0.47, 0.97],
-            }
+            },
           }}
         >
           {letter === ' ' ? '\u00A0' : letter}
@@ -35,203 +38,177 @@ const AnimatedText = ({ text, className = '', delay = 0, style = {} }) => {
 };
 
 export default function HeroSection({ children }) {
-  const [isLoaded, setIsLoaded] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const [animationDelay, setAnimationDelay] = useState(6);
-
-  // Content is always shown now since we removed the loading state
-  const showContent = true;
-
-  // Calculate delay based on whether loader was shown
-  useEffect(() => {
-    // Check if the loader was shown by checking if BirdNestAnimation is active
-    const loaderElement = document.querySelector('[data-bird-loader]');
-    if (loaderElement) {
-      setAnimationDelay(6); // Start after 6 seconds
-    } else {
-      setAnimationDelay(0); // No delay if no loader
-    }
-  }, []);
-
-  useEffect(() => {
-    // Set loaded to true when component mounts
-    setIsLoaded(true);
-    
-    // Handle scroll effect
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // Calculate scroll progress (0 to 1) based on viewport height
-  const scrollProgress = Math.min(1, Math.max(0, scrollY / (window.innerHeight * 0.75)));
+  const [animationDelay, setAnimationDelay] = useState(0);
   
+  // Refs for scroll-triggered animations
+  const thoughtfulRef = useRef(null);
+  const moreThanSpaceRef = useRef(null);
+  const forThoseWhoValueRef = useRef(null);
+  
+  // UseInView hooks
+  const thoughtfulInView = useInView(thoughtfulRef, { once: false, margin: "-100px" });
+  const moreThanSpaceInView = useInView(moreThanSpaceRef, { once: false, margin: "-100px" });
+  const forThoseWhoValueInView = useInView(forThoseWhoValueRef, { once: false, margin: "-100px" });
+  
+  const scrollProgress = Math.min(1, Math.max(0, scrollY / (window.innerHeight * 0.75)));
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
       {/* Fixed Hero Section */}
-      <div 
-        className="w-full min-h-[100svh] md:min-h-[120svh] lg:min-h-[130svh] relative font-inter overflow-hidden fixed top-0 left-0 z-0"
-        style={{
-          opacity: showContent ? (1 - (scrollProgress * 0.9)) : 0, // Hide completely during delay
-          transition: showContent ? 'opacity 0.3s ease-out' : 'none'
-        }}
-      >
-        {/* Notification Bar */}
-        <motion.div 
-          className="w-full bg-[#FFF6ED] text-[#474747] py-2 px-2 md:px-0 text-center text-base font-medium tracking-tight relative z-[60]"
-          initial={{ opacity: 0, y: -20 }}
-          animate={showContent ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: animationDelay, duration: 0.8 }}
-        >
-          {showContent && (
-            <AnimatedText 
-              text="Namaste! Welcome to Namma Studio Goodu" 
+      <div className="relative font-inter overflow-hidden fixed top-0 left-0 w-full min-h-[200vh] z-0">
+        {/* Notification Bar and Navbar Container */}
+        <div className="absolute top-0 left-0 w-full z-[9999]">
+          {/* Notification Bar */}
+          <motion.div
+            className="w-full bg-[#FFF6ED] text-[#474747] py-2 px-2 md:px-0 text-center text-base font-medium tracking-tight"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: animationDelay, duration: 0.8 }}
+          >
+            <AnimatedText
+              text="Namaste! Welcome to Namma Studio Goodu"
               delay={animationDelay + 0.4}
             />
-          )}
-        </motion.div>
-      
-        <img 
-          src={BackSky} 
-          alt="" 
-          className="absolute inset-0 z-0 w-full h-full object-cover object-center"
-          draggable={false}
-        />
-
-        <div className="relative z-[9999]">
-          <Navbar />
+          </motion.div>
+          
+          {/* Navbar */}
+          <div className="w-full bg-transparent">
+            <Navbar />
+          </div>
         </div>
 
-        <div className="absolute inset-0 z-10 flex items-center justify-start">
+        {/* Background Image Container */}
+        <div className="relative z-0 w-full" style={{ paddingTop: '150%' }}>
+          {/* Background Image */}
+          <img
+            src={HeroBG}
+            alt="Hero Background"
+            className="absolute top-0 left-0 w-full h-full object-contain"
+            style={{
+              objectFit: 'contain',
+              width: '100%',
+              height: '100%',
+              objectPosition: 'center top',
+            }}
+            draggable={false}
+          />
+          
+          {/* Brown Grad Overlay - Bottom Half */}
+          <img
+            src={BrownGrad}
+            alt="Brown Gradient Overlay"
+            className="absolute bottom-0 left-0 w-full h-1/2 object-cover"
+            style={{
+              objectFit: 'cover',
+              width: '100%',
+              height: '50%',
+            }}
+            draggable={false}
+          />
+          
+          <div className="absolute inset-0 bg-black/10 z-0"></div>
+        </div>
+
+        {/* Overlay Image - Positioned over everything */}
+        <div className="absolute inset-0 flex items-start justify-center z-[100]" style={{
+            paddingTop: '20%',
+            paddingRight: '4%',  /* Adjust this value to move the overlay up/down */
+            pointerEvents: 'none'
+          }}>
+            <img
+              src={HeroOverlay}
+              alt="Hero Overlay"
+              style={{
+                width: '250%',  /* Much larger width */
+                height: 'auto',
+                maxHeight: '3000vh',  /* Much larger max height */
+                objectFit: 'contain',  /* Changed to contain */
+                transform: 'translateY(-10%) scale(1.1)',  /* Added scale transform */
+              }}
+              draggable={false}
+            />
+          </div>
+
+        {/* Main Text Block - Behind overlay */}
+        <div className="absolute inset-0 z-5 flex items-center justify-start" style={{ transform: 'translateY(-20%)' }}>
           <div className="w-full max-w-[90rem] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-            <div className="w-full">
-              <div className="w-full text-left mt-2 md:mt-4">
-                {showContent && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: animationDelay + 0.2 }}
-                  >
-                    <div>
-                      <AnimatedText 
-                        text="TRANSFORMING SPACES INTO" 
-                        className="font-inter text-white uppercase font-[400] leading-[0.85] tracking-[-0.08em] block mt-[calc(-10vh-35px)] md:mt-[calc(-10vh-200px)] text-left pl-12 sm:pl-16 md:pl-24 lg:pl-32 xl:pl-40"
-                        delay={animationDelay + 0.2}
-                        style={{
-                          fontSize: 'clamp(1.8rem, 5vw, 5rem)',
-                          lineHeight: '1',
-                          marginBottom: '0.1em',
-                          display: 'block',
-                          width: '100%',
-                          textAlign: 'left'
-                        }}
-                      />
-                      <AnimatedText 
-                        text="EXPERIENCES THAT BALANCE" 
-                        className="font-inter text-white uppercase font-[400] leading-[0.85] tracking-[-0.08em] block text-left pl-12 sm:pl-16 md:pl-24 lg:pl-32 xl:pl-40"
-                        delay={animationDelay + 0.35}
-                        style={{
-                          fontSize: 'clamp(1.8rem, 5vw, 5rem)',
-                          lineHeight: '1',
-                          marginBottom: '0.1em',
-                          display: 'block',
-                          width: '100%',
-                          textAlign: 'left'
-                        }}
-                      />
-                      <AnimatedText 
-                        text="UTILITY AND ELEGANCE" 
-                        className="font-inter text-white uppercase font-[400] leading-[0.85] tracking-[-0.08em] block text-left pl-12 sm:pl-16 md:pl-24 lg:pl-32 xl:pl-40"
-                        delay={animationDelay + 0.5}
-                        style={{
-                          fontSize: 'clamp(1.8rem, 5vw, 5rem)',
-                          lineHeight: '1',
-                          marginBottom: 'clamp(0.5rem, 2vw, 2rem)',
-                          display: 'block',
-                          width: '100%',
-                          textAlign: 'left'
-                        }}
-                      />
-                    </div>
-                  </motion.div>
-                )}
-                
-              </div>
+            <div className="w-full text-left">
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: animationDelay + 0.2 }}>
+                <div>
+                  <AnimatedText
+                    text="TRANSFORMING SPACES INTO"
+                    className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
+                    delay={animationDelay + 7.2}
+                    style={{
+                      fontSize: 'clamp(1.8rem, 5vw, 5rem)',
+                      lineHeight: '1.1',
+                      marginBottom: '0.2em',
+                      paddingLeft: '12vw',
+                    }}
+                  />
+                  <AnimatedText
+                    text="EXPERIENCES THAT BALANCE"
+                    className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
+                    delay={animationDelay + 7.35}
+                    style={{
+                      fontSize: 'clamp(1.8rem, 5vw, 5rem)',
+                      lineHeight: '0.9',
+                      marginBottom: '0.1em',
+                      paddingLeft: '12vw',
+                    }}
+                  />
+                  <AnimatedText
+                    text="UTILITY AND ELEGANCE"
+                    className="font-inter text-white uppercase font-[400] tracking-[-0.08em]"
+                    delay={animationDelay + 7.5}
+                    style={{
+                      fontSize: 'clamp(1.8rem, 5vw, 5rem)',
+                      lineHeight: '0.9',
+                      marginBottom: '0',
+                      paddingLeft: '12vw',
+                    }}
+                  />
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
 
-        <img 
-          src={BackSkyless} 
-          alt="" 
-          className="absolute inset-0 z-10 w-full h-full object-cover pointer-events-none"
-          draggable={false}
-        />
-
-        {/* Bottom overlay texts: address, central blurb, right blurb */}
-        <motion.div 
-          className="absolute inset-x-0 bottom-0 z-20 pointer-events-none"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: animationDelay + 1.1, duration: 0.7 }}
-        >
-          {/* Full width gradient background */}
-          <div 
-            className="absolute inset-0 z-[-1]"
-            style={{
-              background: 'linear-gradient(180deg, rgba(60, 40, 30, 0) 0%, rgba(60, 40, 30, 0.2) 5%, rgba(60, 40, 30, 0.4) 15%, #5C3D2E 50%, #3A2A1F 100%)',
-              height: '100%',
-              backdropFilter: 'blur(2px)',
-              WebkitBackdropFilter: 'blur(2px)',
-            }}
-          />
-          <div className="w-full max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 pt-16 pb-24 md:pt-24 md:pb-32">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-16 items-start text-white text-sm sm:text-base md:text-lg font-light tracking-[-0.02em] text-center">
-              {/* Left: Address */}
+        {/* Bottom Text Blocks - Moved up */}
+        <div className="absolute bottom-[35%] left-0 right-0 z-20">
+          <div className="w-full max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start text-white text-sm sm:text-base md:text-lg font-light tracking-[-0.02em]">
+              {/* LEFT */}
               <motion.div 
+                ref={thoughtfulRef}
                 className="flex flex-col items-start"
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px 0px -100px 0px" }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={thoughtfulInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <p className="w-full max-w-[200px] md:max-w-none text-base sm:text-lg md:text-xl font-medium text-left">
-                  3rd Block, 1st, 19/1, Main Road,<br />
-                  3rd Stage 4th Block, 3rd Stage,<br />
-                  Basaveshwar Nagar, Bengaluru,<br />
-                  Karnataka 560079
+                <p className="text-left text-base sm:text-lg md:text-xl font-medium">
+                  Thoughtful, designed layouts,<br />
+                  premium service, Interiors,<br />
+                  architecture, and construction
                 </p>
               </motion.div>
 
-              {/* Center: Blurb */}
+              {/* RIGHT */}
               <motion.div 
-                className="flex flex-col items-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px 0px -100px 0px" }}
-                transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              >
-                <p className="w-full max-w-[280px] md:max-w-none text-base sm:text-lg md:text-xl font-medium text-center">
-                  Thoughtful, Designed Layouts,<br />
-                  Premium Service, Interiors,<br />
-                  Architecture, And Construction
-                </p>
-              </motion.div>
-
-              {/* Right: Value statement */}
-              <motion.div 
+                ref={forThoseWhoValueRef}
                 className="flex flex-col items-end"
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px 0px -100px 0px" }}
-                transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={forThoseWhoValueInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <p className="w-full max-w-[200px] md:max-w-none text-base sm:text-lg md:text-xl font-medium text-right">
+                <p className="text-right text-base sm:text-lg md:text-xl font-medium">
                   For Those Who Value<br />
                   Quality, Style, And<br />
                   Long-Term Living Solutions
@@ -239,26 +216,29 @@ export default function HeroSection({ children }) {
               </motion.div>
             </div>
           </div>
+        </div>
+
+        {/* Bottom Text - Moved up */}
+        <motion.div 
+          ref={moreThanSpaceRef}
+          className="absolute bottom-32 left-0 right-0 z-20 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={moreThanSpaceInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <p className="text-white tracking-[-0.08em] text-4xl sm:text-5xl md:text-6xl font-medium leading-tight max-w-6xl mx-auto px-6">
+            More than a space, an expertly<br />
+            curated ecosystem designed for<br />
+            effortless, comfortable living.
+          </p>
         </motion.div>
       </div>
-      
-      {/* Spacer to push content below the hero section */}
-      <div 
-        className="relative z-0"
-        style={{
-          height: '100vh', // This creates space for the fixed hero
-          pointerEvents: 'none'
-        }}
-      />
-      
-      {/* Content that will scroll over the hero */}
-      <div 
-        className="relative z-20 bg-white"
-        style={{
-          marginTop: '-100vh', // Pull content up to overlap
-          position: 'relative'
-        }}
-      >
+
+      {/* Spacer - Matches the hero section height */}
+      <div style={{ height: '150vh', pointerEvents: 'none' }} />
+
+      {/* Remaining Page Content */}
+      <div className="relative z-20 bg-white" style={{ marginTop: '-150vh' }}>
         {children}
       </div>
     </>

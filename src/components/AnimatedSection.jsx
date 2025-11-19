@@ -46,12 +46,33 @@ export function AnimatedSection({ children, delay = 0, className = '' }) {
   );
 }
 
-export function AnimatedItem({ children, delay = 0, className = '' }) {
+export function AnimatedItem({ children, delay = 0, className = '', direction = 'left' }) {
+  const getInitialAnimation = () => {
+    switch(direction) {
+      case 'left':
+        return { opacity: 0, x: -50 };
+      case 'right':
+        return { opacity: 0, x: 50 };
+      default:
+        return { opacity: 0, y: 30 };
+    }
+  };
+
+  const getWhileInViewAnimation = () => {
+    switch(direction) {
+      case 'left':
+      case 'right':
+        return { opacity: 1, x: 0 };
+      default:
+        return { opacity: 1, y: 0 };
+    }
+  };
+
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={getInitialAnimation()}
+      whileInView={getWhileInViewAnimation()}
       viewport={{ once: false, margin: '0px 0px -50px 0px' }}
       transition={{
         duration: 0.8,

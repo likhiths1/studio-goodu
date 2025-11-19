@@ -84,7 +84,7 @@ export default function PortfolioDetailSection({ title, hero, detailSections: de
         {/* Top banner image */}
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-2xl md:text-[4.6rem] font-playfairdisplay font-medium text-black mb-6 tracking-tight">
+          <h1 className="text-2xl md:text-[4.6rem] font-playfairdisplay font-medium text-black mb-6 tracking-tight leading-[1.1] md:leading-[1.2]">
             {title ?? "ARTHA VILLA"}
           </h1>
           {/* Top banner image */}

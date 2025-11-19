@@ -11,7 +11,7 @@ export default function AboutAuthorSection() {
           <img
             src={AuthorImg}
             alt="Studio Goodu"
-            className="w-full max-w-[400px] md:max-w-[500px] h-auto object-cover rounded-lg shadow-lg"
+            className="w-full max-w-[400px] md:max-w-[500px] h-auto object-cover rounded-lg shadow-lg brightness-90"
           />
         </AnimatedItem>
 

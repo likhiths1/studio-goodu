@@ -56,41 +56,43 @@ export default function ContactUsSection() {
       </div>
 
       {/* Bottom Info Row */}
-      <div className="max-w-[90rem] w-full mt-24 flex flex-col md:grid md:grid-cols-5 md:justify-center gap-y-6 tracking-tight items-center text-center">
+      <div className="w-full mt-24 flex flex-col md:flex-row md:justify-center gap-y-12 md:gap-x-12 tracking-tight items-center text-center">
         {/* Email/Phone */}
         <AnimatedItem delay={2}>
-          <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] flex flex-col gap-1 text-center max-w-xs">
-            <span className="font-inter text-[#4D696C] uppercase mb-1">OUR EMAIL & PHONE</span>
-            <span className="font-playfairdisplay md:text-[1.4rem] text-black">studiogoodu@gmail.com</span>
-            <span className="font-playfairdisplay md:text-[1.4rem] text-black">9980767546 </span>
+          <div className="text-base md:text-xl flex flex-col gap-3 text-center min-w-[240px] px-6">
+            <span className="font-inter text-[#4D696C] uppercase whitespace-nowrap">OUR EMAIL & PHONE</span>
+            <span className="font-playfairdisplay text-lg md:text-xl text-black mt-2">studiogoodu@gmail.com</span>
+            <span className="font-playfairdisplay text-lg md:text-xl text-black">9980767546</span>
           </div>
         </AnimatedItem>
         {/* Line Image */}
         <AnimatedItem delay={3}>
-          <div className="hidden md:flex flex-col items-center justify-center">
+          <div className="hidden md:flex flex-col items-center justify-center h-full px-4">
             <img src={LineImg} alt="" className="h-16 w-auto" />
           </div>
         </AnimatedItem>
         {/* Address - centered */}
         <AnimatedItem delay={4}>
-          <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] font-inter text-black flex flex-col gap-1 items-center text-center max-w-xs mx-auto">
-            <span className="text-[#4D696C] uppercase mb-1">STUDIO ADDRESS</span>
-            <span className="font-playfairdisplay md:text-[1.4rem]">
-              3rd Block, 1st, 19/H, Main Road, 3rd Stage 4th Block, 3rd Stage, Basaveshwar Nagar, Bengaluru, Karnataka 560079
-            </span>
+          <div className="text-base md:text-xl font-inter text-black flex flex-col gap-3 items-center text-center min-w-[400px] px-8 mx-8">
+            <span className="text-[#4D696C] uppercase whitespace-nowrap">STUDIO ADDRESS</span>
+            <div className="font-playfairdisplay text-lg md:text-xl mt-2 text-center">
+              <p>3rd Block, 1st, 19/H, Main Road,</p>
+              <p>3rd Stage 4th Block, Basaveshwar Nagar,</p>
+              <p>Bengaluru, Karnataka 560079</p>
+            </div>
           </div>
         </AnimatedItem>
         {/* Line Image */}
         <AnimatedItem delay={5}>
-          <div className="hidden md:flex flex-col items-center justify-center">
+          <div className="hidden md:flex flex-col items-center justify-center h-full px-4">
             <img src={LineImg} alt="" className="h-16 w-auto" />
           </div>
         </AnimatedItem>
         {/* Hours */}
         <AnimatedItem delay={6}>
-          <div className="col-span-1 text-[1.01rem] md:text-[1.8rem] flex flex-col gap-1 text-center max-w-xs">
-            <span className="font-inter text-[#4D696C] uppercase mb-1">STUDIO HOURS</span>
-            <span className="font-playfairdisplay md:text-[1.4rem] text-black">Monday – Friday<br />10am – 7pm</span>
+          <div className="text-base md:text-xl flex flex-col gap-3 text-center min-w-[240px] px-6">
+            <span className="font-inter text-[#4D696C] uppercase whitespace-nowrap">STUDIO HOURS</span>
+            <span className="font-playfairdisplay text-lg md:text-xl text-black mt-2">Monday – Friday<br />10am – 7pm</span>
           </div>
         </AnimatedItem>
       </div>

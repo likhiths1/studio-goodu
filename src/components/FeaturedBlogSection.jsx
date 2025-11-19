@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BgImg from "../assets/images/blogs/back.png";
 import GradientImg from "../assets/images/blogs/grad2.png";
 import BlogImg from "../assets/images/portfoliodetail/snob1.jpg";
@@ -37,14 +38,14 @@ export default function FeaturedBlogSection() {
         <div className="flex flex-col items-start">
           <div className="bg-black px-10 py-10 flex flex-col justify-between w-[420px] md:w-[520px] h-[520px] md:h-[640px]">
             <h3 className="font-inter text-white text-[1.28rem] md:text-[2rem] leading-tight mb-1">
-              A Featured Blog Post<br />Title Would Go Here
+              Snob Salon
             </h3>
             <p className="font-inter text-white text-[1rem] md:text-[1.3rem] leading-relaxed mb-5 pr-2 opacity-85">
-              With meticulous attention to detail and an unwavering commitment to quality, we design spaces that are as exceptional as you are.
+              In Bengaluru: This salon design by Studio Goodu melds residential intimacy with Art Deco flourishes
             </p>
-            <a href="#" className="font-inter text-white text-[1.2rem] tracking-tight underline underline-offset-4">
+            <Link to="/blog/2" className="font-inter text-white text-[1.2rem] tracking-tight underline underline-offset-4">
               READ POST
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col justify-center items-center">

@@ -1,23 +1,29 @@
 import Img1 from "../assets/images/works/12.jpg";
 import Img2 from "../assets/images/contact/transform2.jpeg";
 import Img3 from "../assets/images/contact/transform3.jpg";
+import Trans1 from "../assets/images/trans1.png";
+import Trans2 from "../assets/images/trans2.png";
+import Trans3 from "../assets/images/trans3.png";
+import Trans4 from "../assets/images/trans4.png";
+import Trans5 from "../assets/images/trans5.png";
+import Trans6 from "../assets/images/trans6.png";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
 export default function ContactSection() {
   return (
     <AnimatedSection className="w-full bg-[#FFF6ED] lg:min-h-screen relative px-4 pt-6 pb-1 md:pt-20 md:pb-6 lg:pb-20 font-inter overflow-x-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col items-center relative">
+      <div className="max-w-[85rem] mx-auto flex flex-col items-center relative">
         {/* Service Categories */}
         <div className="w-full mb-0 md:mb-0 mt-0 flex flex-col gap-0 leading-tight md:px-[12rem]">
-          {/* Row 1 - Left aligned with negative margin */}
-          <AnimatedItem className="flex items-center w-full justify-start gap-0 -ml-2 md:-ml-4">
+          {/* Row 1 - Left aligned - No image */}
+          <AnimatedItem className="relative flex items-center w-full justify-start gap-0 pl-0 md:pl-0" direction="left">
             <span
-              className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em]"
+              className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] relative z-20"
               style={{ color: "#D6AF60" }}
             >
               COMMERCIAL
             </span>
-            <AnimatedItem delay={0.2}>
+            <AnimatedItem delay={0.2} className="relative z-10 -mt-8 md:-mt-16">
               <img
                 src={Img2}
                 alt=""
@@ -27,8 +33,11 @@ export default function ContactSection() {
             </AnimatedItem>
           </AnimatedItem>
           
-          {/* Row 2 - Right aligned with offset */}
-          <AnimatedItem delay={0.3} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-8 md:pr-16">
+          {/* Row 2 - Right aligned - With image */}
+          <AnimatedItem delay={0.3} className="relative flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-0 md:pr-20" direction="right">
+            <div className="absolute left-[-20px] md:left-[-40px] top-[-35%] -translate-y-1/2 z-0 opacity-80">
+              <img src={Trans2} alt="" className="h-48 md:h-96 w-auto" />
+            </div>
             <span
               className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.04em] md:tracking-[-0.04em] whitespace-nowrap"
               style={{ color: "#4D696C" }}
@@ -37,9 +46,11 @@ export default function ContactSection() {
             </span>
           </AnimatedItem>
           
-          {/* Row 3 - Left aligned with more offset */}
-          <AnimatedItem delay={0.4} className="flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-12 md:pl-24">
-            <AnimatedItem delay={0.5}>
+          {/* Row 3 - Left aligned - With image */}
+          <AnimatedItem delay={0.4} className="relative flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-0 md:pl-0" direction="left">
+            <div className="absolute left-[-40px] md:left-[-80px] top-[55%] -translate-y-1/2 z-0 opacity-80">
+            </div>
+            <AnimatedItem delay={0.5} className="relative z-10">
               <img
                 src={Img1}
                 alt=""
@@ -55,15 +66,18 @@ export default function ContactSection() {
             </span>
           </AnimatedItem>
           
-          {/* Row 4 - Right aligned with less offset */}
-          <AnimatedItem delay={0.5} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-4 md:pr-8">
+          {/* Row 4 - Right aligned - With image */}
+          <AnimatedItem delay={0.5} className="relative flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-0 md:pr-0" direction="right">
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 opacity-80">
+              <img src={Trans3} alt="" className="h-48 md:h-[24rem] w-auto" />
+            </div>
             <span
-              className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em]"
+              className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em] relative z-20"
               style={{ color: "#4D696C" }}
             >
               HOSPITALITY
             </span>
-            <AnimatedItem delay={0.6}>
+            <AnimatedItem delay={0.6} className="relative z-10">
               <img
                 src={Img3}
                 alt=""
@@ -73,30 +87,44 @@ export default function ContactSection() {
             </AnimatedItem>
           </AnimatedItem>
           
-          {/* Row 5 - Left aligned with medium offset */}
-          <AnimatedItem delay={0.6} className="flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-6 md:pl-12">
+          {/* Row 5 - Left aligned - With image */}
+          <AnimatedItem delay={0.6} className="relative flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-0 md:pl-0" direction="left">
+            <div className="absolute left-[-40px] md:left-[-80px] top-[15%] -translate-y-1/2 z-0 opacity-80">
+              <img src={Trans5} alt="" className="h-40 md:h-80 w-auto" />
+            </div>
             <span
-              className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em]"
+              className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] relative z-20"
               style={{ color: "#D6AF60" }}
             >
               EXPERIENCE & LIFESTYLE
             </span>
           </AnimatedItem>
           
-          {/* Row 6 - Right aligned with maximum offset */}
-          <AnimatedItem delay={0.7} className="flex items-center justify-end w-full gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pr-16 md:pr-32">
-            <span
-              className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em]"
-              style={{ color: "#4D696C" }}
-            >
-              INSTITUTIONAL & PUBLIC
-            </span>
+          {/* Row 6 - Right aligned - With image */}
+          <AnimatedItem delay={0.7} className="relative w-full -mt-[0.8rem] md:-mt-[1.5rem] pr-0 md:pl-[12rem]" direction="right">
+            <div className="relative w-full flex justify-end">
+              <div className="absolute right-0 top-[10%] -translate-y-1/2 z-0 opacity-80">
+                <img src={Trans6} alt="" className="h-32 md:h-64 w-auto" />
+              </div>
+              <span
+                className="text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em] relative z-20"
+                style={{ color: "#4D696C" }}
+              >
+                INSTITUTIONAL & PUBLIC
+              </span>
+            </div>
           </AnimatedItem>
           
-          {/* Row 7 - Left aligned with slight offset */}
-          <AnimatedItem delay={0.8} className="flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-2 md:pl-4">
+          {/* Row 7 - Left aligned - With two images */}
+          <AnimatedItem delay={0.8} className="relative flex items-center w-full justify-start gap-0 -mt-[0.8rem] md:-mt-[1.5rem] pl-0 md:pl-0" direction="left">
+            <div className="absolute left-[-40px] md:left-[-80px] top-[35%] -translate-y-1/2 z-10 opacity-80">
+              <img src={Trans4} alt="" className="h-40 md:h-80 w-auto" />
+            </div>
+            <div className="absolute right-[-40px] md:right-[-80px] top-[55%] -translate-y-1/2 z-10 opacity-80">
+              <img src={Trans1} alt="" className="h-40 md:h-80 w-auto" />
+            </div>
             <span
-              className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em]"
+              className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] relative z-20"
               style={{ color: "#D6AF60" }}
             >
               INDUSTRIAL & INFRASTRUCTURE

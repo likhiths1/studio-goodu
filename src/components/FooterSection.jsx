@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Icon1 from "../assets/images/footer/icon1.png";
-import Icon2 from "../assets/images/footer/icon2.png";
+import Icon2 from "../assets/images/footer/linkedin.png";
 import Icon3 from "../assets/images/footer/icon3.png";
 import Icon4 from "../assets/images/footer/icon4.png";
 import Icon5 from "../assets/images/footer/icon5.png";
@@ -62,9 +62,6 @@ export default function FooterSection() {
             </a>
             <a href="https://www.instagram.com/studiogoodu/?theme=dark" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <img src={Icon3} alt="LinkedIn" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[32px] md:h-[32px] object-cover opacity-90 hover:opacity-100 transition" />
-            </a>
-            <a href="#" aria-label="Social Media">
-              <img src={Icon4} alt="" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[32px] md:h-[32px] object-cover" />
             </a>
             <a href="https://wa.me/919980767546" aria-label="Social Media">
               <img src={Icon5} alt="" className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[32px] md:h-[32px] object-cover" />

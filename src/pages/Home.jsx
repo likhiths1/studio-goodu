@@ -66,32 +66,6 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <div className="max-w-[90rem] mx-auto px-4 sm:px-8 md:px-14">
-              <div className="space-y-2 md:space-y-4 text-center">
-                <motion.p 
-                  className="text-4xl sm:text-5xl md:text-6xl font-medium text-black/90 leading-[1.1] tracking-tight max-w-5xl mx-auto"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ 
-                    opacity: 1, 
-                    y: 0,
-                    transition: { duration: 0.8, delay: 0.2 }
-                  }}
-                  viewport={{ once: true, margin: "-50px" }}
-                >
-                  Where your vision takes flight
-                </motion.p>
-                <motion.p 
-                  className="text-lg sm:text-xl md:text-2xl font-normal text-black/70 leading-relaxed max-w-3xl mx-auto"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ 
-                    opacity: 1, 
-                    y: 0,
-                    transition: { duration: 0.8, delay: 0.4 }
-                  }}
-                  viewport={{ once: true, margin: "-50px" }}
-                >
-                  Effortless, Comfortable Living.
-                </motion.p>
-              </div>
             </div>
           </motion.div>
         </HeroSection>

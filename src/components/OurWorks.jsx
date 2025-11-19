@@ -6,6 +6,9 @@ import Img1 from '../assets/images/work1.png';
 import Img2 from '../assets/images/works/works22.jpeg';
 import Img3 from '../assets/images/work3.png';
 import Img4 from '../assets/images/work4.png';
+import Img5 from '../assets/images/work5.png';
+import Img6 from '../assets/images/work6.png';
+import Img7 from '../assets/images/work7.png';
 
 const works = [
   // First row - 3 images (33.33% each)
@@ -40,21 +43,21 @@ const works = [
   },
   // Third row - 3 images (33.33% each)
   { 
-    src: Img1, 
+    src: Img5, 
     row: 3, 
     size: 'w-1/3',
     title: 'Modern Workspace',
     category: 'Office Design'
   },
   { 
-    src: Img2, 
+    src: Img6, 
     row: 3, 
     size: 'w-1/3',
     title: 'Stylish Lounge',
     category: 'Interior Design'
   },
   { 
-    src: Img3, 
+    src: Img7, 
     row: 3, 
     size: 'w-1/3',
     title: 'Outdoor Living',

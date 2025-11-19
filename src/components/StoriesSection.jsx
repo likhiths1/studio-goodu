@@ -91,7 +91,7 @@ export default function StoriesSection() {
       <div className="max-w-[90rem] mx-auto">
         {/* Heading */}
         <AnimatedItem className="text-left">
-          <h2 className="text-[3.2rem] sm:text-[3.7rem] md:text-[12rem] font-medium tracking-[-0.08em] text-black leading-none mb-8">
+          <h2 className="text-[3.2rem] sm:text-[3.7rem] md:text-[11rem] font-medium tracking-[-0.08em] text-black leading-none mb-8">
             NAMMA<br />
             <span className="block tracking-[-0.08em] leading-none -mt-[6px] md:-mt-[12px]">GOODU STORIES</span>
           </h2>
