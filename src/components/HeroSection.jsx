@@ -151,6 +151,7 @@ export default function HeroSection({ children }) {
                       lineHeight: '1.1',
                       marginBottom: '0.1em',
                       textAlign: 'center',
+                      marginLeft: '5vw',
                       width: '100%',
                       whiteSpace: 'nowrap',
                     }}
@@ -164,6 +165,7 @@ export default function HeroSection({ children }) {
                       lineHeight: '1.1',
                       marginBottom: '0.1em',
                       textAlign: 'center',
+                      marginLeft: '5vw',
                       width: '100%',
                       whiteSpace: 'nowrap',
                     }}
@@ -177,6 +179,7 @@ export default function HeroSection({ children }) {
                       lineHeight: '1.1',
                       marginBottom: '0',
                       textAlign: 'center',
+                      marginLeft: '5vw',
                       width: '100%',
                       whiteSpace: 'nowrap',
                     }}
