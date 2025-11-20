@@ -4,7 +4,7 @@ import { AnimatedSection, AnimatedItem } from './AnimatedSection';
 import { useNavigate } from 'react-router-dom';
 import Img1 from '../assets/images/work1.png';
 import Img2 from '../assets/images/works/works22.jpeg';
-import Img3 from '../assets/images/work3.png';
+import Img3 from '../assets/images/works/workk3.jpg';
 import Img4 from '../assets/images/work4.png';
 import Img5 from '../assets/images/work5.png';
 import Img6 from '../assets/images/work6.png';

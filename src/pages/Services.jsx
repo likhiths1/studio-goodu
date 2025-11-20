@@ -7,7 +7,7 @@ import FeatureBar from "../components/FeatureBar";
 import Navbar from "../components/NavbarBlack";
 import ExtraContactSection from "../components/ExtraContactSection";
 import ResponsiveImage from "../components/ImageBackground";
-import ServicesBanner from "../assets/images/services/arthaback.jpg";
+import ServicesBanner from "../assets/images/serheader.jpg";
 import ServicesSection from "../components/ServicesSection";
 import ServicesDetailSection from "../components/ServicesDetailSection";
 import { AnimatedSection } from "../components/AnimatedSection";

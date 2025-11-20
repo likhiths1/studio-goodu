@@ -1,7 +1,6 @@
-import Stor4 from '../assets/images/stories/stor1.jpeg';
-import Stor2 from '../assets/images/stories/stor2.jpg';
-import Stor3 from '../assets/images/stories/stor3.jpg';
-import Stor1 from '../assets/images/stories/stor4.jpg';
+import Story1 from '../assets/images/sttori1.jpg';
+import Story2 from '../assets/images/sttori2.jpg';
+import Story3 from '../assets/images/sttori3.jpg';
 import jovo from '../assets/images/testsmall.png'
 import jankal from '../assets/images/jankal.jpeg'
 import sriganga from '../assets/images/sriganga.jpeg'
@@ -57,16 +56,16 @@ export default function StoriesSection() {
     },
   ];
 
-  const storyImages = [Stor1, Stor2, Stor3, Stor4, Stor1, Stor2, Stor3, Stor4];
+  const storyImages = [Story1, Story2, Story3, Story1, Story2, Story3, Story1, Story2];
 
   return (
     <AnimatedSection className="w-full bg-[#FFF6ED] py-16 md:pt-[50px] md:pb-12 px-3 sm:px-8 md:px-14 font-inter min-h-[700px] md:min-h-[850px] overflow-hidden">
       <div className="max-w-[90rem] mx-auto">
         {/* Heading */}
         <AnimatedItem className="text-left">
-          <h2 className="text-[3.2rem] sm:text-[3.7rem] md:text-[11rem] font-medium tracking-[-0.08em] text-black leading-none mb-8">
-            NAMMA<br />
-            <span className="block tracking-[-0.08em] leading-none -mt-[6px] md:-mt-[12px]">GOODU STORIES</span>
+          <h2 className="text-[3.2rem] sm:text-[3.7rem] md:text-[10rem] font-medium tracking-[-0.08em] text-black leading-none mb-8">
+            NAMMA GOODU<br />
+            <span className="block tracking-[-0.08em] leading-none -mt-[6px] md:-mt-[12px]">STORIES</span>
           </h2>
         </AnimatedItem>
         {/* Responsive grid for layout control */}
