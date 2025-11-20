@@ -45,7 +45,7 @@ export default function StoriesSection() {
     },
     {
       text: '"A distinguished blend of design brilliance and skilled workmanship."',
-      name: "",
+      name: "Sriganga",
       place: "Sriganga Residence",
       avatar: sriganga
     },
