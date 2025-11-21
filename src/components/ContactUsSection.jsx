@@ -104,6 +104,14 @@ export default function ContactUsSection() {
               <p>3rd Stage 4th Block, Basaveshwar Nagar,</p>
               <p>Bengaluru, Karnataka 560079</p>
             </div>
+            <a 
+              href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqDAgBECMYJxiABBiKBTIGCAAQRRg5MgwIARAjGCcYgAQYigUyBggCEEUYOzIGCAMQRRg7Mg0IBBAAGIMBGLEDGIAEMhMIBRAuGIMBGMcBGLEDGNEDGIAEMhMIBhAuGIMBGMcBGLEDGNEDGIAEMg0IBxAuGMcBGNEDGIAEMgcICBAAGIAEMgcICRAuGIAE0gEJNTgxMmowajE1qAIIsAIB8QVAvIlMIZWn0w&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KTu6xXcdPa47MdCMpfHix8Ck&daddr=3rd+Block,+1st,+19/H,+Main+Road,+3rd+Stage+4th+Block,+3rd+Stage,+Basaveshwar+Nagar,+Bengaluru,+Karnataka+560079"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 uppercase text-[#4D696C] underline cursor-pointer text-sm hover:opacity-80"
+            >
+              STUDIO GOODU ADDRESS
+            </a>
           </div>
         </AnimatedItem>
         {/* Line Image */}

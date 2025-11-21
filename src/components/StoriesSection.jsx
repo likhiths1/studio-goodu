@@ -115,7 +115,7 @@ export default function StoriesSection() {
                   <img
                     src={storyImages[idx % storyImages.length]}
                     alt="Story Interior"
-                    className="w-full h-full object-cover object-center"
+                    className={`w-full h-full object-cover ${idx === 2 ? 'object-[top_10%_left_90%]' : 'object-center'}`}
                     style={{ borderRadius: 0 }}
                     draggable={false}
                   />
