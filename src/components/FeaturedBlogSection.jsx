@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import BgImg from "../assets/images/blogs/back.png";
 import GradientImg from "../assets/images/blogs/grad2.png";
-import BlogImg from "../assets/images/portfoliodetail/snob1.jpg";
+import BlogImg from "../assets/images/snobback.jpg";
 import ArthaImg from "../assets/images/portfoliodetail/arthavilla1.jpg";
 
 export default function FeaturedBlogSection() {

@@ -26,8 +26,8 @@ const TEAM = [
   },
   {
     img: Person4,
-    name: "Jr. Prapthi Prasad",
-    role: "Talent in Training",
+    name: "Prapthi Prasad",
+    role: "Junior Designer",
   },
   {
     img: Person6,

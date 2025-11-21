@@ -1,6 +1,6 @@
 import Story1 from '../assets/images/sttori1.jpg';
 import Story2 from '../assets/images/sttori2.jpg';
-import Story3 from '../assets/images/sttori3.jpg';
+import Story3 from '../assets/images/portfoliodetail/snob1.jpg';
 import jovo from '../assets/images/testsmall.png'
 import jankal from '../assets/images/jankal.jpeg'
 import sriganga from '../assets/images/sriganga.jpeg'

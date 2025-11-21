@@ -12,34 +12,58 @@ export default function ContactUsSection() {
             <div className="mb-7 font-inter text-[2.4rem] font-regular leading-tight text-black">
               We Are Ready to Help You<br />Elevate Your Space
             </div>
-            <form className="flex flex-col gap-10 bg-[#FFF6ED] p-0 border-none rounded-none">
+            <form 
+              className="flex flex-col gap-10 bg-[#FFF6ED] p-0 border-none rounded-none"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const form = e.target;
+                const name = form.name.value;
+                const email = form.email.value;
+                const service = form.service.value;
+                const message = form.message.value;
+                
+                const subject = `Service Inquiry: ${service}`;
+                const body = `Hi Studio Goodu Team,%0D%0A%0D%0AI am ${name}. I'm reaching out regarding ${service}.%0D%0A%0D%0A${message ? message + '%0D%0A%0D%0A' : ''}Looking forward to your response.%0D%0A%0D%0ABest regards,%0D%0A${name}`;
+                
+                window.location.href = `mailto:studiogoodu@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+              }}
+              name="contactForm"
+            >
               <input
                 type="text"
+                name="name"
                 placeholder="YOUR NAME"
                 className="bg-[#EFE2D3] rounded-none px-4 py-4 text-base font-inter text-[#3D3C3C] placeholder:text-[#3D3C3C] border-none outline-none focus:ring-2 focus:ring-[#4D696C] transition"
+                required
               />
               <input
                 type="email"
+                name="email"
                 placeholder="EMAIL ADDRESS"
                 className="bg-[#EFE2D3] rounded-none px-4 py-4 text-base font-inter text-[#3D3C3C] placeholder:text-[#3D3C3C] border-none outline-none focus:ring-2 focus:ring-[#4D696C] transition"
+                required
               />
               <input
                 type="text"
+                name="service"
                 placeholder="SERVICE INTERESTED IN"
                 className="bg-[#EFE2D3] rounded-none px-4 py-4 text-base font-inter text-[#3D3C3C] placeholder:text-[#3D3C3C] border-none outline-none focus:ring-2 focus:ring-[#4D696C] transition"
+                required
               />
               <textarea
+                name="message"
                 placeholder="WRITE YOUR MESSAGE HERE"
                 className="bg-[#EFE2D3] rounded-none px-4 py-4 h-40 text-base font-inter text-[#3D3C3C] placeholder:text-[#3D3C3C] border-none outline-none focus:ring-2 focus:ring-[#4D696C] transition resize-none"
+                required
               />
+              <button
+                type="submit"
+                className="mt-8 w-fit px-6 py-2 rounded-none font-inter font-medium text-white bg-[#4D696C] hover:bg-[#3a5051] transition"
+                style={{ letterSpacing: 0.5 }}
+              >
+                START YOUR JOURNEY
+              </button>
             </form>
-            <button
-              type="submit"
-              className="mt-8 w-fit px-6 py-2 rounded-none font-inter font-medium text-white bg-[#4D696C] hover:bg-[#3a5051] transition"
-              style={{ letterSpacing: 0.5 }}
-            >
-              START YOUR JOURNEY
-            </button>
           </div>
         </AnimatedItem>
 

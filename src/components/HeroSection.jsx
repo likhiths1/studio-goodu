@@ -143,7 +143,7 @@ export default function HeroSection({ children }) {
                     style={{
                       lineHeight: '1.1',
                       marginBottom: '0.1em',
-                      textAlign: 'center',
+                      textAlign: 'left',
                       width: '100%',
                       whiteSpace: 'nowrap',
                     }}
@@ -155,7 +155,7 @@ export default function HeroSection({ children }) {
                     style={{
                       lineHeight: '1.1',
                       marginBottom: '0.1em',
-                      textAlign: 'center',
+                      textAlign: 'left',
                       width: '100%',
                       whiteSpace: 'nowrap',
                     }}
@@ -167,7 +167,7 @@ export default function HeroSection({ children }) {
                     style={{
                       lineHeight: '1.1',
                       marginBottom: '0',
-                      textAlign: 'center',
+                      textAlign: 'left',
                       width: '100%',
                       whiteSpace: 'nowrap',
                     }}
