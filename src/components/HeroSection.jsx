@@ -133,7 +133,7 @@ export default function HeroSection({ children }) {
         {/* Main Text Block - Behind overlay */}
         <div className="absolute inset-0 z-5 flex items-center justify-start transform -translate-y-[10%] md:-translate-y-[20%]">
           <div className="w-full max-w-[90rem] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-            <div className="w-full text-center">
+            <div className="w-full text-left">
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: animationDelay + 0.2 }}>
                 <div>
                   <AnimatedText

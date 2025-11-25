@@ -9,7 +9,7 @@ export default function AboutUsSection() {
     { number: "06+", desc: "YEARS OF CRAFT\nShaping spaces that unite \narchitecture,artistry, and emotion." },
     { number: "100+", desc: "PROJECTS DELIVERED\nFrom intimate residences to expansive spaces, each crafted with intention and precision." },
     { number: "24hrs", desc: "RESPONSE TIME\nDesign conversations shouldn’t wait. \nWe’re always within reach, always listening." },
-    { number: "5+", desc: "DESIGN EXPERTS\nA multidisciplinary team of architects, \ndesigners,and dreamers, united by craft." },
+    { number: "10+", desc: "DESIGN EXPERTS\nA multidisciplinary team of architects, \ndesigners,and dreamers, united by craft." },
     { number: "24/7", desc: "SUPPORT\nBecause great design doesn’t \nend with delivery, it evolves with you." },
   ];
 
