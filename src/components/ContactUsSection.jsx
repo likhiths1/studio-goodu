@@ -86,7 +86,7 @@ export default function ContactUsSection() {
           <div className="text-base md:text-xl flex flex-col gap-3 text-center min-w-[240px] px-6">
             <span className="font-inter text-[#4D696C] uppercase whitespace-nowrap">OUR EMAIL & PHONE</span>
             <span className="font-playfairdisplay text-lg md:text-xl text-black mt-2">studiogoodu@gmail.com</span>
-            <span className="font-playfairdisplay text-lg md:text-xl text-black">9980767546</span>
+            <span className="font-playfairdisplay text-lg md:text-xl text-black">08049721999</span>
           </div>
         </AnimatedItem>
         {/* Line Image */}
