@@ -141,17 +141,17 @@ export default function ContactSection() {
           <form className="w-full md:w-1/2 max-w-2xl flex flex-col items-end space-y-5">
             <input
               type="text"
-              placeholder="Your Name"
+              placeholder="What should we call you?"
               className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-2xl placeholder:text-black/70 text-base text-black focus:outline-none"
             />
             <input
               type="text"
-              placeholder="Apartment Size"
+              placeholder="How big is your space?"
               className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-2xl placeholder:text-black/70 text-base text-black focus:outline-none"
             />
             <input
               type="text"
-              placeholder="Apartment Details"
+              placeholder="Tell us about your apartment"
               className="w-full bg-transparent border-b border-[#AAA] py-[9px] placeholder:text-2xl placeholder:text-black/70 text-base text-black focus:outline-none"
             />
             <input
