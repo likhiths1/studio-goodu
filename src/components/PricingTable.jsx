@@ -7,7 +7,7 @@ const PricingComparison = () => {
       id: 1,
       label: "Architecture",
       name: "Economy",
-      price: "₹220",
+      price: "₹240",
       isPopular: false,
       floorArea: "Up to 4000 Sq. Ft.",
       features: {
