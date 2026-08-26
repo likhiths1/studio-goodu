@@ -1,6 +1,7 @@
 // src/components/BirdNestLoaderVideo.jsx
-import React, { useRef, useEffect, useState } from "react";
-import video from '../assets/images/bird/video.mp4';
+
+import React, { useEffect, useRef, useState } from "react";
+import video from "../assets/images/bird/video.mp4";
 
 const languages = [
   { word: "ಗೂಡು", lang: "Kannada" },
@@ -8,49 +9,56 @@ const languages = [
   { word: "கூடு", lang: "Tamil" },
   { word: "గూడు", lang: "Telugu" },
   { word: "കൂട്", lang: "Malayalam" },
-  { word: "Goodu", lang: "English" }
+  { word: "Goodu", lang: "English" },
 ];
 
 export default function BirdNestAnimation({ onComplete }) {
-  const videoRef = useRef();
+  const videoRef = useRef(null);
   const [currentLangIndex, setCurrentLangIndex] = useState(0);
 
   useEffect(() => {
-    const ref = videoRef.current;
-    if (ref && onComplete) {
-      ref.onended = onComplete;
-    }
+    const videoElement = videoRef.current;
+
+    if (!videoElement) return;
+
+    videoElement.onended = onComplete;
+
     return () => {
-      if (ref) ref.onended = null;
+      videoElement.onended = null;
     };
   }, [onComplete]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentLangIndex((prev) => (prev + 1) % languages.length);
-    }, 800); // Change language every 800ms
+    }, 800);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white">
-      {/* Video plain, with no shadow or border styling */}
+    <div className="fixed inset-0 z-[99999] isolate flex flex-col items-center justify-center bg-white">
       <video
         ref={videoRef}
         src={video}
         autoPlay
         muted
         playsInline
+        preload="auto"
         className="w-[360px] h-[360px] object-contain bg-white"
-        style={{ background: "white" }}
       />
+
       <div className="mt-6 flex flex-col items-center">
-        <span className="uppercase text-black text-3xl md:text-5xl font-inter font-medium text-[#362e24] tracking-tight animate-pulse">
+        <span className="uppercase whitespace-nowrap text-3xl md:text-5xl font-inter font-medium text-[#362e24] tracking-tight">
           Building your space...
         </span>
-        <span className="mt-1 text-black text-lg md:text-2xl font-inter font-medium text-[#5e513a] opacity-75">
-          The art of creating home — <span className="inline-block transition-all duration-300 ease-in-out transform">{languages[currentLangIndex].word}</span> style.
+
+        <span className="mt-1 whitespace-nowrap text-lg md:text-2xl font-inter font-medium text-[#5e513a] opacity-75">
+          The art of creating home —{" "}
+          <span className="inline-block transition-all duration-300 ease-in-out">
+            {languages[currentLangIndex].word}
+          </span>{" "}
+          style.
         </span>
       </div>
     </div>

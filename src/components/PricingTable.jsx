@@ -88,7 +88,7 @@ const PricingComparison = () => {
             style={{
               fontFamily: "Inter, sans-serif",
               fontWeight: 400,
-              color: "#5A6C6F",
+              color: "#132C1F",
             }}
           >
             Compare plans
@@ -117,7 +117,7 @@ const PricingComparison = () => {
                 <div
                   className="w-full py-2 text-white text-xs uppercase tracking-wide text-center"
                   style={{
-                    backgroundColor: "#5A6C6F",
+                    backgroundColor: "#132C1F",
                     fontFamily: "Inter, sans-serif",
                     fontWeight: 500,
                   }}
@@ -145,7 +145,7 @@ const PricingComparison = () => {
                     style={{
                       fontFamily: "Poppins, sans-serif",
                       fontWeight: 500,
-                      color: "#5A6C6F",
+                      color: "#132C1F",
                     }}
                   >
                     {plan.name}
@@ -165,7 +165,7 @@ const PricingComparison = () => {
                       to="/contact"
                       className="w-full py-3 text-white text-sm uppercase tracking-wide hover:opacity-90 transition-opacity block"
                       style={{
-                        backgroundColor: "#5A6C6F",
+                        backgroundColor: "#132C1F",
                         fontFamily: "Inter, sans-serif",
                         fontWeight: 500,
                       }}
@@ -236,7 +236,7 @@ const PricingComparison = () => {
                     style={{
                       fontFamily: "Poppins, sans-serif",
                       fontWeight: 400,
-                      color: "#5A6C6F",
+                      color: "#132C1F",
                     }}
                   >
                     Compare plans
@@ -265,7 +265,7 @@ const PricingComparison = () => {
                       <div
                         className="w-full py-2 text-white text-xs uppercase tracking-wide"
                         style={{
-                          backgroundColor: "#5A6C6F",
+                          backgroundColor: "#132C1F",
                           fontFamily: "Inter, sans-serif",
                           fontWeight: 500,
                         }}
@@ -289,7 +289,7 @@ const PricingComparison = () => {
                         style={{
                           fontFamily: "Poppins, sans-serif",
                           fontWeight: 500,
-                          color: "#5A6C6F",
+                          color: "#132C1F",
                         }}
                       >
                         {plan.name}
@@ -309,7 +309,7 @@ const PricingComparison = () => {
                           to="/contact"
                           className="w-full py-3 text-white text-sm uppercase tracking-wide hover:opacity-90 transition-opacity block"
                           style={{
-                            backgroundColor: "#5A6C6F",
+                            backgroundColor: "#132C1F",
                             fontFamily: "Inter, sans-serif",
                             fontWeight: 500,
                           }}
@@ -390,7 +390,7 @@ const CheckIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle cx="12" cy="12" r="10" fill="#5A6C6F" />
+    <circle cx="12" cy="12" r="10" fill="#132C1F" />
     <path
       d="M8 12.5L10.5 15L16 9.5"
       stroke="white"

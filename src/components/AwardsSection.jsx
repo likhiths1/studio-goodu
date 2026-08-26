@@ -7,16 +7,49 @@ import award2026_2 from "../assets/images/award2026-2.jpeg";
 const awards = [
   {
     title: "National Architecture and Interior Design Excellence Awards 2025",
-    description:
-      "Studio Goodu has been selected for the prestigious National Architecture and Interior Design Excellence Awards 2025! Our commitment to innovation and excellence has been recognised, and we are honored to receive the 'Futuristic & Trusted Architecture, Construction & Interior Design Firm of the Year 2025' – Karnataka award under Residential & Commercial Projects (Global Edition). Adding to the celebration, our very own Ar. Tharun Mahesh has been awarded 'Promising & Creative Architect & Interior Designer of the Year 2025, Karnataka'! A huge thank you to our incredible team, clients, and well-wishers for your trust and support. Here's to designing the future!",
+    description: (
+      <>
+        Studio Goodu has been selected for the prestigious National
+        Architecture and Interior Design Excellence Awards 2025! Our
+        commitment to innovation and excellence has been recognised, and we
+        are honored to receive the 'Futuristic & Trusted Architecture,
+        Construction & Interior Design Firm of the Year 2025' – Karnataka
+        award under Residential & Commercial Projects (Global Edition).
+        Adding to the celebration, our very own Ar. Tharun Mahesh has been
+        awarded 'Promising & Creative Architect & Interior Designer of the
+        Year 2025, Karnataka'! A huge thank you to our incredible team,
+        clients, and well-wishers for your trust and support. Here's to
+        designing the future!
+      </>
+    ),
     image: awardBg,
     isCollage: false,
   },
 
   {
-    // title: "Architecture & Interior Design Excellence Awards 2026",
-    // description:
-      // "Studio Goodu is proud to be recognized at the Architecture & Interior Design Excellence Awards 2026. This achievement reflects our commitment to innovative design, quality execution, and creating meaningful spaces for our clients. We are grateful to our clients, partners, and team members who continue to inspire excellence in every project we undertake.",
+    title:
+      "We’re proud to share that Studio Goodu has been recognised as the Innovative & Trendsetter Architecture & Interior Design Firm of the Year 2026 - Karnataka at the National Architecture & Interior Design Excellence Awards & Conference.",
+    description: (
+      <>
+        Adding to the celebration, our very own Ar. Tharun Mahesh{" "}
+        <a
+          href="https://www.instagram.com/tharun__mahesh/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:opacity-80 transition-opacity"
+        >
+          @tharun__mahesh
+        </a>{" "}
+        has been awarded “Innovative & Trendsetter Architecture & Interior
+        Design Firm of the Year 2026 - Karnataka”. To everyone who has been
+        part of this journey, thank you for believing in our vision and
+        growing with us. This milestone is a reflection of the trust our
+        clients place in us, the passion our team brings, and the
+        collaborations that shape every space we create. Here’s to continuing
+        this journey and building meaningful spaces. Let’s create your next
+        space with purpose. The nest we built together!
+      </>
+    ),
     images: [award2026_1, award2026_2],
     isCollage: true,
   },
@@ -89,9 +122,9 @@ function AwardSlide({ award }) {
             {award.title}
           </h3>
 
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 leading-relaxed">
+          <div className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 leading-relaxed">
             {award.description}
-          </p>
+          </div>
         </div>
       </div>
     </div>

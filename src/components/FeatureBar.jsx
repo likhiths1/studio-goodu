@@ -15,7 +15,7 @@ export default function FeatureBar() {
   const duplicatedFeatures = [...features, ...features, ...features, ...features];
 
   return (
-    <section className="w-full bg-[#4D696C] py-7 px-4 overflow-hidden relative">
+    <section className="w-full bg-[#132C1F] py-7 px-4 overflow-hidden relative">
       <div className="relative w-full">
         <div className="marquee-container">
           <div className="marquee-content">
@@ -42,8 +42,8 @@ export default function FeatureBar() {
         </div>
       </div>
       {/* Gradient overlays */}
-      <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-[#4D696C] to-transparent z-10 pointer-events-none"></div>
-      <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-[#4D696C] to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-[#132C1F] to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-[#132C1F] to-transparent z-10 pointer-events-none"></div>
       <style jsx global>{`
         @keyframes scroll {
           0% {

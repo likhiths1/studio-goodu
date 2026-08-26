@@ -1,16 +1,17 @@
-import { useParams, useNavigate} from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+
 import PortfolioHeader from "../components/PortfolioHeader";
 import FooterSection from "../components/FooterSection";
 import Navbar from "../components/NavbarBlack";
 import FeatureBar from "../components/FeatureBar";
 import ExtraContactSection from "../components/ExtraContactSection";
 import PortfolioDetailSection from "../components/PortfolioDetailSection";
-import ResponsiveImageBlack from "../components/ImageBackgroundBlack";
-import StartImg from "../assets/images/artah.png";
+
 import Hero1 from "../assets/images/portfolio/arthavilla.jpg";
 import Hero2 from "../assets/images/portfolio/snobsalon.jpg";
 import Hero3 from "../assets/images/portfolio/tyd.jpg";
 import Hero4 from "../assets/images/portfolio/srigangaresidence.png";
+
 import snob1 from "../assets/images/portfoliodetail/snob1.jpg";
 import snob2 from "../assets/images/portfoliodetail/snob2.jpg";
 import snob3 from "../assets/images/portfoliodetail/snob3.jpg";
@@ -21,6 +22,7 @@ import snob7 from "../assets/images/portfoliodetail/snob7.jpg";
 import snob8 from "../assets/images/portfoliodetail/snob8.jpg";
 import snob9 from "../assets/images/portfoliodetail/snob9.jpg";
 import snob10 from "../assets/images/portfoliodetail/snob10.jpg";
+
 import tyd1 from "../assets/images/portfoliodetail/Tyd-5.jpg";
 import tyd2 from "../assets/images/portfoliodetail/Tyd-10.jpg";
 import tyd3 from "../assets/images/portfoliodetail/Tyd-12.jpg";
@@ -31,6 +33,7 @@ import tyd7 from "../assets/images/portfoliodetail/Tyd-23.jpg";
 import tyd8 from "../assets/images/portfoliodetail/Tyd-27.jpg";
 import tyd9 from "../assets/images/portfoliodetail/Tyd-29.jpg";
 import tyd10 from "../assets/images/portfoliodetail/Tyd-30.jpg";
+
 import sree1 from "../assets/images/portfoliodetail/sreee1.jpg";
 import sree2 from "../assets/images/portfoliodetail/sreee2.jpg";
 import sree3 from "../assets/images/portfoliodetail/sreee3.jpg";
@@ -41,6 +44,7 @@ import sree7 from "../assets/images/portfoliodetail/sreee7.jpg";
 import sree8 from "../assets/images/portfoliodetail/sreee8.jpg";
 import sree9 from "../assets/images/portfoliodetail/sreee9.jpg";
 import sree10 from "../assets/images/portfoliodetail/sreee10.jpg";
+
 import run1 from "../assets/images/portfoliodetail/runway1.jpeg";
 import run2 from "../assets/images/portfoliodetail/runway2.jpeg";
 import run3 from "../assets/images/portfoliodetail/runway3.jpeg";
@@ -51,6 +55,7 @@ import run7 from "../assets/images/portfoliodetail/runway7.jpeg";
 import run8 from "../assets/images/portfoliodetail/runway8.jpeg";
 import run9 from "../assets/images/portfoliodetail/runway9.jpeg";
 import run10 from "../assets/images/portfoliodetail/runway10.jpeg";
+
 import jankal1 from "../assets/images/portfoliodetail/jankal1.jpg";
 import jankal2 from "../assets/images/portfoliodetail/jankal2.jpg";
 import jankal3 from "../assets/images/portfoliodetail/jankal3.jpg";
@@ -62,6 +67,7 @@ import jankal8 from "../assets/images/portfoliodetail/jankal8.jpg";
 import jankal9 from "../assets/images/portfoliodetail/jankal1.jpg";
 import jankal10 from "../assets/images/portfoliodetail/jankal2.jpg";
 import jankalhero from "../assets/images/portfoliodetail/jankalcover.png";
+
 import maha1 from "../assets/images/portfoliodetail/home1.jpg";
 import maha2 from "../assets/images/portfoliodetail/home2.jpg";
 import maha3 from "../assets/images/portfoliodetail/home3.jpg";
@@ -74,6 +80,52 @@ import maha9 from "../assets/images/portfoliodetail/home9.jpg";
 import maha10 from "../assets/images/portfoliodetail/home10.jpg";
 import mahacover from "../assets/images/portfoliodetail/226cover.jpg";
 
+import villa431 from "../assets/images/portfoliodetail/villa431.jpeg";
+import villa432 from "../assets/images/portfoliodetail/villa432.jpeg";
+import villa433 from "../assets/images/portfoliodetail/villa433.jpeg";
+import villa434 from "../assets/images/portfoliodetail/villa434.jpeg";
+import villa435 from "../assets/images/portfoliodetail/villa435.jpeg";
+import villa436 from "../assets/images/portfoliodetail/villa436.jpeg";
+import villa437 from "../assets/images/portfoliodetail/villa437.jpeg";
+import villa438 from "../assets/images/portfoliodetail/villa438.jpeg";
+import villa439 from "../assets/images/portfoliodetail/villa439.jpeg";
+import villa4310 from "../assets/images/portfoliodetail/villa4310.jpeg";
+
+import villa211 from "../assets/images/portfoliodetail/villa211.jpeg";
+import villa212 from "../assets/images/portfoliodetail/villa212.jpeg";
+import villa213 from "../assets/images/portfoliodetail/villa213.jpeg";
+import villa214 from "../assets/images/portfoliodetail/villa214.jpeg";
+import villa215 from "../assets/images/portfoliodetail/villa215.jpeg";
+import villa216 from "../assets/images/portfoliodetail/villa216.jpeg";
+import villa217 from "../assets/images/portfoliodetail/villa217.jpeg";
+import villa218 from "../assets/images/portfoliodetail/villa218.jpeg";
+import villa219 from "../assets/images/portfoliodetail/villa219.jpeg";
+import villa2110 from "../assets/images/portfoliodetail/villa2110.jpeg";
+
+import antara1 from "../assets/images/portfoliodetail/antara1.jpeg";
+import antara2 from "../assets/images/portfoliodetail/antara2.jpeg";
+import antara3 from "../assets/images/portfoliodetail/antara3.jpeg";
+import antara4 from "../assets/images/portfoliodetail/antara4.jpeg";
+import antara5 from "../assets/images/portfoliodetail/antara5.jpg";
+import antara6 from "../assets/images/portfoliodetail/antara6.jpg";
+import antara7 from "../assets/images/portfoliodetail/antara7.jpg";
+import antara8 from "../assets/images/portfoliodetail/antara8.jpg";
+import antara9 from "../assets/images/portfoliodetail/antara9.jpeg";
+import antara10 from "../assets/images/portfoliodetail/antara10.jpg";
+
+import club71 from "../assets/images/portfoliodetail/club71.jpeg";
+import club72 from "../assets/images/portfoliodetail/club72.png";
+import club73 from "../assets/images/portfoliodetail/club73.png";
+import club74 from "../assets/images/portfoliodetail/club74.png";
+import club75 from "../assets/images/portfoliodetail/club75.png";
+import club76 from "../assets/images/portfoliodetail/club76.png";
+import club77 from "../assets/images/portfoliodetail/club77.png";
+import club78 from "../assets/images/portfoliodetail/club78.jpeg";
+import club79 from "../assets/images/portfoliodetail/club79.png";
+import club710 from "../assets/images/portfoliodetail/club710.png";
+import club711 from "../assets/images/portfoliodetail/club711.png";
+import club712 from "../assets/images/portfoliodetail/club712.png";
+
 const PROJECTS = {
   "1": {
     title: "ARTHA VILLA",
@@ -81,212 +133,91 @@ const PROJECTS = {
     serviceType: "Residential Interior",
     features: "Lime Plaster, Live-edge Furniture, Custom Lighting",
   },
+
   "2": {
     title: "SNOB SALON",
     hero: Hero2,
     serviceType: "Commercial Interior",
     features: "Reception Desk, Accent Lighting, Textured Walls",
-    // Example: make this page's copy unique
     detailSections: [
-      { heading: "Redefining Glamour with Grace", paragraphs: ["Studio Goodu crafts a space where beauty and design mirror each other in quiet sophistication."] },
-      { heading: "Elegance with Ease", paragraphs: ["The client’s vision was as focused as it was ambitious their first-ever salon project had to stand out in a city filled with polished competitors. The directive: premium yet approachable, striking yet subtle. “We wanted people to return not just for the service, but for the space itself,” recalls Tharun. “It had to feel comforting like a home, yet carry that undeniable wow factor. ”The design evolved from a neutral, calming base palette of beige and taupe, layered with rose-gold metallic accents and strategic hints of crimson red. The interplay of arches and capsule forms softens the geometry, lending rhythm and continuity, while crisp linear detailing anchors the Art Deco inspiration in modern restraint. Underfoot, pigmented terrazzo flooring unifies the space, adding a textural sense of quiet luxury."] },
-      { heading: "Navigating Site Constraints", paragraphs: ["The site itself came with challenges deep beams, irregular columns, and protruding walls threatened to fragment the flow. The solution was rooted in spatial clarity. By aligning axes and absorbing irregularities into broader surface treatments, the design visually stretches the narrow footprint, making the layout read as open and fluid. Rigid partitions were replaced with fluted glass panels and suede curtains, creating zones without boundaries. “The space had to breathe,” says Tharun. “Avoiding claustrophobia was key light, reflection, and transparency became our tools.”"] },
-      { heading: "The Visitor’s Journey", paragraphs: ["From the moment of arrival, the experience unfolds like theatre. A grand arched double door, detailed with ornate brass handles and grilled glass, sets an anticipatory tone. Instead of a conventional reception, guests are greeted by a glimpse of the salon in action mirrors angled thoughtfully to reflect motion and vitality. The hair stations, designed as floating islands, capture natural and artificial light in perfect balance. The hair-wash area, set on a raised platform, features a statement suede-clad mirror wall, adding intimacy to indulgence. Only later does the reception reveal itself defined by fluted panelling, soft beading, and curated lighting, alongside a lounge that feels more residential than retail."] },
-      { heading: "Light, Art, and Texture", paragraphs: ["Lighting here is not just illumination it’s punctuation. Custom dome-shaped fixtures from Jovo, suspended on leather straps, recall the glamour of vintage flashbulbs while maintaining an enveloping softness. Pop-art compositions add a playful counterpoint to the salon’s tonal palette, reinforcing its chic, urban personality. The nail bar becomes a focal moment a crimson backdrop framed by floating shelves, illuminated by arched lamps, and paired with sleek leatherite seating that balances comfort with character."] },
-      { heading: "Balancing Openness and Privacy", paragraphs: ["Spatial zoning is handled with quiet intelligence. A fluted-glass partition separates the waiting lounge, which also doubles as a selfie booth a subtle nod to the ritual of capturing the post-transformation moment. Behind arched curtains, the makeup rooms maintain privacy without heaviness. Pedicure and massage alcoves are shielded by Roman blinds, and bathrooms make a statement with colour-blocked walls fluted tiles below, crimson hues above. Throughout, lush foliage from snake plants to fiddle leaf figs punctuates the neutral base with organic freshness."] },
-      { heading: "From Concept to Completion", paragraphs: ["From concept sketches to final detailing, Snob Salon was completed in just three months a feat of precision and coordination. For Studio Goodu, long celebrated for its residential and hospitality expertise, this project marked a distinctive shift bringing that sense of intimacy and warmth into a retail experience. The result is a space that feels cinematic yet personal, structured yet sensuous a salon that redefines the very idea of beauty environments."] },
-      { heading: "Design Essence", paragraphs: ["Snob Salon isn’t just designed for transformation; it’s built around it spatially, sensorially, and emotionally. By merging the polish of Art Deco with the comfort of home, Studio Goodu crafts a setting that turns every visit into an experience and every mirror into a story."] },
+      {
+        heading: "Redefining Glamour with Grace",
+        paragraphs: [
+          "Studio Goodu crafts a space where beauty and design mirror each other in quiet sophistication.",
+        ],
+      },
+      {
+        heading: "Elegance with Ease",
+        paragraphs: [
+          "The client’s vision was as focused as it was ambitious their first-ever salon project had to stand out in a city filled with polished competitors. The directive: premium yet approachable, striking yet subtle.",
+        ],
+      },
     ],
-    // Optional: control its image grid layout
     imageGroups: [
       { images: [snob1, snob9], columns: 2 },
       { images: [snob3, snob4, snob5], columns: 3 },
       { images: [snob6, snob7], columns: 2 },
-      { images: [snob8, snob2, snob10], columns: 3 }
-    ]
-  },
-  "3": {
-    title: "TYD",
-    hero: Hero3,
-    serviceType: "Commercial Interior",
-    features: "Warm Woods, Open Plan, Statement Lighting",
-    detailSections: [
-      { 
-        heading: "TYD: Elevating Bangalore's Rooftop Dining Experience", 
-        paragraphs: [
-          "Nestled in the vibrant heart of North Bangalore, TYD (Taste Your Desires) is more than just a rooftop kitchen and bar; it's an immersive escape designed to delight all your senses. This unique culinary destination masterfully blends contemporary aesthetics with a relaxed, inviting ambiance, offering guests an unforgettable experience under the open sky."
-        ] 
-      },
-      { 
-        heading: "A Design Philosophy Rooted in Comfort and Charm", 
-        paragraphs: [
-          "From the moment you step into TYD, you're greeted by a thoughtful design narrative that prioritizes comfort, warmth, and a touch of sophisticated whimsy. The interiors are a harmonious blend of natural textures and modern elements. Exposed brick walls, bathed in a warm, earthy palette, create an inviting backdrop, while strategically placed lighting fixtures cast a soft, ambient glow, perfect for intimate conversations or lively gatherings.",
-          "The interplay of natural light during the day and the enchanting glow of the various lighting elements by night transforms the ambiance, offering a distinct experience at different times."
-        ] 
-      },
-      { 
-        heading: "Architectural Details and Thoughtful Touches", 
-        paragraphs: [
-          "The design language extends to every detail, from the stylish rattan chairs and comfortable upholstered seating to the patterned tabletops. An eye-catching element is the use of grand, oversized wicker pendant lamps, which create a striking visual statement and contribute to the warm, inviting glow."
-        ] 
-      },
-      { 
-        heading: "An Oasis of Greenery and Open Skies", 
-        paragraphs: [
-          "One of TYD's most captivating features is its seamless integration with nature. Lush greenery is thoughtfully incorporated throughout the space, creating a refreshing contrast against the architectural elements. The open-air sections, adorned with charming wicker lamp shades and elegant street lamp-style fixtures, allow diners to fully embrace Bangalore's pleasant weather and enjoy stunning views as the sun sets.",
-          "The interior spaces also feature unique architectural accents like a charming white facade with a Juliet balcony, adding a touch of European elegance amidst the rustic brickwork. The blend of textures – from the smooth wooden tables to the rough-hewn stone flooring – adds depth and character to the overall design."
-        ] 
-      },
-      { 
-        heading: "A Culinary Journey in a Captivating Setting", 
-        paragraphs: [
-          "TYD's layout offers a variety of seating options, catering to different preferences, whether it's a cozy corner for two, a communal table for a group celebration, or a spot right under the vast, open skylight.",
-          "This thoughtful design ensures that every visit to TYD is a personalized and memorable one."
-        ] 
-      },
-      { 
-        heading: "Experience TYD", 
-        paragraphs: [
-          "TYD is more than just a place to eat and drink; it's a destination where stunning design, captivating ambiance, and a promise of delightful culinary experiences converge. It invites guests to unwind, socialize, and savor the moments, making it a standout addition to Bangalore's dynamic dining scene. Come, taste your desires at TYD."
-        ] 
-      },
-      { 
-        heading: "TYD – A Rooftop Kitchen & Bar: Elevating Experiences in North Bangalore", 
-        paragraphs: [
-          "Nestled in the vibrant landscape of North Bangalore, TYD (Taste Your Desires) is more than just a dining destination; it's an elevated experience. This rooftop kitchen and bar masterfully blends sophisticated design with a relaxed, inviting ambiance, offering a sanctuary where culinary artistry meets breathtaking views.",
-          "From the moment you step into TYD, you are transported. The interior design is a thoughtful symphony of textures and tones. Exposed brick walls, bathed in warm, inviting hues, create an intimate and cozy atmosphere. This rustic charm is beautifully contrasted with sleek wooden tables and comfortable seating, inviting guests to linger and unwind. Elegant lighting, ranging from contemporary hanging bulbs to charming wall sconces, casts a soft glow, enhancing the overall warmth and creating a perfect setting for any occasion."
-        ] 
-      },
-      { 
-        heading: "Design Zones and Features", 
-        paragraphs: [
-          "As you move through TYD, you'll discover distinct zones, each with its own character.",
-          "<strong style=\"color: black;\">Main Dining Areas</strong> - Feature a mix of tables, some with plush, upholstered chairs that promise comfort, others with intricately woven rattan backs that add a touch of natural elegance.",
-          "<strong style=\"color: black;\">Statement Lighting</strong> - Particularly the large, exquisitely crafted wicker chandeliers become immediate focal points, diffusing light warmly and adding a bohemian chic sensibility to the space.",
-          "<strong style=\"color: black;\">Lush Greenery</strong> - Strategically placed throughout, bringing a refreshing natural element indoors and creating a sense of tranquility."
-        ] 
-      },
-      { 
-        heading: "Outdoor and Semi-Outdoor Spaces", 
-        paragraphs: [
-          "The transition to the outdoor or semi-outdoor spaces reveals TYD's commitment to creating diverse experiences. Here, the design opens up to embrace the sky and the surrounding views.",
-          "<strong style=\"color: black;\">Street Lamp-Style Lights</strong> - Line pathways, guiding guests through a verdant landscape of tropical plants and trees.",
-          "<strong style=\"color: black;\">Wicker Dome Structure</strong> - A remarkable, large-scale structure stands as an iconic design feature, offering a unique, semi-private dining experience that feels both enclosed and connected to the open air.",
-          "This area truly capitalizes on the 'rooftop' aspect, providing a fresh, airy environment perfect for enjoying Bangalore's pleasant evenings."
-        ] 
-      },
-      { 
-        heading: "Attention to Detail", 
-        paragraphs: [
-          "TYD's attention to detail is evident in every corner:",
-          "<strong style=\"color: black;\">Elegant Archways</strong> and <strong style=\"color: black;\">Classical Architectural Balcony Features</strong> add a touch of grandeur",
-          "<strong style=\"color: black;\">Intricately Designed Door Handles</strong> and <strong style=\"color: black;\">Wrought-Iron Detailing</strong> speak to a commitment to quality craftsmanship",
-          "The blend of indoor comfort with the expansive feel of a rooftop venue makes TYD versatile for both intimate dinners and lively gatherings."
-        ] 
-      },
-      { 
-        heading: "Culinary Excellence", 
-        paragraphs: [
-          "Beyond its stunning aesthetics, TYD is dedicated to a culinary journey that tantalizes the palate.",
-          "<strong style=\"color: black;\">Diverse Menu</strong> - Crafted with fresh, high-quality ingredients to 'Taste Your Desires'",
-          "<strong style=\"color: black;\">Thoughtfully Curated Bar Menu</strong> - Featuring an array of innovative cocktails, fine spirits, and refreshing beverages, all designed to enhance your dining experience"
-        ] 
-      },
-      { 
-        heading: "More Than Just a Meal", 
-        paragraphs: [
-          "TYD – A Rooftop Kitchen & Bar is more than just a meal; it's an escape, a celebration of design, and a feast for the senses. It's where memories are made, laughter resonates, and every visit leaves you wanting to return. Discover your new favorite destination in North Bangalore."
-        ] 
-      }
+      { images: [snob8, snob2, snob10], columns: 3 },
     ],
-    imageGroups: [
-      { images: [tyd10, tyd2], columns: 2 },
-      { images: [tyd3, tyd4, tyd5], columns: 3 },
-      { images: [tyd6, tyd8], columns: 2 },
-      { images: [tyd1, tyd9, tyd7], columns: 3 }
-    ]
   },
+
+  "3": {
+  title: "TYD",
+  hero: Hero3,
+  serviceType: "Hospitality Architecture & Interior",
+  features: "Brick Cladding, Stucco Finishes, Terrazzo, Acoustic Treatments",
+
+  detailSections: [
+    {
+      heading: "The Subterranean Vault",
+      paragraphs: [
+        "TYD is an 18,000 sq ft hospitality architecture and interior project located in Bangalore, India. The space blends London Subway restobar aesthetics and old-century speakeasy dens using brick cladding, stucco finishes, and a 6\" raised wood and stone stage.",
+        "The layout features diverse zones, including a 50–80 pax dance floor, fine dining areas, a rooftop terrace for brunch, and informal outdoor organic seating.",
+        "Custom furniture integrates a unique touch of terrazzo, stone, and wooden table tops, beautifully complemented by upholstered wooden chairs, wicker, and bronze highlights.",
+        "Site challenges with existing fire services and a delicate PT slab (restricted to 1\" drilling to protect Cobiax cables) were resolved by strategically mapping services and applying a dark olive ceiling finish.",
+        "Due to nearby residences, extensive sound control (reducing levels from 130dB to 75dB) was achieved via glass wool wall treatments, acoustic panels, specialized glass, and fabric furniture."
+      ]
+    },
+
+    {
+      heading: "Concept",
+      paragraphs: [
+        "\"THE URBAN CATACOMB\""
+      ]
+    },
+
+    {
+      heading: "The Urban Catacomb",
+      paragraphs: [
+        "The design bridges the industrial nostalgia of London's historic subways with the intimate allure of a classic speakeasy.",
+        "The transition from raw, vaulted brickwork and stucco-finished tunnels opens up into diverse, texture-rich social landscapes, culminating in an airy rooftop retreat.",
+        "Honest structural adaptations are embraced rather than hidden, pairing rough-hewn stone and terrazzo against deep olive tones and acoustic fabric paneling to cultivate a protected, high-sensory escape."
+      ]
+    }
+  ],
+
+  imageGroups: [
+    { images: [tyd10, tyd2], columns: 2 },
+    { images: [tyd3, tyd4, tyd5], columns: 3 },
+    { images: [tyd6, tyd8], columns: 2 },
+    { images: [tyd1, tyd9, tyd7], columns: 3 }
+  ]
+},
+
   "4": {
     title: "SRIGANGA RESIDENCE",
     hero: Hero4,
     serviceType: "Residential Interior",
     features: "Natural Stone, Wooden Flooring, Custom Carpentry",
-    detailSections: [
-      { 
-        heading: "A sanctuary of light and craft", 
-        paragraphs: [
-          "Welcome to a home that is more than just a structure- it is a serene sanctuary tailored for a family of five. Spanning about 6000 sq.ft this home is a masterful blend of bespoke craftsmanship, rich materiality, and an intuitive connection to nature, resulting in spaces that are both luxurious and deeply personal."
-        ] 
-      },
-      { 
-        heading: "The Architectural Embrace: Exterior and Elevation", 
-        paragraphs: [
-          "The residence presents a contemporary yet warm elevation, thoughtfully integrated with its verdant surroundings. The facade utilizes a balanced composition of textures featuring stark white and earthy, brown-toned panels, softened by inclusion of expansive dark-framed windows and balconies. These elements are enveloped by the mature, lush green trees of the neighbourhood, ensuring the home feels anchored and harmonious, a modern structure nested within nature."
-        ] 
-      },
-      { 
-        heading: "Interiors: A Symphony of Texture and Light", 
-        paragraphs: [
-          "Stepping inside a design narrative unfolds through tactile surfaces, custom details and an orchestrated flow of natural light."
-        ] 
-      },
-      { 
-        heading: "The Social Core: Foyer, Living and Dining", 
-        paragraphs: [
-          "The journey begins in the foyer which seamlessly transitions into the double height-ed living area. Here custom artistry takes centre stage.",
-          "The TV wall in the living room and the partition between the living and foyer feature stunning, subtle hand-painted elements. This bespoke touch elevates simple walls to artwork, adding a unique soft texture and narrative to the primary gathering space."
-        ] 
-      },
-      { 
-        heading: "The Puja Room", 
-        paragraphs: [
-          "Visible from the dining area, puja room is the spiritual focal point designed with elegant transparency. It is composed of lattice of vertical and horizontal wooden elements, offering a sense of sacred enclosure without being completely closed off, allowing light and energy to flow."
-        ] 
-      },
-      { 
-        heading: "Dining and Balcony", 
-        paragraphs: [
-          "The dining area is a bright hub, enjoying generous early morning light. It opens directly onto a balcony, creating a lovely indoor-outdoor connection for family meals."
-        ] 
-      },
-      { 
-        heading: "Informal Living Area", 
-        paragraphs: [
-          "Beyond the formal spaces, this residence unveils a truly enchanting informal living space - a versatile retreat designed for relaxation, play and contemplation. This boasts a privileged vantage point, on one side it looks down into the double height living space and a large door opens into a terrace/balcony on the other side."
-        ] 
-      },
-      { 
-        heading: "Illumination and Design Highlights", 
-        paragraphs: [
-          "A key element in the design is the use of dramatic custom lighting and textured walls:",
-          "<strong style=\"color: black;\">Statement Lighting</strong> - The home is graced with remarkable light fixtures from the organic woven rattan ceiling installation in the dining area, linear rattan pendant lights in the double height formal living space and the unique, cloud-like pendant lights in the staircase well.",
-          "<strong style=\"color: black;\">Texture walls</strong> - Across the common areas walls are characterized by vertical fluting and subtle three-dimensional patterns lending an immediate sense of richness and depth to the neutral color palette.",
-          "<strong style=\"color: black;\">Skylight</strong> - The ceiling in the informal living area is punctuated by a series of precisely angled skylights sculpting daylight into dramatic shafts. This illuminates a captivating wall decor feature- a collection of whimsical climbing figures that add a playful dimension."
-        ] 
-      },
-      { 
-        heading: "Private Retreats: The Bedrooms", 
-        paragraphs: [
-          "The four bedrooms, including the master bedroom with a dedicated walk-in closet, two specialized kids' bedrooms and a grandparents' room are designed as individualized havens.",
-          "<strong style=\"color: black;\">Sun-Kissed Comfort</strong>: The master bedroom, one of the kids' bedrooms and the grandparents' room are perfectly oriented to receive the afternoon sunlight. This delightful positioning allows the family to enjoy golden-hour warmth in their private spaces.",
-          "<strong style=\"color: black;\">Bay Windows and Green Views</strong>: Three out of four bedrooms feature inviting bay windows. These are not just functional windows; they are designated resting spots that offer idyllic views out to the lush green neighbourhood, perfectly framing the natural scenery and reinforcing the home's connection to the outdoors."
-        ] 
-      },
-      { 
-        heading: "A Testament to Luxurious Living", 
-        paragraphs: [
-          "This 6000 sq. ft. residence is a testament to luxurious living rooted in thoughtful execution. From the play of light in the common spaces to the bespoke, hand-painted details, it's a home where every material tells a story and every space feels intentionally crafted for the family who calls it sanctuary."
-        ] 
-      }
-    ],
+    detailSections: [],
     imageGroups: [
       { images: [sree1, sree7], columns: 2 },
       { images: [sree3, sree4, sree5], columns: 3 },
       { images: [sree6, sree2], columns: 2 },
-      { images: [sree8, sree9, sree10], columns: 3 }
-    ]
-    
+      { images: [sree8, sree9, sree10], columns: 3 },
+    ],
   },
+
   "5": {
     title: "THE RUNWAY RETREAT",
     hero: run2,
@@ -295,10 +226,10 @@ const PROJECTS = {
       { images: [run1, run2], columns: 2 },
       { images: [run3, run4, run5], columns: 3 },
       { images: [run6, run7], columns: 2 },
-      { images: [run8, run9, run10], columns: 3 }
-    ]
-    
+      { images: [run8, run9, run10], columns: 3 },
+    ],
   },
+
   "6": {
     title: "JANKAL MARKETING OFFICE",
     hero: jankalhero,
@@ -307,10 +238,10 @@ const PROJECTS = {
       { images: [jankal1, jankal2], columns: 2 },
       { images: [jankal3, jankal4, jankal5], columns: 3 },
       { images: [jankal6, jankal7], columns: 2 },
-      { images: [jankal8, jankal9, jankal10], columns: 3 }
-    ]
-    
+      { images: [jankal8, jankal9, jankal10], columns: 3 },
+    ],
   },
+
   "7": {
     title: "226 DUPLEX APARTMENT, MAHALAKSHMI LAYOUT",
     hero: mahacover,
@@ -319,52 +250,193 @@ const PROJECTS = {
       { images: [maha1, maha2], columns: 2 },
       { images: [maha3, maha4, maha5], columns: 3 },
       { images: [maha6, maha7], columns: 2 },
-      { images: [maha8, maha9, maha10], columns: 3 }
-    ]
-    
+      { images: [maha8, maha9, maha10], columns: 3 },
+    ],
   },
-  
+
+  "8": {
+    title: "VILLA 43",
+    hero: villa431,
+    serviceType: "Residential Interior",
+    features: "Japandi, Biophilia, Curated Solitude",
+    detailSections: [
+      {
+        heading: "The Art of Japandi Fusion",
+        paragraphs: [
+          "Villa 43 is a 6,800 sq. ft. residential interior builder project located in Bangalore, India, executed under the direction of Fortius. The project introduces a sublime, Japandi-style fusion of Japanese minimalism and Scandinavian design, specifically showcased in the formal living area at Hygge.",
+          "The design philosophy seamlessly blurs the boundaries between indoor and outdoor areas by delicately integrating lush backyard gardens, courtyards, and flowing water features.",
+        ],
+      },
+      {
+        heading: "CONCEPT",
+        paragraphs: [
+          "INSIDE OUT",
+          "Merging Courtyard Biophilia with Residential Interiors.",
+          "The design concept is defined as a harmonious intersection of tranquil minimalism and functional comfort, specifically tailored for this project in Bangalore. This approach, centered on the Japandi fusion of Japanese and Scandinavian philosophies, prioritizes a palette of light wood, neutral tones, and subtle burnt-orange and olive accents to evoke warmth.",
+        ],
+      },
+    ],
+    imageGroups: [
+      { images: [villa431, villa437], columns: 2 },
+      { images: [villa433, villa434, villa435], columns: 3 },
+      { images: [villa436, villa432], columns: 2 },
+      { images: [villa438, villa439, villa4310], columns: 3 },
+    ],
+  },
+
+  "9": {
+    title: "VILLA 21",
+    hero: villa211,
+    serviceType: "Residential Interior",
+    features: "Natural Stone, Rustic Textures, British-inspired Details",
+    detailSections: [
+      {
+        heading: "The Art of Earthy Luxury",
+        paragraphs: [
+          "This is a 10,000 sq ft bespoke architectural masterpiece crafted in partnership with Embassy Boulevard. The design marks a dramatic transformation from a conventional layout into a curated, personalized luxury narrative.",
+          "An innovative entryway seamlessly transitions into an expansive dining area, setting a grand tone for the home. The interior features natural tandur flooring, rustic stonewalls, vintage arches, and distressed copperfinished doors.",
+          "On the top floor, the aesthetic evolves into a British-inspired lounge and bar area defined by elegant coffered ceilings. The experience extends outdoors into a lush, landscaped backyard complete with a private gazebo and a treehouse.",
+        ],
+      },
+      {
+        heading: "CONCEPT",
+        paragraphs: [
+          "THE URBAN CATACOMB",
+          "The project redefines conventional luxury by stripping away rigid, sterile finishes and replacing them with an earthy, texture-rich Bohemian narrative tailored to a laid-back lifestyle.",
+          "By blending raw, natural materials like limestone and stonewalls with structured British-inspired architectural elements, the design strikes a deliberate balance between rustic warmth and refined sophistication.",
+        ],
+      },
+    ],
+    imageGroups: [
+      { images: [villa211, villa217], columns: 2 },
+      { images: [villa213, villa214, villa215], columns: 3 },
+      { images: [villa216, villa212], columns: 2 },
+      { images: [villa218, villa219, villa2110], columns: 3 },
+    ],
+  },
+
+  "10": {
+    title: "ANTARA VILLA AT NANDI",
+    hero: antara1,
+    serviceType: "Residential Architecture",
+    features: "Natural Stone, Limewash, Biophilic Design",
+    detailSections: [
+      {
+        heading: "Tropical Monolith",
+        paragraphs: [
+          "This 6500sq.ft family getaway, located near Nandi Hills, brings a luxury Bali resort-inspired aesthetic to the region.",
+          "The elevation features a distinctive curving roof and lush planters on every balcony, connecting every floor to nature. Natural stone, limewash, and extensive arches define the textured interiors, while large sliding doors merge the living spaces with the outdoors.",
+          "Upper floor curves guide occupants to tropical bedrooms, leading up to a dark-toned entertainment suite. Finally, the open terrace floor transforms the retreat, allowing the hills' scenic views to become the design's ultimate defining element.",
+        ],
+      },
+      {
+        heading: "CONCEPT",
+        paragraphs: [
+          "CONTOURS OF BALI",
+          "The design concept fuses the serene, grounded essence of Balinese resort living with modern biophilic architecture tailored to the foothills of Nandi.",
+          "Externally, this is articulated through a fluid, wave-like roof silhouette and cascading floor-to-floor planters that mimic the natural contours of the surrounding landscape.",
+        ],
+      },
+    ],
+    imageGroups: [
+      { images: [antara1, antara7], columns: 2 },
+      { images: [antara3, antara4, antara5], columns: 3 },
+      { images: [antara6, antara2], columns: 2 },
+      { images: [antara8, antara9, antara10], columns: 3 },
+    ],
+  },
+
+  "11": {
+    title: "CLUB SEVEN GYM",
+    hero: club71,
+    serviceType: "Commercial Interior",
+    features: "Industrial Aesthetic, Dynamic Lighting, Wellness Spaces",
+    detailSections: [
+      {
+        heading: "Premium Fitness Club",
+        paragraphs: [
+          "Club Seven Gym at Chandra Layout is envisioned as a premium fitness destination that seamlessly blends performance, wellness, and community.",
+          "Designed with a contemporary industrial aesthetic, the space features dedicated zones for cardio, strength training, functional workouts, group classes, and athletic training, creating a well-organized and immersive fitness experience.",
+          "The facility extends beyond conventional gym amenities by incorporating a café, assessment room, sauna, ice plunge, locker rooms, and spacious reception and waiting lounges, offering members a holistic health and recovery environment.",
+          "Every area is planned to maximize functionality, comfort, and visual appeal, delivering a motivating atmosphere that supports fitness, recovery, and social interaction.",
+        ],
+      },
+      {
+        heading: "CONCEPT",
+        paragraphs: [
+          "MOMENTUM IN MOTION",
+          "Inspired by movement and progress, the design combines industrial materials, clean geometric forms, and dynamic lighting to create an energetic and motivating fitness environment.",
+          "Open, well-defined training zones enhance functionality, while integrated wellness spaces such as the café, sauna, and ice plunge promote recovery and community, delivering a complete fitness experience.",
+        ],
+      },
+    ],
+    imageGroups: [
+      { images: [club71, club77], columns: 2 },
+      { images: [club73, club74, club75], columns: 3 },
+      { images: [club76, club72], columns: 2 },
+      { images: [club78, club79, club710], columns: 3 },
+      { images: [club711, club712], columns: 2 },
+    ],
+  },
 };
 
 export default function PortfolioDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
+
   const project = PROJECTS[id] ?? {};
 
-  // Compute prev/next ids without wrap-around
-  const ids = Object.keys(PROJECTS).sort((a, b) => Number(a) - Number(b));
+  const ids = Object.keys(PROJECTS).sort(
+    (a, b) => Number(a) - Number(b)
+  );
+
   const idx = ids.indexOf(id ?? ids[0]);
+
   const hasPrev = idx > 0;
   const hasNext = idx > -1 && idx < ids.length - 1;
+
   const prevId = hasPrev ? ids[idx - 1] : null;
   const nextId = hasNext ? ids[idx + 1] : null;
 
   const smoothTop = () => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    if (typeof window !== "undefined") {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
     }
   };
 
   const onPrev = () => {
     if (!hasPrev || !prevId) return;
+
     navigate(`/portfolio/${prevId}`);
     smoothTop();
   };
+
   const onNext = () => {
     if (!hasNext || !nextId) return;
+
     navigate(`/portfolio/${nextId}`);
     smoothTop();
   };
 
-  // Determine header title based on project ID
+  // Keep projects 5, 6 and 7 under UPCOMING PROJECTS
   const isUpcomingProject = ["5", "6", "7"].includes(id);
-  const headerTitle = isUpcomingProject ? "UPCOMING PROJECTS" : "DESIGN ARCHIVE";
+
+  const headerTitle = isUpcomingProject
+    ? "UPCOMING PROJECTS"
+    : "DESIGN ARCHIVE";
 
   return (
     <>
       <Navbar />
+
       <PortfolioHeader title={headerTitle} />
+
       <FeatureBar />
+
       <PortfolioDetailSection
         title={project.title}
         hero={project.hero}
@@ -377,9 +449,10 @@ export default function PortfolioDetailPage() {
         hasPrev={hasPrev}
         hasNext={hasNext}
       />
+
       <ExtraContactSection />
+
       <FooterSection />
-      {/* ... */}
     </>
   );
 }

@@ -40,7 +40,7 @@ export default function ContactSection() {
                 </div>
                 <span
                   className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.04em] md:tracking-[-0.04em] whitespace-nowrap"
-                  style={{ color: "#4D696C" }}
+                  style={{ color: "#132C1F" }}
                 >
                   RESIDENTIAL
                 </span>
@@ -72,7 +72,7 @@ export default function ContactSection() {
                 </div>
                 <span
                   className="block text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em] relative z-20"
-                  style={{ color: "#4D696C" }}
+                  style={{ color: "#132C1F" }}
                 >
                   HOSPITALITY
                 </span>
@@ -107,7 +107,7 @@ export default function ContactSection() {
                   </div>
                   <span
                     className="text-center text-[2.5rem] sm:text-[3rem] md:text-[7.5rem] font-regular tracking-[-0.08em] md:tracking-[-0.08em] relative z-20"
-                    style={{ color: "#4D696C" }}
+                    style={{ color: "#132C1F" }}
                   >
                     INSTITUTIONAL & PUBLIC
                   </span>

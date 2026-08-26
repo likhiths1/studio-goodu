@@ -1,4 +1,4 @@
-import AuthorImg from "../assets/images/team/studiogoodu.jpg";
+import AuthorImg from "../assets/images/team/tharun-mahesh.jpg";
 import QuoteIcon from "../assets/images/author/quote.png";
 import { AnimatedSection, AnimatedItem } from "./AnimatedSection";
 
@@ -21,7 +21,7 @@ export default function AboutAuthorSection() {
                   Meet Ar. Tharun Mahesh
                 </p>
                 <p className="text-sm md:text-base font-medium">
-                  Founder & Mastermind of <br />Design and Architecture
+                  Founder & Mastermind of <br />Design and Architecture | Principal Architect
                 </p>
               </div>
             </div>

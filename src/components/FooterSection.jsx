@@ -17,7 +17,7 @@ const footerLinks = [
 
 export default function FooterSection() {
   return (
-    <footer className="w-full bg-[#4D696C] mt-8 md:mt-0 pt-2 md:pt-3 pb-0 px-3 md:px-0 md:-mb-24 font-inter">
+    <footer className="w-full bg-[#132C1F] mt-8 md:mt-0 pt-2 md:pt-3 pb-0 px-3 md:px-0 md:-mb-24 font-inter">
       <div className="max-w-[90rem] mx-auto grid grid-cols-1 md:grid-cols-5 gap-y-5 gap-x-2 items-start md:items-stretch">
         {/* Left: Navigation links */}
         <div className="md:col-span-2 flex flex-col gap-1.5 sm:gap-2 pt-3 pb-4 pl-6 pr-6 md:pl-8 md:pr-8 min-w-0">
@@ -83,7 +83,7 @@ export default function FooterSection() {
             {/* GOODU pinned right/bottom, responsive size and no wrap */}
             <span
               className="absolute right-0 bottom-[-1px] whitespace-nowrap text-[5rem] sm:text-[8rem] md:text-[12rem] lg:text-[14rem] font-regular tracking-tight leading-none"
-              style={{ color: "#4D696C" }}
+              style={{ color: "#132C1F" }}
             >
               GOODU
             </span>
